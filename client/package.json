@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/thegrumpys/odop/issues"
   },
-  "homepage": "https://odop.heroku.com/",
+  "homepage": ".",
   "browserslist": [
     ">0.2%",
     "not dead",
