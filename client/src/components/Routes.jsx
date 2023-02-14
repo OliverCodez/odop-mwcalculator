@@ -61,7 +61,7 @@ class Routes extends Component {
       this.props.deleteAutoSave("redirect");
       this.props.deleteAutoSave(); // Get rid of any AutoSave data too
       config.url.prompt = false; // Turn off prompt
-      config.url.view = this.props.view; // Use model view
+      config.url.view = 'Calculator'; // Use model view
       config.url.type = this.props.type; // Use model type
       config.url.name = this.props.name; // Use model name
       config.url.execute = undefined; // Turn off execute
@@ -119,7 +119,7 @@ class Routes extends Component {
   getDesign(user, type, name) {
 //      console.log('In Routes.getDesign user=',user,'type=',type,'name=',name);
       displaySpinner(true);
-      fetch(`/designtypes/${encodeURIComponent(type)}/designs/${encodeURIComponent(name)}.json`)
+      fetch(`/startup.json`)
       .then(res => {
           displaySpinner(false);
           if (!res.ok) {

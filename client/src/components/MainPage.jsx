@@ -5,11 +5,8 @@ import {
     Tab,
     Row
 } from 'react-bootstrap';
-import classnames from 'classnames';
 import ExecutePanel from './ExecutePanel';
 import { connect } from 'react-redux';
-import SignIn from '../menus/Session/SignIn';
-import SignOut from '../menus/Session/SignOut';
 import { withOktaAuth } from '@okta/okta-react';
 import { changeUser, changeView, deleteAutoSave } from '../store/actionCreators';
 import config from '../config';
@@ -25,7 +22,7 @@ class MainPage extends Component {
         this.props.changeView(config.url.view);
         this.state = {
             isOpen: false,
-            activeTab: config.url.view,
+            activeTab: 'Calculator',
         };
     }
 
@@ -80,7 +77,7 @@ class MainPage extends Component {
 
 const mapStateToProps = state => ({
     name: state.name,
-    view: state.view,
+    view: 'Calculator',
     type: state.model.type,
     symbol_table: state.model.symbol_table,
 });
