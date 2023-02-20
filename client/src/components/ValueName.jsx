@@ -9,7 +9,7 @@ class ValueName extends Component {
         return (
             <td className={"align-middle " + (this.props.className !== undefined ? this.props.className : '')} id={'vn_'+this.props.name}>
                 <OverlayTrigger placement="top" overlay={this.props.tooltip !== undefined && <Tooltip>{this.props.tooltip}</Tooltip>}>
-                    <span>{this.props.name}</span>
+                    <span className='d-block'>{this.props.name}</span>
                 </OverlayTrigger>
             </td>
         );

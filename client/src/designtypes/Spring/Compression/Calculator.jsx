@@ -18,7 +18,7 @@ export class Calculator extends ReportBase {
         return (
             <Container>
                 <Row>
-                    <table className="report-table">
+                    <table className="report-table report-table-1">
                         <tbody>
                             <tr>
                                 <SymbolName element={this.props.symbol_table[o.Material_Type]} index={o.Material_Type} />
@@ -40,7 +40,7 @@ export class Calculator extends ReportBase {
                 <Row>
                     <table className="report-table">
                         <thead>
-                            <tr>
+                            <tr className='report-table-head'>
                                 <th></th>
                                 <ValueName name={<><b>Length</b><br />{this.props.symbol_table[o.L_Free].units}</>} tooltip="Length at free point, point 1, point 2 and solid point" className="text-center" />
                                 <ValueName name={<><b>Deflection</b><br />{this.props.symbol_table[o.L_Free].units}</>} tooltip="Deflection at free point, point 1, point 2 and solid point" className="text-center" />
@@ -131,7 +131,7 @@ export class Calculator extends ReportBase {
                                 <SymbolUnits element={this.props.symbol_table[o.Rate]} index={o.Rate} className="text-left" />
                             </tr>
                             <tr>
-                                <ValueName name="Safe Load" tooltip="Greatest static load that can be supported without exceeding maximum allowable stress (Stress_Lim_Stat)"/>
+                                <ValueName className='font-weight-bold' name="Safe Load" tooltip="Greatest static load that can be supported without exceeding maximum allowable stress (Stress_Lim_Stat)"/>
                                 <Value id="Safe_Load" value={this.safe_load} />
                                 <td className="text-left">{this.safe_load_u}</td>
                                 <td> &nbsp; &nbsp; </td>
@@ -140,7 +140,7 @@ export class Calculator extends ReportBase {
                                 <SymbolUnits element={this.props.symbol_table[o.Weight]} index={o.Weight} className="text-left" />
                             </tr>
                             <tr>
-                                <ValueName name="Pitch" tooltip="Pitch is the distance between two adjacent coils"/>
+                                <ValueName className='font-weight-bold' name="Pitch" tooltip="Pitch is the distance between two adjacent coils"/>
                                 <Value id="Pitch" value={this.pitch} />
                                 <SymbolUnits element={this.props.symbol_table[o.L_Free]} index={o.L_Free} className="text-left" />
                                 <td> &nbsp; &nbsp; </td>
@@ -156,11 +156,11 @@ export class Calculator extends ReportBase {
                     <table className="report-table">
                         <tbody>
                             <tr>
-                                <td>
+                                <td className='font-weight-bold'>
                                     Deflection at point 2 (maximum operating load) is
                                 </td>
                                 <SymbolValue element={this.props.symbol_table[o.PC_Avail_Deflect]} index={o.PC_Avail_Deflect} />
-                                <td>
+                                <td className='font-weight-bold'>
                                     % of total available deflection.
                                 </td>
                             </tr>

@@ -30,3 +30,19 @@ input[type=number] {
 .design-table input, .design-table select, .design-table .input-group-append, .design-table .input-group-prepend {
     border: 1px solid black;
 }
+
+.report-table-1 .symbol-name, .report-table-head span {
+    background: #1d1d21;
+    color: #f7d160 !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.report-table .symbol-name {
+    font-weight: bold;
+}
+
+.report-table input, .report-table select, .report-table .input-group-append, .report-table .input-group-prepend {
+    border: 1px solid black;
+    margin: 2px 0 !important;
+}
