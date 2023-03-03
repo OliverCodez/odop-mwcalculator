@@ -46,7 +46,7 @@
 
  Prop\_Calc\_Method = 1 - Use values from material table 
  indicates values come from materials table; 
- allowable stresses will be calculated as a function of Wire_Dia. 
+ allowable stresses will be calculated as a function of Wire_Diameter. 
 
  Prop\_Calc\_Method = 2 - Use Tensile & %\_Tensile_... 
  indicates Tensile and allowable %\_Tensile 

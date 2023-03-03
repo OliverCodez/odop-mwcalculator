@@ -19,7 +19,7 @@ export const initialState = {
         },
         {
             "input": true,
-            "name": "Wire_Dia",
+            "name": "Wire_Diameter",
             "value": 0.1055,
             "units": "inch",
             "lmin": 0,
@@ -35,7 +35,7 @@ export const initialState = {
         },
         {
             "input": true,
-            "name": "L_Free",
+            "name": "Free_Length",
             "value": 3.25,
             "units": "inches",
             "lmin": 0,
@@ -51,7 +51,7 @@ export const initialState = {
         },
         {
             "input": true,
-            "name": "Coils_T",
+            "name": "Total_Coils",
             "value": 10.0,
             "units": "coils",
             "lmin": 0,
@@ -256,7 +256,7 @@ export const initialState = {
             "validmin": 0.0,
             "validmax": Number.MAX_VALUE,
             "sdlim": 0.1,
-            "tooltip": "Ratio of free length (L_Free) to mean diameter (Mean_Dia)",
+            "tooltip": "Ratio of free length (Free_Length) to mean diameter (Mean_Dia)",
             "type": "equationset",
             "hidden": false
         },
@@ -304,7 +304,7 @@ export const initialState = {
             "validmin": 1.0,
             "validmax": Number.MAX_VALUE,
             "sdlim": 1.0,
-            "tooltip": "Ratio of mean coil diameter (Mean_Dia) to wire diameter (Wire_Dia)",
+            "tooltip": "Ratio of mean coil diameter (Mean_Dia) to wire diameter (Wire_Diameter)",
             "type": "equationset",
             "hidden": false
         },

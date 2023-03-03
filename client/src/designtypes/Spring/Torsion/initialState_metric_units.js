@@ -19,7 +19,7 @@ export const initialState = {
         },
         {
             "input": true,
-            "name": "Wire_Dia",
+            "name": "Wire_Diameter",
             "value": 1.6,
             "units": "mm",
             "lmin": 0,
@@ -35,7 +35,7 @@ export const initialState = {
         },
         {
             "input": true,
-            "name": "Coils_T",
+            "name": "Total_Coils",
             "value": 7.04,
             "units": "coils",
             "lmin": 0,
@@ -305,7 +305,7 @@ export const initialState = {
             "validmin": 1.0,
             "validmax": Number.MAX_VALUE,
             "sdlim": 1.0,
-            "tooltip": "Ratio of mean coil diameter (Mean_Dia) to wire diameter (Wire_Dia)",
+            "tooltip": "Ratio of mean coil diameter (Mean_Dia) to wire diameter (Wire_Diameter)",
             "type": "equationset",
             "hidden": false
         },

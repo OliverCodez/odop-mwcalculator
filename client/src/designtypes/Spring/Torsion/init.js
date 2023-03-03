@@ -105,7 +105,7 @@ export function init(store, p, x) {
 //           (log10(tbase400) - const_term);
     x[o.slope_term] = (tensile_400 - x[o.tensile_010]) / (Math.log10(x[o.tbase400]) - x[o.const_term]);
 //    tensile=slope_term*(log10(wire_dia)-const_term) + tensile_010;
-    x[o.Tensile] = x[o.slope_term] * (Math.log10(p[o.Wire_Dia]) - x[o.const_term]) + x[o.tensile_010];
+    x[o.Tensile] = x[o.slope_term] * (Math.log10(p[o.Wire_Diameter]) - x[o.const_term]) + x[o.tensile_010];
 //    stress_lim_endur=tensile*pc_tensile_endur/100.0;
     x[o.Stress_Lim_Bnd_Endur] = x[o.Tensile] * x[o.PC_Ten_Bnd_Endur] / 100.0;
 //    stress_lim_stat =tensile*pc_tensile_stat /100.0;

@@ -19,36 +19,36 @@ export function checks(store) {        /*    Compression  Spring  */
 
 // Alerts common to all round-wire coil springs 
 
-    if (design.model.symbol_table[o.Wire_Dia].value > design.model.symbol_table[o.ID_Free].value) {
+    if (design.model.symbol_table[o.Wire_Diameter].value > design.model.symbol_table[o.ID_Free].value) {
         addAlert({
-            element: design.model.symbol_table[o.Wire_Dia],
-            name: design.model.symbol_table[o.Wire_Dia].name, 
-            message: check_message(design,o.Wire_Dia,'>',o.ID_Free),
+            element: design.model.symbol_table[o.Wire_Diameter],
+            name: design.model.symbol_table[o.Wire_Diameter].name, 
+            message: check_message(design,o.Wire_Diameter,'>',o.ID_Free),
             severity: WARN,
-            help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#Wire_Dia_GT_ID_Free)'
+            help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#Wire_Diameter_GT_ID_Free)'
         });
         addAlert({
             element: design.model.symbol_table[o.ID_Free],
             name: design.model.symbol_table[o.ID_Free].name, 
-            message: check_message(design,o.ID_Free,'<=',o.Wire_Dia),
+            message: check_message(design,o.ID_Free,'<=',o.Wire_Diameter),
             severity: WARN,
             duplicate: true
         });
     }
-    if (design.model.symbol_table[o.Wire_Dia].value < 0.5 * design.model.symbol_table[o.tbase010].value && design.model.symbol_table[o.Prop_Calc_Method].value === 1) {
+    if (design.model.symbol_table[o.Wire_Diameter].value < 0.5 * design.model.symbol_table[o.tbase010].value && design.model.symbol_table[o.Prop_Calc_Method].value === 1) {
         addAlert({
-            element: design.model.symbol_table[o.Wire_Dia],
-            name: design.model.symbol_table[o.Wire_Dia].name, 
-            message: 'Material properties for this ' + design.model.symbol_table[o.Wire_Dia].name + ' (' + design.model.symbol_table[o.Wire_Dia].value.toODOPPrecision() + ') may not be accurate.',
+            element: design.model.symbol_table[o.Wire_Diameter],
+            name: design.model.symbol_table[o.Wire_Diameter].name, 
+            message: 'Material properties for this ' + design.model.symbol_table[o.Wire_Diameter].name + ' (' + design.model.symbol_table[o.Wire_Diameter].value.toODOPPrecision() + ') may not be accurate.',
             severity: WARN,
             help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#MatPropAccuracy)'
         });
     }
-    if (design.model.symbol_table[o.Wire_Dia].value > 5.0 * design.model.symbol_table[o.tbase400].value && design.model.symbol_table[o.Prop_Calc_Method].value === 1) {
+    if (design.model.symbol_table[o.Wire_Diameter].value > 5.0 * design.model.symbol_table[o.tbase400].value && design.model.symbol_table[o.Prop_Calc_Method].value === 1) {
         addAlert({
-            element: design.model.symbol_table[o.Wire_Dia],
-            name: design.model.symbol_table[o.Wire_Dia].name, 
-            message: 'Material properties for this ' + design.model.symbol_table[o.Wire_Dia].name + ' (' + design.model.symbol_table[o.Wire_Dia].value.toODOPPrecision() + ') may not be accurate.',
+            element: design.model.symbol_table[o.Wire_Diameter],
+            name: design.model.symbol_table[o.Wire_Diameter].name, 
+            message: 'Material properties for this ' + design.model.symbol_table[o.Wire_Diameter].name + ' (' + design.model.symbol_table[o.Wire_Diameter].value.toODOPPrecision() + ') may not be accurate.',
             severity: WARN,
             help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#MatPropAccuracy)'
         });
@@ -187,18 +187,18 @@ export function checks(store) {        /*    Compression  Spring  */
             duplicate: true
         });
     }
-    if (design.model.symbol_table[o.L_Free].value < design.model.symbol_table[o.L_Solid].value) {
+    if (design.model.symbol_table[o.Free_Length].value < design.model.symbol_table[o.L_Solid].value) {
         addAlert({
-            element: design.model.symbol_table[o.L_Free],
-            name: design.model.symbol_table[o.L_Free].name, 
-            message: check_message(design,o.L_Free,'<',o.L_Solid),
+            element: design.model.symbol_table[o.Free_Length],
+            name: design.model.symbol_table[o.Free_Length].name, 
+            message: check_message(design,o.Free_Length,'<',o.L_Solid),
             severity: ERR,
-            help_url: '[Help](/docs/Help/DesignTypes/Spring/Compression/alerts.html#L_Free_LT_L_Solid)'
+            help_url: '[Help](/docs/Help/DesignTypes/Spring/Compression/alerts.html#Free_Length_LT_L_Solid)'
         });
         addAlert({
             element: design.model.symbol_table[o.L_Solid],
             name: design.model.symbol_table[o.L_Solid].name, 
-            message: check_message(design,o.L_Solid,'>=',o.L_Free),
+            message: check_message(design,o.L_Solid,'>=',o.Free_Length),
             severity: ERR,
             duplicate: true
         });
@@ -233,7 +233,7 @@ export function checks(store) {        /*    Compression  Spring  */
     check_DCD_alert(design.model.symbol_table[o.FS_Solid], MIN, 'C');
     check_DCD_alert(design.model.symbol_table[o.PC_Avail_Deflect], MAX, 'C');
 
-    var deflectRatio = design.model.symbol_table[o.Deflect_2].value / design.model.symbol_table[o.L_Free].value;
+    var deflectRatio = design.model.symbol_table[o.Deflect_2].value / design.model.symbol_table[o.Free_Length].value;
     var sq1 = 1.4 * design.model.symbol_table[o.Slenderness].value - 4.0;
     var buckleMsg;
     if (sq1 > design.model.system_controls.smallnum) {  /* structured to avoid div by 0 */
@@ -263,7 +263,7 @@ export function checks(store) {        /*    Compression  Spring  */
             });
         }
     }
-    var PC_Avail_Deflect1 = 100.0 * design.model.symbol_table[o.Deflect_1].value / (design.model.symbol_table[o.L_Free].value - design.model.symbol_table[o.L_Solid].value); 
+    var PC_Avail_Deflect1 = 100.0 * design.model.symbol_table[o.Deflect_1].value / (design.model.symbol_table[o.Free_Length].value - design.model.symbol_table[o.L_Solid].value); 
     if (PC_Avail_Deflect1 < 20.0) {
         addAlert({
             value: PC_Avail_Deflect1, 

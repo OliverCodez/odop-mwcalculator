@@ -92,7 +92,7 @@ export class Calculator extends ReportBase {
                                 <Value id="Deflection_Max_Safe" value={this.def_max} />
                                 <Value id="Force_Max_Safe" value={this.safe_load} />
                                 <Value id="OD_Max_Safe" value={this.od_max} />
-                                <Value id="ID_Max_Safe" value={this.od_max - (2.0 * this.props.symbol_table[o.Wire_Dia].value)} />
+                                <Value id="ID_Max_Safe" value={this.od_max - (2.0 * this.props.symbol_table[o.Wire_Diameter].value)} />
                                 <SymbolValue element={this.props.symbol_table[o.Stress_Lim_Bnd_Stat]} index={o.Stress_Lim_Bnd_Stat} />
                                 <Value id="Static_FS_Max_Safe" value={1.0} />
                             </tr>
@@ -108,14 +108,14 @@ export class Calculator extends ReportBase {
                                 <SymbolValue element={this.props.symbol_table[o.Stroke]} index={o.Stroke} />
                                 <SymbolUnits element={this.props.symbol_table[o.Stroke]} index={o.Stroke} className="text-left" />
                                 <td> &nbsp; &nbsp; </td>
-                                <SymbolName element={this.props.symbol_table[o.Wire_Dia]} index={o.Wire_Dia} />
-                                <SymbolValueWireDia element={this.props.symbol_table[o.Wire_Dia]} index={o.Wire_Dia} />
-                                <SymbolUnits element={this.props.symbol_table[o.Wire_Dia]} index={o.Wire_Dia} className="text-left" />
+                                <SymbolName element={this.props.symbol_table[o.Wire_Diameter]} index={o.Wire_Diameter} />
+                                <SymbolValueWireDia element={this.props.symbol_table[o.Wire_Diameter]} index={o.Wire_Diameter} />
+                                <SymbolUnits element={this.props.symbol_table[o.Wire_Diameter]} index={o.Wire_Diameter} className="text-left" />
                             </tr>
                             <tr>
-                                <SymbolName element={this.props.symbol_table[o.Coils_T]} index={o.Coils_T} />
-                                <SymbolValue element={this.props.symbol_table[o.Coils_T]} index={o.Coils_T} />
-                                <SymbolUnits element={this.props.symbol_table[o.Coils_T]} index={o.Coils_T} className="text-left" />
+                                <SymbolName element={this.props.symbol_table[o.Total_Coils]} index={o.Total_Coils} />
+                                <SymbolValue element={this.props.symbol_table[o.Total_Coils]} index={o.Total_Coils} />
+                                <SymbolUnits element={this.props.symbol_table[o.Total_Coils]} index={o.Total_Coils} className="text-left" />
                                 <td> &nbsp; &nbsp; </td>
                                 <SymbolName element={this.props.symbol_table[o.Spring_Index]} index={o.Spring_Index} />
                                 <SymbolValue element={this.props.symbol_table[o.Spring_Index]} index={o.Spring_Index} />

@@ -43,7 +43,7 @@ to become over-specified.
 
 The various [tutorial and demo sessions](tutordemo.html) provide additional insights. 
 
-<!--- ToDo: create a hints article/topic for spring design.  Keep Wire_Dia free.  See guidedDesign.  etc. --> 
+<!--- ToDo: create a hints article/topic for spring design.  Keep Wire_Diameter free.  See guidedDesign.  etc. --> 
 
 See Also:   
  - [Setting Values](settingValues.html)   

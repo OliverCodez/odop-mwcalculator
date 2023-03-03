@@ -182,13 +182,13 @@ export const execute = {
                     
                     <p>
                     In the process of moving to the following page, the tutorial will impose a new value 
-                    for an input (Independent Variable) ... the free length (L_Free) of our compression spring. 
+                    for an input (Independent Variable) ... the free length (Free_Length) of our compression spring. 
                     Take note of the current value of %_Avail_Deflect so that you can see the 
                     impact of the change.
                     </p>
                     
                     <p>
-                    When you click on Next, the tutorial will set the value of L_Free to 3.0 inches.
+                    When you click on Next, the tutorial will set the value of Free_Length to 3.0 inches.
                     </p>
                 </>
             )
@@ -198,13 +198,13 @@ export const execute = {
             text: (
                 <>
                     <p>
-                    The tutorial has now entered a value of 3.0 inches for L_Free. 
+                    The tutorial has now entered a value of 3.0 inches for Free_Length. 
                     In the shorthand summary that will be used in the remaining tutorial 
                     and demo sessions, the action was:
                     </p>
                     
                     <p>
-                    CHANGE  L_Free  3.0<br />
+                    CHANGE  Free_Length  3.0<br />
                     </p>
                     
                     <p>
@@ -215,7 +215,7 @@ export const execute = {
                     </p>
                     
                     <p>
-                    Also notice that this change to L_Free by this tutorial session did not leave it in Fixed status.
+                    Also notice that this change to Free_Length by this tutorial session did not leave it in Fixed status.
                     By default, the ODOP AutoFix feature is enabled. 
                     Thus, a user making a change to the value of an independent variable like OD_Free 
                     will leave it in Fixed status. 
@@ -223,7 +223,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                changeSymbolValue("L_Free", 3.0)
+                changeSymbolValue("Free_Length", 3.0)
             ]
         },
         {
@@ -246,9 +246,9 @@ export const execute = {
                     </p>
                     
                     <p>
-                    When you click on Next, the tutorial will impose a value of 12 coils (turns) on Coils_T.<br />
+                    When you click on Next, the tutorial will impose a value of 12 coils (turns) on Total_Coils.<br />
                     <br />
-                    CHANGE Coils_T 12
+                    CHANGE Total_Coils 12
                     </p>
                 </>
             )
@@ -274,16 +274,16 @@ export const execute = {
                     
                     <p>
                     Before we get into Search, let's suppose that we really don't want 
-                    the Search process to change either the 0.1055 inch value for Wire_Dia or the 
+                    the Search process to change either the 0.1055 inch value for Wire_Diameter or the 
                     39 pound value of Force_2 that were established by default (the initialState).
                     When you click Next, the tutorial will check the appropriate Fix checkboxes 
                     (positioned between the Value entry fields and the Units fields) 
-                    to put Wire_Dia and Force_2 into Fixed status.
+                    to put Wire_Diameter and Force_2 into Fixed status.
                     </p>
                 </>
             ),
             actions: [
-                changeSymbolValue("Coils_T",12)
+                changeSymbolValue("Total_Coils",12)
             ]
         },
         {
@@ -291,13 +291,13 @@ export const execute = {
             text: (
                 <>
                     <p>
-                    Now, the Fix checkboxes for Wire_Dia and Force_2 are checked. 
+                    Now, the Fix checkboxes for Wire_Diameter and Force_2 are checked. 
                     Also, Fixed status is indicated by heavy borders at the right and left of the Value field. 
                     </p>
                     
                     <p>
-                    By having Wire_Dia and Force_2 in Fixed status, the search will be able to adjust
-                    only the values of OD_Free, Wire_Dia, L_Free and Coils_T to find a design that 
+                    By having Wire_Diameter and Force_2 in Fixed status, the search will be able to adjust
+                    only the values of OD_Free, Wire_Diameter, Free_Length and Total_Coils to find a design that 
                     does not exceed the maximum on %_Avail_Deflect.
                     Of course, the entire collection of Dependent Variables will respond 
                     to any changes in the Independent Variables.
@@ -306,7 +306,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('Wire_Dia'),
+                fixSymbolValue('Wire_Diameter'),
                 fixSymbolValue('Force_2')
             ]
         },
@@ -344,7 +344,7 @@ export const execute = {
                     
                     <p>
                     Indeed, the design now utilizes less than 90 percent of its available deflection.
-                    Also, Wire_Dia has remained at 0.1055 inches 
+                    Also, Wire_Diameter has remained at 0.1055 inches 
                     and Force_2 at 39 pounds as specified. 
                     </p>
                     

@@ -5,9 +5,9 @@ import { changeSymbolValue } from '../actionCreators';
 export function resetCatalogSelection(store, action) {
 //    console.log('<li>','Start resetCatalogSelection store=',store,'action=',action,'</li><ul>');
     if (action.payload.name === "OD_Free" || // Compression and Extension
-        action.payload.name === "Wire_Dia" || // Compression and Extension
-        action.payload.name === "L_Free" || // Compression Only
-        action.payload.name === "Coils_T" || // Compression and Extension
+        action.payload.name === "Wire_Diameter" || // Compression and Extension
+        action.payload.name === "Free_Length" || // Compression Only
+        action.payload.name === "Total_Coils" || // Compression and Extension
         action.payload.name === "Initial_Tension" || // Extension Only
         action.payload.name === "Material_Type" || // Compression and Extension
         action.payload.name === "End_Type") { // Compression and Extension

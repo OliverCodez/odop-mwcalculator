@@ -81,10 +81,10 @@ export const execute = {
                         <li>
                         By default, the selected Material_Type is used to get values from 
                         an internal table. These values
-                        are combined with the current Wire_Dia and the cycle life target to
+                        are combined with the current Wire_Diameter and the cycle life target to
                         calculate the values of the allowable stresses: Stress_Lim_Endur and
                         Stress_Lim_Stat.  Thus, every time the user or the search changes the
-                        value of Wire_Dia, a new set of allowable stresses is calculated,
+                        value of Wire_Diameter, a new set of allowable stresses is calculated,
                         resulting in new factor of safety values.
                         </li>
                         <li>
@@ -96,7 +96,7 @@ export const execute = {
                         </li>
                     </ol>
                     <p>
-                    The later two options eliminate the dependence on Wire_Dia.
+                    The later two options eliminate the dependence on Wire_Diameter.
                     </p>
                     <br /><br />
                 </>
@@ -123,7 +123,7 @@ export const execute = {
                     <p>
                     Observe how selecting different materials changes the values of 
                     Torsion_Modulus, Tensile, %_Tensile_Stat and %_Tensile_Endur.
-                    Observe how changes in Wire_Dia impact the values of 
+                    Observe how changes in Wire_Diameter impact the values of 
                     the allowable stresses Stress_Lim_Endur and Stress_Lim_Stat.
                     </p>
                     
@@ -136,7 +136,7 @@ export const execute = {
                     In summary ... by default, Material_Type is used
                     to get the values of Torsion_Modulus, Tensile,
                     %_Tensile_Endur and %_Tensile_Stat from the material table.  These
-                    values are combined with the current Wire_Dia to calculate the values of
+                    values are combined with the current Wire_Diameter to calculate the values of
                     the allowable stresses Stress_Lim_Endur and Stress_Lim_Stat.
                     In turn, those allowable stress values are used to calculate the
                     Factor of Safety numbers that can be used as constraints on the design.
@@ -175,7 +175,7 @@ export const execute = {
                     Specifically, setting Prop_Calc_Method to <b>"2-Use Tensile & %_Tensile_..."</b>
                     will allow the user to establish arbitrary values for
                     Torsion_Modulus, Tensile, %_Tensile_Endur and %_Tensile_Stat.
-                    Wire_Dia will no longer be a factor in the calculation of allowable stresses
+                    Wire_Diameter will no longer be a factor in the calculation of allowable stresses
                     Stress_Lim_Endur and Stress_Lim_Stat.
                     </p>
                 
@@ -185,7 +185,7 @@ export const execute = {
                     Experiment with changing the values listed above.
                     Observe that Stress_Lim_Endur and Stress_Lim_Stat are now determined by the 
                     user specified values of Tensile, %_Tensile_Endur and %_Tensile_Stat
-                    and are no longer dependent on Wire_Dia.
+                    and are no longer dependent on Wire_Diameter.
                     </p>
                     <br />
                 </>
@@ -205,7 +205,7 @@ export const execute = {
                     In the case that Prop_Calc_Method is set to "3-Use Stress_Lim_..."
                     ODOP:Spring will assume that the allowable stresses 
                     (Stress_Lim_Endur and Stress_Lim_Stat) are directly set by the user. 
-                    There is no relationship to Wire_Dia. 
+                    There is no relationship to Wire_Diameter. 
                     </p>
                     
                     <p>
@@ -213,7 +213,7 @@ export const execute = {
                     Prop_Calc_Method to "3-Use Stress_Lim_...".
                     Experiment with changing the values listed above.
                     Observe that Stress_Lim_Endur and Stress_Lim_Stat are now directly determined by the 
-                    user specified values and are no longer dependent on Wire_Dia.
+                    user specified values and are no longer dependent on Wire_Diameter.
                     </p>
                     <br />
                 </>

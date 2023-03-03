@@ -165,7 +165,7 @@ export const execute = {
                     ID_Free, M_2 and Deflect_2.
                     The (uncorrected) value of stress is a good match to the handbook's value of 162,800 psi.
                     In order to achieve the specified deflection, 
-                    the value of Coils_T is slightly higher than the handbook's value of 7.04 coils.
+                    the value of Total_Coils is slightly higher than the handbook's value of 7.04 coils.
                     Thus, the value of L_Body is also a bit higher than the handbook's value of 0.504 inch.
                     <br />
                     &nbsp;
@@ -194,7 +194,7 @@ export const execute = {
                     
                     <p>
                     In the process of transitioning to the next page, the demo session will
-                    FIX a value of 0.063 inch on Wire_Dia,
+                    FIX a value of 0.063 inch on Wire_Diameter,
                     adjust the value of Coil_Spacing,
                     change Heat_Treat to "Stress Relieve" in order to utilize a curvature correction factor
                     and then
@@ -209,7 +209,7 @@ export const execute = {
                 <>
                     <p>
                     The demo session has now imposed the values:<br /> 
-                    FIX Wire_Dia 0.063<br /> 
+                    FIX Wire_Diameter 0.063<br /> 
                     CHANGE Coil_Spacing 0.015<br /> 
                     CHANGE Heat_Treat "Stress Relieve"<br /> 
                     and executed another search.
@@ -227,12 +227,12 @@ export const execute = {
                     <p>
                     While the two solutions are in reasonable agreement,
                     the demo session will take one more step and 
-                    impose the handbook's values for OD_Free and Coils_T.
+                    impose the handbook's values for OD_Free and Total_Coils.
                     </p>
                 </>
             ),
             actions: [
-                fixSymbolValue('Wire_Dia', 0.063),
+                fixSymbolValue('Wire_Diameter', 0.063),
                 changeSymbolValue("Coil_Spacing",0.015),
                 changeSymbolValue("Heat_Treat",2),
                 search()
@@ -254,14 +254,14 @@ export const execute = {
                     </p>
                     
                     <p>
-                    The shift in OD_Free and Coils_T have resulted in a small change in deflection at point 2.
+                    The shift in OD_Free and Total_Coils have resulted in a small change in deflection at point 2.
                     Even so, the two solutions are still in reasonable agreement.
                     </p>
                 </>
             ),
             actions: [
                 changeSymbolValue("OD_Free",0.876),
-                changeSymbolValue("Coils_T",7.0),
+                changeSymbolValue("Total_Coils",7.0),
             ]
         }
     ]

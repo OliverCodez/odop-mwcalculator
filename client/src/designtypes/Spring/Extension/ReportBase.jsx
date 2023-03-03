@@ -30,11 +30,11 @@ export class ReportBase extends Component {
         
         this.len_lbl = "Wire Length";
 
-        var sq1 = this.props.symbol_table[o.Wire_Dia].value * this.props.symbol_table[o.Coils_T].value;
-        var sq2 = this.props.symbol_table[o.Coils_T].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value;
+        var sq1 = this.props.symbol_table[o.Wire_Diameter].value * this.props.symbol_table[o.Total_Coils].value;
+        var sq2 = this.props.symbol_table[o.Total_Coils].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value;
         this.wire_len_t = Math.sqrt(sq1 * sq1 + sq2 * sq2)
-            + Math.PI * (this.props.symbol_table[o.End_ID].value + this.props.symbol_table[o.Wire_Dia].value
-            + this.props.symbol_table[o.Extended_End_ID].value + this.props.symbol_table[o.Wire_Dia].value)
+            + Math.PI * (this.props.symbol_table[o.End_ID].value + this.props.symbol_table[o.Wire_Diameter].value
+            + this.props.symbol_table[o.Extended_End_ID].value + this.props.symbol_table[o.Wire_Diameter].value)
             + this.props.symbol_table[o.End_Extension].value;
 
         this.wgt1000 = 1000.0 * this.props.symbol_table[o.Weight].value;
@@ -43,16 +43,16 @@ export class ReportBase extends Component {
         this.wire_len_a = sq1 * sq1 + sq2 * sq2;
         
         this.dhat = this.def_dia(sq1 + this.props.symbol_table[o.Deflect_1].value);
-        this.od_1 = this.dhat + this.props.symbol_table[o.Wire_Dia].value;
-        this.id_1 = this.dhat - this.props.symbol_table[o.Wire_Dia].value;
+        this.od_1 = this.dhat + this.props.symbol_table[o.Wire_Diameter].value;
+        this.id_1 = this.dhat - this.props.symbol_table[o.Wire_Diameter].value;
         
         this.dhat = this.def_dia(sq1 + this.props.symbol_table[o.Deflect_2].value);
-        this.od_2 = this.dhat + this.props.symbol_table[o.Wire_Dia].value;
-        this.id_2 = this.dhat - this.props.symbol_table[o.Wire_Dia].value;
+        this.od_2 = this.dhat + this.props.symbol_table[o.Wire_Diameter].value;
+        this.id_2 = this.dhat - this.props.symbol_table[o.Wire_Diameter].value;
 
         var kc = (4.0 * this.props.symbol_table[o.Spring_Index].value - 1.0) / (4.0 * this.props.symbol_table[o.Spring_Index].value - 4.0);
         var ks = kc + 0.615 / this.props.symbol_table[o.Spring_Index].value;
-        var wd3 = this.props.symbol_table[o.Wire_Dia].value * this.props.symbol_table[o.Wire_Dia].value * this.props.symbol_table[o.Wire_Dia].value;
+        var wd3 = this.props.symbol_table[o.Wire_Diameter].value * this.props.symbol_table[o.Wire_Diameter].value * this.props.symbol_table[o.Wire_Diameter].value;
         var s_f = ks * 8.0 * this.props.symbol_table[o.Mean_Dia].value / (Math.PI * wd3);
 
         this.kw1 = ks;
@@ -81,8 +81,8 @@ export class ReportBase extends Component {
         this.pc_avail_deflect = 100.0 * this.props.symbol_table[o.Deflect_2].value / this.safe_travel;
         
         this.dhat = this.def_dia(sq1 + this.safe_travel);
-        this.od_maxsafe = this.dhat + this.props.symbol_table[o.Wire_Dia].value;
-        this.id_maxsafe = this.dhat - this.props.symbol_table[o.Wire_Dia].value;
+        this.od_maxsafe = this.dhat + this.props.symbol_table[o.Wire_Diameter].value;
+        this.id_maxsafe = this.dhat - this.props.symbol_table[o.Wire_Diameter].value;
         this.dhat = this.props.symbol_table[o.Tensile].value / 100.0;
 
         if (this.props.symbol_table[o.End_Type].value !== Close_Wound_Coil && (this.sb > this.props.symbol_table[o.Stress_Lim_Endur].value || this.props.symbol_table[o.Stress_Hook].value > this.props.symbol_table[o.Stress_Lim_Bend].value)) {
@@ -123,7 +123,7 @@ export class ReportBase extends Component {
          * intermediate dia. calcs. assume no wire stretch
          * note that value of this.wire_len_a is actually square of active wire length
          */
-        return Math.sqrt(this.wire_len_a - def_len * def_len) / (this.props.symbol_table[o.Coils_T].value * Math.PI);
+        return Math.sqrt(this.wire_len_a - def_len * def_len) / (this.props.symbol_table[o.Total_Coils].value * Math.PI);
     }
 
 }

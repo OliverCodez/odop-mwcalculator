@@ -19,36 +19,36 @@ export function checks(store) {        /*    Compression  Spring  */
 
 // Alerts common to all round-wire coil springs 
 
-    if (design.model.symbol_table[o.Wire_Dia].value > design.model.symbol_table[o.ID_Free].value) {
+    if (design.model.symbol_table[o.Wire_Diameter].value > design.model.symbol_table[o.ID_Free].value) {
         addAlert({
-            element: design.model.symbol_table[o.Wire_Dia],
-            name: design.model.symbol_table[o.Wire_Dia].name, 
-            message: check_message(design,o.Wire_Dia,'>',o.ID_Free),
+            element: design.model.symbol_table[o.Wire_Diameter],
+            name: design.model.symbol_table[o.Wire_Diameter].name, 
+            message: check_message(design,o.Wire_Diameter,'>',o.ID_Free),
             severity: WARN,
-            help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#Wire_Dia_GT_ID_Free)'
+            help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#Wire_Diameter_GT_ID_Free)'
         });
         addAlert({
             element: design.model.symbol_table[o.ID_Free],
             name: design.model.symbol_table[o.ID_Free].name, 
-            message: check_message(design,o.ID_Free,'<=',o.Wire_Dia),
+            message: check_message(design,o.ID_Free,'<=',o.Wire_Diameter),
             severity: WARN,
             duplicate: true
         });
     }
-    if (design.model.symbol_table[o.Wire_Dia].value < 0.5 * design.model.symbol_table[o.tbase010].value && design.model.symbol_table[o.Prop_Calc_Method].value === 1) {
+    if (design.model.symbol_table[o.Wire_Diameter].value < 0.5 * design.model.symbol_table[o.tbase010].value && design.model.symbol_table[o.Prop_Calc_Method].value === 1) {
         addAlert({
-            element: design.model.symbol_table[o.Wire_Dia],
-            name: design.model.symbol_table[o.Wire_Dia].name, 
-            message: 'Material properties for this ' + design.model.symbol_table[o.Wire_Dia].name + ' (' + design.model.symbol_table[o.Wire_Dia].value.toODOPPrecision() + ') may not be accurate.',
+            element: design.model.symbol_table[o.Wire_Diameter],
+            name: design.model.symbol_table[o.Wire_Diameter].name, 
+            message: 'Material properties for this ' + design.model.symbol_table[o.Wire_Diameter].name + ' (' + design.model.symbol_table[o.Wire_Diameter].value.toODOPPrecision() + ') may not be accurate.',
             severity: WARN,
             help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#MatPropAccuracy)'
         });
     }
-    if (design.model.symbol_table[o.Wire_Dia].value > 5.0 * design.model.symbol_table[o.tbase400].value && design.model.symbol_table[o.Prop_Calc_Method].value === 1) {
+    if (design.model.symbol_table[o.Wire_Diameter].value > 5.0 * design.model.symbol_table[o.tbase400].value && design.model.symbol_table[o.Prop_Calc_Method].value === 1) {
         addAlert({
-            element: design.model.symbol_table[o.Wire_Dia],
-            name: design.model.symbol_table[o.Wire_Dia].name, 
-            message: 'Material properties for this ' + design.model.symbol_table[o.Wire_Dia].name + ' (' + design.model.symbol_table[o.Wire_Dia].value.toODOPPrecision() + ') may not be accurate.',
+            element: design.model.symbol_table[o.Wire_Diameter],
+            name: design.model.symbol_table[o.Wire_Diameter].name, 
+            message: 'Material properties for this ' + design.model.symbol_table[o.Wire_Diameter].name + ' (' + design.model.symbol_table[o.Wire_Diameter].value.toODOPPrecision() + ') may not be accurate.',
             severity: WARN,
             help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#MatPropAccuracy)'
         });
@@ -219,7 +219,7 @@ export function checks(store) {        /*    Compression  Spring  */
             duplicate: true
         });
     }
-    var wd3 = design.model.symbol_table[o.Wire_Dia].value * design.model.symbol_table[o.Wire_Dia].value * design.model.symbol_table[o.Wire_Dia].value;
+    var wd3 = design.model.symbol_table[o.Wire_Diameter].value * design.model.symbol_table[o.Wire_Diameter].value * design.model.symbol_table[o.Wire_Diameter].value;
         /*  ref. pg 51 Associated Spring Design Handbook - assume C2=4; i.e. R2=twice wire dia   */
     var sb = 1.25 * (8.0 * design.model.symbol_table[o.Mean_Dia].value * design.model.symbol_table[o.Force_2].value) / (Math.PI * wd3);
     const Close_Wound_Coil = 5;

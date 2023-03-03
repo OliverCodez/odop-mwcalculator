@@ -58,8 +58,8 @@ that will resolve the alerts.
  - [Functionally Determined Constraint Level (FDCL) is enabled](alerts.html#FDCL)  
 
 ### On other pages (design type specific alerts):   
- - [Wire_Dia > ID_Free](/docs/Help/DesignTypes/Spring/alerts.html#Wire_Dia_GT_ID_Free)  
- - [Material properties for this Wire_Dia may not be accurate](/docs/Help/DesignTypes/Spring/alerts.html#MatPropAccuracy)  
+ - [Wire_Diameter > ID_Free](/docs/Help/DesignTypes/Spring/alerts.html#Wire_Diameter_GT_ID_Free)  
+ - [Material properties for this Wire_Diameter may not be accurate](/docs/Help/DesignTypes/Spring/alerts.html#MatPropAccuracy)  
  - [FS_CycleLife MIN not set](/docs/Help/DesignTypes/Spring/alerts.html#FS_CycleLife_MIN_not_set)  
  - [Over-design concern](/docs/Help/DesignTypes/Spring/alerts.html#OverDesign)  
  - [Coils_A is less than 1](/docs/Help/DesignTypes/Spring/alerts.html#Coils_A_LT_1)  

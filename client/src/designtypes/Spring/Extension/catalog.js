@@ -94,12 +94,12 @@ function convertToResultArray(entry) {
 //    console.log('In convertToResultArray entry=',entry);
     var result;
     var entry_select = entry[0].replace('-', '\u2011');
-    var entry_table = `OD_Free:\u00A0${entry[1]}, Wire_Dia:\u00A0${entry[2]}, Coils_T:\u00A0${entry[3]}, Initial_Tension:\u00A0${entry[4]}, Material_Type:\u00A0${entry[5]}, End_Type:\u00A0${entry[6]}, Obj:\u00A0${entry[9]}`;
+    var entry_table = `OD_Free:\u00A0${entry[1]}, Wire_Diameter:\u00A0${entry[2]}, Total_Coils:\u00A0${entry[3]}, Initial_Tension:\u00A0${entry[4]}, Material_Type:\u00A0${entry[5]}, End_Type:\u00A0${entry[6]}, Obj:\u00A0${entry[9]}`;
     // Convert to changeSymbolValue array
     var entry_symbol_values = [];
     entry_symbol_values.push(['OD_Free',entry[1]]);
-    entry_symbol_values.push(['Wire_Dia',entry[2]]);
-    entry_symbol_values.push(['Coils_T',entry[3]]);
+    entry_symbol_values.push(['Wire_Diameter',entry[2]]);
+    entry_symbol_values.push(['Total_Coils',entry[3]]);
     entry_symbol_values.push(['Initial_Tension',entry[4]]);
     entry_symbol_values.push(['Material_Type',entry[7]]);
     entry_symbol_values.push(['End_Type',entry[8]]);
@@ -142,10 +142,10 @@ export function getCatalogEntries(name, store, st, viol_wt) {
     // Create implied constraints between half and twice
     var cmin_OD_Free = st[o.OD_Free].value/2;
     var cmax_OD_Free = st[o.OD_Free].value*2;
-    var cmin_Wire_Dia = st[o.Wire_Dia].value/2;
-    var cmax_Wire_Dia = st[o.Wire_Dia].value*2;
-    var cmin_Coils_T = st[o.Coils_T].value/2;
-    var cmax_Coils_T = st[o.Coils_T].value*2;
+    var cmin_Wire_Diameter = st[o.Wire_Diameter].value/2;
+    var cmax_Wire_Diameter = st[o.Wire_Diameter].value*2;
+    var cmin_Total_Coils = st[o.Total_Coils].value/2;
+    var cmax_Total_Coils = st[o.Total_Coils].value*2;
     var cmin_Initial_Tension = st[o.Initial_Tension].value/2;
     var cmax_Initial_Tension = st[o.Initial_Tension].value*2;
 
@@ -154,31 +154,31 @@ export function getCatalogEntries(name, store, st, viol_wt) {
 //    console.log('In getCatalogEntries catalog=',catalog);
     
     entry = Object.assign({},catalog[0]);
-    var L_FreeStyle;
+    var Free_LengthStyle;
     var temp;
     const END_DIAMETERS = 1.75;  // TODO:  this is a kludge.  Needs better.
-    if (entry[3] === "L_Free") {
-        L_FreeStyle = true;
+    if (entry[3] === "Free_Length") {
+        Free_LengthStyle = true;
     }
     else {
-        L_FreeStyle = false;
+        Free_LengthStyle = false;
     }
     
     // scan through catalog
     for (let i = 1; i < catalog.length; i++) { // Skip column headers at zeroth entry
         entry = Object.assign({},catalog[i]); // Make copy so we can modify it without affecting catalog
         
-        if (L_FreeStyle) {
+        if (Free_LengthStyle) {
             temp = entry[1] - 2.0 * entry[2];   //   inside diameter
             temp = END_DIAMETERS * temp;        //   total hook allowance
-            entry[3] = (entry[3] - temp) / entry[2];  //  corrected value of Coils_T
-//            console.log("corrected Coils_T = ", entry[0], entry[3]);
+            entry[3] = (entry[3] - temp) / entry[2];  //  corrected value of Total_Coils
+//            console.log("corrected Total_Coils = ", entry[0], entry[3]);
         }
         
         // Skip catalog entry if it's less than half the constraint value or greater than twice the constraint value
         if (entry[1] < cmin_OD_Free         || entry[1] > cmax_OD_Free        ) continue;
-        if (entry[2] < cmin_Wire_Dia        || entry[2] > cmax_Wire_Dia       ) continue;
-        if (entry[3] < cmin_Coils_T         || entry[3] > cmax_Coils_T        ) continue;
+        if (entry[2] < cmin_Wire_Diameter        || entry[2] > cmax_Wire_Diameter       ) continue;
+        if (entry[3] < cmin_Total_Coils         || entry[3] > cmax_Total_Coils        ) continue;
         if (entry[4] < cmin_Initial_Tension || entry[4] > cmax_Initial_Tension) continue;
         
         entry[7] = m_tab.findIndex(findMaterialTypeIndex); // Set matching Material Type index
@@ -186,8 +186,8 @@ export function getCatalogEntries(name, store, st, viol_wt) {
         
         // Update with catalog entries
         st[o.OD_Free].value = entry[1];
-        st[o.Wire_Dia].value = entry[2];
-        st[o.Coils_T].value = entry[3];
+        st[o.Wire_Diameter].value = entry[2];
+        st[o.Total_Coils].value = entry[3];
         st[o.Initial_Tension].value = entry[4];
         st[o.Material_Type].value = entry[7]; // Use Material Type index
         st[o.End_Type].value = entry[8]; // Use End Type index

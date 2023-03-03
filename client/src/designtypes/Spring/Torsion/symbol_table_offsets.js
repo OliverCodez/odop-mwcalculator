@@ -1,7 +1,7 @@
 // Variables
 export const OD_Free = 0;
-export const Wire_Dia = 1;
-export const Coils_T = 2;
+export const Wire_Diameter = 1;
+export const Total_Coils = 2;
 export const M_1 = 3;
 export const M_2 = 4;
 export const Coil_Spacing = 5;

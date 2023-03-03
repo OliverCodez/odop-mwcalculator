@@ -218,7 +218,7 @@ export const execute = {
                     As a general rule, in the first approach to a new problem, 
                     let the calculations use an arbitrary (non-standard) wire diameter. 
                     As a last step, select a standard wire diameter.
-                    Then with Wire_Dia in FIXed status, execute a search to make any necessary 
+                    Then with Wire_Diameter in FIXed status, execute a search to make any necessary 
                     adjustments in the remaining free Independent Variables.
                     </p>
                     
@@ -229,9 +229,9 @@ export const execute = {
                     to chose the nearest standard wire diameter.
                     <br /><br />
                     In Demo / Tutorial speak:<br />
-                    Select  Size  Wire_Dia  0.135<br />
+                    Select  Size  Wire_Diameter  0.135<br />
                     <br />
-                    Please confirm that Wire_Dia is FIXed at 0.135 and then click Next 
+                    Please confirm that Wire_Diameter is FIXed at 0.135 and then click Next 
                     to move to the next page.
                     </p>
                 </>

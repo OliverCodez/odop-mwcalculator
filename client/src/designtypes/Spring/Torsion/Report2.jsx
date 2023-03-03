@@ -40,10 +40,10 @@ class Report2 extends ReportBase {
                             <td className="text-left" colSpan="2">{this.matTypeValue}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Wire_Dia].name}</td>
+                            <td>{this.props.symbol_table[o.Wire_Diameter].name}</td>
                             <td>=</td>
-                            <td>{this.props.symbol_table[o.Wire_Dia].value.toFixed(4)}</td>
-                            <td className="text-left">{this.props.symbol_table[o.Wire_Dia].units}</td>
+                            <td>{this.props.symbol_table[o.Wire_Diameter].value.toFixed(4)}</td>
+                            <td className="text-left">{this.props.symbol_table[o.Wire_Diameter].units}</td>
                             <td/>
                             <td>{this.props.symbol_table[o.Elastic_Modulus].name}</td>
                             <td>=</td>

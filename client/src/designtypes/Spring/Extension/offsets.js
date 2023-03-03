@@ -1,7 +1,7 @@
 // Independent Variables (input-only)
 export const OD_Free = 0;
-export const Wire_Dia = 1;
-export const Coils_T = 2;
+export const Wire_Diameter = 1;
+export const Total_Coils = 2;
 export const Initial_Tension = 3;
 export const End_Extension = 4;
 export const Force_1 = 5;
@@ -15,7 +15,7 @@ export const Rate = 3;
 export const Deflect_1 = 4;
 export const Deflect_2 = 5;
 export const L_Body = 6;
-export const L_Free = 7;
+export const Free_Length = 7;
 export const L_1 = 8;
 export const L_2 = 9;
 export const L_Stroke = 10;

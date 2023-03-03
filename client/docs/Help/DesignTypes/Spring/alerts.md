@@ -3,8 +3,8 @@
 Alerts common to all round-wire coil springs 
 
 ### On this page:   
- - [Wire_Dia > ID_Free](alerts.html#Wire_Dia_GT_ID_Free)  
- - [Material properties for this Wire_Dia may not be accurate](alerts.html#MatPropAccuracy)  
+ - [Wire_Diameter > ID_Free](alerts.html#Wire_Diameter_GT_ID_Free)  
+ - [Material properties for this Wire_Diameter may not be accurate](alerts.html#MatPropAccuracy)  
  - [FS_CycleLife MIN not set](alerts.html#FS_CycleLife_MIN_not_set)  
  - [Over-design concern](alerts.html#OverDesign)  
  - [Coils_A is less than 1](alerts.html#Coils_A_LT_1)  
@@ -17,16 +17,16 @@ Alerts common to all round-wire coil springs
 
 ___
 
-<a id="Wire_Dia_GT_ID_Free"></a>  
+<a id="Wire_Diameter_GT_ID_Free"></a>  
 ___
 
 Alert entry #S51
-## Wire_Dia > ID_Free 
-The wire diameter (Wire_Dia) is greater than the coil inside diameter (ID_Free).
+## Wire_Diameter > ID_Free 
+The wire diameter (Wire_Diameter) is greater than the coil inside diameter (ID_Free).
 
 Most spring wire is not sufficiently ductile to be wound this tight. 
 
-Resolve this alert by increasing the value of OD_Free or decreasing the value of Wire_Dia. 
+Resolve this alert by increasing the value of OD_Free or decreasing the value of Wire_Diameter. 
 
 Alternatively, confirm that the Spring_Index MIN constraint is enabled at a constraint level of 4 or greater 
 and run Search (menu Action : Search or the Search button). 
@@ -40,7 +40,7 @@ ___
 ___
 
 Alert entry #S52
-## Material properties for this Wire_Dia may not be accurate. 
+## Material properties for this Wire_Diameter may not be accurate. 
 This message is provided to warn the user that the current value for wire diameter is well outside 
 the anticipated range for the selected material type and
 the material properties from the internal table may not be completely accurate. 
@@ -48,7 +48,7 @@ the material properties from the internal table may not be completely accurate.
 Specifically, the ODOP : Spring software uses an interpolation / extrapolation mechanism to calculate a new value 
 of tensile strength for each new wire diameter that is evaluated. 
 The specific numbers involved change with each different material in the materials table. 
-In this case, the current value of Wire_Dia requires an extrapolation significantly outside the range covered by values in 
+In this case, the current value of Wire_Diameter requires an extrapolation significantly outside the range covered by values in 
 the materials table. 
 Thus, the corresponding values for tensile strength may not be completely accurate. 
 
@@ -95,7 +95,7 @@ The term "over-design" implies that this design may be excessively conservative.
 Its Factor of Safety at operating point 2 exceeds the maximum constraint. 
 
 Suggest investigating a smaller wire diameter. 
-One approach is to run Search (menu Action : Search or Search button) with Wire_Dia in Free status. 
+One approach is to run Search (menu Action : Search or Search button) with Wire_Diameter in Free status. 
 
 Later, when ready to finalize the design, 
 investigate design variations with the nearest standard wire diameters. 
@@ -187,7 +187,7 @@ Change inputs such that stress at working point 2 (maximum operating load) is re
 
 Increase | &nbsp; | Decrease  
 ---      | ---    | ---  
-Wire_Dia | &nbsp; | Force_2 or M_2 
+Wire_Diameter | &nbsp; | Force_2 or M_2 
  &nbsp;  | &nbsp; | OD_Free  
 
 Perhaps the best approach is to to confirm that one or more of these variables is in Free status 

@@ -109,7 +109,7 @@ export const execute = {
                     
                     In summary, the changes were:<br />
                     FIX OD_Free 0.925<br />
-                    FIX L_Free 1.713<br />
+                    FIX Free_Length 1.713<br />
                     FIX Force_2 50.0<br />
                     FIX L_2 1.278<br />
                     CHANGE L_Solid MAX 1.060<br />
@@ -122,7 +122,7 @@ export const execute = {
             ),
             actions: [
                 fixSymbolValue('OD_Free', 0.925),
-                fixSymbolValue('L_Free', 1.713),
+                fixSymbolValue('Free_Length', 1.713),
                 fixSymbolValue('Force_2', 50.0),
                 fixSymbolValue('L_2', 1.278),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
@@ -195,11 +195,11 @@ export const execute = {
                     
                     <p>
                     In Demo / Tutorial Speak:<br />
-                    SELECT  Wire_Dia  0.125
+                    SELECT  Wire_Diameter  0.125
                     </p>
                     
                     <p>
-                    Please confirm that Wire_Dia is FIXed at 0.125 inch. 
+                    Please confirm that Wire_Diameter is FIXed at 0.125 inch. 
                     We will need to Search one more time to bring all the numbers into alignment.
                     That Search will happen when you click the Next button.
                     </p>

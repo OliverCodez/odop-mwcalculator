@@ -46,7 +46,7 @@ export const execute = {
             ),
             actions: [
 //                loadInitialState('Spring/Compression'),
-//                changeSymbolValue("L_Free", 3.0),
+//                changeSymbolValue("Free_Length", 3.0),
 //                changeSymbolConstraint('%_Avail_Deflect', MAX, 98.),
 //                changeLabelsValue([{name: 'COMMENT', value: 'tutorTour - Compression Spring tutorial session'}])
             ]

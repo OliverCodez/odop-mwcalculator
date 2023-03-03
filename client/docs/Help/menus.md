@@ -360,7 +360,7 @@ ___
  "Fixed" status.  The user should then execute a Search to obtain 
  corresponding values for the other Independent Variables. 
   
- In spring design Calculator view, selecting a new value of Wire_Dia automatically 
+ In spring design Calculator view, selecting a new value of Wire_Diameter automatically 
  incorporates selection from the appropriate (US, metric) standard size table and 
  automatically puts the selected value in Fixed status. 
 

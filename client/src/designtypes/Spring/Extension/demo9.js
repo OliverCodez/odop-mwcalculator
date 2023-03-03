@@ -109,7 +109,7 @@ export const execute = {
                     &nbsp; CHANGE  Material_Type  OIL_TEMPERED_MB<br />
                     &nbsp; CHANGE  End_Type  75%_Hook<br />
                     &nbsp; FIX  OD_Free  0.5<br />
-                    &nbsp; FIX  L_Free  2.938<br />
+                    &nbsp; FIX  Free_Length  2.938<br />
                     &nbsp; FIX  Force_2  15<br />
                     &nbsp; FIX  L_2     4.688
                     </p>
@@ -126,7 +126,7 @@ export const execute = {
                 changeSymbolValue("Material_Type",3),
                 changeSymbolValue("End_Type",4),
                 fixSymbolValue('OD_Free', 0.5),
-                fixSymbolValue('L_Free', 2.938),
+                fixSymbolValue('Free_Length', 2.938),
                 fixSymbolValue('Force_2', 15.0),
                 fixSymbolValue('L_2', 4.688)
             ]
@@ -175,7 +175,7 @@ export const execute = {
                    
                     <p>
                     In the process of transitioning to the next page, the demo session will
-                    FIX a value of 0.062 inch on Wire_Dia and then
+                    FIX a value of 0.062 inch on Wire_Diameter and then
                     run another search to re-establish corresponding values for all the other problem variables.
                     </p>
                 </>
@@ -216,7 +216,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('Wire_Dia', 0.062),
+                fixSymbolValue('Wire_Diameter', 0.062),
                 search()
             ]
         },
@@ -252,8 +252,8 @@ export const execute = {
                 </>
             ),
             actions: [
-                changeSymbolValue('Wire_Dia', 0.0625),
-                changeSymbolValue('Coils_T', 37.2),
+                changeSymbolValue('Wire_Diameter', 0.0625),
+                changeSymbolValue('Total_Coils', 37.2),
                 fixSymbolValue('Initial_Tension', 3.0),
                 changeSymbolValue("End_Type",6),
                 changeSymbolValue("Hook_Deflect_All",0.0),

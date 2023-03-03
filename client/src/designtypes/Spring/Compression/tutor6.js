@@ -90,7 +90,7 @@ export const execute = {
                     CHANGE  OD_Free MAX  .920 &nbsp; &#60;--- (0.005 margin)<br />
                     CHANGE  L_Solid MAX  1.06<br />
                     <br />
-                    FIX  L_Free   1.713<br />
+                    FIX  Free_Length   1.713<br />
                     FIX  Force_1  0<br />
                     FIX  Force_2 50<br />
                     FIX  L_2      1.278
@@ -103,7 +103,7 @@ export const execute = {
                     <p>
                     The alert panel indicates that there is multiple issues with this design..  
                     When free length is reduced to 1.713 and the load increased to 50 pounds, 
-                    the current values of Wire_Dia and Coils_T 
+                    the current values of Wire_Diameter and Total_Coils 
                     (determined from the initial conditions established at the beginning of this tutorial session) 
                     produced a starting point where L_2, the length at load point 2,
                     is less than zero.  
@@ -120,7 +120,7 @@ export const execute = {
                 changeSymbolConstraint('OD_Free', MAX, 0.920),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.06),
-                fixSymbolValue('L_Free', 1.713),
+                fixSymbolValue('Free_Length', 1.713),
                 fixSymbolValue('Force_1', 0.0),
                 fixSymbolValue('Force_2', 50.0),
                 fixSymbolValue('L_2', 1.278)
@@ -143,11 +143,11 @@ export const execute = {
                     
                     <p>
                     Use the <b>Action : Select Size</b> menu item to find the nearest standard wire diameter.  
-                    It will return with Wire_Dia in FIXed status.
+                    It will return with Wire_Diameter in FIXed status.
                     </p>
                     
                     <p>
-                    In the process of moving to the next page, the tutorial will confirm that Wire_Dia is 
+                    In the process of moving to the next page, the tutorial will confirm that Wire_Diameter is 
                     fixed at 0.120 inch and then run another search.
                     But first, we'll make a small change that will allow ODOP:Spring to
                     consider designs with a slightly larger factor of safety than the default established by 
@@ -196,7 +196,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('Wire_Dia', 0.120),
+                fixSymbolValue('Wire_Diameter', 0.120),
                 changeSymbolConstraint('FS_2', MAX, 1.6),
                 search()
             ]

@@ -55,11 +55,18 @@ input[type=number] {
 .calc-hide-some > thead,
 .calc-hide-some > tbody,
 .calc-hide-someinit > tbody:nth-child(6),
-.calc-hide-someinit > tbody:nth-child(7) {
+.calc-hide-someinit > tbody:nth-child(7),
+.calc-hide-someinit .input-group-append,
+#main_Calculator > .container > .row:first-child {
     display: none!important;
 }
 
 .calc-hide-some > tbody:nth-child(4),
 .calc-hide-some > tbody:nth-child(16) {
     display: table-row-group!important;
+}
+
+.calc-hide-someinit {
+    border-bottom: none !important;
+    margin-bottom: 0!important;
 }

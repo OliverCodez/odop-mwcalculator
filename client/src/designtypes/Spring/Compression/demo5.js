@@ -94,7 +94,7 @@ export const execute = {
                     In summary, the changes were:<br />
                     </p>
                     FIX  OD_Free  1.00<br />
-                    FIX  L_Free   3.25<br />
+                    FIX  Free_Length   3.25<br />
                     FIX  l_2      1.75<br />
                     FIX  Force_1  0.0<br />
                     FIX  Force_2  60.0<br />
@@ -109,7 +109,7 @@ export const execute = {
             ),
             actions: [
                 fixSymbolValue('OD_Free', 1.0),
-                fixSymbolValue('L_Free', 3.25),
+                fixSymbolValue('Free_Length', 3.25),
                 fixSymbolValue('L_2', 1.75),
                 fixSymbolValue('Force_1', 0.0),
                 fixSymbolValue('Force_2', 60.0),
@@ -177,11 +177,11 @@ export const execute = {
                     and chose the nearest standard wire diameter.
                     In summary:
                     <br /><br />
-                    SELECT  Wire_Dia 0.120<br />
+                    SELECT  Wire_Diameter 0.120<br />
                     <br />
                     In any case, to guarantee the expected outcome, the demo session will
-                    to use a FIX to impose the expected value of Wire_Dia.
-                    Look for the new value of Wire_Dia on the next page.
+                    to use a FIX to impose the expected value of Wire_Diameter.
+                    Look for the new value of Wire_Diameter on the next page.
                     </p>
                 </>
             )
@@ -204,7 +204,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('Wire_Dia', 0.120)
+                fixSymbolValue('Wire_Diameter', 0.120)
             ]
         },
         {
@@ -247,15 +247,15 @@ export const execute = {
                     <p>
                     The demo session has now imposed the values:<br />
                     <br />
-                    CHANGE  Wire_Dia  .1205<br />
-                    CHANGE  Coils_T  13
+                    CHANGE  Wire_Diameter  .1205<br />
+                    CHANGE  Total_Coils  13
                     </p>
                     <br />
                 </>
             ),
             actions: [
-                changeSymbolValue("Wire_Dia",0.1205),
-                changeSymbolValue("Coils_T", 13),
+                changeSymbolValue("Wire_Diameter",0.1205),
+                changeSymbolValue("Total_Coils", 13),
             ]
         },
         {

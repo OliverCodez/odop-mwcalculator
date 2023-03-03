@@ -51,9 +51,9 @@ export const execute = {
 //                                       Expect to re-enable NaN in future release
 //                                       "NaN" (Not a Number) may appear if inputs are not complete.
 //                changeSymbolValue("OD_Free", Number.NaN),
-//                changeSymbolValue("Wire_Dia", Number.NaN),
-//                changeSymbolValue("L_Free", Number.NaN),
-//                changeSymbolValue("Coils_T", Number.NaN),
+//                changeSymbolValue("Wire_Diameter", Number.NaN),
+//                changeSymbolValue("Free_Length", Number.NaN),
+//                changeSymbolValue("Total_Coils", Number.NaN),
 //                changeSymbolValue("Force_1", Number.NaN),
 //                changeSymbolValue("Force_2", Number.NaN),
                 changeResultTerminationCondition('When finished reading all four of the Welcome pages above, use the gray "Exit" button in the upper right to close the light green panel.'),
@@ -110,11 +110,11 @@ export const execute = {
                     </p>
                     
                     <p>
-                    The Wire_Dia field of Calculator View provides a list of commonly available wire diameters 
+                    The Wire_Diameter field of Calculator View provides a list of commonly available wire diameters 
                     that depends on the selected Material_Type and 
                     &nbsp;<a href="/docs/Help/SpringDesign/unitsUSmetric.html" target="_blank" rel="noopener noreferrer">units</a>&nbsp; (U.S., metric). 
-                    To choose a standard wire diameter, select the Wire_Dia input field, choose "Select std size", 
-                    click in the Wire_Dia field and scroll to the desired value. 
+                    To choose a standard wire diameter, select the Wire_Diameter input field, choose "Select std size", 
+                    click in the Wire_Diameter field and scroll to the desired value. 
                     After selection, the value is automatically marked with Fixed status so that it is not manipulated by Search.
                     </p>
                     

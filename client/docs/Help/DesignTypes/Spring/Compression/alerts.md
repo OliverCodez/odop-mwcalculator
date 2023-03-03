@@ -49,8 +49,8 @@ to its solid condition (Force_Solid).
 To resolve this alert, where practical, change these values in the direction specified. 
 Increase | &nbsp; | Decrease  
 ---      | ---    | ---  
-Wire_Dia | &nbsp; | Force_2  
- L_Free  | &nbsp; | Coils_T  
+Wire_Diameter | &nbsp; | Force_2  
+ L_Free  | &nbsp; | Total_Coils  
  &nbsp;  | &nbsp; | OD_Free  
  
 Depending on the Fixes and constraints on lengths and deflections associated with the second operating point, 
@@ -70,11 +70,11 @@ having free length (L_Free) specified as less than the solid height (L_Solid) is
 Where practical, change these values in the direction specified. 
 Increase | &nbsp; | Decrease  
 ---      | ---    | ---  
- L_Free  | &nbsp; | Wire_Dia  
- &nbsp;  | &nbsp; | Coils_T
+ L_Free  | &nbsp; | Wire_Diameter  
+ &nbsp;  | &nbsp; | Total_Coils
 
 It may also possible to use Search (menu Action : Search or Search button) to clear this alert. 
-If not immediately successful, confirm that Wire_Dia is in Free status and try Search again. 
+If not immediately successful, confirm that Wire_Diameter is in Free status and try Search again. 
 
 See also: 
  - [Compression Spring Force - Deflection Diagram](/docs/Help/img/ForceVsDeflection.png)
@@ -95,12 +95,12 @@ is an impossible condition.
 Where practical, change these values in the direction specified. 
 Increase  | &nbsp; | Decrease  
 ---       | ---    | ---  
- L_Free   | &nbsp; | Coils_T  
- Wire_Dia | &nbsp; | OD_Free  
+ L_Free   | &nbsp; | Total_Coils  
+ Wire_Diameter | &nbsp; | OD_Free  
  &nbsp;   | &nbsp; | Force_2
 
 It may also possible to use Search (menu Action : Search or Search button) to clear this alert. 
-If not immediately successful, confirm that Wire_Dia is in Free status and try Search again. 
+If not immediately successful, confirm that Wire_Diameter is in Free status and try Search again. 
 
 Compression spring lengths are ordered from the largest (L_Free) to L_1 to L_2 to the smallest (L_Solid). 
 The [Compression Spring Force - Deflection Diagram](/docs/Help/img/ForceVsDeflection.png) provides more detail on this point. 
@@ -125,10 +125,10 @@ where practical, change these values in the direction specified.
 Increase  | &nbsp; | Decrease  
 ---       | ---    | ---  
  OD_Free  | &nbsp; | L_Free  
- Coils_T  | &nbsp; | Wire_Dia  
+ Total_Coils  | &nbsp; | Wire_Diameter  
 
 In order to design a spring that is not over-stressed when deflected to the solid condition: 
- - confirm that the design is not over specified.  For this case, at least one of OD_Free, Wire_Dia, L_Free, and Coils_T must be in Free status and away from binding constraints. 
+ - confirm that the design is not over specified.  For this case, at least one of OD_Free, Wire_Diameter, L_Free, and Total_Coils must be in Free status and away from binding constraints. 
  - confirm that the lower constraint on factor of safety in the solid condition (FS_Solid MIN) is enabled (it is enabled by default) 
  - set that FS_Solid MIN constraint to a value slightly above 1.0 (perhaps 1.1; the default is 1.0) 
  - run the Search feature (menu Action : Search or Search button). 

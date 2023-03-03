@@ -114,11 +114,11 @@ export const execute = {
                     <br />
                     FIX  L_2  0.385<br />
                     FIX  Force_2  7.2<br />
-                    FIX  L_Free  0.475<br />
+                    FIX  Free_Length  0.475<br />
                     <br />
                     We'll leave wire diameter free, but start at the suggested value of 0.035 inch.
                     <br />
-                    CHANGE  Wire_Dia  0.035<br />
+                    CHANGE  Wire_Diameter  0.035<br />
                     </p>
                 </>
             ),
@@ -130,8 +130,8 @@ export const execute = {
                 changeSymbolConstraint('L_Solid', MAX, 0.340),
                 fixSymbolValue('L_2', 0.385),
                 fixSymbolValue('Force_2', 7.2),
-                fixSymbolValue('L_Free', 0.475),
-                changeSymbolValue("Wire_Dia",0.035)
+                fixSymbolValue('Free_Length', 0.475),
+                changeSymbolValue("Wire_Diameter",0.035)
             ]
         },
         {

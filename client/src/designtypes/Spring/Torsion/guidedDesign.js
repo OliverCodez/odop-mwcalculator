@@ -176,7 +176,7 @@ export const execute = {
                     </p>
                     
                     <p>
-                    For the moment, leave wire diameter (Wire_Dia) free.  
+                    For the moment, leave wire diameter (Wire_Diameter) free.  
                     This allows the search to manipulate wire diameter as necessary to achieve those goals.
                     Selecting an available wire size happens later in the session.
                     </p>
@@ -382,7 +382,7 @@ export const execute = {
                     <br /><br />
                     <b>Select the nearest larger standard wire size.</b>
                     <br /><br />
-                    Note that this operation leaves Wire_Dia in Fixed status.
+                    Note that this operation leaves Wire_Diameter in Fixed status.
                     Even a small change in wire diameter has likely caused constraints to be violated.
                     This situation can be resolved.
                     </p>

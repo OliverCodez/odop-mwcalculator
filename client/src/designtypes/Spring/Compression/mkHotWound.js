@@ -31,9 +31,9 @@ export const execute = {
                         <li>{'changeName("HotWound"),'}</li>
                         <li>{'changeLabelsValue([{name: "COMMENT", value: "Hot Wound Compression Spring Startup"}]),'}</li>
                         <li>{'changeSymbolValue("OD_Free", 6.0),'}</li>
-                        <li>{'changeSymbolValue("Wire_Dia", 0.625),'}</li>
-                        <li>{'changeSymbolValue("L_Free", 10.0),'}</li>
-                        <li>{'changeSymbolValue("Coils_T", 7.0),'}</li>
+                        <li>{'changeSymbolValue("Wire_Diameter", 0.625),'}</li>
+                        <li>{'changeSymbolValue("Free_Length", 10.0),'}</li>
+                        <li>{'changeSymbolValue("Total_Coils", 7.0),'}</li>
                         <li>{'changeSymbolValue("Force_1", 400.0),'}</li>
                         <li>{'changeSymbolValue("Force_2", 1200.0),'}</li>
                         <li>{'changeSymbolValue("Material_Type", 16),'}</li>
@@ -63,9 +63,9 @@ export const execute = {
                 changeName("HotWound"),
                 changeLabelsValue([{name: "COMMENT", value: "Hot Wound Compression Spring Startup"}]),
                 changeSymbolValue("OD_Free", 6.0),
-                changeSymbolValue("Wire_Dia", 0.625),
-                changeSymbolValue("L_Free", 10.0),
-                changeSymbolValue("Coils_T", 7.0),
+                changeSymbolValue("Wire_Diameter", 0.625),
+                changeSymbolValue("Free_Length", 10.0),
+                changeSymbolValue("Total_Coils", 7.0),
                 changeSymbolValue("Force_1", 400.0),
                 changeSymbolValue("Force_2", 1200.0),
                 changeSymbolValue("Material_Type", 16),

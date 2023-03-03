@@ -186,7 +186,7 @@ export const execute = {
                    
                     <p>
                     In the process of transitioning to the next page, the demo session will
-                    FIX a value of 0.105 inch on Wire_Dia and then
+                    FIX a value of 0.105 inch on Wire_Diameter and then
                     run another search to re-establish corresponding values for all the other problem variables.
                     </p>
                 </>
@@ -221,7 +221,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('Wire_Dia', 0.105),
+                fixSymbolValue('Wire_Diameter', 0.105),
                 search()
             ]
         },
@@ -252,7 +252,7 @@ export const execute = {
             ),
             actions: [
                 fixSymbolValue('OD_Free', 1.105),
-                fixSymbolValue('Coils_T', 17.5),
+                fixSymbolValue('Total_Coils', 17.5),
                 fixSymbolValue('Initial_Tension', 6.35),
                 changeSymbolValue("End_Type",6),
                 changeSymbolValue("Hook_Deflect_All",0.0)

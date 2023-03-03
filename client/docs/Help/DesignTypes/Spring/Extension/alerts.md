@@ -143,7 +143,7 @@ In order to clear this alert,
 where practical, change one or more of these values in the direction specified. 
 Increase  | &nbsp; | Decrease  
 ---       | ---    | ---  
- Wire_Dia | &nbsp; | Coil_Dia  
+ Wire_Diameter | &nbsp; | Coil_Dia  
  FS_2     | &nbsp; | Force_2  
  FS_Hook  | &nbsp; | L_Stroke  
  &nbsp;   | &nbsp; | Spring_Index  

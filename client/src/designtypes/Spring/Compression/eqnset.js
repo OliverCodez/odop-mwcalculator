@@ -12,17 +12,17 @@ export function eqnset(p, x) {        /*    Compression  Spring  */
     var se2;
     
     /*  *******  DESIGN EQUATIONS  *******                  */
-    x[o.Mean_Dia] = p[o.OD_Free] - p[o.Wire_Dia];
+    x[o.Mean_Dia] = p[o.OD_Free] - p[o.Wire_Diameter];
 
-    x[o.ID_Free] = x[o.Mean_Dia] - p[o.Wire_Dia];
+    x[o.ID_Free] = x[o.Mean_Dia] - p[o.Wire_Diameter];
 
-    x[o.Spring_Index] = x[o.Mean_Dia] / p[o.Wire_Dia];
+    x[o.Spring_Index] = x[o.Mean_Dia] / p[o.Wire_Diameter];
 
     kc = (4.0 * x[o.Spring_Index] - 1.0) / (4.0 * x[o.Spring_Index] - 4.0);
 
     ks = kc + 0.615 / x[o.Spring_Index];
 
-    x[o.Coils_A] = p[o.Coils_T] - x[o.Inactive_Coils];
+    x[o.Coils_A] = p[o.Total_Coils] - x[o.Inactive_Coils];
 
     temp = x[o.Spring_Index] * x[o.Spring_Index];
     x[o.Rate] = x[o.Hot_Factor_Kh] * x[o.Torsion_Modulus] * x[o.Mean_Dia] /
@@ -38,25 +38,25 @@ export function eqnset(p, x) {        /*    Compression  Spring  */
     x[o.Deflect_1] = p[o.Force_1] / x[o.Rate];
     x[o.Deflect_2] = p[o.Force_2] / x[o.Rate];
 
-    x[o.L_1] = p[o.L_Free] - x[o.Deflect_1];
-    x[o.L_2] = p[o.L_Free] - x[o.Deflect_2];
+    x[o.L_1] = p[o.Free_Length] - x[o.Deflect_1];
+    x[o.L_2] = p[o.Free_Length] - x[o.Deflect_2];
 
     x[o.L_Stroke] = x[o.L_1] - x[o.L_2];
 
-    x[o.Slenderness] = p[o.L_Free] / x[o.Mean_Dia];
+    x[o.Slenderness] = p[o.Free_Length] / x[o.Mean_Dia];
 
-    x[o.L_Solid] = p[o.Wire_Dia] * (p[o.Coils_T] + x[o.Add_Coils_Solid]);
+    x[o.L_Solid] = p[o.Wire_Diameter] * (p[o.Total_Coils] + x[o.Add_Coils_Solid]);
 
-    x[o.Force_Solid] = x[o.Rate] * (p[o.L_Free] - x[o.L_Solid]);
+    x[o.Force_Solid] = x[o.Rate] * (p[o.Free_Length] - x[o.L_Solid]);
 
-      s_f = ks * 8.0 * x[o.Mean_Dia] / (Math.PI * p[o.Wire_Dia] * p[o.Wire_Dia] * p[o.Wire_Dia]);
+      s_f = ks * 8.0 * x[o.Mean_Dia] / (Math.PI * p[o.Wire_Diameter] * p[o.Wire_Diameter] * p[o.Wire_Diameter]);
 
     x[o.Stress_1] = s_f * p[o.Force_1];
     x[o.Stress_2] = s_f * p[o.Force_2];
     x[o.Stress_Solid] = s_f * x[o.Force_Solid];
 
       if (x[o.Prop_Calc_Method] === 1) {
-          x[o.Tensile] = x[o.slope_term] * (Math.log10(p[o.Wire_Dia]) - x[o.const_term]) + x[o.tensile_010];
+          x[o.Tensile] = x[o.slope_term] * (Math.log10(p[o.Wire_Diameter]) - x[o.const_term]) + x[o.tensile_010];
 //          console.log("eqnset Tensile = ", x[o.Tensile]);
       }
       if (x[o.Prop_Calc_Method] <= 2) {
@@ -95,24 +95,24 @@ export function eqnset(p, x) {        /*    Compression  Spring  */
 //        cycle_life = cl_calc(material_index,life_catagory,1,tensile,stress_1,stress_2);
         x[o.Cycle_Life] = cl_calc(x[o.Material_Type], x[o.Life_Category], 1, x[o.Tensile], x[o.Stress_1], x[o.Stress_2]);
     } else x[o.Cycle_Life] = 0.0;   // Setting to NaN causes problems with File : Open.  See issue 232
-//  console.log('In eqnset','Wire_Dia=',p[o.Wire_Dia],'Cycle_Life=',x[o.Cycle_Life]);
+//  console.log('In eqnset','Wire_Diameter=',p[o.Wire_Diameter],'Cycle_Life=',x[o.Cycle_Life]);
 
-        var sq1 = p[o.L_Free];
-        var sq2 = p[o.Coils_T] * Math.PI * x[o.Mean_Dia];
+        var sq1 = p[o.Free_Length];
+        var sq2 = p[o.Total_Coils] * Math.PI * x[o.Mean_Dia];
         var wire_len_t = Math.sqrt(sq1 * sq1 + sq2 * sq2);
         if (x[o.End_Type] === 5 )  /*  calculate developed length of tapered ends based on 2 ends * pi * wire diameter * 0.625 */
-            wire_len_t = wire_len_t - 3.926 * p[o.Wire_Dia];
+            wire_len_t = wire_len_t - 3.926 * p[o.Wire_Diameter];
 
-        x[o.Weight] = x[o.Density] * (Math.PI * p[o.Wire_Dia] * p[o.Wire_Dia] / 4.0) * wire_len_t;
+        x[o.Weight] = x[o.Density] * (Math.PI * p[o.Wire_Diameter] * p[o.Wire_Diameter] / 4.0) * wire_len_t;
 
-    if (p[o.L_Free] > x[o.L_Solid]) {
-        x[o.PC_Avail_Deflect] = 100.0 * x[o.Deflect_2] / (p[o.L_Free] - x[o.L_Solid]);
-        if (p[o.L_Free] < x[o.L_Solid] + p[o.Wire_Dia]) {
-            temp = 100.0 * x[o.Deflect_2] / p[o.Wire_Dia] + 10000.0 * (x[o.L_Solid] + p[o.Wire_Dia] - p[o.L_Free]);
+    if (p[o.Free_Length] > x[o.L_Solid]) {
+        x[o.PC_Avail_Deflect] = 100.0 * x[o.Deflect_2] / (p[o.Free_Length] - x[o.L_Solid]);
+        if (p[o.Free_Length] < x[o.L_Solid] + p[o.Wire_Diameter]) {
+            temp = 100.0 * x[o.Deflect_2] / p[o.Wire_Diameter] + 10000.0 * (x[o.L_Solid] + p[o.Wire_Diameter] - p[o.Free_Length]);
             if (temp < x[o.PC_Avail_Deflect]) x[o.PC_Avail_Deflect] = temp;
         };
     }
-    else x[o.PC_Avail_Deflect] = 100.0 * x[o.Deflect_2] / p[o.Wire_Dia] + 10000.0 * (x[o.L_Solid] + p[o.Wire_Dia] - p[o.L_Free]);
+    else x[o.PC_Avail_Deflect] = 100.0 * x[o.Deflect_2] / p[o.Wire_Diameter] + 10000.0 * (x[o.L_Solid] + p[o.Wire_Diameter] - p[o.Free_Length]);
  
      x[o.Energy] = 0.5 * x[o.Rate] * (x[o.Deflect_2] * x[o.Deflect_2] - x[o.Deflect_1] * x[o.Deflect_1]);
     

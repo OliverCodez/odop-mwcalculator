@@ -3,7 +3,7 @@ import * as mo from '../mat_offsets';
 
 export function getSizeTypes() {
     var result = [
-        'Wire_Dia', // Default
+        'Wire_Diameter', // Default
         'OD_Free'
     ];
 //    console.log('In getSizeTypes result=',result);
@@ -18,7 +18,7 @@ export function getSizeEntries(type, st) {
     var result = [];
     var m_tab, i;
     switch(type) {
-    case "Wire_Dia":
+    case "Wire_Diameter":
         // Find size name, load size table, and get wire diameter value
         if (st[o.Material_File].value === "mat_metric.json")
             m_tab = require('../mat_metric.json');
@@ -28,11 +28,11 @@ export function getSizeEntries(type, st) {
         i = st[o.Material_Type].value;
         wire_dia_filename = m_tab[i][mo.wire_dia_filename];
         wire_dia_table = require('../'+wire_dia_filename+'.json'); // Dynamically load table
-        wire_dia = st[o.Wire_Dia].value;
+        wire_dia = st[o.Wire_Diameter].value;
 //        console.log('In getSizeEntries wire_dia_filename=',wire_dia_filename);
 //        console.log('In getSizeEntries wire_dia_table=',wire_dia_table);
 //        console.log('In getSizeEntries wire_dia=',wire_dia);
-        // Select one below value less than Wire_Dia and two value greater than Wire_Dia
+        // Select one below value less than Wire_Diameter and two value greater than Wire_Diameter
         for (let i = 1; i < wire_dia_table.length; i++) { // Skip column headers at zeroth entry
             wire_dia_entry = wire_dia_table[i];
             size0 = size1;

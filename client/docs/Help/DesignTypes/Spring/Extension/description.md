@@ -127,11 +127,11 @@ ___
 
 ## Independent Variable names: 
 
-    Wire_Dia     -  wire diameter
+    Wire_Diameter     -  wire diameter
     
     OD_Free      -  outside diameter in the free condition
     
-    Coils_T      -  total number of coils, including inactive coils
+    Total_Coils      -  total number of coils, including inactive coils
     
     Initial_Tension  -  initial tension of extension spring (free condition)
     
@@ -166,7 +166,7 @@ ___
     L_2          -  spring length at maximum operating load  (Force_2)
     L_Stroke     -  net deflection between point 1 and point 2
     Weight       -  weight of spring; wire density * wire volume
-    Spring_Index    -  spring index;  the ratio COIL_DIA/Wire_Dia
+    Spring_Index    -  spring index;  the ratio COIL_DIA/Wire_Diameter
     Stress_Initial  -  stress produced by initial tension
     Stress_1        -  torsional stress at point 1
     Stress_2        -  torsional stress at point 2
@@ -238,7 +238,7 @@ ___
             and allowable stresses are determined.
             1 indicates values come from materials table;
             allowable stresses will be calculated as a function
-            of Wire_Dia.
+            of Wire_Diameter.
             2 indicates tensile and allowable % are supplied
             by the user; allowable stresses are calculated.
             3 indicates allowable stresses are supplied directly

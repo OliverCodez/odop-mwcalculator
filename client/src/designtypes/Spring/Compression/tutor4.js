@@ -229,9 +229,9 @@ export const execute = {
                     In Tutorial speak, the changes just imposed are:<br />
                     <br />
                         CHANGE  OD_Free  2.0<br />
-                        CHANGE  Wire_Dia .22<br />
-                        CHANGE  L_Free  3.0<br />
-                        CHANGE  Coils_T   7
+                        CHANGE  Wire_Diameter .22<br />
+                        CHANGE  Free_Length  3.0<br />
+                        CHANGE  Total_Coils   7
                     </p>
                     
                     <p>
@@ -241,9 +241,9 @@ export const execute = {
             ),
             actions: [
                 changeSymbolValue("OD_Free", 2.0),
-                changeSymbolValue("Wire_Dia", 0.22),
-                changeSymbolValue("L_Free", 3.0),
-                changeSymbolValue("Coils_T", 7.0)
+                changeSymbolValue("Wire_Diameter", 0.22),
+                changeSymbolValue("Free_Length", 3.0),
+                changeSymbolValue("Total_Coils", 7.0)
             ]
         },
         {

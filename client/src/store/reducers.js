@@ -376,7 +376,7 @@ export function reducers(state, action) {
                 ...state.model,
                 symbol_table: state.model.symbol_table.map((element) => {
                     if (element.type === "equationset" && element.input) {
-//                        if (element.name === "Wire_Dia")
+//                        if (element.name === "Wire_Diameter")
 //                            console.log('In reducers.SAVE_INPUT_SYMBOL_VALUES element=',element);
                         return Object.assign({}, element, {
                             oldvalue: element.value
@@ -394,7 +394,7 @@ export function reducers(state, action) {
                 symbol_table: state.model.symbol_table.map((element) => {
                     if (element.type === "equationset" && element.input) {
                         if (element.oldvalue !== undefined) {
-//                            if (element.name === "Wire_Dia")
+//                            if (element.name === "Wire_Diameter")
 //                                console.log('In reducers.RESTORE_INPUT_SYMBOL_VALUES oldvalue==defined element=',element);
                             var value = element.oldvalue; // Get the value as local
                             delete element.oldvalue; // Delete the value
@@ -402,7 +402,7 @@ export function reducers(state, action) {
                                 value: value
                             });
                         } else {
-//                            if (element.name === "Wire_Dia")
+//                            if (element.name === "Wire_Diameter")
 //                                console.log('In reducers.RESTORE_INPUT_SYMBOL_VALUES oldvalue==undefined element=',element);
                             return element;
                         }

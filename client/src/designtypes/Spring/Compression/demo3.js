@@ -190,10 +190,10 @@ export const execute = {
                     </p>
                     
                     <p>
-                    CHANGE  Wire_Dia  0.189<br />
+                    CHANGE  Wire_Diameter  0.189<br />
                     CHANGE  OD_Free   1.5<br />
-                    CHANGE  L_Free    2.843<br />
-                    CHANGE  Coils_T   8.4<br />
+                    CHANGE  Free_Length    2.843<br />
+                    CHANGE  Total_Coils   8.4<br />
                     </p>
                     
                     <p>
@@ -202,10 +202,10 @@ export const execute = {
                 </>
             ),
             actions: [
-                changeSymbolValue("Wire_Dia",0.189),
+                changeSymbolValue("Wire_Diameter",0.189),
                 changeSymbolValue("OD_Free",1.5),
-                changeSymbolValue("L_Free",2.843),
-                changeSymbolValue("Coils_T",8.4)
+                changeSymbolValue("Free_Length",2.843),
+                changeSymbolValue("Total_Coils",8.4)
             ]
         },
         {

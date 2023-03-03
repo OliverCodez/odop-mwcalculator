@@ -135,7 +135,7 @@ export const execute = {
                     &nbsp; CHANGE  Material_Type  MUSIC_WIRE<br />
                     &nbsp; CHANGE  End_Type  Full_Hook<br />
                     &nbsp; CHANGE  OD_Free MAX  0.645 &nbsp; (includes a 0.010 margin)<br />
-                    &nbsp; FIX  L_Free   5.125<br />
+                    &nbsp; FIX  Free_Length   5.125<br />
                     &nbsp; CHANGE  Force_1  MIN  45 &nbsp; (50 minus 5 pounds)<br />
                     &nbsp; CHANGE  Force_1  MAX  55 &nbsp; (50 plus&nbsp; 5 pounds)<br />
                     &nbsp; FIX  L_1    5.625<br />
@@ -150,7 +150,7 @@ export const execute = {
                 changeSymbolValue("End_Type",3),
                 setSymbolFlag('OD_Free', MAX, CONSTRAINED),
                 changeSymbolConstraint('OD_Free', MAX, 0.645),
-                fixSymbolValue('L_Free', 5.125),
+                fixSymbolValue('Free_Length', 5.125),
                 resetSymbolFlag('Force_1', MIN, FDCL),
                 setSymbolFlag('Force_1', MIN, CONSTRAINED),
                 changeSymbolConstraint('Force_1', MIN, 45.0),
@@ -210,7 +210,7 @@ export const execute = {
                     Specifically, the ODOP:Spring Calculation Inputs L_End and L_Extended_End 
                     are determined by End_Type.
                     Typically, these quantities will represent the 75% or 100% of a coil
-                    inside diameter that is added to L_Body in order to establish L_Free.
+                    inside diameter that is added to L_Body in order to establish Free_Length.
                     <br /><br />
                     For a spring with "Full" hook or loop ends, ODOP:Spring's End_Extension 
                     would be:
@@ -255,7 +255,7 @@ export const execute = {
                     <p>
                     While it appears that a smaller standard wire diameter would be possible, 
                     in order to be consistent with the handbook,
-                    the demo session will impose a Wire_Dia value of 0.120 
+                    the demo session will impose a Wire_Diameter value of 0.120 
                     in the process of transitioning to the next page.
                     Another search will re-establish corresponding values for all the other problem variables.
                     </p>
@@ -296,7 +296,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('Wire_Dia', 0.120),
+                fixSymbolValue('Wire_Diameter', 0.120),
                 search()
             ]
         },
@@ -333,7 +333,7 @@ export const execute = {
                     
                     <p>
                     CHANGE  OD_Free   0.645   (0.010 margin)<br />
-                    CHANGE  Coils_T  29.0    (no allowance for hook deflection)<br />
+                    CHANGE  Total_Coils  29.0    (no allowance for hook deflection)<br />
                     CHANGE  Initial_Tension  14.4<br />
                     CHANGE  End_Extension  0.715   (per earlier calculation)<br />
                     CHANGE  Force_1  50.0<br />
@@ -346,7 +346,7 @@ export const execute = {
             ),
             actions: [
                 changeSymbolValue('OD_Free', 0.645),
-                changeSymbolValue('Coils_T', 29.0),
+                changeSymbolValue('Total_Coils', 29.0),
                 changeSymbolValue('Initial_Tension', 14.4),
                 changeSymbolValue('End_Extension', 0.715),
                 changeSymbolValue('Force_1', 50.0),

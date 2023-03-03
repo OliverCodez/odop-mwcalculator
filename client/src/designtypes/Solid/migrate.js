@@ -131,7 +131,7 @@ export function migrate(design) {
                 element.validmax = Number.MAX_VALUE;
             }
         });
-//        design.symbol_table[ 3].validmin = 1; // Coils_T
+//        design.symbol_table[ 3].validmin = 1; // Total_Coils
         if (design.symbol_table[ 3].value > 5) { // Material table expansion
             ++design.symbol_table[ 3].value;
         };

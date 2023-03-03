@@ -17,9 +17,9 @@ export function eqnset(p, x) {        /*    Torsion  Spring  */
     var ctp1;
     
     /*  *******  DESIGN EQUATIONS  *******                  */
-    x[o.Mean_Dia] = p[o.OD_Free] - p[o.Wire_Dia];
+    x[o.Mean_Dia] = p[o.OD_Free] - p[o.Wire_Diameter];
 
-    x[o.Spring_Index] = x[o.Mean_Dia] / p[o.Wire_Dia];
+    x[o.Spring_Index] = x[o.Mean_Dia] / p[o.Wire_Diameter];
 
     if (x[o.Heat_Treat] === 2){     //  Stress Relieve
         kb = (4.0 * x[o.Spring_Index] - 1.0) / (4.0 * x[o.Spring_Index] - 4.0);
@@ -33,9 +33,9 @@ export function eqnset(p, x) {        /*    Torsion  Spring  */
 //  end_deflect_all=(l_end_1+l_end_2)/(3.0*pi*mean_dia);
     x[o.End_Deflect_All] = (x[o.L_End_1] + x[o.L_End_2]) / (3.0 * Math.PI * x[o.Mean_Dia]);
 
-    x[o.Coils_A] = p[o.Coils_T] + x[o.End_Deflect_All];
+    x[o.Coils_A] = p[o.Total_Coils] + x[o.End_Deflect_All];
 
-    temp = p[o.Wire_Dia] * p[o.Wire_Dia];
+    temp = p[o.Wire_Diameter] * p[o.Wire_Diameter];
     x[o.Rate] = x[o.Hot_Factor_Kh] * x[o.Elastic_Modulus] * temp * temp /
            (10.8 * x[o.Mean_Dia] * x[o.Coils_A]);
 //    console.log('x=',x);
@@ -51,17 +51,17 @@ export function eqnset(p, x) {        /*    Torsion  Spring  */
     x[o.Deflect_1] = p[o.M_1] / x[o.Rate];
     x[o.Deflect_2] = p[o.M_2] / x[o.Rate];
 
-    x[o.ID_Free] = x[o.Mean_Dia] - p[o.Wire_Dia];
+    x[o.ID_Free] = x[o.Mean_Dia] - p[o.Wire_Diameter];
 
-    ctp1 = p[o.Coils_T] + 1.0;
-    x[o.L_Body] = p[o.Wire_Dia] * ctp1 + p[o.Coil_Spacing] * p[o.Coils_T];
+    ctp1 = p[o.Total_Coils] + 1.0;
+    x[o.L_Body] = p[o.Wire_Diameter] * ctp1 + p[o.Coil_Spacing] * p[o.Total_Coils];
 //      l_1 = max(l_body, wire_dia*(ctp1+deflect_1/deg_per_turn) );
-    x[o.L_1] = Math.max( x[o.L_Body], p[o.Wire_Dia] * (ctp1 + x[o.Deflect_1] / Deg_Per_Turn) );
-    x[o.L_2] = Math.max( x[o.L_Body], p[o.Wire_Dia] * (ctp1 + x[o.Deflect_2] / Deg_Per_Turn) );
+    x[o.L_1] = Math.max( x[o.L_Body], p[o.Wire_Diameter] * (ctp1 + x[o.Deflect_1] / Deg_Per_Turn) );
+    x[o.L_2] = Math.max( x[o.L_Body], p[o.Wire_Diameter] * (ctp1 + x[o.Deflect_2] / Deg_Per_Turn) );
 
     x[o.Stroke] = x[o.Deflect_2] - x[o.Deflect_1];
 
-      s_f = 32.0 * kb / (Math.PI * p[o.Wire_Dia] * p[o.Wire_Dia] * p[o.Wire_Dia]);
+      s_f = 32.0 * kb / (Math.PI * p[o.Wire_Diameter] * p[o.Wire_Diameter] * p[o.Wire_Diameter]);
 
     x[o.Stress_1] = s_f * p[o.M_1];
     x[o.Stress_2] = s_f * p[o.M_2];
@@ -76,13 +76,13 @@ export function eqnset(p, x) {        /*    Torsion  Spring  */
     }
     
 //    end_angle_free=deg_per_turn*(coils_t-trunc(coils_t));
-    x[o.End_Angle_Free] = Deg_Per_Turn * (p[o.Coils_T] - Math.trunc(p[o.Coils_T]));
+    x[o.End_Angle_Free] = Deg_Per_Turn * (p[o.Total_Coils] - Math.trunc(p[o.Total_Coils]));
 
 //    stress_end = 0.0;         /*  stresses in ends;       */
     x[o.Stress_End] = zero;
 
       if (x[o.Prop_Calc_Method] === 1) {
-          x[o.Tensile] = x[o.slope_term] * (Math.log10(p[o.Wire_Dia]) - x[o.const_term]) + x[o.tensile_010];
+          x[o.Tensile] = x[o.slope_term] * (Math.log10(p[o.Wire_Diameter]) - x[o.const_term]) + x[o.tensile_010];
 //          console.log("eqnset Tensile = ", x[o.Tensile]);
       }
       if (x[o.Prop_Calc_Method] <= 2) {
@@ -122,10 +122,10 @@ export function eqnset(p, x) {        /*    Torsion  Spring  */
     x[o.PC_Safe_Deflect] = 100.0 * x[o.Deflect_2] / ((x[o.Stress_Lim_Bnd_Stat] / s_f) / x[o.Rate]);
  
     var sq1 = x[o.L_Body];
-    var sq2 = p[o.Coils_T] * Math.PI * x[o.Mean_Dia];
+    var sq2 = p[o.Total_Coils] * Math.PI * x[o.Mean_Dia];
     var wire_len_t = Math.sqrt(sq1 * sq1 + sq2 * sq2);
 
-    x[o.Weight] = x[o.Density] * (Math.PI * p[o.Wire_Dia] * p[o.Wire_Dia] / 4.0) * (wire_len_t + x[o.Xlen_1] + x[o.Xlen_2]);
+    x[o.Weight] = x[o.Density] * (Math.PI * p[o.Wire_Diameter] * p[o.Wire_Diameter] / 4.0) * (wire_len_t + x[o.Xlen_1] + x[o.Xlen_2]);
 
     RateInRad = x[o.Rate] / Deg2Rad;
     Def1InRad = x[o.Deflect_1] * Deg2Rad;

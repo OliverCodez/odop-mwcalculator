@@ -84,8 +84,9 @@ class NameValueUnitsRowCalcInput extends Component {
                 <tr key={this.props.element.name}>
                     <td className="align-middle" colSpan="2" id={'constant_'+this.props.index}>
                         <OverlayTrigger placement="top" overlay={this.props.element.tooltip !== undefined && <Tooltip>{this.props.element.tooltip}</Tooltip>}>
-                            <span>{this.props.element.name}</span>
+                            <span className="calc-hidden">{this.props.element.name}</span>
                         </OverlayTrigger>
+                        <span>{this.props.element.name.replace(/_/g, ' ')}</span>
                     </td>
                     <td className="align-middle" colSpan="2">
                         <InputGroup>

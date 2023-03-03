@@ -19,7 +19,7 @@ export const initialState = {
         },
         {
             "input": true,
-            "name": "Wire_Dia",
+            "name": "Wire_Diameter",
             "value": 1.5,
             "units": "mm",
             "lmin": 0,
@@ -35,7 +35,7 @@ export const initialState = {
         },
         {
             "input": true,
-            "name": "Coils_T",
+            "name": "Total_Coils",
             "value": 10.0,
             "units": "coils",
             "lmin": 0,
@@ -234,7 +234,7 @@ export const initialState = {
         },
         {
             "input": false,
-            "name": "L_Free",
+            "name": "Free_Length",
             "value": 64.75,
             "units": "mm",
             "lmin": 0,
@@ -324,7 +324,7 @@ export const initialState = {
             "validmin": 1.0,
             "validmax": Number.MAX_VALUE,
             "sdlim": 1.0,
-            "tooltip": "Ratio of mean coil diameter (Mean_Dia) to wire diameter (Wire_Dia)",
+            "tooltip": "Ratio of mean coil diameter (Mean_Dia) to wire diameter (Wire_Diameter)",
             "type": "equationset",
             "hidden": false
         },
@@ -900,7 +900,7 @@ export const initialState = {
             "validmin": -Number.MIN_VALUE,
             "validmax": Number.MAX_VALUE,
             "sdlim": 0.0,
-            "tooltip": "Length of End (see diagram in on-line Help). Used in calculation of L_Free.",
+            "tooltip": "Length of End (see diagram in on-line Help). Used in calculation of Free_Length.",
             "type": "calcinput",
             "hidden": false
         },
@@ -916,7 +916,7 @@ export const initialState = {
             "validmin": -Number.MIN_VALUE,
             "validmax": Number.MAX_VALUE,
             "sdlim": 0.0,
-            "tooltip": "Length of Extended End (see diagram in on-line Help). Used in calculation of L_Free.",
+            "tooltip": "Length of Extended End (see diagram in on-line Help). Used in calculation of Free_Length.",
             "type": "calcinput",
             "hidden": false
         },

@@ -86,11 +86,11 @@ ___
 
 ## Independent Variable names: 
 
-    Wire_Dia     -  wire diameter
+    Wire_Diameter     -  wire diameter
     
     OD_Free      -  outside diameter in the free condition
     
-    Coils_T      -  total number of coils, including inactive coils
+    Total_Coils      -  total number of coils, including inactive coils
     
     L_Free       -  free length
     
@@ -133,7 +133,7 @@ ___
     
     Weight       -  weight of spring; wire density * wire volume
     
-    Spring_Index  -  spring index;  the ratio Mean_Dia/Wire_Dia
+    Spring_Index  -  spring index;  the ratio Mean_Dia/Wire_Diameter
     
     Force_Solid  -  force produced in solid condition
     
@@ -186,7 +186,7 @@ ___
                 allowable stresses are determined.
                 1 indicates values come from materials table;
                 allowable stresses will be calculated as a 
-                function of Wire_Dia.
+                function of Wire_Diameter.
                 2 indicates tensile and allowable % are supplied
                 by the user; allowable stresses are calculated.
                 3 indicates allowable stresses are supplied 
@@ -383,7 +383,7 @@ and with the other end Closed&Ground:
 To represent a spring with ten active coils, two dead coils and closed ends: 
 
     CHANGE  End_Type  User_Specified
-    FIX Coils_T     14.0
+    FIX Total_Coils     14.0
     CHANGE  Inactive_Coils   4.0
     CHANGE  Add_Coils@Solid  1.0
 

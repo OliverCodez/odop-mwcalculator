@@ -129,10 +129,10 @@ export const execute = {
                     This demo session has now entered what is known about the problem. 
                     In summary, the changes were:<br />
                     </p>
-                    FIX  Wire_Dia   0.0395<br/>
+                    FIX  Wire_Diameter   0.0395<br/>
                     FIX  OD_Free    0.357<br/>
-                    FIX  L_Free     0.807<br/>
-                    FIX  Coils_T    8<br/>
+                    FIX  Free_Length     0.807<br/>
+                    FIX  Total_Coils    8<br/>
                     FIX  L_1 &nbsp; 0.689<br/>
                     FIX  L_2 &nbsp; 0.394<br/>
                     <br />
@@ -142,10 +142,10 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('Wire_Dia', 0.0395),
+                fixSymbolValue('Wire_Diameter', 0.0395),
                 fixSymbolValue('OD_Free', 0.357),
-                fixSymbolValue('L_Free', 0.807),
-                fixSymbolValue('Coils_T', 8),
+                fixSymbolValue('Free_Length', 0.807),
+                fixSymbolValue('Total_Coils', 8),
                 fixSymbolValue('L_1', 0.689),
                 fixSymbolValue('L_2', 0.394),
             ]

@@ -311,7 +311,7 @@ export const execute = {
                     <p>
                     This time, let's see if we can handle a design that has both force and
                     length specified at each of two points.
-                    As long as L_Free (spring length in the free, no load condition) is in FREE status,
+                    As long as Free_Length (spring length in the free, no load condition) is in FREE status,
                     this should not be a problem. 
                     You may want to review 
                     &nbsp;<a href="/docs/Help/designSituations.html" target="_blank" rel="noopener noreferrer">Design Situations</a>&nbsp; 

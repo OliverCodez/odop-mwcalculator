@@ -133,13 +133,13 @@ export const execute = {
                 <>
                     <p>
                     Original Case 1:<br />
-                    Starting Search from this point in v4.0.x produced negative Wire_Dia and other variables. 
+                    Starting Search from this point in v4.0.x produced negative Wire_Diameter and other variables. 
                     Improved default constraints and sdlim values permit v4.2.2 to produce a valid and feasible result 
                     from this start point. 
                     </p>
                     <p>
                     Loaded Compression spring initialState.<br />
-                    Wire_Dia = 0.4 inch<br />
+                    Wire_Diameter = 0.4 inch<br />
                     </p>
                     <p>
                     Click Next to run Search.
@@ -148,7 +148,7 @@ export const execute = {
             ),
             actions: [
                 loadInitialState('Spring/Compression'),
-                changeSymbolValue("Wire_Dia", 0.4),
+                changeSymbolValue("Wire_Diameter", 0.4),
             ]
         },
         {
