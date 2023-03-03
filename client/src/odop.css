@@ -54,3 +54,13 @@ input[type=number] {
 .calc-hidden {
     display: none!important;
 }
+
+.calc-hide-some > thead,
+.calc-hide-some > tbody {
+    display: none!important;
+}
+
+.calc-hide-some > tbody:nth-child(3),
+.calc-hide-some > tbody:nth-child(15) {
+    display: table-row-group!important;
+}

@@ -10,7 +10,7 @@ class NameValueUnitsCalcInputTable extends Component {
 //        console.log('In NameValueUnitsTable.render this=',this);
         return (
             <>
-                <Table className="calc-hidden col-md-6 border border-secondary" size="sm">
+                <Table className="calc-hide-some col-md-6 border border-secondary" size="sm">
                     <NameValueUnitsHeaderCalcInput />
                     {this.props.symbol_table.map((element,index) => element.type === "calcinput" && !element.hidden && <NameValueUnitsRowCalcInput key={element.name} element={element} index={index} />)}
                 </Table>
