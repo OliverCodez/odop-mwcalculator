@@ -10,12 +10,12 @@ class NameValueUnitsHeaderIndependentVariable extends Component {
             <thead>
                 <tr>
                     <th className="text-center bg-secondary text-white" colSpan="6" id="IVTitle">
-                        <OverlayTrigger placement="top" overlay={<Tooltip>Inputs to design equations. Search adjusts FREE Independent Variables to obtain a feasible solution.</Tooltip>}>
-                            <span>Independent Variable (IV)</span>
+                        <OverlayTrigger placement="top">
+                            <span>Enter Spring Properties</span>
                         </OverlayTrigger>
                     </th>
                 </tr>
-                <tr>
+                <tr className="calc-hidden">
                     <th className="text-left" colSpan="2" id="IVNameTitle">
                         <OverlayTrigger placement="top" overlay={<Tooltip>Variable names</Tooltip>}>
                             <span>Name</span>

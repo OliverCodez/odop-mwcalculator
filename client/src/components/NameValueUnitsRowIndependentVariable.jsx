@@ -113,7 +113,7 @@ class NameValueUnitsRowIndependentVariable extends Component {
         <td className="align-middle" colSpan="2" id={'independent_variable_' + this.props.index}>
           <OverlayTrigger placement="top" overlay={this.props.element.tooltip !== undefined &&
           <Tooltip>{this.props.element.tooltip}</Tooltip>}>
-            <span>{this.props.element.name}</span>
+            <span>{this.props.element.name.replace(/_/g, ' ')}</span>
           </OverlayTrigger>
         </td>
         <td className="align-middle" colSpan="2">
@@ -126,7 +126,7 @@ class NameValueUnitsRowIndependentVariable extends Component {
               <InputGroup.Text>
                 <OverlayTrigger placement="top" overlay={<Tooltip>{value_fix_free_text}</Tooltip>}>
                   <Form.Check className='form-check' type="checkbox" aria-label="Checkbox for fixed value"
-                              checked={this.props.element.lmin & FIXED}
+                              checked={true}
                               onChange={this.props.element.lmin & FIXED ? this.onReset : this.onSet}/>
                 </OverlayTrigger>
               </InputGroup.Text>
