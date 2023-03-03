@@ -51,10 +51,7 @@ input[type=number] {
     margin: 2px 0 !important;
 }
 
-.calc-hidden {
-    display: none!important;
-}
-
+.calc-hidden,
 .calc-hide-some > thead,
 .calc-hide-some > tbody,
 .calc-hide-someinit > tbody:nth-child(6),
