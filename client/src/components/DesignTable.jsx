@@ -10,6 +10,7 @@ class DesignTable extends Component {
 
     render() {
 //        console.log('In DesignTable.render this=',this);
+//        NameValueUnitsTable :: TODO :: extract fields from Independent Variable segment
         return (
             <div className='design-table'>
                 <Row>

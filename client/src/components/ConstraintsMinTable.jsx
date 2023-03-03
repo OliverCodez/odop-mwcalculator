@@ -12,7 +12,7 @@ class ConstraintsMinTable extends Component {
 //        console.log('In ConstraintsMinTable.render this=',this);
         return (
             <>
-                <Table className="col-md-3 border border-secondary" size="sm">
+                <Table className="calc-hidden col-md-3 border border-secondary" size="sm">
                     <ConstraintsMinHeaderIndependentVariable />
                     {this.props.symbol_table.map((element,index) => element.type === "equationset" && element.input && !element.hidden && <ConstraintsMinRowIndependentVariable key={element.name} element={element} index={index} />)}
                     <ConstraintsMinHeaderDependentVariable />

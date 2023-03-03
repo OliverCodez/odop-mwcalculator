@@ -75,7 +75,7 @@ class NameValueUnitsRowDependentVariable extends Component {
     // Table Row
     // =======================================
     return (
-      <tbody>
+      <tbody className="calc-hidden">
       <tr key={this.props.element.name}>
         <td className="align-middle" colSpan="2" id={'dependent_variable_' + this.props.index}>
           <OverlayTrigger placement="top" overlay={this.props.element.tooltip !== undefined &&

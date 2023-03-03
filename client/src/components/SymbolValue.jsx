@@ -101,6 +101,7 @@ class SymbolValue extends Component {
     }
 
     onContextMenu(e) {
+        // Modal is initiated via this function
 //        console.log('In SymbolValue.onContextMenu this=',this,'e=',e);
         e.preventDefault();
         this.setState({

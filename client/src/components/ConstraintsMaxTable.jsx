@@ -12,7 +12,7 @@ class ConstraintsMaxTable extends Component {
 //        console.log('In ConstraintsMaxTable.render this=',this);
         return (
             <>
-                <Table className="col-md-3 border border-secondary" size="sm">
+                <Table className="calc-hidden col-md-3 border border-secondary" size="sm">
                     <ConstraintsMaxHeaderIndependentVariable />
                     {this.props.symbol_table.map((element,index) => element.type === "equationset" && element.input && !element.hidden && <ConstraintsMaxRowIndependentVariable key={element.name} element={element} index={index} />)}
                     <ConstraintsMaxHeaderDependentVariable />

@@ -1,3 +1,7 @@
+#root2 > .container > .row {
+    display: none!important;
+}
+
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -45,4 +49,8 @@ input[type=number] {
 .report-table input, .report-table select, .report-table .input-group-append, .report-table .input-group-prepend {
     border: 1px solid black;
     margin: 2px 0 !important;
+}
+
+.calc-hidden {
+    display: none!important;
 }
