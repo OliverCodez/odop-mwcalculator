@@ -73,4 +73,6 @@ input[type=number] {
 
 #root2 > .container > .tab-content > .tab-pane:first-child {
     display: block!important;
+    opacity: 1 !important;
+    margin-left: 68px;
 }
