@@ -72,7 +72,9 @@ input[type=number] {
 }
 
 #root2 > .container > .tab-content > .tab-pane:first-child,
-#root2 > .container > .tab-content > .tab-pane:nth-child(3) {
+#root2 > .container > .tab-content > .tab-pane:nth-child(3),
+#root2 > .container > .tab-content > .tab-pane:nth-child(4),
+#root2 > .container > .tab-content > .tab-pane:nth-child(5) {
     display: block!important;
     opacity: 1 !important;
     margin-left: 68px;
