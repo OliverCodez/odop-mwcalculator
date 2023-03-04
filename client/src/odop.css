@@ -71,7 +71,8 @@ input[type=number] {
     margin-bottom: 0!important;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child {
+#root2 > .container > .tab-content > .tab-pane:first-child,
+#root2 > .container > .tab-content > .tab-pane:nth-child(3) {
     display: block!important;
     opacity: 1 !important;
     margin-left: 68px;
