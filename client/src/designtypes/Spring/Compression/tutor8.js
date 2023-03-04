@@ -81,7 +81,7 @@ export const execute = {
                     In "Tutorial shorthand", the changes just imposed by the tutorial are:<br />
                     <br />
                         CHANGE  Cycle_Life MIN  50000<br />
-                        CHANGE  OD_Free MAX  2.0<br />
+                        CHANGE  Free_OD MAX  2.0<br />
                         CHANGE  L_Solid MAX  1.2<br />
                         CHANGE  L_Stroke MIN 1.0<br />
                         FIX  Force_1  0<br />
@@ -110,8 +110,8 @@ export const execute = {
             actions: [
                 setSymbolFlag('Cycle_Life', MIN, CONSTRAINED),
                 changeSymbolConstraint('Cycle_Life', MIN, 50000.0),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 2.0),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 2.0),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.2),
                 setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
@@ -248,7 +248,7 @@ export const execute = {
                     </p>
                     
                     <p>
-                    Enter <b>0.0</b> for the weight on each violated constraint except <b>OD_Free </b> 
+                    Enter <b>0.0</b> for the weight on each violated constraint except <b>Free_OD </b> 
                     which should be set to <b>1.0</b>. 
                     Select <b>Continue</b>.
                     </p>
@@ -268,7 +268,7 @@ export const execute = {
                     </p>
                     
                     <p>
-                    Observe that Trade predicts a feasible solution if the OD_Free MAX constraint 
+                    Observe that Trade predicts a feasible solution if the Free_OD MAX constraint 
                     is moved from the previous value of 2.0 inches 
                     to a new value of approximately 2.6 inches. 
                     </p>

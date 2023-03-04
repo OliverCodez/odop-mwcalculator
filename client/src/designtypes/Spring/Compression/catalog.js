@@ -94,10 +94,10 @@ function convertToResultArray(entry) {
 //    console.log('In convertToResultArray entry=',entry);
     var result;
     var entry_select = entry[0].replace('-', '\u2011');
-    var entry_table = `OD_Free:\u00A0${entry[1]}, Wire_Diameter:\u00A0${entry[2]}, Free_Length:\u00A0${entry[3]}, Total_Coils:\u00A0${entry[4]}, Material_Type:\u00A0${entry[5]}, End_Type:\u00A0${entry[6]}, Obj:\u00A0${entry[9]}`;
+    var entry_table = `Free_OD:\u00A0${entry[1]}, Wire_Diameter:\u00A0${entry[2]}, Free_Length:\u00A0${entry[3]}, Total_Coils:\u00A0${entry[4]}, Material_Type:\u00A0${entry[5]}, End_Type:\u00A0${entry[6]}, Obj:\u00A0${entry[9]}`;
     // Convert to changeSymbolValue array
     var entry_symbol_values = [];
-    entry_symbol_values.push(['OD_Free',entry[1]]);
+    entry_symbol_values.push(['Free_OD',entry[1]]);
     entry_symbol_values.push(['Wire_Diameter',entry[2]]);
     entry_symbol_values.push(['Free_Length',entry[3]]);
     entry_symbol_values.push(['Total_Coils',entry[4]]);
@@ -140,8 +140,8 @@ export function getCatalogEntries(name, store, st, viol_wt) {
     }
     
     // Create implied constraints between half and twice
-    var cmin_OD_Free = st[o.OD_Free].value/2;
-    var cmax_OD_Free = st[o.OD_Free].value*2;
+    var cmin_Free_OD = st[o.Free_OD].value/2;
+    var cmax_Free_OD = st[o.Free_OD].value*2;
     var cmin_Wire_Diameter = st[o.Wire_Diameter].value/2;
     var cmax_Wire_Diameter = st[o.Wire_Diameter].value*2;
     var cmin_Free_Length = st[o.Free_Length].value/2;
@@ -157,7 +157,7 @@ export function getCatalogEntries(name, store, st, viol_wt) {
         entry = Object.assign({},catalog[i]); // Make copy so we can modify it without affecting catalog
         
         // Skip catalog entry if it's less than half the constraint value or greater than twice the constraint value
-        if (entry[1] < cmin_OD_Free  || entry[1] > cmax_OD_Free ) continue;
+        if (entry[1] < cmin_Free_OD  || entry[1] > cmax_Free_OD ) continue;
         if (entry[2] < cmin_Wire_Diameter || entry[2] > cmax_Wire_Diameter) continue;
         if (entry[3] < cmin_Free_Length   || entry[3] > cmax_Free_Length  ) continue;
         if (entry[4] < cmin_Total_Coils  || entry[4] > cmax_Total_Coils ) continue;
@@ -166,7 +166,7 @@ export function getCatalogEntries(name, store, st, viol_wt) {
         entry[8] = et_tab.findIndex(findEndTypeIndex); // Set matching End Type index
         
         // Update with catalog entries
-        st[o.OD_Free].value = entry[1];
+        st[o.Free_OD].value = entry[1];
         st[o.Wire_Diameter].value = entry[2];
         st[o.Free_Length].value = entry[3];
         st[o.Total_Coils].value = entry[4];

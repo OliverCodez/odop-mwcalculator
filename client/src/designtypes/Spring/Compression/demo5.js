@@ -93,7 +93,7 @@ export const execute = {
                     The demo has now entered what is known about the problem. 
                     In summary, the changes were:<br />
                     </p>
-                    FIX  OD_Free  1.00<br />
+                    FIX  Free_OD  1.00<br />
                     FIX  Free_Length   3.25<br />
                     FIX  l_2      1.75<br />
                     FIX  Force_1  0.0<br />
@@ -108,7 +108,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('OD_Free', 1.0),
+                fixSymbolValue('Free_OD', 1.0),
                 fixSymbolValue('Free_Length', 3.25),
                 fixSymbolValue('L_2', 1.75),
                 fixSymbolValue('Force_1', 0.0),

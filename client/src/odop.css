@@ -70,3 +70,7 @@ input[type=number] {
     border-bottom: none !important;
     margin-bottom: 0!important;
 }
+
+#root2 > .container > .tab-content > .tab-pane:first-child {
+    display: block!important;
+}

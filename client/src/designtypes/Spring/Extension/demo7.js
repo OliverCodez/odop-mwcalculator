@@ -134,7 +134,7 @@ export const execute = {
                     In summary, the changes were:<br />
                     &nbsp; CHANGE  Material_Type  MUSIC_WIRE<br />
                     &nbsp; CHANGE  End_Type  Full_Hook<br />
-                    &nbsp; CHANGE  OD_Free MAX  0.645 &nbsp; (includes a 0.010 margin)<br />
+                    &nbsp; CHANGE  Free_OD MAX  0.645 &nbsp; (includes a 0.010 margin)<br />
                     &nbsp; FIX  Free_Length   5.125<br />
                     &nbsp; CHANGE  Force_1  MIN  45 &nbsp; (50 minus 5 pounds)<br />
                     &nbsp; CHANGE  Force_1  MAX  55 &nbsp; (50 plus&nbsp; 5 pounds)<br />
@@ -148,8 +148,8 @@ export const execute = {
             actions: [
                 changeSymbolValue("Material_Type",2),
                 changeSymbolValue("End_Type",3),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 0.645),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 0.645),
                 fixSymbolValue('Free_Length', 5.125),
                 resetSymbolFlag('Force_1', MIN, FDCL),
                 setSymbolFlag('Force_1', MIN, CONSTRAINED),
@@ -332,7 +332,7 @@ export const execute = {
                     </p>
                     
                     <p>
-                    CHANGE  OD_Free   0.645   (0.010 margin)<br />
+                    CHANGE  Free_OD   0.645   (0.010 margin)<br />
                     CHANGE  Total_Coils  29.0    (no allowance for hook deflection)<br />
                     CHANGE  Initial_Tension  14.4<br />
                     CHANGE  End_Extension  0.715   (per earlier calculation)<br />
@@ -345,7 +345,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                changeSymbolValue('OD_Free', 0.645),
+                changeSymbolValue('Free_OD', 0.645),
                 changeSymbolValue('Total_Coils', 29.0),
                 changeSymbolValue('Initial_Tension', 14.4),
                 changeSymbolValue('End_Extension', 0.715),

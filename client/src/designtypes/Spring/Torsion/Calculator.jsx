@@ -45,7 +45,7 @@ export class Calculator extends ReportBase {
                                 <ValueName name={<><b>Length</b><br />{this.props.symbol_table[o.L_1].units}</>} tooltip="Length at free point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>Deflection</b><br />{this.props.symbol_table[o.Deflect_1].units}</>} tooltip="Deflection at free point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>Moment</b><br />{this.props.symbol_table[o.M_1].units}</>} tooltip="Moment at free point, point 1, point 2 and maximum safe point" className="text-center" />
-                                <ValueName name={<><b>OD</b><br />{this.props.symbol_table[o.OD_Free].units}</>} tooltip="Outside Diameter at free point, point 1, point 2 and maximum safe point" className="text-center" />
+                                <ValueName name={<><b>OD</b><br />{this.props.symbol_table[o.Free_OD].units}</>} tooltip="Outside Diameter at free point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>ID</b><br />{this.props.symbol_table[o.ID_Free].units}</>} tooltip="Inside Diameter at free point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>Stress</b><br />{this.props.symbol_table[o.Stress_1].units}</>} tooltip="Stress at free point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>Static FS</b><br />{this.props.symbol_table[o.FS_2].units}</>} tooltip="Static Factor of Safety at free point, point 1, point 2 and maximum safe point" className="text-center" />
@@ -57,7 +57,7 @@ export class Calculator extends ReportBase {
                                 <SymbolValue element={this.props.symbol_table[o.L_Body]} index={o.L_Body} />
                                 <Value id="Deflection_Free" value={0.0} />
                                 <Value id="Moment_Free" value={0.0} />
-                                <SymbolValue element={this.props.symbol_table[o.OD_Free]} index={o.OD_Free} />
+                                <SymbolValue element={this.props.symbol_table[o.Free_OD]} index={o.Free_OD} />
                                 <SymbolValue element={this.props.symbol_table[o.ID_Free]} index={o.ID_Free} />
                                 <Value id="Stress_Free" value={0.0} />
                                 <td className="align-middle">

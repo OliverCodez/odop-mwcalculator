@@ -87,7 +87,7 @@ export const execute = {
                     As usual, we use FIX and constraints to express our objectives for the design.<br />
                     <br />
                     CHANGE  Material_Type  HARD_DRAWN_WIRE<br />
-                    CHANGE  OD_Free MAX  .920 &nbsp; &#60;--- (0.005 margin)<br />
+                    CHANGE  Free_OD MAX  .920 &nbsp; &#60;--- (0.005 margin)<br />
                     CHANGE  L_Solid MAX  1.06<br />
                     <br />
                     FIX  Free_Length   1.713<br />
@@ -116,8 +116,8 @@ export const execute = {
             ),
             actions: [
                 changeSymbolValue("Material_Type",1),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 0.920),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 0.920),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.06),
                 fixSymbolValue('Free_Length', 1.713),

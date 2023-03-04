@@ -102,7 +102,7 @@ export const execute = {
                     </p>
                     <p>
                     Loaded Compression spring initialState.<br />
-                    Set OD_Free = -1.1 inches<br />
+                    Set Free_OD = -1.1 inches<br />
                     </p>
                     <p>
                     Click Next to run Search.
@@ -111,7 +111,7 @@ export const execute = {
             ),
             actions: [
                 loadInitialState('Spring/Compression'),
-                changeSymbolValue("OD_Free", -1.1),
+                changeSymbolValue("Free_OD", -1.1),
             ]
         },
         {
@@ -177,7 +177,7 @@ export const execute = {
                     </p>
                     <p>
                     Loaded Compression spring initialState.<br />
-                    OD_Free = 91.1 inches<br />
+                    Free_OD = 91.1 inches<br />
                     </p>
                     <p>
                     Click Next to run Search.
@@ -186,7 +186,7 @@ export const execute = {
             ),
             actions: [
                 loadInitialState('Spring/Compression'),
-                changeSymbolValue("OD_Free", 91.1),
+                changeSymbolValue("Free_OD", 91.1),
             ]
         },
         {
@@ -215,7 +215,7 @@ export const execute = {
                     </p>
                     <p>
                     Loaded Compression spring initialState.<br />
-                    OD_Free = 11.1 inches<br />
+                    Free_OD = 11.1 inches<br />
                     Spring_Index MIN 1.0
                     Spring_Index MAX 1.6
                     </p>
@@ -226,7 +226,7 @@ export const execute = {
             ),
             actions: [
                 loadInitialState('Spring/Compression'),
-                changeSymbolValue("OD_Free", 11.1),
+                changeSymbolValue("Free_OD", 11.1),
                 resetSymbolFlag('Spring_Index', MIN, CONSTRAINED),
                 changeSymbolConstraint('Spring_Index', MIN, 1.0),
                 setSymbolFlag('Spring_Index', MAX, CONSTRAINED),

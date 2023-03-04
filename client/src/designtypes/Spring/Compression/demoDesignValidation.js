@@ -130,7 +130,7 @@ export const execute = {
                     In summary, the changes were:<br />
                     </p>
                     FIX  Wire_Diameter   0.0395<br/>
-                    FIX  OD_Free    0.357<br/>
+                    FIX  Free_OD    0.357<br/>
                     FIX  Free_Length     0.807<br/>
                     FIX  Total_Coils    8<br/>
                     FIX  L_1 &nbsp; 0.689<br/>
@@ -143,7 +143,7 @@ export const execute = {
             ),
             actions: [
                 fixSymbolValue('Wire_Diameter', 0.0395),
-                fixSymbolValue('OD_Free', 0.357),
+                fixSymbolValue('Free_OD', 0.357),
                 fixSymbolValue('Free_Length', 0.807),
                 fixSymbolValue('Total_Coils', 8),
                 fixSymbolValue('L_1', 0.689),

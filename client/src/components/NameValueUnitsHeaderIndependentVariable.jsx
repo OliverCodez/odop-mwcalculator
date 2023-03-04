@@ -10,9 +10,7 @@ class NameValueUnitsHeaderIndependentVariable extends Component {
             <thead>
                 <tr>
                     <th className="text-center bg-secondary text-white" colSpan="6" id="IVTitle">
-                        <OverlayTrigger placement="top">
-                            <span>Enter Spring Properties</span>
-                        </OverlayTrigger>
+                        <span>Enter Spring Properties</span>
                     </th>
                 </tr>
                 <tr className="calc-hidden">

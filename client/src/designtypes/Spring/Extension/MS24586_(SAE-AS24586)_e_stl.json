@@ -1,5 +1,5 @@
 [
-    ["Name","OD_Free","Wire_Diameter","Total_Coils","Initial_Tension","Material_Type","End_Type"],
+    ["Name","Free_OD","Wire_Diameter","Total_Coils","Initial_Tension","Material_Type","End_Type"],
     [  "1",     0.12,     0.016,     50.5,     0.2,          "MUSIC_WIRE",  "Full_Hook"],
     [  "2",     0.12,     0.016,     58.5,     0.2,          "MUSIC_WIRE",  "Full_Hook"],
     [  "3",     0.12,     0.016,     66.0,     0.2,          "MUSIC_WIRE",  "Full_Hook"],

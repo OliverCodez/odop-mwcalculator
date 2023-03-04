@@ -45,7 +45,7 @@ export class Calculator extends ReportBase {
                                 <ValueName name={<><b>Length</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Length at initial point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>Deflection</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Deflection at initial point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>Force</b><br />{this.props.symbol_table[o.Force_1].units}</>} tooltip="Force at initial point, point 1, point 2 and maximum safe point" className="text-center" />
-                                <ValueName name={<><b>OD</b><br />{this.props.symbol_table[o.OD_Free].units}</>} tooltip="Outside Diameter at initial point, point 1, point 2 and maximum safe point" className="text-center" />
+                                <ValueName name={<><b>OD</b><br />{this.props.symbol_table[o.Free_OD].units}</>} tooltip="Outside Diameter at initial point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>ID</b><br />{this.props.symbol_table[o.ID_Free].units}</>} tooltip="Inside Diameter at initial point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>Stress</b><br />{this.props.symbol_table[o.Stress_1].units}</>} tooltip="Stress at initial point, point 1, point 2 and maximum safe point" className="text-center" />
                                 <ValueName name={<><b>Static FS</b><br />{this.props.symbol_table[o.FS_2].units}</>} tooltip="Static Factor of Safety at initial point, point 1, point 2 and maximum safe point" className="text-center" />
@@ -57,7 +57,7 @@ export class Calculator extends ReportBase {
                                 <SymbolValue element={this.props.symbol_table[o.Free_Length]} index={o.Free_Length} />
                                 <Value id="Deflection_Free" value={0.0} />
                                 <SymbolValue element={this.props.symbol_table[o.Initial_Tension]} index={o.Initial_Tension} />
-                                <SymbolValue element={this.props.symbol_table[o.OD_Free]} index={o.OD_Free} />
+                                <SymbolValue element={this.props.symbol_table[o.Free_OD]} index={o.Free_OD} />
                                 <SymbolValue element={this.props.symbol_table[o.ID_Free]} index={o.ID_Free} />
                                 <SymbolValue element={this.props.symbol_table[o.Stress_Initial]} index={o.Stress_Initial} />
                                 <Value id="Static FS_Free" value={(this.props.symbol_table[o.Stress_Lim_Stat].value / this.props.symbol_table[o.Stress_Initial].value)} />

@@ -17,7 +17,7 @@ export function eqnset(p, x) {        /*    Torsion  Spring  */
     var ctp1;
     
     /*  *******  DESIGN EQUATIONS  *******                  */
-    x[o.Mean_Dia] = p[o.OD_Free] - p[o.Wire_Diameter];
+    x[o.Mean_Dia] = p[o.Free_OD] - p[o.Wire_Diameter];
 
     x[o.Spring_Index] = x[o.Mean_Dia] / p[o.Wire_Diameter];
 

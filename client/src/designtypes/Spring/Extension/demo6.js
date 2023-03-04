@@ -109,7 +109,7 @@ export const execute = {
                     &nbsp; CHANGE  Material_Type  OIL_TEMPERED_MB<br />
                     &nbsp; CHANGE  End_Type  Full_Loop<br />
                     &nbsp; CHANGE  ID_Free MIN   .765<br />
-                    &nbsp; CHANGE  OD_Free MAX  1.235<br />
+                    &nbsp; CHANGE  Free_OD MAX  1.235<br />
                     &nbsp; FIX  Force_1  25<br />
                     &nbsp; FIX  L_1    5.6<br />
                     &nbsp; FIX  Force_2  35<br />
@@ -126,8 +126,8 @@ export const execute = {
                 changeSymbolValue("End_Type",1),
                 setSymbolFlag('ID_Free', MIN, CONSTRAINED),
                 changeSymbolConstraint('ID_Free', MIN, 0.765),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 1.235),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 1.235),
                 fixSymbolValue('Force_1', 25.0),
                 fixSymbolValue('L_1', 5.6),
                 fixSymbolValue('Force_2', 35.0),
@@ -251,7 +251,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('OD_Free', 1.105),
+                fixSymbolValue('Free_OD', 1.105),
                 fixSymbolValue('Total_Coils', 17.5),
                 fixSymbolValue('Initial_Tension', 6.35),
                 changeSymbolValue("End_Type",6),

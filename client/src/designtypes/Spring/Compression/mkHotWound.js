@@ -30,7 +30,7 @@ export const execute = {
                         <li>{'loadInitialState("Spring/Compression","US"),'}</li>
                         <li>{'changeName("HotWound"),'}</li>
                         <li>{'changeLabelsValue([{name: "COMMENT", value: "Hot Wound Compression Spring Startup"}]),'}</li>
-                        <li>{'changeSymbolValue("OD_Free", 6.0),'}</li>
+                        <li>{'changeSymbolValue("Free_OD", 6.0),'}</li>
                         <li>{'changeSymbolValue("Wire_Diameter", 0.625),'}</li>
                         <li>{'changeSymbolValue("Free_Length", 10.0),'}</li>
                         <li>{'changeSymbolValue("Total_Coils", 7.0),'}</li>
@@ -62,7 +62,7 @@ export const execute = {
                 loadInitialState("Spring/Compression","US"),
                 changeName("HotWound"),
                 changeLabelsValue([{name: "COMMENT", value: "Hot Wound Compression Spring Startup"}]),
-                changeSymbolValue("OD_Free", 6.0),
+                changeSymbolValue("Free_OD", 6.0),
                 changeSymbolValue("Wire_Diameter", 0.625),
                 changeSymbolValue("Free_Length", 10.0),
                 changeSymbolValue("Total_Coils", 7.0),

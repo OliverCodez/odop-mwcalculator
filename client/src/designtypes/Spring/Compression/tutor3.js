@@ -94,7 +94,7 @@ export const execute = {
             text: (
                 <>
                     <p>
-                    The tutorial has changed a constraint: CHANGE  OD_Free MAX 0.9<br />
+                    The tutorial has changed a constraint: CHANGE  Free_OD MAX 0.9<br />
                     <br />
                     Take a look at the results.
                     </p>
@@ -117,8 +117,8 @@ export const execute = {
                 </>
             ),
             actions: [
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 0.9),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 0.9),
                 fixSymbolValue('Force_2')
             ]
         },
@@ -216,15 +216,15 @@ export const execute = {
                     <br />
                     FIX  Force_2   280<br />
                     FIX  Deflect_2   5.5<br />
-                    CHANGE  OD_Free MAX  2.0<br />
+                    CHANGE  Free_OD MAX  2.0<br />
                     </p>
                 </>
             ),
             actions: [
                 fixSymbolValue('Force_2', 280.0),
                 fixSymbolValue('Deflect_2', 5.5),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 2.0)
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 2.0)
             ]
         },
         {

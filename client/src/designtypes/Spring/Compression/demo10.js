@@ -131,7 +131,7 @@ export const execute = {
 
                     <p>
                     CHANGE Material_Type 302_STAINLESS &nbsp; <br />
-                    CHANGE OD_Free 1.142<br />
+                    CHANGE Free_OD 1.142<br />
                     CHANGE Wire_Diameter 0.142
                     </p>
 
@@ -148,14 +148,14 @@ export const execute = {
                     The values of Density, Torsion Modulus and Tensile for 302 Stainless will carry forward 
                     but other properties will be specified separately. 
                     Specifically, the stress correction factor adjusted value of allowable stress will be applied. 
-                    In the process, the previous values of OD_Free and Wire_Diameter will be restored so that the demo session
+                    In the process, the previous values of Free_OD and Wire_Diameter will be restored so that the demo session
                     is not able to "cheat" and start the solution with the handbook answer already in place. 
                     </p>
                 </>
             ),
             actions: [
                 changeSymbolValue("Material_Type",7),
-                changeSymbolValue("OD_Free",1.142),
+                changeSymbolValue("Free_OD",1.142),
                 changeSymbolValue("Wire_Diameter",0.142)
             ]
         },
@@ -169,7 +169,7 @@ export const execute = {
 
                     <p>
                     CHANGE Prop_Calc_Method 3<br /> 
-                    CHANGE OD_Free 1.1<br />
+                    CHANGE Free_OD 1.1<br />
                     CHANGE Wire_Diameter 0.1055<br />
                     CHANGE Stress_Lim_Stat 96880 
                     </p>
@@ -191,7 +191,7 @@ export const execute = {
             ),
             actions: [
                 changeSymbolValue("Prop_Calc_Method",3),
-                changeSymbolValue("OD_Free",1.1),
+                changeSymbolValue("Free_OD",1.1),
                 changeSymbolValue("Wire_Diameter",0.1055),
                 changeSymbolValue("Stress_Lim_Stat",96880)
             ]

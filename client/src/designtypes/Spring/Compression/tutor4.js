@@ -147,7 +147,7 @@ export const execute = {
                     <br />
                         CHANGE Life_Category "1 million cycles - Not Peened" &nbsp; &#60;--- request nearest cycle life category<br />
                         CHANGE  FS_CycleLife MIN  1.0<br />
-                        CHANGE  OD_Free MAX  1.950 &nbsp; &#60;--- 0.050 margin for hole<br />
+                        CHANGE  Free_OD MAX  1.950 &nbsp; &#60;--- 0.050 margin for hole<br />
                         CHANGE  L_Solid MAX  1.2<br />
                         CHANGE  L_Stroke MIN 1.0<br />
                         FIX  Force_1  0<br />
@@ -167,8 +167,8 @@ export const execute = {
                 changeSymbolValue("Life_Category",3),
                 setSymbolFlag('FS_CycleLife', MIN, CONSTRAINED),
                 changeSymbolConstraint('FS_CycleLife', MIN, 1.0),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 1.950),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 1.950),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.2),
                 setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
@@ -228,7 +228,7 @@ export const execute = {
                     <p>
                     In Tutorial speak, the changes just imposed are:<br />
                     <br />
-                        CHANGE  OD_Free  2.0<br />
+                        CHANGE  Free_OD  2.0<br />
                         CHANGE  Wire_Diameter .22<br />
                         CHANGE  Free_Length  3.0<br />
                         CHANGE  Total_Coils   7
@@ -240,7 +240,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                changeSymbolValue("OD_Free", 2.0),
+                changeSymbolValue("Free_OD", 2.0),
                 changeSymbolValue("Wire_Diameter", 0.22),
                 changeSymbolValue("Free_Length", 3.0),
                 changeSymbolValue("Total_Coils", 7.0)

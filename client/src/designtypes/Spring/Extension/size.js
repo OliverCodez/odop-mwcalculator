@@ -4,7 +4,7 @@ import * as mo from '../mat_offsets';
 export function getSizeTypes() {
     var result = [
         'Wire_Diameter', // Default
-        'OD_Free'
+        'Free_OD'
     ];
 //    console.log('In getSizeTypes result=',result);
     return result;
@@ -54,7 +54,7 @@ export function getSizeEntries(type, st) {
             result.push(size2);
         }
         break;
-    case "OD_Free":
+    case "Free_OD":
         if (st[o.Material_File].value === "mat_metric.json")
             m_tab = require('../mat_metric.json');
         else
@@ -66,9 +66,9 @@ export function getSizeEntries(type, st) {
 //        console.log('In getSizeEntries od_free_filename=',od_free_filename);
         od_free_table = require('../'+od_free_filename+'.json'); // Dynamically load table
 //        console.log('In getSizeEntries od_free_table=',od_free_table);
-        od_free = st[o.OD_Free].value;
+        od_free = st[o.Free_OD].value;
 //        console.log('In getSizeEntries od_free=',od_free);
-        // Select one below value less than OD_Free and two value greater than OD_Free
+        // Select one below value less than Free_OD and two value greater than Free_OD
         for (let i = 1; i < od_free_table.length; i++) { // Skip column headers at zeroth entry
             od_free_entry = od_free_table[i];
             size0 = size1;

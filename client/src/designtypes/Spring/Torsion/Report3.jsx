@@ -228,11 +228,11 @@ class Report3 extends ReportBase {
                         </tr>
                         <tr>
                             <td><b>Outside Dia.</b></td>
-                            <td>{this.props.symbol_table[o.OD_Free].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.Free_OD].value.toFixed(3)}</td>
                             <td>{this.od_1.toFixed(3)}</td>
                             <td>{this.od_2.toFixed(3)}</td>
                             <td>{this.od_max.toFixed(3)}</td>
-                            <td className="text-left">{this.props.symbol_table[o.OD_Free].units}</td>
+                            <td className="text-left">{this.props.symbol_table[o.Free_OD].units}</td>
                         </tr>
                         <tr>
                             <td><b>Inside Dia.</b></td>

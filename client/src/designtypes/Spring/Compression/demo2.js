@@ -109,7 +109,7 @@ export const execute = {
                     CHANGE  Material_Type  302_STAINLESS<br />
                     CHANGE  End_Type  Closed<br />
                     <br />
-                    FIX     OD_Free  0.188<br />
+                    FIX     Free_OD  0.188<br />
                     CHANGE  L_Solid MAX  0.340<br />
                     <br />
                     FIX  L_2  0.385<br />
@@ -125,7 +125,7 @@ export const execute = {
             actions: [
                 changeSymbolValue("Material_Type",7),
                 changeSymbolValue("End_Type",3),
-                fixSymbolValue('OD_Free', 0.188),
+                fixSymbolValue('Free_OD', 0.188),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 0.340),
                 fixSymbolValue('L_2', 0.385),

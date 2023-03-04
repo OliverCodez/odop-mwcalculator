@@ -1,5 +1,5 @@
 // Independent Variables (input-only)
-export const OD_Free = 0;
+export const Free_OD = 0;
 export const Wire_Diameter = 1;
 export const Free_Length = 2;
 export const Total_Coils = 3;

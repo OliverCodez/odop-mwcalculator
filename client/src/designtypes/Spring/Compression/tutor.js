@@ -217,7 +217,7 @@ export const execute = {
                     <p>
                     Also notice that this change to Free_Length by this tutorial session did not leave it in Fixed status.
                     By default, the ODOP AutoFix feature is enabled. 
-                    Thus, a user making a change to the value of an independent variable like OD_Free 
+                    Thus, a user making a change to the value of an independent variable like Free_OD 
                     will leave it in Fixed status. 
                     </p>
                 </>
@@ -297,7 +297,7 @@ export const execute = {
                     
                     <p>
                     By having Wire_Diameter and Force_2 in Fixed status, the search will be able to adjust
-                    only the values of OD_Free, Wire_Diameter, Free_Length and Total_Coils to find a design that 
+                    only the values of Free_OD, Wire_Diameter, Free_Length and Total_Coils to find a design that 
                     does not exceed the maximum on %_Avail_Deflect.
                     Of course, the entire collection of Dependent Variables will respond 
                     to any changes in the Independent Variables.

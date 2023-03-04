@@ -12,7 +12,7 @@ export function eqnset(p, x) {        /*    Compression  Spring  */
     var se2;
     
     /*  *******  DESIGN EQUATIONS  *******                  */
-    x[o.Mean_Dia] = p[o.OD_Free] - p[o.Wire_Diameter];
+    x[o.Mean_Dia] = p[o.Free_OD] - p[o.Wire_Diameter];
 
     x[o.ID_Free] = x[o.Mean_Dia] - p[o.Wire_Diameter];
 

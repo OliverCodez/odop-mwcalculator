@@ -108,7 +108,7 @@ export const execute = {
                     In summary, the changes were:<br />
                     &nbsp; CHANGE  Material_Type  OIL_TEMPERED_MB<br />
                     &nbsp; CHANGE  End_Type  75%_Hook<br />
-                    &nbsp; FIX  OD_Free  0.5<br />
+                    &nbsp; FIX  Free_OD  0.5<br />
                     &nbsp; FIX  Free_Length  2.938<br />
                     &nbsp; FIX  Force_2  15<br />
                     &nbsp; FIX  L_2     4.688
@@ -125,7 +125,7 @@ export const execute = {
             actions: [
                 changeSymbolValue("Material_Type",3),
                 changeSymbolValue("End_Type",4),
-                fixSymbolValue('OD_Free', 0.5),
+                fixSymbolValue('Free_OD', 0.5),
                 fixSymbolValue('Free_Length', 2.938),
                 fixSymbolValue('Force_2', 15.0),
                 fixSymbolValue('L_2', 4.688)

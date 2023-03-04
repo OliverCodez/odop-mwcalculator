@@ -1,5 +1,5 @@
 [
-    ["Name","OD_Free","Wire_Diameter","Free_Length","Total_Coils","Material_Type","End_Type"],
+    ["Name","Free_OD","Wire_Diameter","Free_Length","Total_Coils","Material_Type","End_Type"],
     [   "C1", 0.120, 0.016,  0.250,  6.500, "Stainless 302",   "Closed&Ground"],
     [   "C2", 0.120, 0.016,  0.310,  8.250, "Stainless 302",   "Closed&Ground"],
     [   "C3", 0.120, 0.016,  0.380,  9.750, "Stainless 302",   "Closed&Ground"],

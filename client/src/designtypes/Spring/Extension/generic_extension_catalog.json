@@ -1,5 +1,5 @@
 [
-    ["Name","OD_Free","Wire_Diameter","Free_Length","Initial_Tension","Material_Type","End_Type"],
+    ["Name","Free_OD","Wire_Diameter","Free_Length","Initial_Tension","Material_Type","End_Type"],
     ["201-S",  0.125,   0.014,    1.500,   0.14,      "MUSIC_WIRE",         "75%_Hook"],
     ["202-S",  0.125,   0.018,    1.500,   0.39,      "MUSIC_WIRE",         "75%_Hook"],
     ["218-S",  0.125,   0.014,    1.875,   0.14,      "MUSIC_WIRE",         "75%_Hook"],

@@ -105,7 +105,7 @@ class Report1 extends ReportBase {
                             <td className="text-center"><b>Deflect</b><br />{this.props.symbol_table[o.Deflect_1].units}</td>
                             <td className="text-center"><b>Length</b><br />{this.props.symbol_table[o.L_Body].units}</td>
                             <td/>
-                            <td className="text-center"><b>OD</b><br />{this.props.symbol_table[o.OD_Free].units}</td>
+                            <td className="text-center"><b>OD</b><br />{this.props.symbol_table[o.Free_OD].units}</td>
                             <td className="text-center"><b>ID</b><br />{this.props.symbol_table[o.ID_Free].units}</td>
                             <td/>
                             <td className="text-center"><b>Stress</b><br />{this.props.symbol_table[o.Stress_1].units}</td>
@@ -119,7 +119,7 @@ class Report1 extends ReportBase {
                             <td>{(0.0).toFixed(1)}</td>
                             <td>{this.props.symbol_table[o.L_Body].value.toFixed(3)}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.OD_Free].value.toFixed(4)}</td>
+                            <td>{this.props.symbol_table[o.Free_OD].value.toFixed(4)}</td>
                             <td>{this.props.symbol_table[o.ID_Free].value.toFixed(4)}</td>
                             <td/>
                             <td>{(0.0).toFixed(0)}</td>

@@ -16,7 +16,7 @@ export function eqnset(p, x) {        /*    Extension  Spring  */
 //  console.log("et_tab=", et_tab);
 
     /*  *******  DESIGN EQUATIONS  *******                  */
-    x[o.Mean_Dia] = p[o.OD_Free] - p[o.Wire_Diameter];
+    x[o.Mean_Dia] = p[o.Free_OD] - p[o.Wire_Diameter];
 
     x[o.ID_Free] = x[o.Mean_Dia] - p[o.Wire_Diameter];
 
@@ -49,7 +49,7 @@ export function eqnset(p, x) {        /*    Extension  Spring  */
     
     /*
      * End_ID, Extended_End_ID, L_End and L_Extended_End are also calculated in init.
-     * They need to be calculated in eqnset because OD_Free will be changed during Search when init is not called.
+     * They need to be calculated in eqnset because Free_OD will be changed during Search when init is not called.
      */
     j = x[o.End_Type];
     if (x[o.End_Type] <= e_end_num) {

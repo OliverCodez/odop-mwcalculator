@@ -26,7 +26,7 @@ class ViewCADModel extends Component {
 //        console.log('In ViewCADModel.render this=',this);
 
         var od_free = this.props.symbol_table[0];
-//        console.log('In ViewCADModel.render OD_Free=',od_free);
+//        console.log('In ViewCADModel.render Free_OD=',od_free);
         var wire_dia = this.props.symbol_table[1];
 //        console.log('In ViewCADModel.render Wire_Diameter=',wire_dia);
         var coils_t = this.props.symbol_table[2];

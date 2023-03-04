@@ -139,7 +139,7 @@ export const execute = {
                     <p>
                     FIX  Force_1   0.0<br />
                     FIX  Force_2  20.0<br />
-                    CHANGE  OD_Free MAX   1.5<br />
+                    CHANGE  Free_OD MAX   1.5<br />
                     CHANGE  L_Stroke MIN  1.0<br />
                     CHANGE  L_Solid MAX   1.5
                     </p>
@@ -159,8 +159,8 @@ export const execute = {
             actions: [
                 fixSymbolValue('Force_1', 0.0),
                 fixSymbolValue('Force_2', 20.0),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 1.5),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 1.5),
                 setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
                 changeSymbolConstraint('L_Stroke', MIN, 1.0),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
@@ -491,7 +491,7 @@ export const execute = {
                     <p>
                     In "Tutorial Speak" those changes are:<br />
                     <br />
-                    CHANGE  OD_Free MAX  1.5<br />
+                    CHANGE  Free_OD MAX  1.5<br />
                     CHANGE  L_Solid MAX  1.5<br />
                     CHANGE  L_Stroke MIN 1.0<br />
                     FIX  Force_1 0
@@ -508,8 +508,8 @@ export const execute = {
             ),
             actions: [
                 loadInitialState('Spring/Compression'),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 1.5),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 1.5),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.5),
                 setSymbolFlag('L_Stroke', MIN, CONSTRAINED),

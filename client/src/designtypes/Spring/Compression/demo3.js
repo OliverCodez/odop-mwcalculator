@@ -98,8 +98,8 @@ export const execute = {
             actions: [
                 changeSymbolValue("Material_Type",3),
                 changeSymbolValue("End_Type",4),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 1.56),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 1.56),
                 fixSymbolValue('Force_1', 61.8),
                 fixSymbolValue('L_1', 2.362),
                 fixSymbolValue('Force_2', 112.0),
@@ -191,7 +191,7 @@ export const execute = {
                     
                     <p>
                     CHANGE  Wire_Diameter  0.189<br />
-                    CHANGE  OD_Free   1.5<br />
+                    CHANGE  Free_OD   1.5<br />
                     CHANGE  Free_Length    2.843<br />
                     CHANGE  Total_Coils   8.4<br />
                     </p>
@@ -203,7 +203,7 @@ export const execute = {
             ),
             actions: [
                 changeSymbolValue("Wire_Diameter",0.189),
-                changeSymbolValue("OD_Free",1.5),
+                changeSymbolValue("Free_OD",1.5),
                 changeSymbolValue("Free_Length",2.843),
                 changeSymbolValue("Total_Coils",8.4)
             ]

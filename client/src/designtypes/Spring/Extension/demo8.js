@@ -82,7 +82,7 @@ export const execute = {
                     In summary, the changes were:<br />
                     &nbsp; CHANGE  Material_Type  HARD_DRAWN_WIRE<br />
                     &nbsp; CHANGE  End_Type  Full_Loop<br />
-                    &nbsp; CHANGE  OD_Free MAX  0.261 &nbsp; &lt;---  0.015 margin<br />
+                    &nbsp; CHANGE  Free_OD MAX  0.261 &nbsp; &lt;---  0.015 margin<br />
                     &nbsp; FIX  Force_1  3.93 &nbsp; <br />
                     &nbsp; FIX  L_1    0.984<br />
                     &nbsp; FIX  Force_2  6.74 &nbsp; <br />
@@ -93,8 +93,8 @@ export const execute = {
             actions: [
                 changeSymbolValue("Material_Type",1),
                 changeSymbolValue("End_Type",1),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 0.261),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 0.261),
                 changeSymbolConstraint('Force_1', MIN, 3.929),
                 resetSymbolFlag('Force_1', MIN, CONSTRAINED),
                 fixSymbolValue('Force_1', 3.93),
@@ -246,7 +246,7 @@ export const execute = {
                     </p>
                     
                     <p>
-                    change  OD_Free   0.248<br />
+                    change  Free_OD   0.248<br />
                     change  Wire_Diameter  0.035433   &lt;---  0.9 mm<br />
                     change  Total_Coils  13.2    &lt;--- no allowance for hook deflection<br />
                     change  Initial_Tension  1.68<br />
@@ -263,7 +263,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                changeSymbolValue('OD_Free', 0.248),
+                changeSymbolValue('Free_OD', 0.248),
                 changeSymbolValue('Wire_Diameter', 0.035433),
                 changeSymbolValue('Total_Coils', 13.2),
                 changeSymbolValue('Initial_Tension', 1.68),

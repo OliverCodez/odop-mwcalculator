@@ -227,7 +227,7 @@ export const execute = {
                     <p>
                     While the two solutions are in reasonable agreement,
                     the demo session will take one more step and 
-                    impose the handbook's values for OD_Free and Total_Coils.
+                    impose the handbook's values for Free_OD and Total_Coils.
                     </p>
                 </>
             ),
@@ -254,13 +254,13 @@ export const execute = {
                     </p>
                     
                     <p>
-                    The shift in OD_Free and Total_Coils have resulted in a small change in deflection at point 2.
+                    The shift in Free_OD and Total_Coils have resulted in a small change in deflection at point 2.
                     Even so, the two solutions are still in reasonable agreement.
                     </p>
                 </>
             ),
             actions: [
-                changeSymbolValue("OD_Free",0.876),
+                changeSymbolValue("Free_OD",0.876),
                 changeSymbolValue("Total_Coils",7.0),
             ]
         }

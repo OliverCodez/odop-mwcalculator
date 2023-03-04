@@ -3,7 +3,7 @@ export const initialState = {
     "symbol_table": [
         {
             "input": true,
-            "name": "OD_Free",
+            "name": "Free_OD",
             "value": 24.4475,
             "units": "mm",
             "lmin": 0,

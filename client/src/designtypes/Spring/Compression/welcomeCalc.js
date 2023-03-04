@@ -50,7 +50,7 @@ export const execute = {
                 logUsage('event','welcomeCalc', { event_label: 'Page 01 of 04' }),
 //                                       Expect to re-enable NaN in future release
 //                                       "NaN" (Not a Number) may appear if inputs are not complete.
-//                changeSymbolValue("OD_Free", Number.NaN),
+//                changeSymbolValue("Free_OD", Number.NaN),
 //                changeSymbolValue("Wire_Diameter", Number.NaN),
 //                changeSymbolValue("Free_Length", Number.NaN),
 //                changeSymbolValue("Total_Coils", Number.NaN),

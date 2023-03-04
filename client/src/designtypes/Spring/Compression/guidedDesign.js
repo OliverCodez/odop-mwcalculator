@@ -318,7 +318,7 @@ export const execute = {
                     The Seek feature can find the constrained extreme of any independent or dependent variable 
                     that is not in Fixed status. 
                     For compression springs, the most likely candidates are: 
-                    min Weight, max Cycle_Life, min OD_Free, min L_Solid (solid height), min Rate and max Stroke.
+                    min Weight, max Cycle_Life, min Free_OD, min L_Solid (solid height), min Rate and max Stroke.
                     </p>
                     
                     <p>

@@ -127,7 +127,7 @@ export const execute = {
                     CHANGE  Life_Category 1 Million cycles - Not peened<br />
                     CHANGE  FS_CycleLife 1.0<br />
                     CHANGE  Cycle_Life  MIN  1000000<br />
-                    CHANGE  OD_Free   MAX  1.25<br />
+                    CHANGE  Free_OD   MAX  1.25<br />
                     CHANGE  L_Solid   MAX  1.30<br />
                     CHANGE  L_Stroke  MIN  0.65<br />
                     FIX  Force_1  30.0<br />
@@ -146,8 +146,8 @@ export const execute = {
                 changeSymbolConstraint('FS_CycleLife', MIN, 1.0),
                 setSymbolFlag('Cycle_Life', MIN, CONSTRAINED),
                 changeSymbolConstraint('Cycle_Life', MIN, 1000000),
-                setSymbolFlag('OD_Free', MAX, CONSTRAINED),
-                changeSymbolConstraint('OD_Free', MAX, 1.25),
+                setSymbolFlag('Free_OD', MAX, CONSTRAINED),
+                changeSymbolConstraint('Free_OD', MAX, 1.25),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.30),
                 setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
