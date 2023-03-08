@@ -71,6 +71,15 @@ input[type=number] {
     margin-bottom: 0!important;
 }
 
+#root2 > .container {
+    padding-top: 40px!important;
+    max-width: unset!important;
+}
+
+#root2 > .container > .nav-tabs {
+    border: none;
+}
+
 #root2 > .container > .tab-content > .tab-pane:first-child,
 #root2 > .container > .tab-content > .tab-pane {
     display: block!important;
@@ -87,6 +96,7 @@ input[type=number] {
     margin: 0 auto;
     box-shadow: 8px 8px 10px 0 #00000063;
     border: 2px solid #000;
+    margin-bottom: 40px;
 }
 
 #root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child,
@@ -105,6 +115,7 @@ input[type=number] {
     flex-direction: column;
     justify-content: center;
     padding: 0;
+    border: none !important;
 }
 
 #root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child thead {
@@ -150,6 +161,8 @@ input[type=number] {
 #root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(1) {
     text-align: right;
     width: 30%;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 #root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2),
@@ -158,11 +171,17 @@ input[type=number] {
 }
 
 #root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) input,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) input {
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) input,
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) select,
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) select {
     color: #000;
+    font-family: Sans;
+    font-size: 1.1rem;
 }
 
 #root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(3),
 #root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(3) {
     width: 15%;
+    font-size: 1rem;
+    text-transform: capitalize;
 }
