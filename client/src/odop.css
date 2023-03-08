@@ -72,8 +72,14 @@ input[type=number] {
 }
 
 #root2 > .container {
-    padding-top: 40px!important;
-    max-width: unset!important;
+    max-width: 1140px !important;
+    padding-top: 40px !important;
+}
+
+#root2 > .container h4 {
+    color: #000;
+    font-size: 1.9rem;
+    font-weight: bolder;
 }
 
 #root2 > .container > .nav-tabs {
@@ -89,8 +95,12 @@ input[type=number] {
     width: 100%;
 }
 
-#root2 > .container > .tab-content > .tab-pane:nth-child(3) {
-    margin-top: 60px;
+#root2 > .container > .tab-content > .tab-pane > #main_Report1,
+#root2 > .container > .tab-content > .tab-pane > #main_Report2,
+#root2 > .container > .tab-content > .tab-pane > #main_Report3 {
+    border-top: solid 2px #8286883b;
+    padding-top: 15px;
+    margin-top: 15px;
 }
 
 #main_Advanced > .design-table {
@@ -161,9 +171,12 @@ input[type=number] {
     border: none;
 }
 
-#main_Calculator > .container > .row:nth-child(3) .report-table,
-#main_Calculator > .container > .row:nth-child(4) .report-table {
+#main_Calculator > .container .report-table {
     margin: 0 auto;
+}
+
+#main_Calculator > .container .report-table td {
+    text-align: right;
 }
 
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(1),
@@ -174,6 +187,11 @@ input[type=number] {
     width: 30%;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+#main_Calculator > .container > .row:nth-child(2) .report-table tbody tr td:first-child,
+#main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child {
+    width: auto;
 }
 
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2),
@@ -209,7 +227,7 @@ input[type=number] {
     background-color: #ffbf00;
 }
 
-#main_Calculator > .container > .row:nth-child(2) .report-table thead td > span {
+#main_Calculator > .container > .row:nth-child(2) .report-table-head span {
     background-color: #000;
     color: #ffbf00 !important;
     font-weight: normal;
@@ -264,6 +282,7 @@ header {
     padding: 0 20px;
     line-height: 50px;
     margin-top: 20px;
+    color: #000;
 }
 
 #mwc-hero-img {
