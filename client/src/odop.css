@@ -232,9 +232,9 @@ header {
 }
 
 #mwc-logo {
-    background-image: url(mwc-logo.svg);
+    background-image: url("mwc-logo.svg");
 }
 
 #mwc-hero-img {
-    background-image: url(mwc-hero-img.svg);
+    background-image: url("mwc-hero-img.svg");
 }
