@@ -74,6 +74,95 @@ input[type=number] {
 #root2 > .container > .tab-content > .tab-pane:first-child,
 #root2 > .container > .tab-content > .tab-pane {
     display: block!important;
+    position: relative;
     opacity: 1 !important;
-    margin-left: 68px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table {
+    display: block;
+    width: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 8px 8px 10px 0 #00000063;
+    border: 2px solid #000;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child,
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) {
+    display: block;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child,
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child thead {
+    display: block;
+    background: #000;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child thead tr {
+    display: block;
+    width: 100%;
+    background-color: #000;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child thead tr th {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 22px;
+    background: #000 !important;
+    border-top: none;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody,
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody {
+    border: none;
+    margin-top: 8px;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr,
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr {
+    border: none;
+    display: flex;
+    justify-content: right;
+    line-height: 39px;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td,
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td {
+    border: none;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(1),
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(1) {
+    text-align: right;
+    width: 30%;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2),
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) {
+    width: 55%;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) input,
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) input {
+    color: #000;
+}
+
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(3),
+#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(3) {
+    width: 15%;
 }
