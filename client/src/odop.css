@@ -89,7 +89,7 @@ input[type=number] {
     width: 100%;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table {
+#main_Advanced > .design-table {
     display: block;
     width: auto;
     max-width: 600px;
@@ -99,16 +99,16 @@ input[type=number] {
     margin-bottom: 40px;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) {
+#main_Advanced > .design-table > .row:first-child,
+#main_Advanced > .design-table > .row:nth-child(2) {
     display: block;
     margin: 0;
     width: 100%;
     padding: 0;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child {
+#main_Advanced > .design-table > .row:first-child table:first-child,
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child {
     width: 100%;
     max-width: 100%;
     display: flex;
@@ -118,18 +118,18 @@ input[type=number] {
     border: none !important;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child thead {
+#main_Advanced > .design-table > .row:first-child table:first-child thead {
     display: block;
     background: #000;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child thead tr {
+#main_Advanced > .design-table > .row:first-child table:first-child thead tr {
     display: block;
     width: 100%;
     background-color: #000;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child thead tr th {
+#main_Advanced > .design-table > .row:first-child table:first-child thead tr th {
     display: block;
     width: 100%;
     padding: 10px;
@@ -138,50 +138,81 @@ input[type=number] {
     border-top: none;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody {
+#main_Advanced > .design-table > .row:first-child table:first-child tbody,
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody {
     border: none;
     margin-top: 8px;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr {
+#main_Advanced > .design-table > .row:first-child table:first-child tbody tr,
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr {
     border: none;
     display: flex;
     justify-content: right;
     line-height: 39px;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td {
+#main_Advanced > .design-table > .row:first-child table:first-child tbody tr td,
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td {
     border: none;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(1),
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(1) {
+#main_Calculator .row:nth-child(3) .report-table,
+#main_Calculator .row:nth-child(4) .report-table {
+    margin: 0 auto;
+}
+
+#main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(1),
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(1),
+#main_Calculator .row:nth-child(2) .report-table tbody tr td:first-child,
+#main_Calculator .row:nth-child(3) .report-table tbody tr td:first-child {
     text-align: right;
     width: 30%;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2),
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) {
+#main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2),
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) {
     width: 55%;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) input,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) input,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) select,
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) select {
+#main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) input,
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) input,
+#main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) select,
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) select,
+#main_Calculator .row:nth-child(2) .report-table tbody td > .input-group > input {
     color: #000;
     font-family: Sans;
     font-size: 1.1rem;
+    border-radius: 3px;
 }
 
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(3),
-#root2 > .container > .tab-content > .tab-pane:first-child #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(3) {
+#main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(3),
+#main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(3) {
     width: 15%;
     font-size: 1rem;
     text-transform: capitalize;
+}
+
+.form-control:focus {
+    border-color: #ffbf00;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(255, 191, 0, 0.25);
+}
+
+.form-control option:hover {
+    background-color: #ffbf00;
+}
+
+#main_Calculator .row:nth-child(2) .report-table thead td > span {
+    background-color: #000;
+    color: #ffbf00 !important;
+    font-weight: normal;
+    text-transform: capitalize;
+    font-size: 18px;
+    line-height: 18px;
+    min-height: 50px;
+    text-align: center;
+    padding: 6px 0;
 }
