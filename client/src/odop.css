@@ -228,6 +228,8 @@ header {
 
 .mwc-hero {
     display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .mcw-hero-left {
@@ -245,7 +247,8 @@ header {
 #mwc-logo {
     height: 58px;
     margin-top: 10px;
-    background: url("mwc-logo.svg") contain center no-repeat;
+    background-position: center;
+    background-image: url("mwc-logo.svg") ;
 }
 
 #mwc-logo-sub {
@@ -261,5 +264,6 @@ header {
 
 #mwc-hero-img {
     height: 290px;
-    background: url("mwc-hero-img.svg") contain right no-repeat;
+    background-position: right;
+    background: url("mwc-hero-img.svg");
 }
