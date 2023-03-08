@@ -28,7 +28,7 @@ input[type=number] {
 
 .design-table table tr:first-child th {
     background: #1d1d21 !important;
-    color: #ffbf00 !important;
+    color: rgb(255, 214, 0) !important;
 }
 
 .design-table input, .design-table select, .design-table .input-group-append, .design-table .input-group-prepend {
@@ -59,6 +59,10 @@ input[type=number] {
 .calc-hide-someinit .input-group-append,
 #main_Calculator > .container > .row:first-child {
     display: none!important;
+}
+
+#main_Calculator > .container > .row:nth-child(5) {
+    margin-top: 26px;
 }
 
 .calc-hide-some > tbody:nth-child(4),
@@ -147,7 +151,10 @@ input[type=number] {
     display: block;
     width: 100%;
     padding: 10px;
-    font-size: 22px;
+    font-size: 20px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     background: #000 !important;
     border-top: none;
 }
@@ -181,16 +188,19 @@ input[type=number] {
 
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(1),
 #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(1),
-#main_Calculator > .container > .row:nth-child(2) .report-table tbody tr td:first-child,
-#main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child {
+#main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child,
+#main_Calculator > .container > .row:nth-child(5) .report-table tbody tr td:first-child {
     text-align: right;
     width: 30%;
-    font-size: 1.2rem;
+    font-size: 22px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-weight: bold;
 }
 
-#main_Calculator > .container > .row:nth-child(2) .report-table tbody tr td:first-child,
-#main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child {
+#main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child,
+#main_Calculator > .container > .row:nth-child(5) .report-table tbody tr td:first-child {
     width: auto;
 }
 
@@ -203,33 +213,38 @@ input[type=number] {
 #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) input,
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) select,
 #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) select,
-#main_Calculator > .container > .row:nth-child(2) .report-table tbody td > .input-group > input {
+#main_Calculator > .container > .row:nth-child(3) .report-table tbody td > .input-group > input {
     color: #000;
-    font-family: Sans;
-    font-size: 1.1rem;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
     border-radius: 3px;
 }
 
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(3),
 #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(3) {
     width: 15%;
-    font-size: 1rem;
     text-transform: capitalize;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .form-control:focus {
-    border-color: #ffbf00;
+    border-color: rgb(255, 214, 0);
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(255, 191, 0, 0.25);
 }
 
 .form-control option:hover {
-    background-color: #ffbf00;
+    background-color: rgb(255, 214, 0);
 }
 
-#main_Calculator > .container > .row:nth-child(2) .report-table-head span {
+#main_Calculator > .container > .row:nth-child(3) .report-table-head span {
     background-color: #000;
-    color: #ffbf00 !important;
+    color: rgb(255, 214, 0) !important;
     font-weight: normal;
     text-transform: capitalize;
     font-size: 18px;
@@ -283,6 +298,10 @@ header {
     line-height: 50px;
     margin-top: 20px;
     color: #000;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 50px;
 }
 
 #mwc-hero-img {
