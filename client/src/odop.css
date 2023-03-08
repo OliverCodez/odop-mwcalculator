@@ -216,3 +216,25 @@ input[type=number] {
     text-align: center;
     padding: 6px 0;
 }
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mwc-hero {
+    display: block;
+}
+
+.mwc-hero svg {
+    display: block;
+}
+
+#mwc-logo {
+    background-image: url(mwc-logo.svg);
+}
+
+#mwc-hero-img {
+    background-image: url(mwc-hero-img.svg);
+}
