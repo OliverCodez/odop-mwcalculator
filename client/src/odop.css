@@ -221,10 +221,21 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    max-width: 1090px;
+    width: auto;
+    margin: 60px auto 0;
 }
 
 .mwc-hero {
     display: block;
+}
+
+.mcw-hero-left {
+    width: 42%;
+}
+
+.mcw-hero-right {
+    width: 58%;
 }
 
 .mwc-hero svg {
@@ -232,9 +243,23 @@ header {
 }
 
 #mwc-logo {
-    background-image: url("mwc-logo.svg");
+    height: 58px;
+    margin-top: 10px;
+    background: url("mwc-logo.svg") contain center no-repeat;
+}
+
+#mwc-logo-sub {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    font-family: arial;
+    padding: 0 20px;
+    line-height: 50px;
+    margin-top: 20px;
 }
 
 #mwc-hero-img {
-    background-image: url("mwc-hero-img.svg");
+    height: 290px;
+    background: url("mwc-hero-img.svg") contain right no-repeat;
 }
