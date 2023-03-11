@@ -1,3 +1,9 @@
+body{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 #root2 > .container > .row {
     display: none!important;
 }
@@ -200,7 +206,10 @@ input[type=number] {
 }
 
 #main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child,
+#main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child b,
 #main_Calculator > .container > .row:nth-child(5) .report-table tbody tr td:first-child {
+    font-weight: 700!important;
+    font-size: 18px;
     width: auto;
 }
 
@@ -245,13 +254,19 @@ input[type=number] {
 #main_Calculator > .container > .row:nth-child(3) .report-table-head span {
     background-color: #000;
     color: rgb(255, 214, 0) !important;
-    font-weight: normal;
     text-transform: capitalize;
-    font-size: 18px;
-    line-height: 18px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
     min-height: 50px;
     text-align: center;
     padding: 6px 0;
+}
+
+#main_Calculator > .container > .row:nth-child(3) .report-table-head span b {
+    font-weight: 700!important;
 }
 
 header {
