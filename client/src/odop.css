@@ -223,7 +223,9 @@ input[type=number] {
 #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) input,
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) select,
 #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) select,
-#main_Calculator > .container > .row:nth-child(3) .report-table tbody td > .input-group > input {
+#main_Calculator > .container > .row:nth-child(3) .report-table tbody td > .input-group > input,
+#main_Calculator .report-table input,
+#main_Calculator .report-table select {
     color: #000;
     font-family: source-sans-pro, sans-serif;
     font-weight: 400;
