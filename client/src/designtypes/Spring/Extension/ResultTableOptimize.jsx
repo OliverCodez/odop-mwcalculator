@@ -14,7 +14,7 @@ export class ResultTableOptimize extends Component {
         this.onOptimizeSeekMINWeight = this.onOptimizeSeekMINWeight.bind(this);
         this.onOptimizeSeekMAXCycle_Life = this.onOptimizeSeekMAXCycle_Life.bind(this);
         this.onOptimizeSeekMINRate = this.onOptimizeSeekMINRate.bind(this);
-        this.onOptimizeSeekMAXL_Stroke = this.onOptimizeSeekMAXL_Stroke.bind(this);
+        this.onOptimizeSeekMAXLength_of_Stroke = this.onOptimizeSeekMAXLength_of_Stroke.bind(this);
     }
 
     onOptimizeSeekMINWeight(event) {
@@ -41,11 +41,11 @@ export class ResultTableOptimize extends Component {
         this.props.onClick(event);
     }
 
-    onOptimizeSeekMAXL_Stroke(event) {
-//        console.log('In ResultTableOptimize.onOptimizeSeekMAXL_Stroke this=',this,'event=',event);
-        logUsage('event', 'ResultTableOptimize', { event_label: 'optimize Seek MAX L_Stroke button' });
+    onOptimizeSeekMAXLength_of_Stroke(event) {
+//        console.log('In ResultTableOptimize.onOptimizeSeekMAXLength_of_Stroke this=',this,'event=',event);
+        logUsage('event', 'ResultTableOptimize', { event_label: 'optimize Seek MAX Length_of_Stroke button' });
         this.props.saveAutoSave();
-        this.props.seek('L_Stroke', MAX);
+        this.props.seek('Length_of_Stroke', MAX);
         this.props.onClick(event);
     }
 
@@ -69,7 +69,7 @@ export class ResultTableOptimize extends Component {
                                 <Button variant="primary" disabled={this.props.symbol_table[sto.Rate].lmin & FIXED ? true : false} onClick={this.onOptimizeSeekMINRate}>Seek MIN Rate</Button>
                             </td>
                             <td width="50%">
-                                <Button variant="primary" disabled={this.props.symbol_table[sto.L_Stroke].lmin & FIXED ? true : false} onClick={this.onOptimizeSeekMAXL_Stroke}>Seek MAX L_Stroke</Button>
+                                <Button variant="primary" disabled={this.props.symbol_table[sto.Length_of_Stroke].lmin & FIXED ? true : false} onClick={this.onOptimizeSeekMAXLength_of_Stroke}>Seek MAX Length_of_Stroke</Button>
                             </td>
                         </tr>
                     </tbody>

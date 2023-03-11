@@ -31,26 +31,26 @@ export class ReportBase extends Component {
 
         switch(this.props.symbol_table[o.End_Type].value) {
         case 4:        //  Closed & Ground
-            this.pitch = (this.props.symbol_table[o.Free_Length].value - 2.0 * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Coils_A].value;
+            this.pitch = (this.props.symbol_table[o.Free_Length].value - 2.0 * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Active_Coils].value;
             break;
         case 3:        //  Closed
-            this.pitch = (this.props.symbol_table[o.Free_Length].value - 3.0 * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Coils_A].value;
+            this.pitch = (this.props.symbol_table[o.Free_Length].value - 3.0 * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Active_Coils].value;
             break;
         case 2:        //  Open & Ground
             this.pitch = this.props.symbol_table[o.Free_Length].value / this.props.symbol_table[o.Total_Coils].value;
             break;
         case 1:        //  Open
-            this.pitch = (this.props.symbol_table[o.Free_Length].value -       this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Coils_A].value;
+            this.pitch = (this.props.symbol_table[o.Free_Length].value -       this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Active_Coils].value;
             break;
         case 5:        //  Tapered Closed & Ground
-            this.pitch = (this.props.symbol_table[o.Free_Length].value - 1.5 * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Coils_A].value;
+            this.pitch = (this.props.symbol_table[o.Free_Length].value - 1.5 * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Active_Coils].value;
             this.len_lbl = "Bar cut len.";
             break;
         case 6:        //  Pig-tail
-            this.pitch = (this.props.symbol_table[o.Free_Length].value - 2.0 * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Coils_A].value;
+            this.pitch = (this.props.symbol_table[o.Free_Length].value - 2.0 * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Active_Coils].value;
             break;
         default:        //  User Specified
-            this.pitch = (this.props.symbol_table[o.Free_Length].value - (this.props.symbol_table[o.Inactive_Coils].value + 1.0) * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Coils_A].value;
+            this.pitch = (this.props.symbol_table[o.Free_Length].value - (this.props.symbol_table[o.Inactive_Coils].value + 1.0) * this.props.symbol_table[o.Wire_Diameter].value) / this.props.symbol_table[o.Active_Coils].value;
         }
 
         var sq1 = this.props.symbol_table[o.Free_Length].value;
@@ -66,7 +66,7 @@ export class ReportBase extends Component {
          * note that value of this.wire_len_a is actually square of active wire length
          */
         sq1 = this.props.symbol_table[o.Free_Length].value;
-        sq2 = this.props.symbol_table[o.Coils_A].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value;
+        sq2 = this.props.symbol_table[o.Active_Coils].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value;
         this.wire_len_a = sq1 * sq1 + sq2 * sq2;
 
         this.dhat = this.def_dia(this.props.symbol_table[o.L_1].value);
@@ -188,7 +188,7 @@ export class ReportBase extends Component {
     def_dia(def_len) {
         /*  calculates mean diameter of deflected spring.  */
 //        console.log("In ReportBase.def_dia this=",this);
-        return Math.sqrt(this.wire_len_a - def_len * def_len) / (this.props.symbol_table[o.Coils_A].value * Math.PI);
+        return Math.sqrt(this.wire_len_a - def_len * def_len) / (this.props.symbol_table[o.Active_Coils].value * Math.PI);
     }
 
 }

@@ -100,9 +100,9 @@ export class Calculator extends ReportBase {
                     <table className="report-table">
                         <tbody>
                             <tr>
-                                <SymbolName element={this.props.symbol_table[o.L_Stroke]} index={o.L_Stroke} />
-                                <SymbolValue element={this.props.symbol_table[o.L_Stroke]} index={o.L_Stroke} />
-                                <SymbolUnits element={this.props.symbol_table[o.L_Stroke]} index={o.L_Stroke} className="text-left" />
+                                <SymbolName element={this.props.symbol_table[o.Length_of_Stroke]} index={o.Length_of_Stroke} />
+                                <SymbolValue element={this.props.symbol_table[o.Length_of_Stroke]} index={o.Length_of_Stroke} />
+                                <SymbolUnits element={this.props.symbol_table[o.Length_of_Stroke]} index={o.Length_of_Stroke} className="text-left" />
                                 <td> &nbsp; &nbsp; </td>
                                 <SymbolName element={this.props.symbol_table[o.Wire_Diameter]} index={o.Wire_Diameter} />
                                 <SymbolValueWireDia element={this.props.symbol_table[o.Wire_Diameter]} index={o.Wire_Diameter} />
@@ -118,9 +118,9 @@ export class Calculator extends ReportBase {
                                 <SymbolUnits element={this.props.symbol_table[o.Spring_Index]} index={o.Spring_Index} className="text-left" />
                             </tr>
                             <tr>
-                                <SymbolName element={this.props.symbol_table[o.Coils_A]} index={o.Coils_A} />
-                                <SymbolValue element={this.props.symbol_table[o.Coils_A]} index={o.Coils_A} />
-                                <SymbolUnits element={this.props.symbol_table[o.Coils_A]} index={o.Coils_A} className="text-left" />
+                                <SymbolName element={this.props.symbol_table[o.Active_Coils]} index={o.Active_Coils} />
+                                <SymbolValue element={this.props.symbol_table[o.Active_Coils]} index={o.Active_Coils} />
+                                <SymbolUnits element={this.props.symbol_table[o.Active_Coils]} index={o.Active_Coils} className="text-left" />
                                 <td> &nbsp; &nbsp; </td>
                                 <SymbolName element={this.props.symbol_table[o.Rate]} index={o.Rate} />
                                 <SymbolValue element={this.props.symbol_table[o.Rate]} index={o.Rate} />

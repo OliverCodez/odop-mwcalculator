@@ -52,7 +52,7 @@ export const execute = {
                         CHANGE  Cycle_Life MIN  50000<br />
                         CHANGE  FS_2 MAX 2.0 &nbsp; &#60;--- allow more conservative designs<br/>
                         CHANGE  L_Solid MAX  1.2<br />
-                        CHANGE  L_Stroke MIN 1.0<br />
+                        CHANGE  Length_of_Stroke MIN 1.0<br />
                         FIX  Force_1  0<br />
                         FIX  Force_2  250<br />
                     </p>
@@ -86,9 +86,9 @@ export const execute = {
                 saveOutputSymbolConstraints('L_Solid'),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.2),
-                saveOutputSymbolConstraints('L_Stroke'),
-                setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
-                changeSymbolConstraint('L_Stroke', MIN, 1.0),
+                saveOutputSymbolConstraints('Length_of_Stroke'),
+                setSymbolFlag('Length_of_Stroke', MIN, CONSTRAINED),
+                changeSymbolConstraint('Length_of_Stroke', MIN, 1.0),
                 fixSymbolValue('Force_1', 0.0),
                 fixSymbolValue('Force_2', 250.0)
             ]

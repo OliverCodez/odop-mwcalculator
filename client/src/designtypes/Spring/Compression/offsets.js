@@ -8,13 +8,13 @@ export const Force_2 = 5;
 
 // Dependent Variables (input-output)
 export const Mean_Dia = 0;
-export const Coils_A = 1;
+export const Active_Coils = 1;
 export const Rate = 2;
 export const Deflect_1 = 3;
 export const Deflect_2 = 4;
 export const L_1 = 5;
 export const L_2 = 6;
-export const L_Stroke = 7;
+export const Length_of_Stroke = 7;
 export const L_Solid = 8;
 export const Slenderness = 9;
 export const ID_Free = 10;

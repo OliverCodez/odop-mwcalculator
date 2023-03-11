@@ -22,17 +22,17 @@ export function eqnset(p, x) {        /*    Compression  Spring  */
 
     ks = kc + 0.615 / x[o.Spring_Index];
 
-    x[o.Coils_A] = p[o.Total_Coils] - x[o.Inactive_Coils];
+    x[o.Active_Coils] = p[o.Total_Coils] - x[o.Inactive_Coils];
 
     temp = x[o.Spring_Index] * x[o.Spring_Index];
     x[o.Rate] = x[o.Hot_Factor_Kh] * x[o.Torsion_Modulus] * x[o.Mean_Dia] /
-           (8.0 * x[o.Coils_A] * temp * temp);
+           (8.0 * x[o.Active_Coils] * temp * temp);
 //    console.log('x=',x);
 //    console.log('x[o.Spring_Index]=',x[o.Spring_Index]);
 //    console.log('x[o.Hot_Factor_Kh]=',x[o.Hot_Factor_Kh]);
 //    console.log('x[o.Torsion_Modulus]=',x[o.Torsion_Modulus]);
 //    console.log('x[o.Mean_Dia]=',x[o.Mean_Dia]);
-//    console.log('x[o.Coils_A]=',x[o.Coils_A]);
+//    console.log('x[o.Active_Coils]=',x[o.Active_Coils]);
 //    console.log('x[o.Rate]=',x[o.Rate]);
 
     x[o.Deflect_1] = p[o.Force_1] / x[o.Rate];
@@ -41,7 +41,7 @@ export function eqnset(p, x) {        /*    Compression  Spring  */
     x[o.L_1] = p[o.Free_Length] - x[o.Deflect_1];
     x[o.L_2] = p[o.Free_Length] - x[o.Deflect_2];
 
-    x[o.L_Stroke] = x[o.L_1] - x[o.L_2];
+    x[o.Length_of_Stroke] = x[o.L_1] - x[o.L_2];
 
     x[o.Slenderness] = p[o.Free_Length] / x[o.Mean_Dia];
 

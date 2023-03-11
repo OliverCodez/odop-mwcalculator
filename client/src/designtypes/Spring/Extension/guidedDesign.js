@@ -189,7 +189,7 @@ export const execute = {
                     <Table bordered size="sm">
                     <tbody>
                         <tr>
-                            <td> &nbsp; &nbsp; &nbsp; &nbsp; </td><td>active coils</td><td>Coils_A</td><td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; </td><td> &nbsp; </td>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; </td><td>active coils</td><td>Active_Coils</td><td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; </td><td> &nbsp; </td>
                         </tr>
                         <tr>
                             <td></td><td>deflection at first load point</td><td>Deflect_1</td><td></td>

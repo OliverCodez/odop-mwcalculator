@@ -29,7 +29,7 @@ Resolve this alert by reducing the value of Force_1 below the value of Force_2.
 
 It should also be possible to 
 confirm that Force_1 is in Free status, 
-confirm that the constraint L_Stroke MIN is enabled with a greater-than-zero constraint level 
+confirm that the constraint Length_of_Stroke MIN is enabled with a greater-than-zero constraint level 
 and then use the Search feature (menu Action : Search or Search button). 
 
 See also: 

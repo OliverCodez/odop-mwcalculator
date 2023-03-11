@@ -115,7 +115,7 @@ export const initialState = {
         },
         {
             "input": false,
-            "name": "Coils_A",
+            "name": "Active_Coils",
             "value": 8.0,
             "units": "coils",
             "lmin": CONSTRAINED,
@@ -213,7 +213,7 @@ export const initialState = {
         },
         {
             "input": false,
-            "name": "L_Stroke",
+            "name": "Length_of_Stroke",
             "value": 36.88007,
             "units": "mm",
             "lmin": 0,

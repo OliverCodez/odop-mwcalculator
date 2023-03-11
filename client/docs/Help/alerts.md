@@ -62,7 +62,7 @@ that will resolve the alerts.
  - [Material properties for this Wire_Diameter may not be accurate](/docs/Help/DesignTypes/Spring/alerts.html#MatPropAccuracy)  
  - [FS_CycleLife MIN not set](/docs/Help/DesignTypes/Spring/alerts.html#FS_CycleLife_MIN_not_set)  
  - [Over-design concern](/docs/Help/DesignTypes/Spring/alerts.html#OverDesign)  
- - [Coils_A is less than 1](/docs/Help/DesignTypes/Spring/alerts.html#Coils_A_LT_1)  
+ - [Active_Coils is less than 1](/docs/Help/DesignTypes/Spring/alerts.html#Active_Coils_LT_1)  
  - [Spring Index manufacturability concern](/docs/Help/DesignTypes/Spring/alerts.html#SI_manufacturability)  
  - [Cycle_Life calculation is not available](/docs/Help/DesignTypes/Spring/alerts.html#Cycle_LifeNA)  
  - [Cycle_Life not defined beyond yield](/docs/Help/DesignTypes/Spring/alerts.html#Cycle_LifeNA_FS_2)  

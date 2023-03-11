@@ -29,7 +29,7 @@ Resolve this alert by reducing the value of Force_1 below the value of Force_2.
 
 It should also be possible to 
 confirm that Force_1 is in Free status, 
-confirm that the constraint L_Stroke MIN is enabled with a greater-than-zero constraint level 
+confirm that the constraint Length_of_Stroke MIN is enabled with a greater-than-zero constraint level 
 and then use the Search feature (menu Action : Search or Search button). 
 
 See also: 
@@ -46,7 +46,7 @@ Alert entry #E202
 In an extension spring, 
 having the current value of Force_1 less than the current value of Initial_Tension 
 is ambiguous.
-Calculations for L_Stroke and Cycle_Life may not be valid. 
+Calculations for Length_of_Stroke and Cycle_Life may not be valid. 
 
 Where practical, change these values in the direction specified: 
 Increase | &nbsp; | Decrease  
@@ -145,7 +145,7 @@ Increase  | &nbsp; | Decrease
 ---       | ---    | ---  
  Wire_Diameter | &nbsp; | Coil_Dia  
  FS_2     | &nbsp; | Force_2  
- FS_Hook  | &nbsp; | L_Stroke  
+ FS_Hook  | &nbsp; | Length_of_Stroke  
  &nbsp;   | &nbsp; | Spring_Index  
 
 Alternatively, use Advanced View to enable the minimum constraint on FS_Hook with a constraint level of 1.0 or greater, 
@@ -208,7 +208,7 @@ For example:
  - Disabling the lower (MIN) constraint on the first operating load (Force_1 MIN) 
 allows Search to return a design that has Force_1 less than the initial tension and declare it to be "feasible". 
 This situation is ambiguous. 
-If this were to happen, calculations for L_Stroke and Cycle_Life may not be valid. 
+If this were to happen, calculations for Length_of_Stroke and Cycle_Life may not be valid. 
  - Depending on the configuration of other constraints, 
 disabling the upper (MAX) constraint on percent safe deflection at operating load point 2 (%_Safe_Deflect) 
 might allow Search to return a design where the the second operating load (Force_2) exceeds the allowable stress 

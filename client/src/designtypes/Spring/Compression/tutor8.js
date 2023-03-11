@@ -83,7 +83,7 @@ export const execute = {
                         CHANGE  Cycle_Life MIN  50000<br />
                         CHANGE  Free_OD MAX  2.0<br />
                         CHANGE  L_Solid MAX  1.2<br />
-                        CHANGE  L_Stroke MIN 1.0<br />
+                        CHANGE  Length_of_Stroke MIN 1.0<br />
                         FIX  Force_1  0<br />
                         FIX  Force_2  250<br />
                     </p>
@@ -114,8 +114,8 @@ export const execute = {
                 changeSymbolConstraint('Free_OD', MAX, 2.0),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.2),
-                setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
-                changeSymbolConstraint('L_Stroke', MIN, 1.0),
+                setSymbolFlag('Length_of_Stroke', MIN, CONSTRAINED),
+                changeSymbolConstraint('Length_of_Stroke', MIN, 1.0),
                 fixSymbolValue('Force_1', 0.0),
                 fixSymbolValue('Force_2', 250.0)
             ]
@@ -191,7 +191,7 @@ export const execute = {
                     </p>
                     
                     <p>
-                    Enter <b>0.0</b> for the weight on each violated constraint except <b>L_Stroke </b> 
+                    Enter <b>0.0</b> for the weight on each violated constraint except <b>Length_of_Stroke </b> 
                     which should be set to <b>1.0</b>. 
                     Select <b>Continue</b>.
                     </p>
@@ -203,7 +203,7 @@ export const execute = {
                     </p>
                     
                     <p>
-                    Observe that Trade predicts a feasible solution if the L_Stroke MIN constraint 
+                    Observe that Trade predicts a feasible solution if the Length_of_Stroke MIN constraint 
                     is moved from 1.0 inches to something slightly less than 0.8 inches. 
                     </p>
                     

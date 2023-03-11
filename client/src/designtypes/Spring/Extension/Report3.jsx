@@ -140,10 +140,10 @@ class Report3 extends ReportBase {
                             <td>{this.wgt1000.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Weight].units + "/1000"}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Coils_A].name}</td>
+                            <td>{this.props.symbol_table[o.Active_Coils].name}</td>
                             <td>=</td>
-                            <td>{this.props.symbol_table[o.Coils_A].value.toFixed(3)}</td>
-                            <td className="text-left">{"active " + this.props.symbol_table[o.Coils_A].units}</td>
+                            <td>{this.props.symbol_table[o.Active_Coils].value.toFixed(3)}</td>
+                            <td className="text-left">{"active " + this.props.symbol_table[o.Active_Coils].units}</td>
                         </tr>
                         <tr>
                             <td>Safe Load</td>

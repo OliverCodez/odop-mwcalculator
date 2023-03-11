@@ -7,7 +7,7 @@ Alerts common to all round-wire coil springs
  - [Material properties for this Wire_Diameter may not be accurate](alerts.html#MatPropAccuracy)  
  - [FS_CycleLife MIN not set](alerts.html#FS_CycleLife_MIN_not_set)  
  - [Over-design concern](alerts.html#OverDesign)  
- - [Coils_A is less than 1](alerts.html#Coils_A_LT_1)  
+ - [Active_Coils is less than 1](alerts.html#Active_Coils_LT_1)  
  - [Spring Index manufacturability concern](alerts.html#SI_manufacturability)  
  - [Cycle_Life calculation is not available](alerts.html#Cycle_LifeNA)  
  - [Cycle_Life not defined beyond yield](alerts.html#Cycle_LifeNA_FS_2)  
@@ -113,11 +113,11 @@ See also:
 
 ___
 
-<a id="Coils_A_LT_1"></a>  
+<a id="Active_Coils_LT_1"></a>  
 ___
 
 Alert entry #S55
-## Coils_A is less than 1 
+## Active_Coils is less than 1 
 A warning alert is produced whenever the current design has fewer than one active coil.  
 
 This is not an error that will block operations like Search, Seek and Trade. 

@@ -151,7 +151,7 @@ export class ReportBase extends Component {
 
     def_dia_t(def) {
 //      return((mean_dia*coils_a)/(coils_a+def/deg_per_turn));
-      return (this.props.symbol_table[o.Mean_Dia].value * this.props.symbol_table[o.Coils_A].value) / (this.props.symbol_table[o.Coils_A].value + def / 360.0);
+      return (this.props.symbol_table[o.Mean_Dia].value * this.props.symbol_table[o.Active_Coils].value) / (this.props.symbol_table[o.Active_Coils].value + def / 360.0);
   }
 
 }

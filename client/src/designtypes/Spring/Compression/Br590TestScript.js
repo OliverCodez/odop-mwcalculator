@@ -25,7 +25,7 @@ export const execute = {
                     <p>
                     Loaded Compression spring initialState.<br />
                     Set Force_2 MIN = 40.0 pounds<br />
-                    Set L_Stroke MIN = 1.75 inches<br />
+                    Set Length_of_Stroke MIN = 1.75 inches<br />
                     </p>
                     <p>
                     Click Next to run Search.
@@ -36,8 +36,8 @@ export const execute = {
                 loadInitialState('Spring/Compression'),
                 setSymbolFlag('Force_2', MIN, CONSTRAINED),
                 changeSymbolConstraint("Force_2", MIN, 40.0),
-                setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
-                changeSymbolConstraint("L_Stroke", MIN, 1.75),
+                setSymbolFlag('Length_of_Stroke', MIN, CONSTRAINED),
+                changeSymbolConstraint("Length_of_Stroke", MIN, 1.75),
             ]
         },
         {
@@ -63,7 +63,7 @@ export const execute = {
                     <p>
                     Loaded Compression spring initialState.<br />
                     Set Force_2 MIN = 40.0 pounds<br />
-                    Set L_Stroke MIN = 1.75 inches<br />
+                    Set Length_of_Stroke MIN = 1.75 inches<br />
                     Set Force_2 = 90.0 pounds<br />
                     </p>
                     <p>
@@ -75,8 +75,8 @@ export const execute = {
                 loadInitialState('Spring/Compression'),
                 setSymbolFlag('Force_2', MIN, CONSTRAINED),
                 changeSymbolConstraint("Force_2", MIN, 40.0),
-                setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
-                changeSymbolConstraint("L_Stroke", MIN, 1.75),
+                setSymbolFlag('Length_of_Stroke', MIN, CONSTRAINED),
+                changeSymbolConstraint("Length_of_Stroke", MIN, 1.75),
                 changeSymbolValue("Force_2", 90.0),
             ]
         },
@@ -171,7 +171,7 @@ export const execute = {
                 <>
                     <p>
                     Original Case 2:<br />
-                    Starting Search from this point in v4.0.x produced negative Coils_A and other variables. 
+                    Starting Search from this point in v4.0.x produced negative Active_Coils and other variables. 
                     Improved default constraints and sdlim values permit v4.2.2 to produce a valid and feasible result 
                     from this start point. 
                     </p>

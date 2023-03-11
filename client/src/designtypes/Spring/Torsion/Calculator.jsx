@@ -122,9 +122,9 @@ export class Calculator extends ReportBase {
                                 <SymbolUnits element={this.props.symbol_table[o.Spring_Index]} index={o.Spring_Index} className="text-left" />
                             </tr>
                             <tr>
-                                <SymbolName element={this.props.symbol_table[o.Coils_A]} index={o.Coils_A} />
-                                <SymbolValue element={this.props.symbol_table[o.Coils_A]} index={o.Coils_A} />
-                                <SymbolUnits element={this.props.symbol_table[o.Coils_A]} index={o.Coils_A} className="text-left" />
+                                <SymbolName element={this.props.symbol_table[o.Active_Coils]} index={o.Active_Coils} />
+                                <SymbolValue element={this.props.symbol_table[o.Active_Coils]} index={o.Active_Coils} />
+                                <SymbolUnits element={this.props.symbol_table[o.Active_Coils]} index={o.Active_Coils} className="text-left" />
                                 <td> &nbsp; &nbsp; </td>
                                 <SymbolName element={this.props.symbol_table[o.Rate]} index={o.Rate} />
                                 <SymbolValue element={this.props.symbol_table[o.Rate]} index={o.Rate} />

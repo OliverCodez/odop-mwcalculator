@@ -40,7 +40,7 @@ ___
                  |      /      :  .
     Force_1 -----|-----/       :  .
                  |    /:       :  .
-           C     |   / :<----->:------- L_Stroke
+           C     |   / :<----->:------- Length_of_Stroke
                  |  /  :       :  .
            E     | /   :       :  .
                  |/____:_______:__._______
@@ -110,7 +110,7 @@ ___
     Mean_Dia     -  mean diameter of spring coil in free condition
                      (OD_Free + ID_Free)/2
                      
-    Coils_A      -  number of active coils (turns)
+    Active_Coils      -  number of active coils (turns)
     
     Rate         -  spring constant - force per unit deflection
     
@@ -122,7 +122,7 @@ ___
     
     L_2          -  spring length at maximum operating load  (Force_2)
     
-    L_Stroke     -  net deflection between point 1 and point 2
+    Length_of_Stroke     -  net deflection between point 1 and point 2
     
     L_Solid      -  solid height
     

@@ -33,17 +33,17 @@ export function eqnset(p, x) {        /*    Torsion  Spring  */
 //  end_deflect_all=(l_end_1+l_end_2)/(3.0*pi*mean_dia);
     x[o.End_Deflect_All] = (x[o.L_End_1] + x[o.L_End_2]) / (3.0 * Math.PI * x[o.Mean_Dia]);
 
-    x[o.Coils_A] = p[o.Total_Coils] + x[o.End_Deflect_All];
+    x[o.Active_Coils] = p[o.Total_Coils] + x[o.End_Deflect_All];
 
     temp = p[o.Wire_Diameter] * p[o.Wire_Diameter];
     x[o.Rate] = x[o.Hot_Factor_Kh] * x[o.Elastic_Modulus] * temp * temp /
-           (10.8 * x[o.Mean_Dia] * x[o.Coils_A]);
+           (10.8 * x[o.Mean_Dia] * x[o.Active_Coils]);
 //    console.log('x=',x);
 //    console.log('x[o.Spring_Index]=',x[o.Spring_Index]);
 //    console.log('x[o.Hot_Factor_Kh]=',x[o.Hot_Factor_Kh]);
 //    console.log('x[o.Elastic_Modulus]=',x[o.Elastic_Modulus]);
 //    console.log('x[o.Mean_Dia]=',x[o.Mean_Dia]);
-//    console.log('x[o.Coils_A]=',x[o.Coils_A]);
+//    console.log('x[o.Active_Coils]=',x[o.Active_Coils]);
 //    console.log('x[o.Rate]=',x[o.Rate]);
 
     x[o.Rate] = x[o.Rate] / Deg_Per_Turn;

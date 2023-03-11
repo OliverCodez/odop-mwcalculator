@@ -142,7 +142,7 @@
     },
     {
       "input": false,
-      "name": "Coils_A",
+      "name": "Active_Coils",
       "value": 8,
       "units": "coils",
       "lmin": 1,
@@ -266,7 +266,7 @@
     },
     {
       "input": false,
-      "name": "L_Stroke",
+      "name": "Length_of_Stroke",
       "value": 1.2813998103395086,
       "units": "inches",
       "lmin": 0,

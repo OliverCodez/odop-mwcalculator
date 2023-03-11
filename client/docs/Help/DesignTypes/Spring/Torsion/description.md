@@ -128,7 +128,7 @@ ___
      
     ID_Free        -  inside diameter of spring coil in free condition
     
-    Coils_A        -  number of active coils (turns)
+    Active_Coils        -  number of active coils (turns)
                       (includes arm deflection)
                       
     Rate           -  spring constant - moment per unit deflection 

@@ -210,7 +210,7 @@ export const execute = {
                     FIX Force_1 0.0<br /> 
                     FIX Force_2 90.0<br /> 
                     FIX Force_Solid 90.0<br /> 
-                    FIX L_Stroke 3.0<br /> 
+                    FIX Length_of_Stroke 3.0<br /> 
                     FIX Mean_Dia 1.0<br /> 
                     FIX Stress_Solid 96880<br /> 
                     </p>
@@ -227,7 +227,7 @@ export const execute = {
                 fixSymbolValue('Force_1', 0.0),
                 fixSymbolValue('Force_2', 90.0),
                 fixSymbolValue('Force_Solid', 90.0),
-                fixSymbolValue('L_Stroke', 3.0),
+                fixSymbolValue('Length_of_Stroke', 3.0),
                 fixSymbolValue('Mean_Dia', 1.0),
                 fixSymbolValue('Stress_Solid', 96880.0)
             ]

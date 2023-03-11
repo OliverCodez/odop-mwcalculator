@@ -9,7 +9,7 @@ export const Coil_Spacing = 5;
 // Dependent Variables (input-output)
 export const Mean_Dia = 0;
 export const ID_Free = 1;
-export const Coils_A = 2;
+export const Active_Coils = 2;
 export const Rate = 3;
 export const Deflect_1 = 4;
 export const Deflect_2 = 5;

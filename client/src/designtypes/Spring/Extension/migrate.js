@@ -285,7 +285,7 @@ export function migrate(design) {
         });
         design.symbol_table[ 4].validmin = -Number.MIN_VALUE; // End_Extension
         design.symbol_table[11].validmin = -Number.MIN_VALUE; // Deflect_1
-        design.symbol_table[17].validmin = -Number.MIN_VALUE; // L_Stroke
+        design.symbol_table[17].validmin = -Number.MIN_VALUE; // Length_of_Stroke
         design.symbol_table[19].validmin = 1;                 // Spring_Index
         design.symbol_table[27].validmin = -Number.MIN_VALUE; // Cycle_Life
         design.symbol_table[34].validmin = -Number.MIN_VALUE; // Energy

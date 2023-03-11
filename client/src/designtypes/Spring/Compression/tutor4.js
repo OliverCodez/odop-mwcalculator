@@ -149,7 +149,7 @@ export const execute = {
                         CHANGE  FS_CycleLife MIN  1.0<br />
                         CHANGE  Free_OD MAX  1.950 &nbsp; &#60;--- 0.050 margin for hole<br />
                         CHANGE  L_Solid MAX  1.2<br />
-                        CHANGE  L_Stroke MIN 1.0<br />
+                        CHANGE  Length_of_Stroke MIN 1.0<br />
                         FIX  Force_1  0<br />
                         FIX  Force_2  250<br />
                     </p>
@@ -171,8 +171,8 @@ export const execute = {
                 changeSymbolConstraint('Free_OD', MAX, 1.950),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.2),
-                setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
-                changeSymbolConstraint('L_Stroke', MIN, 1.0),
+                setSymbolFlag('Length_of_Stroke', MIN, CONSTRAINED),
+                changeSymbolConstraint('Length_of_Stroke', MIN, 1.0),
                 fixSymbolValue('Force_1', 0.0),
                 fixSymbolValue('Force_2', 250.0)
             ]

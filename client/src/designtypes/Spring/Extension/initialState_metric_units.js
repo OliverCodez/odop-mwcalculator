@@ -154,7 +154,7 @@ export const initialState = {
         },
         {
             "input": false,
-            "name": "Coils_A",
+            "name": "Active_Coils",
             "value": 29.9,
             "units": "coils",
             "lmin": CONSTRAINED,
@@ -282,7 +282,7 @@ export const initialState = {
         },
         {
             "input": false,
-            "name": "L_Stroke",
+            "name": "Length_of_Stroke",
             "value": 41.24,
             "units": "mm",
             "lmin": 0,
@@ -932,7 +932,7 @@ export const initialState = {
             "validmin": -Number.MIN_VALUE,
             "validmax": Number.MAX_VALUE,
             "sdlim": 0.0,
-            "tooltip": "Hook Deflection Allowance - adds to Coils_A",
+            "tooltip": "Hook Deflection Allowance - adds to Active_Coils",
             "type": "calcinput",
             "hidden": false
         },

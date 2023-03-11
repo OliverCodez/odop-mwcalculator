@@ -44,7 +44,7 @@ ___
                         |     /      :
       C     Force_1 ----|----/       :
                         |   /:       :
-      E                 |  / :<----->:------- L_Stroke
+      E                 |  / :<----->:------- Length_of_Stroke
                         | /  :       :
             Initial_ _ _|/   :       :
             Tension     |    :       :
@@ -156,7 +156,7 @@ ___
                         (OD_free + ID_Free)/2   
                         
     ID_Free         -  inside  diameter in free condition
-    Coils_A         -  number of active coils (turns)
+    Active_Coils         -  number of active coils (turns)
     Rate            -  spring constant - force per unit deflection
     Deflect_1       -  deflection at Force_1
     Deflect_2       -  deflection at Force_2
@@ -164,7 +164,7 @@ ___
     L_Free       -  length of the entire spring, in free condition
     L_1          -  spring length at minimum operating load  (Force_1)
     L_2          -  spring length at maximum operating load  (Force_2)
-    L_Stroke     -  net deflection between point 1 and point 2
+    Length_of_Stroke     -  net deflection between point 1 and point 2
     Weight       -  weight of spring; wire density * wire volume
     Spring_Index    -  spring index;  the ratio COIL_DIA/Wire_Diameter
     Stress_Initial  -  stress produced by initial tension

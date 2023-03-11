@@ -351,7 +351,7 @@ export const execute = {
                     <p>
                     Finally, to wrap up this session,
                     the next page will demonstrate how it is possible to specify
-                    the value of L_Stroke, a Dependent Variable.
+                    the value of Length_of_Stroke, a Dependent Variable.
                     We will choose 1.725 inches, a value very close to what was in place
                     prior to making the changes up to this point in this tutorial session.
                     </p>
@@ -367,7 +367,7 @@ export const execute = {
             text: (
                 <>
                     <p>
-                    The tutorial has imposed: Fix L_Stroke 1.725
+                    The tutorial has imposed: Fix Length_of_Stroke 1.725
                     </p>
                     
                     <p>
@@ -376,7 +376,7 @@ export const execute = {
                     
                     <p>
                     Again, a Search will be required to establish values for the free Independent Variables
-                    such that the Fixed value of L_Stroke is established while simultaneously keeping %_Avail_Deflect 
+                    such that the Fixed value of Length_of_Stroke is established while simultaneously keeping %_Avail_Deflect 
                     below the maximum.
                     </p>
                     
@@ -386,7 +386,7 @@ export const execute = {
                 </>
             ),
             actions: [
-                fixSymbolValue('L_Stroke', 1.725)
+                fixSymbolValue('Length_of_Stroke', 1.725)
             ]
         },
         {

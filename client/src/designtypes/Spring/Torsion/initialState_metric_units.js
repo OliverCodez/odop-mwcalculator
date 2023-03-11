@@ -135,7 +135,7 @@ export const initialState = {
         },
         {
             "input": false,
-            "name": "Coils_A",
+            "name": "Active_Coils",
             "value": 7.04,
             "units": "coils",
             "lmin": CONSTRAINED,

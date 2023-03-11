@@ -140,7 +140,7 @@ export const execute = {
                     FIX  Force_1   0.0<br />
                     FIX  Force_2  20.0<br />
                     CHANGE  Free_OD MAX   1.5<br />
-                    CHANGE  L_Stroke MIN  1.0<br />
+                    CHANGE  Length_of_Stroke MIN  1.0<br />
                     CHANGE  L_Solid MAX   1.5
                     </p>
                     
@@ -161,8 +161,8 @@ export const execute = {
                 fixSymbolValue('Force_2', 20.0),
                 setSymbolFlag('Free_OD', MAX, CONSTRAINED),
                 changeSymbolConstraint('Free_OD', MAX, 1.5),
-                setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
-                changeSymbolConstraint('L_Stroke', MIN, 1.0),
+                setSymbolFlag('Length_of_Stroke', MIN, CONSTRAINED),
+                changeSymbolConstraint('Length_of_Stroke', MIN, 1.0),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.5)
             ]
@@ -329,7 +329,7 @@ export const execute = {
                     <br />
                     FIX  Force_1  0<br />
                     FIX  Force_2  100<br />
-                    CHANGE  L_Stroke  MIN  2.5 &nbsp; &#60;--- use constraint, not FIX<br />
+                    CHANGE  Length_of_Stroke  MIN  2.5 &nbsp; &#60;--- use constraint, not FIX<br />
                     <br />
                     CHANGE  Prop_Calc_Method  3  &nbsp;  &#60;--- specify allowable stress<br />
                     CHANGE  Stress_Lim_Stat  80000<br />
@@ -343,8 +343,8 @@ export const execute = {
                 changeLabelsValue([{name: 'COMMENT', value: 'Compression Spring Demo'}]),
                 fixSymbolValue('Force_1', 0.0),
                 fixSymbolValue('Force_2', 100.0),
-                setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
-                changeSymbolConstraint('L_Stroke', MIN, 2.5),
+                setSymbolFlag('Length_of_Stroke', MIN, CONSTRAINED),
+                changeSymbolConstraint('Length_of_Stroke', MIN, 2.5),
                 changeSymbolValue("Prop_Calc_Method", 3),
                 changeSymbolValue("Stress_Lim_Stat", 80000.0),
                 setSymbolFlag('FS_2', MIN, CONSTRAINED),
@@ -493,7 +493,7 @@ export const execute = {
                     <br />
                     CHANGE  Free_OD MAX  1.5<br />
                     CHANGE  L_Solid MAX  1.5<br />
-                    CHANGE  L_Stroke MIN 1.0<br />
+                    CHANGE  Length_of_Stroke MIN 1.0<br />
                     FIX  Force_1 0
                     </p>
                     
@@ -512,8 +512,8 @@ export const execute = {
                 changeSymbolConstraint('Free_OD', MAX, 1.5),
                 setSymbolFlag('L_Solid', MAX, CONSTRAINED),
                 changeSymbolConstraint('L_Solid', MAX, 1.5),
-                setSymbolFlag('L_Stroke', MIN, CONSTRAINED),
-                changeSymbolConstraint('L_Stroke', MIN, 1.0),
+                setSymbolFlag('Length_of_Stroke', MIN, CONSTRAINED),
+                changeSymbolConstraint('Length_of_Stroke', MIN, 1.0),
                 fixSymbolValue('Force_1', 0.0)
             ]
         },

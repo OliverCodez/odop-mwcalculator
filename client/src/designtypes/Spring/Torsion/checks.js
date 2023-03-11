@@ -71,13 +71,13 @@ export function checks(store) {        /*    Compression  Spring  */
             help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#OverDesign)' 
         });
     }
-    if (design.model.symbol_table[o.Coils_A].value < 1.0) {
+    if (design.model.symbol_table[o.Active_Coils].value < 1.0) {
         addAlert({
-            element: design.model.symbol_table[o.Coils_A],
-            name: design.model.symbol_table[o.Coils_A].name, 
-            message: 'RELATIONSHIP: ' + design.model.symbol_table[o.Coils_A].name + ' (' + design.model.symbol_table[o.Coils_A].value.toODOPPrecision() + ') < 1.0',
+            element: design.model.symbol_table[o.Active_Coils],
+            name: design.model.symbol_table[o.Active_Coils].name, 
+            message: 'RELATIONSHIP: ' + design.model.symbol_table[o.Active_Coils].name + ' (' + design.model.symbol_table[o.Active_Coils].value.toODOPPrecision() + ') < 1.0',
             severity: WARN, 
-            help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#Coils_A_LT_1)'
+            help_url: '[Help](/docs/Help/DesignTypes/Spring/alerts.html#Active_Coils_LT_1)'
         });
     }
     if (design.model.symbol_table[o.Spring_Index].value < 4.0 || design.model.symbol_table[o.Spring_Index].value > 25.0) {
@@ -137,7 +137,7 @@ export function checks(store) {        /*    Compression  Spring  */
             });
     }
 
-    check_DCD_alert(design.model.symbol_table[o.Coils_A], MIN, '');
+    check_DCD_alert(design.model.symbol_table[o.Active_Coils], MIN, '');
     check_DCD_alert(design.model.symbol_table[o.Spring_Index], MIN, '');
     check_DCD_alert(design.model.symbol_table[o.Spring_Index], MAX, '');
     check_DCD_alert(design.model.symbol_table[o.FS_2], MIN, '');
