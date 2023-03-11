@@ -42,42 +42,42 @@ class Report1 extends ReportBase {
                 <table id="view1" className="report-table">
                     <tbody>
                         <tr>
-                            <td>{this.props.symbol_table[o.Spring_Type].name}</td>
+                            <td>{this.props.symbol_table[o.Spring_Type].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td className="text-left" colSpan="2">{this.props.symbol_table[o.Spring_Type].value}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Material_Type].name}</td>
+                            <td>{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td className="text-left" colSpan="2">{this.matTypeValue}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Wire_Diameter].name}</td>
+                            <td>{this.props.symbol_table[o.Wire_Diameter].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Wire_Diameter].value.toFixed(4)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Wire_Diameter].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.End_Type].name}</td>
+                            <td>{this.props.symbol_table[o.End_Type].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td className="text-left" colSpan="2">{this.et_tab[this.props.symbol_table[o.End_Type].value][0]}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Spring_Index].name}</td>
+                            <td>{this.props.symbol_table[o.Spring_Index].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Spring_Index].value.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Spring_Index].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Total_Coils].name}</td>
+                            <td>{this.props.symbol_table[o.Total_Coils].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Total_Coils].value.toFixed(3)}</td>
                             <td className="text-left">{"total " + this.props.symbol_table[o.Total_Coils].units}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Rate].name}</td>
+                            <td>{this.props.symbol_table[o.Rate].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Rate].value.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Rate].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Active_Coils].name}</td>
+                            <td>{this.props.symbol_table[o.Active_Coils].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Active_Coils].value.toFixed(3)}</td>
                             <td className="text-left">{"active " + this.props.symbol_table[o.Active_Coils].units}</td>
@@ -166,12 +166,12 @@ class Report1 extends ReportBase {
                             <td className="text-left">{this.props.symbol_table[o.Free_Length].units}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Length_of_Stroke].name}</td>
+                            <td>{this.props.symbol_table[o.Length_of_Stroke].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Length_of_Stroke].value.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Length_of_Stroke].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Weight].name}</td>
+                            <td>{this.props.symbol_table[o.Weight].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.wgt1000.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Weight].units + "/1000"}</td>
@@ -182,7 +182,7 @@ class Report1 extends ReportBase {
                             <td>{this.pitch.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Free_Length].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Cycle_Life].name}</td>
+                            <td>{this.props.symbol_table[o.Cycle_Life].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Cycle_Life].value.toFixed(0)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Cycle_Life].units + " (estimate)"}</td>

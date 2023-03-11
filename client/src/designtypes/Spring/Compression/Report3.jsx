@@ -30,34 +30,34 @@ class Report3 extends ReportBase {
                 <table id="view1" className="report-table">
                     <tbody>
                         <tr>
-                            <td>{this.props.labels[o.Contact_person].name}:</td>
+                            <td>{this.props.labels[o.Contact_person].name.replace(/_/g, ' ')}:</td>
                             <td/>
                             <td className="text-left" width="30%">{this.props.labels[o.Contact_person].value}</td>
                             <td/>
-                            <td>{this.props.labels[o.Phone___email].name}: </td>
+                            <td>{this.props.labels[o.Phone___email].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" width="30%">{this.props.labels[o.Phone___email].value}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.labels[o.Company_name].name}: </td>
+                            <td>{this.props.labels[o.Company_name].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" width="30%">{this.props.labels[o.Company_name].value}</td>
                             <td/>
-                            <td>{this.props.labels[o.Date].name}: </td>
+                            <td>{this.props.labels[o.Date].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" width="30%">{this.props.labels[o.Date].value}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.labels[o.Street].name}: </td>
+                            <td>{this.props.labels[o.Street].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" width="30%">{this.props.labels[o.Street].value}</td>
                             <td/>
-                            <td>{this.props.labels[o.Part_Number].name}: </td>
+                            <td>{this.props.labels[o.Part_Number].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" width="30%">{this.props.labels[o.Part_Number].value}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.labels[o.City__State___Zip].name}: </td>
+                            <td>{this.props.labels[o.City__State___Zip].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td  className="text-left" width="30%">{this.props.labels[o.City__State___Zip].value}</td>
                             <td/>
@@ -67,57 +67,57 @@ class Report3 extends ReportBase {
                         </tr>
                     </tbody>
                 </table>
-                <b>{this.props.labels[o.COMMENT].name}: &nbsp; </b> {this.props.labels[o.COMMENT].value} <br/>
+                <b>{this.props.labels[o.COMMENT].name.replace(/_/g, ' ')}: &nbsp; </b> {this.props.labels[o.COMMENT].value} <br/>
                 <br/>
                 <table id="view2" className="report-table">
                     <tbody>
                         <tr>
-                            <td>{this.props.symbol_table[o.Spring_Type].name}</td>
+                            <td>{this.props.symbol_table[o.Spring_Type].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td className="text-left" colSpan="2">{this.props.symbol_table[o.Spring_Type].value}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Material_Type].name}</td>
+                            <td>{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td className="text-left" colSpan="2">{this.matTypeValue}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Wire_Diameter].name}</td>
+                            <td>{this.props.symbol_table[o.Wire_Diameter].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Wire_Diameter].value.toFixed(4)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Wire_Diameter].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.ASTM_Fed_Spec].name}</td>
+                            <td>{this.props.symbol_table[o.ASTM_Fed_Spec].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td className="text-left" colSpan="2">{this.astmFedSpecValue}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Mean_Dia].name}</td>
+                            <td>{this.props.symbol_table[o.Mean_Dia].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Mean_Dia].value.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Mean_Dia].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Tensile].name}</td>
+                            <td>{this.props.symbol_table[o.Tensile].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Tensile].value.toFixed(0)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Tensile].units}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Spring_Index].name}</td>
+                            <td>{this.props.symbol_table[o.Spring_Index].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Spring_Index].value.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Spring_Index].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.End_Type].name}</td>
+                            <td>{this.props.symbol_table[o.End_Type].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td className="text-left" colSpan="2">{this.et_tab[this.props.symbol_table[o.End_Type].value][0]}</td>
                         </tr>
                         <tr>
-                            <td>{this.props.symbol_table[o.Rate].name}</td>
+                            <td>{this.props.symbol_table[o.Rate].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Rate].value.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Rate].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Total_Coils].name}</td>
+                            <td>{this.props.symbol_table[o.Total_Coils].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Total_Coils].value.toFixed(3)}</td>
                             <td className="text-left">{"total " + this.props.symbol_table[o.Total_Coils].units}</td>
@@ -128,7 +128,7 @@ class Report3 extends ReportBase {
                             <td>{this.pitch.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Free_Length].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Active_Coils].name}</td>
+                            <td>{this.props.symbol_table[o.Active_Coils].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Active_Coils].value.toFixed(3)}</td>
                             <td className="text-left">{"active " + this.props.symbol_table[o.Active_Coils].units}</td>
@@ -150,7 +150,7 @@ class Report3 extends ReportBase {
                             <td>{this.safe_load.toFixed(3)}</td>
                             <td className="text-left">{this.safe_load_u}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Weight].name}</td>
+                            <td>{this.props.symbol_table[o.Weight].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.wgt1000.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Weight].units + "/1000"}</td>
@@ -161,7 +161,7 @@ class Report3 extends ReportBase {
                             <td>{this.safe_travel.toFixed(3)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Free_Length].units}</td>
                             <td/>
-                            <td>{this.props.symbol_table[o.Cycle_Life].name}</td>
+                            <td>{this.props.symbol_table[o.Cycle_Life].name.replace(/_/g, ' ')}</td>
                             <td>=</td>
                             <td>{this.props.symbol_table[o.Cycle_Life].value.toFixed(0)}</td>
                             <td className="text-left">{this.props.symbol_table[o.Cycle_Life].units + " (estimate)"}</td>
@@ -268,69 +268,69 @@ class Report3 extends ReportBase {
                 <table id="view4" className="report-table">
                     <tbody>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Data_Source].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Data_Source].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" colSpan="4">{this.props.labels[o.Data_Source].value}</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Mandril].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Mandril].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left">{this.props.labels[o.Mandril].value}</td>
                             <td className="text-left">{this.props.symbol_table[o.ID_Free].units}</td>
                             <td colSpan="2"></td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Wind].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Wind].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" colSpan="2">{this.props.labels[o.Wind].value}</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Shot_peen].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Shot_peen].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left">{this.props.labels[o.Shot_peen].value}</td>
                             <td colSpan="3" className="text-left">{"(calculations assume: " + this.peenValue + ")"}</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Stress_relieve_HT].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Stress_relieve_HT].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" colSpan="4">{this.props.labels[o.Stress_relieve_HT].value}</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Pre_set].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Pre_set].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left">{this.props.labels[o.Pre_set].value}</td>
                             <td className="text-left" colSpan="3">(calculations assume: No pre-set)</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Finish].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Finish].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" colSpan="4">{this.props.labels[o.Finish].value}</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Squareness].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Squareness].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left">{this.props.labels[o.Squareness].value}</td>
                             <td className="text-left">deg.</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.End_use].name}: </td>
+                            <td className="text-left">{this.props.labels[o.End_use].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" colSpan="4">{this.props.labels[o.End_use].value}</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Fits_in___Works_over].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Fits_in___Works_over].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left">{this.props.labels[o.Fits_in___Works_over].value}</td>
                             <td className="text-left">{this.props.symbol_table[o.ID_Free].units}</td>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Operating_temp].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Operating_temp].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left">{this.props.labels[o.Operating_temp].value}</td>
                             <td/>
                         </tr>
                         <tr>
-                            <td className="text-left">{this.props.labels[o.Special_notes___tol].name}: </td>
+                            <td className="text-left">{this.props.labels[o.Special_notes___tol].name.replace(/_/g, ' ')}: </td>
                             <td/>
                             <td className="text-left" colSpan="4">{this.props.labels[o.Special_notes___tol].value}</td>
                         </tr>
