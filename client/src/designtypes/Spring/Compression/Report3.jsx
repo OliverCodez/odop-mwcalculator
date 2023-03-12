@@ -269,48 +269,43 @@ class Report3 extends ReportBase {
                     <tbody>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Data_Source].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value" colSpan="4">{this.props.labels[o.Data_Source].value}</td>
+                            <td className="text-left text-value">{this.props.labels[o.Data_Source].value}</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Mandril].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value">{this.props.labels[o.Mandril].value}</td>
-                            <td className="text-left text-value">{this.props.symbol_table[o.ID_Free].units}</td>
+                            <td className="text-left text-value">{this.props.labels[o.Mandril].value} {this.props.symbol_table[o.ID_Free].units}</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Wind].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value" colSpan="2">{this.props.labels[o.Wind].value}</td>
+                            <td className="text-left text-value">{this.props.labels[o.Wind].value}</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Shot_peen].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value">{this.props.labels[o.Shot_peen].value}</td>
-                            <td colSpan="3" className="text-left text-value">{"(calculations assume: " + this.peenValue + ")"}</td>
+                            <td className="text-left text-value">{this.props.labels[o.Shot_peen].value} {"(calculations assume: " + this.peenValue + ")"}</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Stress_relieve_HT].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value" colSpan="4">{this.props.labels[o.Stress_relieve_HT].value}</td>
+                            <td className="text-left text-value">{this.props.labels[o.Stress_relieve_HT].value}</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Pre_set].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value">{this.props.labels[o.Pre_set].value}</td>
-                            <td className="text-left text-value" colSpan="3">(calculations assume: No pre-set)</td>
+                            <td className="text-left text-value">{this.props.labels[o.Pre_set].value} (calculations assume: No pre-set)</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Finish].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value" colSpan="4">{this.props.labels[o.Finish].value}</td>
+                            <td className="text-left text-value">{this.props.labels[o.Finish].value}</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Squareness].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value">{this.props.labels[o.Squareness].value}</td>
-                            <td className="text-left text-value">deg.</td>
+                            <td className="text-left text-value">{this.props.labels[o.Squareness].value} deg.</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.End_use].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value" colSpan="4">{this.props.labels[o.End_use].value}</td>
+                            <td className="text-left text-value">{this.props.labels[o.End_use].value}</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Fits_in___Works_over].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value">{this.props.labels[o.Fits_in___Works_over].value}</td>
-                            <td className="text-left text-value">{this.props.symbol_table[o.ID_Free].units}</td>
+                            <td className="text-left text-value">{this.props.labels[o.Fits_in___Works_over].value} {this.props.symbol_table[o.ID_Free].units}</td>
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Operating_temp].name.replace(/_/g, ' ')}: </td>
@@ -318,7 +313,7 @@ class Report3 extends ReportBase {
                         </tr>
                         <tr className="text-value-row">
                             <td className="text-left">{this.props.labels[o.Special_notes___tol].name.replace(/_/g, ' ')}: </td>
-                            <td className="text-left text-value" colSpan="4">{this.props.labels[o.Special_notes___tol].value}</td>
+                            <td className="text-left text-value">{this.props.labels[o.Special_notes___tol].value}</td>
                         </tr>
                         <tr>
                             <td/>
@@ -338,6 +333,7 @@ class Report3 extends ReportBase {
                         <tr className="text-value-row">
                             <td className="text-left">By {this.props.labels[o.Customer_approval].value}</td>
                         </tr>
+                        <br />
                         <tr className="text-value-row">
                             <td className="text-left">Date {this.props.labels[o.Customer_date].value}</td>
                         </tr>

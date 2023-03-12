@@ -350,6 +350,10 @@ header {
     font-weight: 700;
 }
 
+.text-value-small thead th:first-child {
+    max-width: 120px
+}
+
 .btn-outline-info {
     display: none!important;
 }
