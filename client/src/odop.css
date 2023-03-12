@@ -349,3 +349,7 @@ header {
     font-size: 18px;
     font-weight: 700;
 }
+
+.btn-outline-info {
+    display: none!important;
+}
