@@ -24,15 +24,15 @@ class Report1 extends ReportBase {
 //        console.log('In Report1.render this=',this);
         var line = 1;
         var isGround = 1;
-        if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1.7;
+        if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1.700;
         console.log('endtype:');
         console.log(this.et_tab[this.props.symbol_table[o.End_Type].value][0]);
         console.log('steps side 1::');
         console.log((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4));
         console.log(((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10));
         console.log('steps side 2::');
-        console.log((this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25));
-        console.log(((this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ));
+        console.log((this.props.symbol_table[o.Spring_Index].value + (25)));
+        console.log(((this.props.symbol_table[o.Spring_Index].value + (25)) / 2000 ));
         console.log('steps before divide to inch::');
         console.log(((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround));
         console.log('total: ' + (((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround) / 25.4).toFixed(3));
@@ -204,7 +204,7 @@ class Report1 extends ReportBase {
                         <tr className="text-value-row">
                             <td>Free Length Tol.</td>
                             <td>=</td>
-                            <td className="text-value">{(((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround) / 25.4).toFixed(3)}</td>
+                            <td className="text-value">{(((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.400) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + (25).toFixed(3)) / 2000 ) * isGround) / 25.400).toFixed(3)}</td>
                             <td className="text-value">inches</td>
                             <td/>
                             <td>Coil Diameter Tol.</td>
