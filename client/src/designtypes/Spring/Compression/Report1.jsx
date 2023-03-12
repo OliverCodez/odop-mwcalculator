@@ -193,7 +193,16 @@ class Report1 extends ReportBase {
                             <td/>
                         </tr>
                         <tr className="text-value-row">
-                            <td>Free Length Tolerance = <span className="text-value">{(((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround) / 25.4)} inches</span></td>
+                            <td>Free Length Tol.</td>
+                            <td>=</td>
+                            <td className="text-value">{(((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround) / 25.4).toFixed(3)}</td>
+                            <td className="text-value">inches</td>
+                            <td/>
+                            <td>Coil Diameter Tol.</td>
+                            <td>=</td>
+                            <td className="text-value">0.000</td>
+                            <td className="text-value">inches</td>
+                            <td/>
                         </tr>
                     </tbody>
                 </table>
