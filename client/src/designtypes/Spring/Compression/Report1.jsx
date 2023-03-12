@@ -27,6 +27,15 @@ class Report1 extends ReportBase {
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1.7;
         console.log('endtype:');
         console.log(this.et_tab[this.props.symbol_table[o.End_Type].value][0]);
+        console.log('steps side 1::');
+        console.log((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4));
+        console.log(((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10));
+        console.log('steps side 2::');
+        console.log((this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25));
+        console.log(((this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ));
+        console.log('steps before divide to inch::');
+        console.log(((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround));
+        console.log('total: ' + (((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround) / 25.4).toFixed(3));
         return (
             <>
                 <h4 className="d-flex mt-3">
