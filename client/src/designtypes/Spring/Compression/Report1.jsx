@@ -204,7 +204,7 @@ class Report1 extends ReportBase {
                         <tr className="text-value-row">
                             <td>Free Length Tol.</td>
                             <td>=</td>
-                            <td className="text-value">{(((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.400) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + (25).toFixed(3)) / 2000 ) * isGround) / 25.400).toFixed(3)}</td>
+                            <td className="text-value">{((((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value + (25))) / 2000 ) * isGround) / 25.4).toFixed(3)}</td>
                             <td className="text-value">inches</td>
                             <td/>
                             <td>Coil Diameter Tol.</td>
