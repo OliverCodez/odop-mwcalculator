@@ -336,10 +336,16 @@ header {
 }
 
 .text-value {
+    font-size: 22px;
     font-weight: 700;
 }
 
 .text-table-small {
     font-size: 18px;
     font-weight: 400;
+}
+
+.text-value-small {
+    font-size: 18px;
+    font-weight: 700;
 }
