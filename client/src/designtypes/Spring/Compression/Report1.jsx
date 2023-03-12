@@ -23,6 +23,10 @@ class Report1 extends ReportBase {
         super.render();
 //        console.log('In Report1.render this=',this);
         var line = 1;
+        var isGround = 1;
+        if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1.7;
+        console.log('endtype:');
+        console.log(this.et_tab[this.props.symbol_table[o.End_Type].value][0]);
         return (
             <>
                 <h4 className="d-flex mt-3">
@@ -187,6 +191,9 @@ class Report1 extends ReportBase {
                             <td className="text-value">{this.props.symbol_table[o.Cycle_Life].value.toFixed(0)}</td>
                             <td className="text-left text-value">{this.props.symbol_table[o.Cycle_Life].units + " (estimate)"}</td>
                             <td/>
+                        </tr>
+                        <tr className="text-value-row">
+                            <td>Free Length Tolerance = <span className="text-value">{(((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround) / 25.4)} inches</span></td>
                         </tr>
                     </tbody>
                 </table>

@@ -331,11 +331,11 @@ class Report3 extends ReportBase {
                             <td>&nbsp;</td>
                         </tr>
                         <tr className="text-value-row">
-                            <td className="text-left">By {this.props.labels[o.Customer_approval].value}</td>
+                            <td className="text-left">By __________________________</td>
                         </tr>
                         <br />
                         <tr className="text-value-row">
-                            <td className="text-left">Date {this.props.labels[o.Customer_date].value}</td>
+                            <td className="text-left">Date  ________________________</td>
                         </tr>
                     </tbody>
                 </table>
