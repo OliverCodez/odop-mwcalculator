@@ -67,7 +67,8 @@ class Report3 extends ReportBase {
                         </tr>
                     </tbody>
                 </table>
-                <span className="text-value">{this.props.labels[o.COMMENT].name.replace(/_/g, ' ')}: &nbsp; </span> {this.props.labels[o.COMMENT].value} <br/>
+                <br />
+                <span className="text-value">{this.props.labels[o.COMMENT].name.replace(/_/g, ' ')}: &nbsp; </span> <span className="text-value-row">{this.props.labels[o.COMMENT].value}</span> <br/>
                 <br/>
                 <table id="view2" className="report-table">
                     <tbody>
@@ -169,20 +170,20 @@ class Report3 extends ReportBase {
                     </tbody>
                 </table>
                 <br/>
-                <table id="view3" className="report-table">
+                <table id="view3" className="report-table text-table-small">
                     <thead>
                         <tr>
                             <th/>
-                            <th className="text-right" width="15%">Free </th>
-                            <th className="text-right" width="15%">1st&nbsp;Load</th>
-                            <th className="text-right" width="15%">2nd&nbsp;Load</th>
-                            <th className="text-right" width="15%">Solid</th>
+                            <th className="text-right text-value" width="15%">Free </th>
+                            <th className="text-right text-value" width="15%">1st&nbsp;Load</th>
+                            <th className="text-right text-value" width="15%">2nd&nbsp;Load</th>
+                            <th className="text-right text-value" width="15%">Solid</th>
                             <th/>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><b>Force</b></td>
+                            <td><span className="text-value-small">Force</span></td>
                             <td>{(0.0).toFixed(2)}</td>
                             <td>{this.props.symbol_table[o.Force_1].value.toFixed(2)}</td>
                             <td>{this.props.symbol_table[o.Force_2].value.toFixed(2)}</td>
@@ -190,7 +191,7 @@ class Report3 extends ReportBase {
                             <td className="text-left" colSpan="2">{this.props.symbol_table[o.Force_1].units}</td>
                         </tr>
                         <tr>
-                            <td><b>Deflection</b></td>
+                            <td><span className="text-value-small">Deflection</span></td>
                             <td>{(0.0).toFixed(3)}</td>
                             <td>{this.props.symbol_table[o.Deflect_1].value.toFixed(3)}</td>
                             <td>{this.props.symbol_table[o.Deflect_2].value.toFixed(3)}</td>
@@ -198,7 +199,7 @@ class Report3 extends ReportBase {
                             <td className="text-left">{this.props.symbol_table[o.Deflect_2].units}</td>
                         </tr>
                         <tr>
-                            <td><b>Length</b></td>
+                            <td><span className="text-value-small">Length</span></td>
                             <td>{this.props.symbol_table[o.Free_Length].value.toFixed(3)}</td>
                             <td>{this.props.symbol_table[o.L_1].value.toFixed(3)}</td>
                             <td>{this.props.symbol_table[o.L_2].value.toFixed(3)}</td>
@@ -206,7 +207,7 @@ class Report3 extends ReportBase {
                             <td className="text-left">{this.props.symbol_table[o.L_1].units}</td>
                         </tr>
                         <tr>
-                            <td><b>Outside Dia.</b></td>
+                            <td><span className="text-value-small">Outside Dia.</span></td>
                             <td>{this.props.symbol_table[o.Free_OD].value.toFixed(3)}</td>
                             <td>{this.od_1.toFixed(3)}</td>
                             <td>{this.od_2.toFixed(3)}</td>
@@ -214,7 +215,7 @@ class Report3 extends ReportBase {
                             <td className="text-left">{this.props.symbol_table[o.Free_OD].units}</td>
                         </tr>
                         <tr>
-                            <td><b>Inside Dia.</b></td>
+                            <td><span className="text-value-small">Inside Dia.</span></td>
                             <td>{this.props.symbol_table[o.ID_Free].value.toFixed(3)}</td>
                             <td>{this.id_1.toFixed(3)}</td>
                             <td>{this.id_2.toFixed(3)}</td>
@@ -222,7 +223,7 @@ class Report3 extends ReportBase {
                             <td className="text-left">{this.props.symbol_table[o.ID_Free].units}</td>
                         </tr>
                         <tr>
-                            <td><b>Energy</b></td>
+                            <td><span className="text-value-small">Energy</span></td>
                             <td>{(0.0).toFixed(2)}</td>
                             <td>{this.energy_1.toFixed(2)}</td>
                             <td>{this.energy_2.toFixed(2)}</td>
@@ -230,7 +231,7 @@ class Report3 extends ReportBase {
                             <td className="text-left">{this.props.symbol_table[o.Energy].units}</td>
                         </tr>
                         <tr>
-                            <td><b>Stress</b><sup>*</sup></td>
+                            <td><span className="text-value-small">Stress</span><sup>*</sup></td>
                             <td>{(0.0).toFixed(0)}</td>
                             <td>{this.props.symbol_table[o.Stress_1].value.toFixed(0)}</td>
                             <td>{this.props.symbol_table[o.Stress_2].value.toFixed(0)}</td>
@@ -238,7 +239,7 @@ class Report3 extends ReportBase {
                             <td className="text-left">{this.props.symbol_table[o.Stress_1].units}</td>
                         </tr>
                         <tr>
-                            <td><b>% Tensile</b><sup>*</sup></td>
+                            <td><span className="text-value-small">% Tensile</span><sup>*</sup></td>
                             <td>{(0.0).toFixed(1)}</td>
                             <td>{(this.props.symbol_table[o.Stress_1].value / this.dhat).toFixed(1)}</td>
                             <td>{(this.props.symbol_table[o.Stress_2].value / this.dhat).toFixed(1)}</td>
@@ -246,7 +247,7 @@ class Report3 extends ReportBase {
                             <td className="text-left">%</td>
                         </tr>
                         <tr>
-                            <td><b>Static F.S.</b><sup>*</sup></td>
+                            <td><span className="text-value-small">Static F.S.</span><sup>*</sup></td>
                             <td>Infinity</td>
                             <td>{this.fs_1.toFixed(2)}</td>
                             <td>{this.props.symbol_table[o.FS_2].value.toFixed(2)}</td>
@@ -255,12 +256,12 @@ class Report3 extends ReportBase {
                         </tr>
                         <tr>
                             <td/>
-                            <td className="text-left" colSpan="5"><sup>*</sup> without pre-set &nbsp; kw = <span className="text-value">{this.kw1.toFixed(3)}</span></td>
+                            <td className="text-left" colSpan="5"><sup>*</sup> without pre-set &nbsp; kw = <span className="text-value-small">{this.kw1.toFixed(3)}</span></td>
                         </tr>
                     </tbody>
                 </table>
                 <br/>
-                Deflection at 2nd load is {this.props.symbol_table[o.PC_Avail_Deflect].value.toFixed(0)}% of total available deflection.<br />
+                <span className="text-value-row">Deflection at 2nd load is {this.props.symbol_table[o.PC_Avail_Deflect].value.toFixed(0)}% of total available deflection.</span><br />
                 {this.pcadmsg}{this.pcadmsg !== undefined && <br />}
                 {this.errmsg1}{this.errmsg1 !== undefined && <br />}
                 {this.errmsg0}
@@ -343,21 +344,15 @@ class Report3 extends ReportBase {
                 <table id="view5" className="report-table">
                     <tbody>
                         <tr>
-                            <td className="text-center" colSpan="2">approved for mfg.</td>
-                            <td/>
-                            <td> &nbsp; &nbsp; </td>
-                            <td className="text-center" colSpan="2">approved for mfg.</td>
+                            <td className="text-center text-value-row" colSpan="2">approved for mfg.</td>
                             <td/>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                         </tr>
-                        <tr>
+                        <tr className="text-value-row">
                             <td colSpan="2">by {this.props.labels[o.Customer_approval].value}</td>
                             <td>date {this.props.labels[o.Customer_date].value}</td>
-                            <td> &nbsp; &nbsp; </td>
-                            <td colSpan="2">by {this.props.labels[o.Vendor_approval].value}</td>
-                            <td>date {this.props.labels[o.Vendor_date].value}</td>
                         </tr>
                     </tbody>
                 </table>
