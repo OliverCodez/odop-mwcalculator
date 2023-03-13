@@ -25,17 +25,26 @@ class Report1 extends ReportBase {
         var line = 1;
         var isGround = 1;
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1.700;
-        console.log('endtype:');
-        console.log(this.et_tab[this.props.symbol_table[o.End_Type].value][0]);
-        console.log('steps side 1::');
-        console.log((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4));
-        console.log(((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10));
-        console.log('steps side 2::');
-        console.log((this.props.symbol_table[o.Spring_Index].value + (25)));
-        console.log(((this.props.symbol_table[o.Spring_Index].value + (25)) / 2000 ));
-        console.log('steps before divide to inch::');
-        console.log((((((this.props.symbol_table[o.Free_Length].value * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value + (25))) / 2000 ) * isGround));
-        console.log('total: ' + (((((this.props.symbol_table[o.Free_Length].value.toFixed(3) * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value.toFixed(3) + 25) / 2000 ) * isGround) / 25.4).toFixed(3));
+        console.log('first side:');
+        var sideOne = ((this.props.symbol_table[o.Free_Length].value * 25.4) + 10);
+        console.log(sideOne);
+        console.log('second side:');
+        var sideTwo = (this.props.symbol_table[o.Spring_Index].value + (25));
+        console.log(sideTwo);
+        console.log('multiplied by each other:');
+        var multiPlied = (sideOne * sideTwo);
+        console.log(multiPlied);
+        console.log('outcome dived by 2k:');
+        var divIded = (multiPlied / 2000);
+        console.log(divIded);
+        console.log('multiplied by groundvar:');
+        var multiPliedTwo = (divIded * isGround);
+        console.log(multiPliedTwo);
+        console.log('divided by 25.4:');
+        var divIdedMM = (multiPliedTwo / 25.4);
+        console.log(divIdedMM);
+        console.log('result to fixed:');
+        console.log(divIdedMM.toFixed(3));
         return (
             <>
                 <h4 className="d-flex mt-3">
