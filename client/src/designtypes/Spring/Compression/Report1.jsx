@@ -35,7 +35,7 @@ class Report1 extends ReportBase {
 
         console.log('FullTotal: ');
         console.log(testTotal);
-        
+
         console.log('mean dia:');
         console.log(meanDia);
 
@@ -44,7 +44,7 @@ class Report1 extends ReportBase {
         console.log(leftTotal);
 
         console.log('second inner^:');
-        var toPower = (this.props.symbol_table[o.Wire_Diameter].value ^ 0.398);
+        var toPower = Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398);
         console.log(toPower);
 
         console.log('second outer');
