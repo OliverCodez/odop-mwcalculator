@@ -23,28 +23,42 @@ class Report1 extends ReportBase {
         super.render();
 //        console.log('In Report1.render this=',this);
         var line = 1;
-        var isGround = 1;
-        if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1.700;
-        console.log('first side:');
-        var sideOne = ((this.props.symbol_table[o.Free_Length].value * 25.4) + 10);
-        console.log(sideOne);
-        console.log('second side:');
-        var sideTwo = (this.props.symbol_table[o.Spring_Index].value + (25));
-        console.log(sideTwo);
-        console.log('multiplied by each other:');
-        var multiPlied = (sideOne * sideTwo);
-        console.log(multiPlied);
-        console.log('outcome dived by 2k:');
-        var divIded = (multiPlied / 2000);
-        console.log(divIded);
-        console.log('multiplied by groundvar:');
-        var multiPliedTwo = (divIded * isGround);
-        console.log(multiPliedTwo);
-        console.log('divided by 25.4:');
-        var divIdedMM = (multiPliedTwo / 25.4);
-        console.log(divIdedMM);
-        console.log('result to fixed:');
-        console.log(divIdedMM.toFixed(3));
+        var isGround = 1.7;
+        if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
+        var meanDia = ((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2);
+
+        var testTotal = ((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((this.props.symbol_table[o.Wire_Diameter].value ^ 0.398) * 135) * 2).toFixed(3);
+
+
+//        ( (CoilMeanDiameter * 0.7) / ( ( wire diameter ^0.398 ) * 135 ) ) * 2
+
+
+        console.log('FullTotal: ');
+        console.log(testTotal);
+        
+        console.log('mean dia:');
+        console.log(meanDia);
+
+        console.log('first:');
+        var leftTotal = (meanDia * 0.7);
+        console.log(leftTotal);
+
+        console.log('second inner^:');
+        var toPower = (this.props.symbol_table[o.Wire_Diameter].value ^ 0.398);
+        console.log(toPower);
+
+        console.log('second outer');
+        var rightTotal = (toPower * 135);
+        console.log(rightTotal);
+
+        console.log('divided sum:');
+        var divSum = (leftTotal / rightTotal);
+        console.log(divSum);
+
+        console.log('Total:');
+        var totalSum = (divSum * 2);
+        console.log(totalSum.toFixed(3));
+
         return (
             <>
                 <h4 className="d-flex mt-3">
