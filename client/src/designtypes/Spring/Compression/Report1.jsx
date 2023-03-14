@@ -31,11 +31,6 @@ class Report1 extends ReportBase {
                     <span className="mr-auto">Spring Compression Report</span>
                 </h4>
                 <br />
-                {this.hits > 0 ?
-                    <></>
-                : '' }
-                {this.hits > 0 && this.startpntmsg}{this.hits > 0 && <br />}
-                {this.hits > 0 && <br />}
                 <table id="view1" className="report-table">
                     <tbody>
                         <tr className="text-value-row">
