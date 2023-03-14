@@ -21,6 +21,8 @@ class Report3 extends ReportBase {
     render() {
         super.render();
 //        console.log('In Report3.render this.props=',this.props);
+        var isGround = 1.7;
+        if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
         return (
             <>
                 <h4 className="d-flex mt-3">
@@ -166,6 +168,28 @@ class Report3 extends ReportBase {
                             <td>=</td>
                             <td className="text-value">{this.props.symbol_table[o.Cycle_Life].value.toFixed(0)}</td>
                             <td className="text-left text-value">{this.props.symbol_table[o.Cycle_Life].units + " (estimate)"}</td>
+                        </tr>
+                        <tr className="text-value-row">
+                            <td>Free Length Tol.</td>
+                            <td>=</td>
+                            <td className="text-value">{((((((this.props.symbol_table[o.Free_Length].value * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value + (25))) / 2000 ) * isGround) / 25.4).toFixed(3)}</td>
+                            <td className="text-value">inches</td>
+                            <td/>
+                            <td>Coil Diameter Tol.</td>
+                            <td>=</td>
+                            <td className="text-value">{((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3)}</td>
+                            <td className="text-value text-left">inches</td>
+                        </tr>
+                        <tr className="text-value-row">
+                            <td>Corrected % of MTS</td>
+                            <td>=</td>
+                            <td className="text-value">0.000</td>
+                            <td className="text-value text-left"></td>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
                         </tr>
                     </tbody>
                 </table>
