@@ -155,9 +155,9 @@ export class Calculator extends ReportBase {
                                     <span>Free Length Tol.</span>
                                 </td>
                                 <td className="align-middle ">
-                                    <div className="input-group">
-                                        <input disabled="" type="text" className="text-right form-control" value={((((((this.props.symbol_table[o.Free_Length].value * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value + (25))) / 2000 ) * isGround) / 25.4).toFixed(3)} />
-                                    </div>
+                                    <InputGroup>
+                                        <Form.Control type="text" disabled={true} className="text-right" value={((((((this.props.symbol_table[o.Free_Length].value * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value + (25))) / 2000 ) * isGround) / 25.4).toFixed(3)} />
+                                    </InputGroup>
                                 </td>
                                 <td clasclassNames="text-nowrap align-middle text-left">inches</td>
                                 <td> &nbsp; &nbsp; </td>
@@ -165,9 +165,9 @@ export class Calculator extends ReportBase {
                                     <span>Coil Dia. Tol.</span>
                                 </td>
                                 <td className="align-middle ">
-                                    <div className="input-group">
-                                        <input disabled="" type="text" className="text-right form-control" value={((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3)} />
-                                    </div>
+                                    <InputGroup>
+                                        <Form.Control type="text" disabled={true} className="text-right" value={((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3)} />
+                                    </InputGroup>
                                 </td>
                                 <td clasclassNames="text-left">inches</td>
                             </tr>
