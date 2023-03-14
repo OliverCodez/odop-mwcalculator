@@ -25,40 +25,6 @@ class Report1 extends ReportBase {
         var line = 1;
         var isGround = 1.7;
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
-        var meanDia = ((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2);
-
-        var testTotal = ((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((this.props.symbol_table[o.Wire_Diameter].value ^ 0.398) * 135) * 2).toFixed(3);
-
-
-//        ( (CoilMeanDiameter * 0.7) / ( ( wire diameter ^0.398 ) * 135 ) ) * 2
-
-
-        console.log('FullTotal: ');
-        console.log(testTotal);
-
-        console.log('mean dia:');
-        console.log(meanDia);
-
-        console.log('first:');
-        var leftTotal = (meanDia * 0.7);
-        console.log(leftTotal);
-
-        console.log('second inner^:');
-        var toPower = Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398);
-        console.log(toPower);
-
-        console.log('second outer');
-        var rightTotal = (toPower * 135);
-        console.log(rightTotal);
-
-        console.log('divided sum:');
-        var divSum = (leftTotal / rightTotal);
-        console.log(divSum);
-
-        console.log('Total:');
-        var totalSum = (divSum * 2);
-        console.log(totalSum.toFixed(3));
-
         return (
             <>
                 <h4 className="d-flex mt-3">
@@ -232,8 +198,20 @@ class Report1 extends ReportBase {
                             <td/>
                             <td>Coil Diameter Tol.</td>
                             <td>=</td>
-                            <td className="text-value">0.000</td>
+                            <td className="text-value">{((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3)}</td>
                             <td className="text-value">inches</td>
+                            <td/>
+                        </tr>
+                        <tr className="text-value-row">
+                            <td>Corrected % of MTS</td>
+                            <td>=</td>
+                            <td className="text-value">0.000</td>
+                            <td className="text-value"></td>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
                             <td/>
                         </tr>
                     </tbody>

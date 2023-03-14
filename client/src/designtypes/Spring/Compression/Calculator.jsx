@@ -148,6 +148,42 @@ export class Calculator extends ReportBase {
                                 <SymbolValue element={this.props.symbol_table[o.Cycle_Life]} index={o.Cycle_Life} />
                                 <td className="text-left">{this.cycle_life_u}</td>
                             </tr>
+                            <tr>
+                                <td className="align-middle font-weight-bold">
+                                    <span>Free Length Tol.</span>
+                                </td>
+                                <td className="align-middle ">
+                                    <div className="input-group">
+                                        <input disabled="" type="text" className="text-right form-control" value={((((((this.props.symbol_table[o.Free_Length].value * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value + (25))) / 2000 ) * isGround) / 25.4).toFixed(3)} />
+                                    </div>
+                                </td>
+                                <td clasclassNames="text-nowrap align-middle text-left">inches</td>
+                                <td> &nbsp; &nbsp; </td>
+                                <td className="align-middle symbol-name">
+                                    <span>Coil Dia. Tol.</span>
+                                </td>
+                                <td className="align-middle ">
+                                    <div className="input-group">
+                                        <input disabled="" type="text" className="text-right form-control" value={((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3)} />
+                                    </div>
+                                </td>
+                                <td clasclassNames="text-left">inches</td>
+                            </tr>
+                            <tr>
+                                <td className="align-middle font-weight-bold">
+                                    <span>Corrected % of MTS</span>
+                                </td>
+                                <td className="align-middle ">
+                                    <div className="input-group">
+                                        <input disabled="" type="text" className="text-right form-control" value="0.000" />
+                                    </div>
+                                </td>
+                                <td clasclassNames="text-nowrap align-middle text-left"></td>
+                                <td />
+                                <td />
+                                <td />
+                                <td />
+                            </tr>
                         </tbody>
                     </table>
                 </Row>
