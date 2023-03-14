@@ -346,6 +346,14 @@ header {
     font-weight: 400;
 }
 
+.text-table-small thead td {
+    text-transform: capitalize;
+}
+
+.text-table-small tbody td {
+    text-align: center;
+}
+
 .text-value-small {
     font-size: 18px;
     font-weight: 700;
