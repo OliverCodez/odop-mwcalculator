@@ -254,7 +254,9 @@ class Report2 extends ReportBase {
                                 <tr className="text-value-row">
                                     <td>{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
                                     <td>=</td>
-                                    <td colSpan="5"><span className="text-left text-value">{this.matTypeValue}</span><span className="text-right">{this.peenValue}</span></td>
+                                    <td className="text-left text-value">{this.matTypeValue}</td>
+                                    <td/>
+                                    <td colSpan="3" className="text-center">{this.peenValue}</td>
                                 </tr>
                                 <tr className="text-value-row">
                                     <td>{this.props.symbol_table[o.Tensile].name.replace(/_/g, ' ')}</td>
