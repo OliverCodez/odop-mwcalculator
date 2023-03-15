@@ -405,10 +405,12 @@ header {
     }
 
     header #mwc-hero-img {
-        height: 188px;
         display: block;
-        width: 423px;
+        min-height: 188px;
         margin: 0 auto;
+        width: auto;
+        max-width: 423px;
+        height: auto;
     }
 
     #main_Advanced > .design-table > .row:first-child table:first-child tbody tr,
@@ -419,6 +421,12 @@ header {
     #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:first-child,
     #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:first-child {
         display: table;
+    }
+
+    .calc-out1,
+    .calc-out2 {
+        margin-left: -15px;
+        margin-right: -8px;
     }
 
     .calc-out1 .report-table-head span {
@@ -492,6 +500,16 @@ header {
         display: none;
     }
 
+    .calc-out2 tbody td:first-child {
+        display: table;
+        line-height: 19px;
+    }
+
+    .calc-out2 tbody td:first-child > span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
     .calc-footer-table tr {
         display: flex;
         flex-direction: column;
@@ -529,14 +547,14 @@ header {
     }
 
     .report-mobile-only {
-        margin: 30px auto 0;
+        margin: 0 auto;
     }
 
     .report-mobile-only tbody tr > td:first-child {
-        line-height: 19px;
-        padding-top: 2px;
-        padding-bottom: 4px;
         font-size: 14px;
+        line-height: 14px;
+        padding-bottom: 8px;
+        padding-top: 10px;
     }
 
     .report-mobile-only tbody tr > td:first-child > span {
