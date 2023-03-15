@@ -379,7 +379,8 @@ header {
     width: 134px;
 }
 
-.calc-out1 {
+.calc-out1,
+.report-mobile-only {
     display: none;
 }
 
@@ -438,11 +439,13 @@ header {
         display: table-cell;
     }
 
-    .calc-out1 {
+    .calc-out1,
+    .report-mobile-only {
         display: table;
     }
 
-    .calc-out1 thead tr > td {
+    .calc-out1 thead tr > td,
+    .report-mobile-only thead tr > td {
         width: 20%;
     }
 
@@ -516,6 +519,7 @@ header {
         float: left;
     }
 
+    .report-mobile-stack tbody tr,
     .report-mobile-stack tbody tr td:nth-child(4) {
         clear: left;
     }

@@ -90,7 +90,7 @@ class Report1 extends ReportBase {
                     </tbody>
                 </table>
                 <br/>
-                <table id="view2" className="report-table text-table-small">
+                <table id="view2" className="report-table text-table-small calc-outdesk">
                     <thead>
                         <tr>
                             <td></td>
@@ -152,6 +152,67 @@ class Report1 extends ReportBase {
                             <td>{(this.od_solid - 2.0 * this.props.symbol_table[o.Wire_Diameter].value).toFixed(4)}</td>
                             <td/>
                             <td>{this.props.symbol_table[o.Stress_Solid].value.toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.FS_Solid].value.toFixed(2)}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="view2" className="report-table text-table-small report-mobile-only">
+                    <thead>
+                        <tr>
+                            <td className="text-right"><span className="text-value-small">Free</span></td>
+                            <td className="text-right"><span className="text-value-small">1</span></td>
+                            <td className="text-right"><span className="text-value-small">2</span></td>
+                            <td className="text-right"><span className="text-value-small">Solid</span></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className="text-center"><span className="text-value text-caps">Force</span><br />{this.props.symbol_table[o.Force_1].units}</td>
+                            <td>{(0.0).toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_1].value.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_2].value.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_Solid].value.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center"><span className="text-value text-caps">Deflect</span><br />{this.props.symbol_table[o.Free_Length].units}</td>
+                            <td>{(0.0).toFixed(4)}</td>
+                            <td>{this.props.symbol_table[o.Deflect_1].value.toFixed(4)}</td>
+                            <td>{this.props.symbol_table[o.Deflect_2].value.toFixed(4)}</td>
+                            <td>{(this.props.symbol_table[o.Free_Length].value - this.props.symbol_table[o.L_Solid].value).toFixed(4)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center"><span className="text-value text-caps">Length</span><br />{this.props.symbol_table[o.Free_Length].units}</td>
+                            <td>{this.props.symbol_table[o.Free_Length].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_1].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_2].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_Solid].value.toFixed(3)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center"><span className="text-value text-caps">OD</span><br />{this.props.symbol_table[o.Free_OD].units}</td>
+                            <td>{this.props.symbol_table[o.Free_OD].value.toFixed(4)}</td>
+                            <td>{this.od_1.toFixed(4)}</td>
+                            <td>{this.od_2.toFixed(4)}</td>
+                            <td>{this.od_solid.toFixed(4)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center"><span className="text-value text-caps">ID</span><br />{this.props.symbol_table[o.ID_Free].units}</td>
+                            <td>{this.props.symbol_table[o.ID_Free].value.toFixed(4)}</td>
+                            <td>{this.id_1.toFixed(4)}</td>
+                            <td>{this.id_2.toFixed(4)}</td>
+                            <td>{(this.od_solid - 2.0 * this.props.symbol_table[o.Wire_Diameter].value).toFixed(4)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center"><span className="text-value text-caps">Stress</span><br />{this.props.symbol_table[o.Stress_1].units}</td>
+                            <td>{(0.0).toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_1].value.toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_2].value.toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_Solid].value.toFixed(0)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center"><span className="text-value text-caps">Static&nbsp;FS</span><br />{this.props.symbol_table[o.FS_2].units}</td>
+                            <td>Infinity</td>
+                            <td>{this.fs_1.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.FS_2].value.toFixed(2)}</td>
                             <td>{this.props.symbol_table[o.FS_Solid].value.toFixed(2)}</td>
                         </tr>
                     </tbody>
