@@ -374,3 +374,82 @@ header {
 .text-width-min {
     width: 110px;
 }
+
+.text-width-med {
+    width: 134px;
+}
+
+@media only screen and ( max-width: 800px ) {
+    header {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    header .mcw-hero-left {
+        width: 100%;
+    }
+
+    header .mcw-hero-right {
+        width: 96%;
+        margin: 20px auto 0;
+    }
+
+    header #mwc-logo {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header #mwc-hero-img {
+        height: 188px;
+    }
+
+    #main_Advanced > .design-table > .row:first-child table:first-child tbody tr,
+    #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr {
+        max-width: 94%;
+    }
+
+    .calc-out1,
+    .calc-out1 tbody,
+    .calc-out2,
+    .calc-out2 tbody,
+    .calc-footer-table,
+    .calc-footer-table tbody {
+        display: block;
+    }
+
+    .calc-out2 tbody tr {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .calc-out2 tbody tr > td:nth-child(1),
+    .calc-out2 tbody tr > td:nth-child(5) {
+        flex: 35%;
+    }
+
+    .calc-out2 tbody tr > td:nth-child(2),
+    .calc-out2 tbody tr > td:nth-child(6) {
+        flex: 40%;
+    }
+
+    .calc-out2 tbody tr > td:nth-child(3),
+    .calc-out2 tbody tr > td:nth-child(7) {
+        flex: 15%;
+    }
+
+    .calc-out2 tbody tr > td:nth-child(4) {
+        display: none;
+    }
+
+    .calc-footer-table tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calc-footer-table tr td:first-child {
+        text-align: left;
+        font-size: 22px;
+    }
+}

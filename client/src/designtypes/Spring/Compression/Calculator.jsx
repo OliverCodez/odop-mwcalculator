@@ -103,7 +103,7 @@ export class Calculator extends ReportBase {
                 </Row>
                 <br />
                 <Row>
-                    <table className="report-table">
+                    <table className="report-table calc-out2">
                         <tbody>
                             <tr>
                                 <SymbolName element={this.props.symbol_table[o.Length_of_Stroke]} index={o.Length_of_Stroke} />
@@ -191,7 +191,7 @@ export class Calculator extends ReportBase {
                 </Row>
                 <br />
                 <Row>
-                    <table className="report-table">
+                    <table className="report-table calc-footer-table">
                         <tbody>
                             <tr>
                                 <td className='font-weight-bold'>

@@ -251,7 +251,7 @@ class Report2 extends ReportBase {
                                 <tr className="text-value-row">
                                     <td colSpan="7" className="text-left">Modified Goodman calculation inputs:</td>
                                 </tr>
-                                <tr className="text-value-row">
+                                <tr className="text-value-row text-width-med">
                                     <td>{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
                                     <td>=</td>
                                     <td className="text-left text-value">{this.matTypeValue}</td>
