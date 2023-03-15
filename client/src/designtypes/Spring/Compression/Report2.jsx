@@ -212,9 +212,7 @@ class Report2 extends ReportBase {
                 <table id="view5" className="report-table">
                     <tbody>
                         <tr className="text-value-row">
-                            <td colSpan="3" className="text-left">Soderburg calculation inputs:</td>
-                            <td/>
-                            <td colSpan="3"/>
+                            <td colSpan="7" className="text-left">Soderburg calculation inputs:</td>
                         </tr>
                         <tr className="text-value-row">
                             <td>Stress Mean</td>
@@ -235,17 +233,10 @@ class Report2 extends ReportBase {
                             <td className="text-left text-value">{this.props.symbol_table[o.Stress_Lim_Endur].value.toFixed(0) + ' ' + this.props.symbol_table[o.Stress_Lim_Endur].units}</td>
                         </tr>
                         <tr className="text-value-row">
-                            <td/>
-                            <td/>
-                            <td/>
-                            <td>{this.props.symbol_table[o.Life_Category].name.replace(/_/g, ' ')}</td>
-                            <td>=</td>
-                            <td colSpan="2" className="text-left text-value">{this.lifeTargValue}</td>
+                            <td>{this.props.symbol_table[o.Life_Category].name.replace(/_/g, ' ')} = <span className="text-value text-right">{this.lifeTargValue}</span></td>
                         </tr>
                         <tr className="text-value-row">
-                            <td className="text-left">Soderberg calculation result: {this.props.symbol_table[o.FS_CycleLife].name.replace(/_/g, ' ')}</td>
-                            <td>=</td>
-                            <td colSpan="5" className="text-left text-value">{this.props.symbol_table[o.FS_CycleLife].value.toFixed(3) + ' ' + this.props.symbol_table[o.FS_CycleLife].units}</td>
+                            <td className="text-left">Soderberg calculation result: {this.props.symbol_table[o.FS_CycleLife].name.replace(/_/g, ' ')} = <span className="text-left text-value">{this.props.symbol_table[o.FS_CycleLife].value.toFixed(3) + ' ' + this.props.symbol_table[o.FS_CycleLife].units}</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -255,16 +246,11 @@ class Report2 extends ReportBase {
                         <table id="view6" className="report-table">
                             <tbody>
                                 <tr className="text-value-row">
-                                    <td colSpan="7">Modified Goodman calculation inputs:</td>
+                                    <td colSpan="7" className="text-left">Modified Goodman calculation inputs:</td>
                                 </tr>
                                 <tr className="text-value-row">
-                                    <td>{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
-                                    <td>=</td>
-                                    <td className="text-left text-value" colSpan="2">{this.matTypeValue}</td>
-                                    <td/>
-                                    <td> </td>
-                                    <td> &nbsp; </td>
-                                    <td className="text-left">{this.peenValue}</td>
+                                    <td colSpan="6" className="text-left text-value">{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')} = <span className="text-value">{this.matTypeValue}</span></td>
+                                    <td className="text-center">{this.peenValue}</td>
                                 </tr>
                                 <tr className="text-value-row">
                                     <td>{this.props.symbol_table[o.Tensile].name.replace(/_/g, ' ')}</td>
@@ -285,7 +271,7 @@ class Report2 extends ReportBase {
                                     <td className="text-left text-value">{this.props.symbol_table[o.Stress_2].value.toFixed(0) + ' ' + this.props.symbol_table[o.Stress_2].units}</td>
                                </tr>
                                 <tr className="text-value-row">
-                                    <td colSpan="7" className="text-left">Modified Goodman calculation result: {this.props.symbol_table[o.Cycle_Life].name.replace(/_/g, ' ') + ' = ' + this.props.symbol_table[o.Cycle_Life].value.toFixed(0) + ' ' + this.props.symbol_table[o.Cycle_Life].units + ' (estimate)'}</td>
+                                    <td colSpan="7" className="text-left">Modified Goodman calculation result: {this.props.symbol_table[o.Cycle_Life].name.replace(/_/g, ' ')} = <span className="text-left text-value">{this.props.symbol_table[o.Cycle_Life].value.toFixed(0) + ' ' + this.props.symbol_table[o.Cycle_Life].units + ' (estimate)'}</span></td>
                                </tr>
                            </tbody>
                         </table>
