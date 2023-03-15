@@ -233,10 +233,13 @@ class Report2 extends ReportBase {
                             <td className="text-left text-value">{this.props.symbol_table[o.Stress_Lim_Endur].value.toFixed(0) + ' ' + this.props.symbol_table[o.Stress_Lim_Endur].units}</td>
                         </tr>
                         <tr className="text-value-row">
-                            <td>{this.props.symbol_table[o.Life_Category].name.replace(/_/g, ' ')} = <span className="text-value text-right">{this.lifeTargValue}</span></td>
+                            <td colSpan="4"></td>
+                            <td>{this.props.symbol_table[o.Life_Category].name.replace(/_/g, ' ')}</td>
+                            <td>=</td>
+                            <td><span className="text-value text-left">{this.lifeTargValue}</span></td>
                         </tr>
                         <tr className="text-value-row">
-                            <td className="text-left">Soderberg calculation result: {this.props.symbol_table[o.FS_CycleLife].name.replace(/_/g, ' ')} = <span className="text-left text-value">{this.props.symbol_table[o.FS_CycleLife].value.toFixed(3) + ' ' + this.props.symbol_table[o.FS_CycleLife].units}</span></td>
+                            <td colSpan="7" className="text-left">Soderberg calculation result: {this.props.symbol_table[o.FS_CycleLife].name.replace(/_/g, ' ')} = <span className="text-left text-value">{this.props.symbol_table[o.FS_CycleLife].value.toFixed(3) + ' ' + this.props.symbol_table[o.FS_CycleLife].units}</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -249,7 +252,7 @@ class Report2 extends ReportBase {
                                     <td colSpan="7" className="text-left">Modified Goodman calculation inputs:</td>
                                 </tr>
                                 <tr className="text-value-row">
-                                    <td colSpan="6" className="text-left text-value">{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')} = <span className="text-value">{this.matTypeValue}</span></td>
+                                    <td colSpan="6" className="text-left">{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')} = <span className="text-value">{this.matTypeValue}</span></td>
                                     <td className="text-center">{this.peenValue}</td>
                                 </tr>
                                 <tr className="text-value-row">
