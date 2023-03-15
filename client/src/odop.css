@@ -379,6 +379,10 @@ header {
     width: 134px;
 }
 
+.calc-out1 {
+    display: none;
+}
+
 @media only screen and ( max-width: 800px ) {
     header {
         flex-direction: column;
@@ -401,6 +405,9 @@ header {
 
     header #mwc-hero-img {
         height: 188px;
+        display: block;
+        width: 423px;
+        margin: 0 auto;
     }
 
     #main_Advanced > .design-table > .row:first-child table:first-child tbody tr,
@@ -449,7 +456,14 @@ header {
     }
 
     .calc-footer-table tr td:first-child {
-        text-align: left;
+        text-align: left!important;
         font-size: 22px;
+    }
+
+    .calc-outdesk,
+    #root2 > .container > .tab-content > .tab-pane > #main_Report1,
+    #root2 > .container > .tab-content > .tab-pane > #main_Report2,
+    #root2 > .container > .tab-content > .tab-pane > #main_Report3 {
+        display: none;
     }
 }
