@@ -108,7 +108,7 @@ class Report2 extends ReportBase {
                     </thead>
                     <tbody>
                         <tr>
-                            <td><span className="text-value-small">Free</span></td>
+                            <td><span className="text-right text-value-small">Free</span></td>
                             <td>{(0.0).toFixed(2)}</td>
                             <td>{(0.0).toFixed(4)}</td>
                             <td>{this.props.symbol_table[o.Free_Length].value.toFixed(3)}</td>
@@ -123,7 +123,7 @@ class Report2 extends ReportBase {
                             <td>{(0.0).toFixed(2)}</td>
                         </tr>
                         <tr>
-                            <td><span className="text-value-small">1</span></td>
+                            <td><span className="text-right text-value-small">1</span></td>
                             <td>{this.props.symbol_table[o.Force_1].value.toFixed(2)}</td>
                             <td>{this.props.symbol_table[o.Deflect_1].value.toFixed(4)}</td>
                             <td>{this.props.symbol_table[o.L_1].value.toFixed(3)}</td>
@@ -138,7 +138,7 @@ class Report2 extends ReportBase {
                             <td>{this.energy_1.toFixed(2)}</td>
                         </tr>
                         <tr>
-                            <td><span className="text-value-small">2</span></td>
+                            <td><span className="text-right text-value-small">2</span></td>
                             <td>{this.props.symbol_table[o.Force_2].value.toFixed(2)}</td>
                             <td>{this.props.symbol_table[o.Deflect_2].value.toFixed(4)}</td>
                             <td>{this.props.symbol_table[o.L_2].value.toFixed(3)}</td>
@@ -153,7 +153,7 @@ class Report2 extends ReportBase {
                             <td>{this.energy_2.toFixed(2)}</td>
                         </tr>
                         <tr>
-                            <td><span className="text-value-small">Solid</span></td>
+                            <td><span className="text-right text-value-small">Solid</span></td>
                             <td>{this.props.symbol_table[o.Force_Solid].value.toFixed(2)}</td>
                             <td>{(this.props.symbol_table[o.Free_Length].value - this.props.symbol_table[o.L_Solid].value).toFixed(4)}</td>
                             <td>{this.props.symbol_table[o.L_Solid].value.toFixed(3)}</td>
