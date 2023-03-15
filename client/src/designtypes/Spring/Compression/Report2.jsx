@@ -255,10 +255,10 @@ class Report2 extends ReportBase {
                                     <td className="text-left">{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
                                     <td>=</td>
                                     <td className="text-value">{this.matTypeValue}</td>
-                                    <td />
-                                    <td />
+                                    <td/>
+                                    <td/>
                                     <td className="text-center">{this.peenValue}</td>
-                                    <td />
+                                    <td/>
                                 </tr>
                                 <tr className="text-value-row">
                                     <td>{this.props.symbol_table[o.Tensile].name.replace(/_/g, ' ')}</td>
