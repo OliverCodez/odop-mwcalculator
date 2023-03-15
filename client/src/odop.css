@@ -424,7 +424,8 @@ header {
         padding: 2px;
     }
 
-    #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:first-child > span {
+    #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:first-child > span,
+    #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:first-child > span {
         line-height: 22px;
         display: block;
     }
