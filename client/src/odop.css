@@ -415,8 +415,32 @@ header {
         max-width: 94%;
     }
 
-    .calc-out1,
-    .calc-out1 tbody,
+    .calc-out1 .report-table-head span {
+        min-height: 42px;
+        line-height: 34px;
+    }
+    
+    .calc-out1 input {
+        padding: 2px;
+    }
+
+    #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:first-child > span {
+        line-height: 22px;
+        display: block;
+    }
+
+    .calc-out1 {
+        display: table;
+    }
+
+    .calc-out1 tbody td > span:first-child {
+        font-weight: 400!important;
+    }
+
+    .calc-out1 tbody td > span:first-child > b {
+        font-weight: 700!important;
+    }
+
     .calc-out2,
     .calc-out2 tbody,
     .calc-footer-table,
