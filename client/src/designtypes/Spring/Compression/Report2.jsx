@@ -29,7 +29,7 @@ class Report2 extends ReportBase {
                     <span className="mr-auto">Spring Compression Report</span>
                 </h4>
                 <br />
-                <table id="view1" className="report-table">
+                <table id="view1" className="report-table report-mobile-stack">
                     <tbody>
                         <tr className="text-value-row">
                             <td>{this.props.symbol_table[o.Spring_Type].name.replace(/_/g, ' ')}</td>
@@ -79,7 +79,7 @@ class Report2 extends ReportBase {
                     </tbody>
                 </table>
                 <hr/>
-                <table id="view2" className="report-table text-table-small">
+                <table id="view2" className="report-table text-table-small calc-outdesk">
                     <thead>
                         <tr>
                             <th colSpan="4"></th>
@@ -169,6 +169,82 @@ class Report2 extends ReportBase {
                         </tr>
                     </tbody>
                 </table>
+                <table id="view2" className="report-table text-table-small report-mobile-only">
+                    <thead>
+                        <tr>
+                            <td/>
+                            <td className="text-center"><span className="text-value-small">Free</span></td>
+                            <td className="text-center"><span className="text-value-small">1</span></td>
+                            <td className="text-center"><span className="text-value-small">2</span></td>
+                            <td className="text-center"><span className="text-value-small">Solid</span></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Force</span><br />{this.props.symbol_table[o.Force_1].units}</td>
+                            <td>{(0.0).toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_1].value.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_2].value.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_Solid].value.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Deflect</span><br />{this.props.symbol_table[o.Free_Length].units}</td>
+                            <td>{(0.0).toFixed(4)}</td>
+                            <td>{this.props.symbol_table[o.Deflect_1].value.toFixed(4)}</td>
+                            <td>{this.props.symbol_table[o.Deflect_2].value.toFixed(4)}</td>
+                            <td>{(this.props.symbol_table[o.Free_Length].value - this.props.symbol_table[o.L_Solid].value).toFixed(4)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Length</span><br />{this.props.symbol_table[o.Free_Length].units}</td>
+                            <td>{this.props.symbol_table[o.Free_Length].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_1].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_2].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_Solid].value.toFixed(3)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Stress (*kw2)</span><br />{this.props.symbol_table[o.Stress_1].units}</td>
+                            <td>{(0.0).toFixed(0)}</td>
+                            <td>{this.kw2str1.toFixed(0)}</td>
+                            <td>{this.kw2str2.toFixed(0)}</td>
+                            <td>{this.kw2strs.toFixed(0)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">%TS (*kw2)</span><br />%</td>
+                            <td>{(0.0).toFixed(1)}</td>
+                            <td>{(this.kw2str1 / this.dhat).toFixed(1)}</td>
+                            <td>{(this.kw2str2 / this.dhat).toFixed(1)}</td>
+                            <td>{(this.kw2strs / this.dhat).toFixed(1)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Stress (*kw1)</span><br />{this.props.symbol_table[o.Stress_1].units}</td>
+                            <td>{(0.0).toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_1].value.toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_2].value.toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_Solid].value.toFixed(0)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">%TS (*kw1)</span><br />%</td>
+                            <td>{(0.0).toFixed(1)}</td>
+                            <td>{(this.props.symbol_table[o.Stress_1].value / this.dhat).toFixed(1)}</td>
+                            <td>{(this.props.symbol_table[o.Stress_2].value / this.dhat).toFixed(1)}</td>
+                            <td>{(this.props.symbol_table[o.Stress_Solid].value / this.dhat).toFixed(1)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Static&nbsp;FS (*kw1)</span><br />{this.props.symbol_table[o.FS_2].units}</td>
+                            <td>Infinity</td>
+                            <td>{this.fs_1.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.FS_2].value.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.FS_Solid].value.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Energy</span><br />{this.props.symbol_table[o.Energy].units}</td>
+                            <td>{(0.0).toFixed(2)}</td>
+                            <td>{this.energy_1.toFixed(2)}</td>
+                            <td>{this.energy_2.toFixed(2)}</td>
+                            <td>{this.energy_S.toFixed(2)}</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <br />
                 <b><sup>*</sup></b> Calculations assume: {this.peenValue}; No set removal.
                 <table id="view3" className="report-table">
@@ -189,7 +265,7 @@ class Report2 extends ReportBase {
                 </table>
                 <hr/>
                 <span className="text-value">Stress Details</span>
-                <table id="view4" className="report-table">
+                <table id="view4" className="report-table report-mobile-stack">
                     <tbody>
                         <tr className="text-value-row">
                             <td>Helix Angle</td>
@@ -209,7 +285,7 @@ class Report2 extends ReportBase {
                 </table>
                 <br />
                 <span className="text-value">Cycle Life Details</span>
-                <table id="view5" className="report-table">
+                <table id="view5" className="report-table report-mobile-stack">
                     <tbody>
                         <tr className="text-value-row">
                             <td colSpan="7" className="text-left">Soderburg calculation inputs:</td>
@@ -246,7 +322,7 @@ class Report2 extends ReportBase {
                 <br />
                 {this.clWarnString === "" ?
                     <>
-                        <table id="view6" className="report-table">
+                        <table id="view6" className="report-table report-mobile-stack">
                             <tbody>
                                 <tr className="text-value-row">
                                     <td colSpan="7" className="text-left">Modified Goodman calculation inputs:</td>

@@ -29,7 +29,7 @@ class Report3 extends ReportBase {
                     <span className="mr-auto">Spring Compression Report</span>
                 </h4>
                 <br />
-                <table id="view1" className="report-table">
+                <table id="view1" className="report-table report-mobile-stack">
                     <tbody>
                         <tr className="text-value-row">
                             <td className="text-left">Contact Person:</td>
@@ -72,7 +72,7 @@ class Report3 extends ReportBase {
                 <br />
                 <span className="text-value">{this.props.labels[o.COMMENT].name.replace(/_/g, ' ')}: &nbsp; </span> <span className="text-value-row">{this.props.labels[o.COMMENT].value}</span> <br/>
                 <br/>
-                <table id="view2" className="report-table">
+                <table id="view2" className="report-table report-mobile-stack">
                     <tbody>
                         <tr className="text-value-row">
                             <td>{this.props.symbol_table[o.Spring_Type].name.replace(/_/g, ' ')}</td>
@@ -176,7 +176,7 @@ class Report3 extends ReportBase {
                     </tbody>
                 </table>
                 <br/>
-                <table id="view3" className="report-table text-table-small">
+                <table id="view3" className="report-table text-table-small calc-outdesk">
                     <thead>
                         <tr>
                             <th className="text-width-min"></th>
@@ -265,13 +265,92 @@ class Report3 extends ReportBase {
                         </tr>
                     </tbody>
                 </table>
+                <table id="view3" className="report-table text-table-small report-mobile-only">
+                    <thead>
+                        <tr>
+                            <th className="text-width-min"></th>
+                            <th className="text-center text-value" width="15%">Free </th>
+                            <th className="text-center text-value" width="15%">1st&nbsp;Load</th>
+                            <th className="text-center text-value" width="15%">2nd&nbsp;Load</th>
+                            <th className="text-center text-value" width="15%">Solid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Force</span><br />{this.props.symbol_table[o.Force_1].units}</td>
+                            <td>{(0.0).toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_1].value.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_2].value.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.Force_Solid].value.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Deflection</span><br />{this.props.symbol_table[o.Deflect_2].units}</td>
+                            <td>{(0.0).toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.Deflect_1].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.Deflect_2].value.toFixed(3)}</td>
+                            <td>{(this.props.symbol_table[o.Free_Length].value - this.props.symbol_table[o.L_Solid].value).toFixed(3)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Length</span><br />{this.props.symbol_table[o.L_1].units}</td>
+                            <td>{this.props.symbol_table[o.Free_Length].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_1].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_2].value.toFixed(3)}</td>
+                            <td>{this.props.symbol_table[o.L_Solid].value.toFixed(3)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Outside Dia.</span><br />{this.props.symbol_table[o.Free_OD].units}</td>
+                            <td>{this.props.symbol_table[o.Free_OD].value.toFixed(3)}</td>
+                            <td>{this.od_1.toFixed(3)}</td>
+                            <td>{this.od_2.toFixed(3)}</td>
+                            <td>{this.od_solid.toFixed(3)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Inside Dia.</span><br />{this.props.symbol_table[o.ID_Free].units}</td>
+                            <td>{this.props.symbol_table[o.ID_Free].value.toFixed(3)}</td>
+                            <td>{this.id_1.toFixed(3)}</td>
+                            <td>{this.id_2.toFixed(3)}</td>
+                            <td>{(this.od_solid - 2.0 * this.props.symbol_table[o.Wire_Diameter].value).toFixed(3)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Energy</span><br />{this.props.symbol_table[o.Energy].units}</td>
+                            <td>{(0.0).toFixed(2)}</td>
+                            <td>{this.energy_1.toFixed(2)}</td>
+                            <td>{this.energy_2.toFixed(2)}</td>
+                            <td>{this.energy_S.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Stress</span><sup>*</sup><br />{this.props.symbol_table[o.Stress_1].units}</td>
+                            <td>{(0.0).toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_1].value.toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_2].value.toFixed(0)}</td>
+                            <td>{this.props.symbol_table[o.Stress_Solid].value.toFixed(0)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">% Tensile</span><sup>*</sup><br />%</td>
+                            <td>{(0.0).toFixed(1)}</td>
+                            <td>{(this.props.symbol_table[o.Stress_1].value / this.dhat).toFixed(1)}</td>
+                            <td>{(this.props.symbol_table[o.Stress_2].value / this.dhat).toFixed(1)}</td>
+                            <td>{(this.props.symbol_table[o.Stress_Solid].value / this.dhat).toFixed(1)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-right"><span className="text-value text-caps">Static F.S.</span><sup>*</sup><br />{this.props.symbol_table[o.FS_Solid].units}</td>
+                            <td>Infinity</td>
+                            <td>{this.fs_1.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.FS_2].value.toFixed(2)}</td>
+                            <td>{this.props.symbol_table[o.FS_Solid].value.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-left" colSpan="5"><sup>*</sup> without pre-set &nbsp; kw = <span className="text-value-small">{this.kw1.toFixed(3)}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
                 <br/>
                 <span className="text-value-row">Deflection at 2nd load is {this.props.symbol_table[o.PC_Avail_Deflect].value.toFixed(0)}% of total available deflection.</span><br />
                 {this.pcadmsg}{this.pcadmsg !== undefined && <br />}
                 {this.errmsg1}{this.errmsg1 !== undefined && <br />}
                 {this.errmsg0}
                 <hr/>
-                <table id="view4" className="report-table">
+                <table id="view4" className="report-table report-mobile-stack">
                     <tbody>
                         <tr className="text-value-row">
                             <td className="text-right">{this.props.labels[o.Data_Source].name.replace(/_/g, ' ')}: </td>
