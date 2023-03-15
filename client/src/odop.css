@@ -501,10 +501,22 @@ header {
         margin-bottom: 10px;
     }
 
-    .calc-outdesk,
-    #root2 > .container > .tab-content > .tab-pane > #main_Report1,
-    #root2 > .container > .tab-content > .tab-pane > #main_Report2,
-    #root2 > .container > .tab-content > .tab-pane > #main_Report3 {
+    .calc-outdesk {
         display: none;
+    }
+
+    .report-mobile-stack,
+    .report-mobile-stack tbody,
+    .report-mobile-stack tbody tr,
+    .report-mobile-stack tbody tr td {
+        display: block;
+    }
+
+    .report-mobile-stack tbody tr td {
+        float: left;
+    }
+
+    .report-mobile-stack tbody tr td:nth-child(4) {
+        clear: left;
     }
 }

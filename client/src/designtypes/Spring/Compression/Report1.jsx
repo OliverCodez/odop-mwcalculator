@@ -31,7 +31,7 @@ class Report1 extends ReportBase {
                     <span className="mr-auto">Spring Compression Report</span>
                 </h4>
                 <br />
-                <table id="view1" className="report-table">
+                <table id="view1" className="report-table report-mobile-stack">
                     <tbody>
                         <tr className="text-value-row">
                             <td>{this.props.symbol_table[o.Spring_Type].name.replace(/_/g, ' ')}</td>
@@ -157,7 +157,7 @@ class Report1 extends ReportBase {
                     </tbody>
                 </table>
                 <br/>
-                <table id="view3" className="report-table">
+                <table id="view3" className="report-table report-mobile-stack">
                     <tbody>
                         <tr className="text-value-row">
                             <td>Safe Load</td>
