@@ -252,8 +252,13 @@ class Report2 extends ReportBase {
                                     <td colSpan="7" className="text-left">Modified Goodman calculation inputs:</td>
                                 </tr>
                                 <tr className="text-value-row">
-                                    <td colSpan="6" className="text-left">{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')} = <span className="text-value">{this.matTypeValue}</span></td>
+                                    <td className="text-left">{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
+                                    <td>=</td>
+                                    <td className="text-value">{this.matTypeValue}</td>
+                                    <td />
+                                    <td />
                                     <td className="text-center">{this.peenValue}</td>
+                                    <td />
                                 </tr>
                                 <tr className="text-value-row">
                                     <td>{this.props.symbol_table[o.Tensile].name.replace(/_/g, ' ')}</td>
