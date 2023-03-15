@@ -159,10 +159,11 @@ class Report1 extends ReportBase {
                 <table id="view2" className="report-table text-table-small report-mobile-only">
                     <thead>
                         <tr>
-                            <td className="text-right"><span className="text-value-small">Free</span></td>
-                            <td className="text-right"><span className="text-value-small">1</span></td>
-                            <td className="text-right"><span className="text-value-small">2</span></td>
-                            <td className="text-right"><span className="text-value-small">Solid</span></td>
+                            <td/>
+                            <td className="text-center"><span className="text-value-small">Free</span></td>
+                            <td className="text-center"><span className="text-value-small">1</span></td>
+                            <td className="text-center"><span className="text-value-small">2</span></td>
+                            <td className="text-center"><span className="text-value-small">Solid</span></td>
                         </tr>
                     </thead>
                     <tbody>

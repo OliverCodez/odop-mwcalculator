@@ -515,6 +515,10 @@ header {
         display: block;
     }
 
+    .report-mobile-stack tbody tr {
+        min-height: 66px;
+    }
+
     .report-mobile-stack tbody tr td {
         float: left;
     }
@@ -522,5 +526,20 @@ header {
     .report-mobile-stack tbody tr,
     .report-mobile-stack tbody tr td:nth-child(4) {
         clear: left;
+    }
+
+    .report-mobile-only {
+        margin: 30px auto 0;
+    }
+
+    .report-mobile-only tbody tr > td:first-child {
+        line-height: 19px;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        font-size: 14px;
+    }
+
+    .report-mobile-only tbody tr > td:first-child > span {
+        font-size: 18px;
     }
 }
