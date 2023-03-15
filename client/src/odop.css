@@ -542,6 +542,10 @@ header {
         min-height: 66px;
     }
 
+    .report-mobile-unminheight tbody tr {
+        min-height: unset;
+    }
+
     .report-mobile-stack tbody tr td {
         float: left;
     }
@@ -570,5 +574,13 @@ header {
     .calc-out2 tbody td:first-child > span.calc-hidden,
     .calc-out2 tbody td:nth-child(5) > span.calc-hidden {
         display: none!important;
+    }
+
+    .text-width-med {
+        width: auto;
+    }
+
+    .text-small {
+        font-size: 14px!important;
     }
 }

@@ -350,7 +350,7 @@ class Report3 extends ReportBase {
                 {this.errmsg1}{this.errmsg1 !== undefined && <br />}
                 {this.errmsg0}
                 <hr/>
-                <table id="view4" className="report-table report-mobile-stack">
+                <table id="view4" className="report-table report-mobile-stack report-mobile-unminheight">
                     <tbody>
                         <tr className="text-value-row">
                             <td className="text-right">{this.props.labels[o.Data_Source].name.replace(/_/g, ' ')}: </td>
