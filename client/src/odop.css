@@ -509,7 +509,7 @@ header {
 
     .calc-out2 tbody td:first-child > span,
     .calc-out2 tbody td:nth-child(5) > span {
-        display: table-cell;
+        display: table-cell!important;
         vertical-align: middle;
     }
 
@@ -565,5 +565,9 @@ header {
 
     .report-mobile-only tbody tr > td:first-child > span {
         font-size: 18px;
+    }
+
+    .calc-hidden {
+        display: none!important;
     }
 }
