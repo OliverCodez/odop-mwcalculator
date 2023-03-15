@@ -425,8 +425,8 @@ header {
 
     .calc-out1,
     .calc-out2 {
-        margin-left: -15px;
-        margin-right: -8px;
+        margin-left: -15px!important;
+        margin-right: -8px!important;
     }
 
     .calc-out1 .report-table-head span {
@@ -436,6 +436,7 @@ header {
     
     .calc-out1 input {
         padding: 2px;
+        font-size: 16px!important;
     }
 
     #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:first-child > span,
@@ -500,12 +501,14 @@ header {
         display: none;
     }
 
-    .calc-out2 tbody td:first-child {
+    .calc-out2 tbody td:first-child,
+    .calc-out2 tbody td:nth-child(5) {
         display: table;
         line-height: 19px;
     }
 
-    .calc-out2 tbody td:first-child > span {
+    .calc-out2 tbody td:first-child > span,
+    .calc-out2 tbody td:nth-child(5) > span {
         display: table-cell;
         vertical-align: middle;
     }
@@ -522,7 +525,9 @@ header {
         margin-bottom: 10px;
     }
 
-    .calc-outdesk {
+    .calc-outdesk,
+    #main_Report2,
+    #main_Report3 {
         display: none;
     }
 
@@ -555,6 +560,7 @@ header {
         line-height: 14px;
         padding-bottom: 8px;
         padding-top: 10px;
+        padding-left: 0;
     }
 
     .report-mobile-only tbody tr > td:first-child > span {
