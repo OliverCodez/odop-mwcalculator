@@ -415,6 +415,11 @@ header {
         max-width: 94%;
     }
 
+    #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:first-child,
+    #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:first-child {
+        display: table;
+    }
+
     .calc-out1 .report-table-head span {
         min-height: 42px!important;
         line-height: 34px!important;
@@ -427,11 +432,18 @@ header {
     #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:first-child > span,
     #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:first-child > span {
         line-height: 22px;
-        display: block;
+        min-height: 22px;
+        height: auto;
+        vertical-align: middle;
+        display: table-cell;
     }
 
     .calc-out1 {
         display: table;
+    }
+
+    .calc-out1 thead tr > td {
+        width: 20%;
     }
 
     .calc-out1 tbody td > span:first-child {
@@ -440,6 +452,7 @@ header {
     }
 
     .calc-out1 tbody td > span:first-child > b {
+        font-size: 17px;
         font-weight: 700!important;
     }
 
@@ -464,12 +477,12 @@ header {
 
     .calc-out2 tbody tr > td:nth-child(2),
     .calc-out2 tbody tr > td:nth-child(6) {
-        flex: 40%;
+        flex: 44%;
     }
 
     .calc-out2 tbody tr > td:nth-child(3),
     .calc-out2 tbody tr > td:nth-child(7) {
-        flex: 15%;
+        flex: 16%;
     }
 
     .calc-out2 tbody tr > td:nth-child(4) {
@@ -484,6 +497,8 @@ header {
     .calc-footer-table tr td:first-child {
         text-align: left!important;
         font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 10px;
     }
 
     .calc-outdesk,
