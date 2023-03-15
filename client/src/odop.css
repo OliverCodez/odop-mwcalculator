@@ -567,7 +567,8 @@ header {
         font-size: 18px;
     }
 
-    .calc-hidden {
+    .calc-out2 tbody td:first-child > span.calc-hidden,
+    .calc-out2 tbody td:nth-child(5) > span.calc-hidden {
         display: none!important;
     }
 }
