@@ -416,8 +416,8 @@ header {
     }
 
     .calc-out1 .report-table-head span {
-        min-height: 42px;
-        line-height: 34px;
+        min-height: 42px!important;
+        line-height: 34px!important;
     }
     
     .calc-out1 input {
@@ -435,6 +435,7 @@ header {
     }
 
     .calc-out1 tbody td > span:first-child {
+        line-height: 19px;
         font-weight: 400!important;
     }
 
