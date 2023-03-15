@@ -370,3 +370,7 @@ header {
 .text-caps {
     text-transform: capitalize;
 }
+
+.text-width-min {
+    width: 110px;
+}

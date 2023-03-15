@@ -197,7 +197,7 @@ class Report3 extends ReportBase {
                 <table id="view3" className="report-table text-table-small">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th className="text-width-min"></th>
                             <th className="text-center text-value" width="15%">Free </th>
                             <th className="text-center text-value" width="15%">1st&nbsp;Load</th>
                             <th className="text-center text-value" width="15%">2nd&nbsp;Load</th>

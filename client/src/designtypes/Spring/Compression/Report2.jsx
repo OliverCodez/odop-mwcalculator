@@ -252,13 +252,9 @@ class Report2 extends ReportBase {
                                     <td colSpan="7" className="text-left">Modified Goodman calculation inputs:</td>
                                 </tr>
                                 <tr className="text-value-row">
-                                    <td className="text-left">{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
+                                    <td>{this.props.symbol_table[o.Material_Type].name.replace(/_/g, ' ')}</td>
                                     <td>=</td>
-                                    <td className="text-value">{this.matTypeValue}</td>
-                                    <td/>
-                                    <td/>
-                                    <td className="text-center">{this.peenValue}</td>
-                                    <td/>
+                                    <td colSpan="5"><span className="text-left text-value">{this.matTypeValue}</span><span className="text-right">{this.peenValue}</span></td>
                                 </tr>
                                 <tr className="text-value-row">
                                     <td>{this.props.symbol_table[o.Tensile].name.replace(/_/g, ' ')}</td>
@@ -272,7 +268,7 @@ class Report2 extends ReportBase {
                                 <tr className="text-value-row">
                                     <td>{this.props.symbol_table[o.Stress_1].name.replace(/_/g, ' ')}</td>
                                     <td>=</td>
-                                    <td className="text-value">{this.props.symbol_table[o.Stress_1].value.toFixed(0) + ' ' + this.props.symbol_table[o.Stress_1].units}</td>
+                                    <td className="text-left text-value">{this.props.symbol_table[o.Stress_1].value.toFixed(0) + ' ' + this.props.symbol_table[o.Stress_1].units}</td>
                                     <td/>
                                     <td>{this.props.symbol_table[o.Stress_2].name.replace(/_/g, ' ')}</td>
                                     <td>=</td>
