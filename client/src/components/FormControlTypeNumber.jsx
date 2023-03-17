@@ -107,7 +107,17 @@ class FormControlTypeNumber extends Component {
 //        console.log('In FormControlTypeNumber.render value=',this.state.value,'valueString=',this.state.valueString);
 //        console.log('In FormControlTypeNumber.render className=',this.props.className);
         var className = (this.props.className !== undefined ? this.props.className : '') + ' text-right';
+        // TEMP line:
+        if (icon_alerts === undefined) {
+            console.log('no alerts defined');
+        }
+        else {
+            console.log('alerts are defined:');
+            console.log(JSON.stringify(icon_alerts));
+        }
         if (this.state.focused && isNaN(parseFloat(this.state.valueString))) {
+            // TEMP line:
+            if (icon_alerts === undefined) console.log('isNaN and no alerts');
             className += ' borders-invalid';
         }
         var icon_alerts = this.props.icon_alerts; // start with the icon alerts 
