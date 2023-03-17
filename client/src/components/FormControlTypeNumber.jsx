@@ -53,7 +53,7 @@ class FormControlTypeNumber extends Component {
     onChange(event) {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat(event.target.value);
-        if ( event.target.hasClass('err-check') ) {
+        if ( event.target.classList.contains('err-check') ) {
             console.log('CHECK THIS');
             event.target.data('oVal', value);
         }
