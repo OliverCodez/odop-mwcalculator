@@ -139,7 +139,7 @@ class FormControlTypeNumber extends Component {
         return (<>
             {icon_alerts.length > 0 ?
                 <OverlayTrigger placement="top" overlay={<Tooltip className="tooltip-lg">{icon_tooltip}</Tooltip>}>
-                    <i className={icon_class}></i>
+                    <i className={'testclass ' + icon_class}></i>
                 </OverlayTrigger>
             :
             ''}

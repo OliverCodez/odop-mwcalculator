@@ -120,7 +120,7 @@ class NameValueUnitsRowIndependentVariable extends Component {
         <td className="align-middle" colSpan="2">
           <InputGroup>
             <FormControlTypeNumber id={'nvuriv_' + this.props.element.name} icon_alerts={icon_alerts}
-                                   className={className} value={this.props.element.value}
+                                   className={'err-check ' + className} value={this.props.element.value}
                                    validmin={this.props.element.validmin} validmax={this.props.element.validmax}
                                    onChangeValid={this.onChangeValid} onChangeInvalid={this.onChangeInvalid}/>
              <div className='input-group-append'>
