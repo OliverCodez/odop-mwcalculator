@@ -118,7 +118,7 @@ class FormControlTypeNumber extends Component {
             console.log('no alerts defined: ', icon_alerts);
         }
         else {
-            var thisAlerts = icon_alerts.map((entry, i) => { return <li className={entry.className} key={i}>{entry.severity}: {entry.message}</li>});
+            var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});
             if ( thisAlerts.includes('Err') ) console.log('Error detected');
             console.log('relevant are defined: ', thisAlerts);
         }
