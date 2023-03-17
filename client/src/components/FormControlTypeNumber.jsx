@@ -55,7 +55,7 @@ class FormControlTypeNumber extends Component {
         var value = parseFloat(event.target.value);
         if ( event.target.classList.contains('err-check') ) {
             console.log('CHECK THIS');
-            event.target.data('oVal', value);
+            event.target.setAttribute('data-oVal', value);
         }
         console.log('value now: ' + value);
         console.log('eventTarget obj: ', event.target.value);
@@ -152,7 +152,7 @@ class FormControlTypeNumber extends Component {
             if ( thisAlerts.includes('Err') ) {
                 console.log('Error detected');
                 console.log('thisprops:', this.props);
-                console.log('oVal: ' + this.state.data('oVal'));
+                console.log('oVal: ' + this.state.getAttribute('data-oVal'));
             }
         }
 
