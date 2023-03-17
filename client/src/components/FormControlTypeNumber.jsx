@@ -118,13 +118,12 @@ class FormControlTypeNumber extends Component {
             console.log('no alerts defined: ', icon_alerts);
         }
         else {
-            console.log('alerts are defined: ', icon_alerts);
+            var thisAlerts = icon_alerts.map((entry, i) => { return <li className={entry.className} key={i}>{entry.severity}: {entry.message}</li>});
+            if ( thisAlerts.includes('Err') ) console.log('Error detected');
+            console.log('relevant are defined: ', thisAlerts);
         }
 
         if (this.state.focused && isNaN(parseFloat(this.state.valueString))) {
-
-            // TEMP line:
-            if (icon_alerts === undefined) console.log('isNaN and no alerts');
 
             className += ' borders-invalid';
         }
