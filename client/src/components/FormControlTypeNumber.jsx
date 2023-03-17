@@ -91,7 +91,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onBlur(event) {
-//        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
+        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if (this.state.isInvalid) {
             event.target.value = this.state.value.toString();
             this.props.onChangeValid(event); // Pass valid number onward
@@ -158,11 +158,7 @@ class FormControlTypeNumber extends Component {
         var setVal = this.props.disabledText ? '' : this.state.focused ? this.state.valueString : (Number.isFinite(this.state.value) ? this.state.value.toODOPPrecision() : '');
 
         if ( isErr ) {
-            this.setState({
-                value: isErr,
-                valueString: this.state.valueString,
-                isInvalid: true,
-            });
+            this.state.isInvalid = true;
             setVal = this.state.valueString;
         }
 
