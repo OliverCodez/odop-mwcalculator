@@ -55,7 +55,7 @@ class FormControlTypeNumber extends Component {
         var value = parseFloat(event.target.value);
         if ( event.target.classList.contains('err-check') ) {
             console.log('CHECK THIS');
-            event.target.setAttribute('data-oVal', value);
+            event.target.setAttribute('data-oVal', this.state.value);
         }
         console.log('value now: ' + value);
         console.log('eventTarget obj: ', this.state.value);
@@ -145,13 +145,14 @@ class FormControlTypeNumber extends Component {
         delete p.icon_alerts;
         delete p.validmin;
         delete p.validmax;
-        if ( icon_alerts.length > 0 && className.includes( 'err-check' ) ) {
+        if ( icon_alerts.length > 0 && this.props.className.includes( 'err-check' ) ) {
+            console.log('iconalerts and thispropsClassname includes error');
             className += ' borders-invalid';
             icon_class += 'err-notice ';
             var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});
             if ( thisAlerts.includes('Err') ) {
                 console.log('Error detected for thisprops:', this.state);
-                console.log('oVal: ' + this.state.getAttribute('data-oVal'));
+                console.log('oVal: ' + this.getAttribute('data-oVal'));
             }
         }
 
