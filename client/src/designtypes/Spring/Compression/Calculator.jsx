@@ -239,11 +239,11 @@ export class Calculator extends ReportBase {
                             </tr>
                             <tr>
                                 <td className="align-middle font-weight-bold">
-                                    <span>Corrected % of MTS</span>
+                                    <span>% MTS at Solid</span>
                                 </td>
                                 <td className="align-middle ">
                                     <InputGroup>
-                                        <Form.Control type="text" disabled={true} className="text-right" value={'under development'} />
+                                        <Form.Control type="text" disabled={true} className="text-right" value={(this.props.symbol_table[o.Stress_Solid].value / this.dhat).toFixed(1)} />
                                     </InputGroup>
                                 </td>
                                 <td className="text-nowrap align-middle text-left"></td>

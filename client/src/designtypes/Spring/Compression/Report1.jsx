@@ -79,9 +79,9 @@ class Report1 extends ReportBase {
                             <td className="text-left text-value">{((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3) + ' inches'}</td>
                         </tr>
                         <tr className="text-value-row">
-                            <td>Corrected % of MTS</td>
+                            <td>% MTS at Solid</td>
                             <td>=</td>
-                            <td className="text-left text-value">0.000</td>
+                            <td className="text-left text-value">{(this.props.symbol_table[o.Stress_Solid].value / this.dhat).toFixed(1)}</td>
                             <td/>
                             <td/>
                             <td/>

@@ -165,9 +165,9 @@ class Report3 extends ReportBase {
                             <td className="text-left text-value">{((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3) + ' inches'}</td>
                         </tr>
                         <tr className="text-value-row">
-                            <td>Corrected % of MTS</td>
+                            <td>% MTS at Solid</td>
                             <td>=</td>
-                            <td className="text-left text-value">0.000</td>
+                            <td className="text-left text-value">{(this.props.symbol_table[o.Stress_Solid].value / this.dhat).toFixed(1)}</td>
                             <td/>
                             <td/>
                             <td/>
@@ -245,7 +245,7 @@ class Report3 extends ReportBase {
                             <td className="text-left">{this.props.symbol_table[o.Stress_1].units}</td>
                         </tr>
                         <tr>
-                            <td className="text-right"><span className="text-value-small">% Tensile</span><sup>*</sup></td>
+                            <td className="text-right"><span className="text-value-small">% MTS</span><sup>*</sup></td>
                             <td>{(0.0).toFixed(1)}</td>
                             <td>{(this.props.symbol_table[o.Stress_1].value / this.dhat).toFixed(1)}</td>
                             <td>{(this.props.symbol_table[o.Stress_2].value / this.dhat).toFixed(1)}</td>
@@ -326,7 +326,7 @@ class Report3 extends ReportBase {
                             <td>{this.props.symbol_table[o.Stress_Solid].value.toFixed(0)}</td>
                         </tr>
                         <tr>
-                            <td className="text-right"><span className="text-value text-caps">% Tensile</span><sup>*</sup><br />%</td>
+                            <td className="text-right"><span className="text-value text-caps">% MTS</span><sup>*</sup><br />%</td>
                             <td>{(0.0).toFixed(1)}</td>
                             <td>{(this.props.symbol_table[o.Stress_1].value / this.dhat).toFixed(1)}</td>
                             <td>{(this.props.symbol_table[o.Stress_2].value / this.dhat).toFixed(1)}</td>
