@@ -54,11 +54,11 @@ class FormControlTypeNumber extends Component {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat(event.target.value);
         if ( event.target.classList.contains('err-check') ) {
-            console.log('CHECK THIS');
             event.target.setAttribute('data-oVal', this.state.value);
+            this.setState({
+                origValue: this.state.value,
+            });
         }
-        console.log('value now: ' + value);
-        console.log('eventTarget obj: ', this.state.value);
 
         if (!isNaN(value)) {
 //            console.log('In FormControlTypeNumber.onChange Valid event.target.value=',event.target.value,'state=',this.state);
@@ -146,7 +146,6 @@ class FormControlTypeNumber extends Component {
         delete p.validmin;
         delete p.validmax;
         if ( icon_alerts.length > 0 && this.props.className.includes( 'err-check' ) ) {
-            console.log('iconalerts and thispropsClassname includes error');
             className += ' borders-invalid';
             icon_class += 'err-notice ';
             var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});

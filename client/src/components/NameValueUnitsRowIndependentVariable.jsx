@@ -107,6 +107,8 @@ class NameValueUnitsRowIndependentVariable extends Component {
     // =======================================
     // Table Row
     // =======================================
+    var errClass = '';
+    if ( !this.props.element.name.includes('Force') ) errClass = 'err-check ';
     return (
       <tbody>
       <tr key={this.props.element.name}>
@@ -120,7 +122,7 @@ class NameValueUnitsRowIndependentVariable extends Component {
         <td className="align-middle" colSpan="2">
           <InputGroup>
             <FormControlTypeNumber id={'nvuriv_' + this.props.element.name} icon_alerts={icon_alerts}
-                                   className={'err-check ' + className} value={this.props.element.value}
+                                   className={errClass + className} value={this.props.element.value}
                                    validmin={this.props.element.validmin} validmax={this.props.element.validmax}
                                    onChangeValid={this.onChangeValid} onChangeInvalid={this.onChangeInvalid}/>
              <div className='input-group-append'>
