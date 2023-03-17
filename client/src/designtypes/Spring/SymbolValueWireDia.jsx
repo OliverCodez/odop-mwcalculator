@@ -240,11 +240,11 @@ class SymbolValueWireDia extends Component {
       if (this.props.element.type !== 'calcinput') {
         if (this.props.element.input) { // Independent Variable?
           nvu_value_fix_free_text =
-            <div className="mb-3"><em>Fixed status prevents <img src="SearchButton.png" alt="SearchButton"/> from
+            <div className="mb-3"><em>Fixed status prevents the calculator from
               changing the value of this variable.</em></div> // For Fixed
         } else {
           nvu_value_fix_free_text =
-            <div className="mb-3"><em>Fixed status restrains the <img src="SearchButton.png" alt="SearchButton"/> result
+            <div className="mb-3"><em>Fixed status restrains the the calculator result
               to be as close as possible to the constraint value.</em></div> // For Fixed
         }
       }
@@ -257,7 +257,7 @@ class SymbolValueWireDia extends Component {
       }
       if (this.props.element.type !== 'calcinput') {
         nvu_value_fix_free_text =
-          <div className="mb-3"><em>Free status allows <img src="SearchButton.png" alt="SearchButton"/> to change the
+          <div className="mb-3"><em>Free status allows the calculator to change the
             value of this variable.</em></div> // For Free
       }
     }

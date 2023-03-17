@@ -91,7 +91,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onBlur(event) {
-        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
+//        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if (this.state.isInvalid) {
             var updateVal = this.state.value;
             if (this.state.mayError) updateVal = this.state.origValue;
@@ -149,6 +149,7 @@ class FormControlTypeNumber extends Component {
         delete p.icon_alerts;
         delete p.validmin;
         delete p.validmax;
+        // TODO :: Finish cleanup of Err vs Warn messages (warn is last and is taking precedence)
         if ( icon_alerts.length > 0 && this.props.className.includes( 'err-check' ) ) {
             var errLevel = icon_alerts.map((entry, i) => { return entry.severity});
             className += ' borders-invalid';
