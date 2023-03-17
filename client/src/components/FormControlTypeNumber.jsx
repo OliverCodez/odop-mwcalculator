@@ -152,13 +152,13 @@ class FormControlTypeNumber extends Component {
         if ( icon_alerts.length > 0 && this.props.className.includes( 'err-check' ) ) {
             var errLevel = icon_alerts.map((entry, i) => { return entry.severity});
             className += ' borders-invalid';
-            if ( errLevel.includes('Err') ) {
-                icon_class += 'err-notice ';
-                isErr = this.state.origValue;
-            }
             if ( errLevel.includes('Warn') ) {
                 icon_class += 'warn-notice ';
                 className += ' borders-warn';
+            }
+            if ( errLevel.includes('Err') ) {
+                icon_class += 'err-notice ';
+                isErr = this.state.origValue;
             }
         }
 

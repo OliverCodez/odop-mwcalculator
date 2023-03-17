@@ -388,9 +388,12 @@ header {
     color: red!important;
 }
 
-.warn-notice,
-.borders-warn {
+.warn-notice {
     color: orange!important;
+}
+
+.borders-warn {
+    border-color: orange!important;
 }
 
 @media only screen and ( max-width: 800px ) {
