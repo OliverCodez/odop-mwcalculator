@@ -138,7 +138,9 @@ class FormControlTypeNumber extends Component {
         }
 
         var p = Object.assign({},this.props), // clone the props
-            icon_class = 'fas fa-exclamation-triangle icon-invalid ';
+            icon_class = 'fas fa-exclamation-triangle icon-invalid ',
+            isErr = false;
+
         delete p.onChangeValid; // remove special on functions
         delete p.onChangeInvalid;
         delete p.disabledText;
@@ -148,11 +150,15 @@ class FormControlTypeNumber extends Component {
         if ( icon_alerts.length > 0 && this.props.className.includes( 'err-check' ) ) {
             className += ' borders-invalid';
             icon_class += 'err-notice ';
-            var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});
-            if ( thisAlerts.includes('Err') ) {
-                console.log('Error detected for thisprops:', this.state);
-                console.log('oVal: ' + this.getAttribute('data-oVal'));
+            if ( icon_alerts.map((entry, i) => { return entry.severity}).includes('Err') ) {
+                isErr = this.state.origValue;
             }
+        }
+
+        var setVal = this.props.disabledText ? '' : this.state.focused ? this.state.valueString : (Number.isFinite(this.state.value) ? this.state.value.toODOPPrecision() : '');
+
+        if ( isErr ) {
+            setVal = isErr;
         }
 
         return (<>
@@ -169,7 +175,7 @@ class FormControlTypeNumber extends Component {
                 onFocus={this.onFocus}
                 onBlur={this.onBlur}
                 className={className}
-                value={this.props.disabledText ? '' : this.state.focused ? this.state.valueString : (Number.isFinite(this.state.value) ? this.state.value.toODOPPrecision() : '')} />
+                value={setVal} />
         </>)
     }
 }
