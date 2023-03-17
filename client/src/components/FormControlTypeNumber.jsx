@@ -54,7 +54,6 @@ class FormControlTypeNumber extends Component {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat(event.target.value);
         if ( event.target.classList.contains('err-check') ) {
-            event.target.setAttribute('data-oVal', this.state.value);
             this.setState({
                 origValue: this.state.value,
                 mayError: true
@@ -94,7 +93,6 @@ class FormControlTypeNumber extends Component {
     onBlur(event) {
         console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if (this.state.isInvalid) {
-            console.log('INVALID FOUND');
             var updateVal = this.state.value;
             if (this.state.mayError) updateVal = this.state.origValue;
             event.target.value = updateVal.toString();
@@ -152,10 +150,15 @@ class FormControlTypeNumber extends Component {
         delete p.validmin;
         delete p.validmax;
         if ( icon_alerts.length > 0 && this.props.className.includes( 'err-check' ) ) {
+            var errLevel = icon_alerts.map((entry, i) => { return entry.severity});
             className += ' borders-invalid';
-            icon_class += 'err-notice ';
-            if ( icon_alerts.map((entry, i) => { return entry.severity}).includes('Err') ) {
+            if ( errLevel.includes('Err') ) {
+                icon_class += 'err-notice ';
                 isErr = this.state.origValue;
+            }
+            if ( errLevel.includes('Warn') ) {
+                icon_class += 'warn-notice ';
+                className += ' borders-warn';
             }
         }
 
