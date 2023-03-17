@@ -106,24 +106,29 @@ class FormControlTypeNumber extends Component {
     render() {
 //        console.log('In FormControlTypeNumber.render value=',this.state.value,'valueString=',this.state.valueString);
 //        console.log('In FormControlTypeNumber.render className=',this.props.className);
-        var className = (this.props.className !== undefined ? this.props.className : '') + ' text-right';
-        // TEMP line:
+        var className = (this.props.className !== undefined ? this.props.className : '') + ' text-right',
+            icon_alerts = this.props.icon_alerts; // start with the icon alerts
+        
         if (icon_alerts === undefined) {
-            console.log('no alerts defined');
+            icon_alerts = [];
+        }
+
+        // TEMP if/else:
+        if (icon_alerts === undefined) {
+            console.log('no alerts defined: ', icon_alerts);
         }
         else {
-            console.log('alerts are defined:');
-            console.log(JSON.stringify(icon_alerts));
+            console.log('alerts are defined: ', icon_alerts);
         }
+
         if (this.state.focused && isNaN(parseFloat(this.state.valueString))) {
+
             // TEMP line:
             if (icon_alerts === undefined) console.log('isNaN and no alerts');
+
             className += ' borders-invalid';
         }
-        var icon_alerts = this.props.icon_alerts; // start with the icon alerts 
-        if (icon_alerts === undefined) {
-          icon_alerts = [];
-        }
+
 //        console.log('In FormControlTypeNumber.render icon_alerts=',icon_alerts);
         var icon_tooltip;
         if (icon_alerts.length > 0) {
