@@ -58,7 +58,7 @@ class FormControlTypeNumber extends Component {
             event.target.setAttribute('data-oVal', value);
         }
         console.log('value now: ' + value);
-        console.log('eventTarget obj: ', event.target.value);
+        console.log('eventTarget obj: ', this.state.value);
 
         if (!isNaN(value)) {
 //            console.log('In FormControlTypeNumber.onChange Valid event.target.value=',event.target.value,'state=',this.state);
