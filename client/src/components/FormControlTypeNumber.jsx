@@ -113,18 +113,7 @@ class FormControlTypeNumber extends Component {
             icon_alerts = [];
         }
 
-        // TEMP if/else:
-        if (icon_alerts === undefined) {
-            console.log('no alerts defined: ', icon_alerts);
-        }
-        else {
-            var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});
-            if ( thisAlerts.includes('Err') ) console.log('Error detected');
-            console.log('relevant are defined: ', thisAlerts);
-        }
-
         if (this.state.focused && isNaN(parseFloat(this.state.valueString))) {
-
             className += ' borders-invalid';
         }
 
@@ -152,7 +141,11 @@ class FormControlTypeNumber extends Component {
         if ( icon_alerts.length > 0 && className.includes( 'err-check' ) ) {
             className += ' borders-invalid';
             icon_class += 'err-notice ';
-            console.log('valstr: ' + this.state.valueString);
+            var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});
+            if ( thisAlerts.includes('Err') ) {
+                console.log('Error detected');
+                console.log('orig val: ' + this.state.valueString);
+            }
         }
 
         return (<>
