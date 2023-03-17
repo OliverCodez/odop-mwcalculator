@@ -53,6 +53,9 @@ class FormControlTypeNumber extends Component {
     onChange(event) {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat(event.target.value);
+        console.log('state: ' + this.state);
+        console.log('this obj: ', this);
+        console.log('eventTarget obj: ', event.target);
         if (!isNaN(value)) {
 //            console.log('In FormControlTypeNumber.onChange Valid event.target.value=',event.target.value,'state=',this.state);
             this.setState({
@@ -104,7 +107,7 @@ class FormControlTypeNumber extends Component {
     }
 
     render() {
-        console.log('In FormControlTypeNumber.render value=',this.state.value,'valueString=',this.state.valueString);
+//        console.log('In FormControlTypeNumber.render value=',this.state.value,'valueString=',this.state.valueString);
 //        console.log('In FormControlTypeNumber.render className=',this.props.className);
         var className = (this.props.className !== undefined ? this.props.className : '') + ' text-right',
             icon_alerts = this.props.icon_alerts; // start with the icon alerts
@@ -144,7 +147,6 @@ class FormControlTypeNumber extends Component {
             var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});
             if ( thisAlerts.includes('Err') ) {
                 console.log('Error detected');
-                console.log('orig val: ' + this.value);
             }
         }
 
