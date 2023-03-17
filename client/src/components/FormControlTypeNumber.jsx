@@ -57,6 +57,7 @@ class FormControlTypeNumber extends Component {
             event.target.setAttribute('data-oVal', this.state.value);
             this.setState({
                 origValue: this.state.value,
+                mayError: true
             });
         }
 
@@ -93,7 +94,10 @@ class FormControlTypeNumber extends Component {
     onBlur(event) {
         console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if (this.state.isInvalid) {
-            event.target.value = this.state.value.toString();
+            console.log('INVALID FOUND');
+            var updateVal = this.state.value;
+            if (this.state.mayError) updateVal = this.state.origValue;
+            event.target.value = updateVal.toString();
             this.props.onChangeValid(event); // Pass valid number onward
             this.props.onChange(event); // Pass valid number onward
         }
