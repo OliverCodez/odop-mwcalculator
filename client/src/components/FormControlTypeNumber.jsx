@@ -104,7 +104,7 @@ class FormControlTypeNumber extends Component {
     }
 
     render() {
-//        console.log('In FormControlTypeNumber.render value=',this.state.value,'valueString=',this.state.valueString);
+        console.log('In FormControlTypeNumber.render value=',this.state.value,'valueString=',this.state.valueString);
 //        console.log('In FormControlTypeNumber.render className=',this.props.className);
         var className = (this.props.className !== undefined ? this.props.className : '') + ' text-right',
             icon_alerts = this.props.icon_alerts; // start with the icon alerts
@@ -144,7 +144,7 @@ class FormControlTypeNumber extends Component {
             var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});
             if ( thisAlerts.includes('Err') ) {
                 console.log('Error detected');
-                console.log('orig val: ' + this.state.value);
+                console.log('orig val: ' + this.value);
             }
         }
 
