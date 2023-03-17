@@ -39,7 +39,7 @@ class MainPage extends Component {
     }
     
     render() {
-        console.log('In MainPage.render this=',this);
+        // console.log('In MainPage.render this=',this);
         // If you're waiting to logged in then there is nothing to display OR
         // If there is no name or type then there is no model therefore there is nothing to display
         if (this.props.name === null || this.props.type === null || !this.props.symbol_table) return null;

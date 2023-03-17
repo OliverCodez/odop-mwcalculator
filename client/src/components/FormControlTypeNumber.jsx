@@ -150,8 +150,7 @@ class FormControlTypeNumber extends Component {
             icon_class += 'err-notice ';
             var thisAlerts = icon_alerts.map((entry, i) => { return entry.severity});
             if ( thisAlerts.includes('Err') ) {
-                console.log('Error detected');
-                console.log('thisprops:', this.props);
+                console.log('Error detected for thisprops:', this.state);
                 console.log('oVal: ' + this.state.getAttribute('data-oVal'));
             }
         }
