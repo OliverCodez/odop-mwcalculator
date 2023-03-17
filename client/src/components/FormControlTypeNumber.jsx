@@ -127,19 +127,24 @@ class FormControlTypeNumber extends Component {
 //            console.log('icon_tooltip=',icon_tooltip);
         }
 
-        var p = Object.assign({},this.props); // clone the props
+        var p = Object.assign({},this.props), // clone the props
+            icon_class = 'fas fa-exclamation-triangle icon-invalid ';
         delete p.onChangeValid; // remove special on functions
         delete p.onChangeInvalid;
         delete p.disabledText;
         delete p.icon_alerts;
         delete p.validmin;
         delete p.validmax;
+        if ( icon_alerts.length > 0 && className.includes( 'err-check' ) ) {
+            className += ' borders-invalid';
+            icon_class += 'err-notice ';
+            console.log('valstr: ' + this.state.valueString);
+        }
 
-        var icon_class = "fas fa-exclamation-triangle icon-invalid ";
         return (<>
             {icon_alerts.length > 0 ?
                 <OverlayTrigger placement="top" overlay={<Tooltip className="tooltip-lg">{icon_tooltip}</Tooltip>}>
-                    <i className={'testclass ' + icon_class}></i>
+                    <i className={icon_class}></i>
                 </OverlayTrigger>
             :
             ''}
