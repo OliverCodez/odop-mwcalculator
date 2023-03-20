@@ -167,16 +167,21 @@ class FormControlTypeNumber extends Component {
         delete p.validmax;
         // TODO :: Finish cleanup of Err vs Warn messages (warn is last and is taking precedence)
         // TODO :: Bug with origValue when tabbing away
-        if ( icon_alerts.length > 0 && this.props.className.includes( 'err-check' ) ) {
-            var errLevel = icon_alerts.map((entry, i) => { return entry.severity});
-            className += ' borders-invalid';
-            if ( errLevel.includes('Warn') ) {
-                icon_class += 'warn-notice ';
-                className += ' borders-warn';
+        if ( this.props.className.includes( 'err-check' ) ) {
+            if ( icon_alerts.length > 0 ) {
+                var errLevel = icon_alerts.map((entry, i) => { return entry.severity});
+                className += ' borders-invalid';
+                if ( errLevel.includes('Warn') ) {
+                    icon_class += 'warn-notice ';
+                    className += ' borders-warn';
+                }
+                if ( errLevel.includes('Err') ) {
+                    icon_class += 'err-notice ';
+                    isErr = this.state.origValue;
+                }
             }
-            if ( errLevel.includes('Err') ) {
-                icon_class += 'err-notice ';
-                isErr = this.state.origValue;
+            else {
+                this.state.unBlur = true;
             }
         }
 
