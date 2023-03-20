@@ -55,10 +55,17 @@ class FormControlTypeNumber extends Component {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat(event.target.value);
         if ( event.target.classList.contains('err-check') ) {
-            this.setState({
-                origValue: this.state.value,
-                mayError: true
-            });
+            var unblur = true;
+            if ( typeof this.state.unBlur !== 'undefined' ) {
+                unblur = this.state.unBlur;
+            }
+            if ( unblur ) {
+                this.setState({
+                    origValue: this.state.value,
+                    mayError: true,
+                    unBlur: false,
+                });
+            }
         }
 
         if (!isNaN(value)) {
@@ -93,6 +100,11 @@ class FormControlTypeNumber extends Component {
     }
 
     onBlur(event) {
+        if ( event.target.classList.contains('err-check') ) {
+            this.setState({
+                unBlur: true,
+            });
+        }
         console.log('BLUR');
 //        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if (this.state.isInvalid) {
