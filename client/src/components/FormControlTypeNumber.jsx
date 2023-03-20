@@ -51,7 +51,8 @@ class FormControlTypeNumber extends Component {
     }
 
     onChange(event) {
-        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
+        console.log('CHANGE');
+//        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat(event.target.value);
         if ( event.target.classList.contains('err-check') ) {
             this.setState({
@@ -80,6 +81,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onFocus(event) {
+        console.log('FOCUS');
 //        console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
         if (!this.props.readOnly) {
             this.setState({
@@ -91,6 +93,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onBlur(event) {
+        console.log('BLUR');
 //        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if (this.state.isInvalid) {
             var updateVal = this.state.value;
@@ -113,6 +116,7 @@ class FormControlTypeNumber extends Component {
     }
 
     render() {
+        console.log('RENDER');
 //        console.log('In FormControlTypeNumber.render value=',this.state.value,'valueString=',this.state.valueString);
 //        console.log('In FormControlTypeNumber.render className=',this.props.className);
         var className = (this.props.className !== undefined ? this.props.className : '') + ' text-right',
