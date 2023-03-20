@@ -51,7 +51,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onChange(event) {
-//        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
+        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat(event.target.value);
         if ( event.target.classList.contains('err-check') ) {
             this.setState({
@@ -150,6 +150,7 @@ class FormControlTypeNumber extends Component {
         delete p.validmin;
         delete p.validmax;
         // TODO :: Finish cleanup of Err vs Warn messages (warn is last and is taking precedence)
+        // TODO :: Bug with origValue when tabbing away
         if ( icon_alerts.length > 0 && this.props.className.includes( 'err-check' ) ) {
             var errLevel = icon_alerts.map((entry, i) => { return entry.severity});
             className += ' borders-invalid';

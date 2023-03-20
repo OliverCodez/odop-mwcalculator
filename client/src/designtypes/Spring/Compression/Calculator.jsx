@@ -246,7 +246,7 @@ export class Calculator extends ReportBase {
                                         <Form.Control type="text" disabled={true} className="text-right" value={(this.props.symbol_table[o.Stress_Solid].value / this.dhat).toFixed(1)} />
                                     </InputGroup>
                                 </td>
-                                <td className="text-nowrap align-middle text-left"></td>
+                                <td className="text-nowrap align-middle text-left">%</td>
                                 <td />
                                 <td />
                                 <td />
