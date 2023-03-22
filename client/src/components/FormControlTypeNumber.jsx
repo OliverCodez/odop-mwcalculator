@@ -54,7 +54,7 @@ class FormControlTypeNumber extends Component {
         console.log('CHANGE');
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat(event.target.value);
-        if ( event.target.classList.contains('err-check') ) {
+        if ( event.target.classList.contains('err-check') && !this.state.hasError ) {
             this.setState({
                 origValue: this.state.value,
                 mayError: true,
@@ -153,8 +153,6 @@ class FormControlTypeNumber extends Component {
         delete p.icon_alerts;
         delete p.validmin;
         delete p.validmax;
-        // TODO :: Finish cleanup of Err vs Warn messages (warn is last and is taking precedence)
-        // TODO :: Bug with origValue when tabbing away
         if ( this.props.className.includes( 'err-check' ) ) {
             if ( icon_alerts.length > 0 ) {
                 var errLevel = icon_alerts.map((entry, i) => { return entry.severity});
@@ -166,6 +164,10 @@ class FormControlTypeNumber extends Component {
                 if ( errLevel.includes('Err') ) {
                     icon_class += 'err-notice ';
                     isErr = this.state.origValue;
+                    this.state.hasError = true;
+                }
+                else {
+                    this.state.hasError = false;
                 }
             }
         }
