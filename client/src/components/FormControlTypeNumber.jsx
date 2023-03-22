@@ -95,18 +95,18 @@ class FormControlTypeNumber extends Component {
     onBlur(event) {
         console.log('BLUR');
 //        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
-        if (this.state.isInvalid) {
+        if ( this.state.isInvalid ) {
             var updateVal = this.state.value;
-            if (this.state.mayError) updateVal = this.state.origValue;
+            if ( this.state.hasError ) updateVal = this.state.origValue;
             event.target.value = updateVal.toString();
-            this.props.onChangeValid(event); // Pass valid number onward
-            this.props.onChange(event); // Pass valid number onward
+            this.props.onChangeValid( event ); // Pass valid number onward
+            this.props.onChange( event ); // Pass valid number onward
         }
-        this.setState({
+        this.setState( {
             valueString: this.state.value.toODOPPrecision(), // Update the display with formatted value
             isInvalid: false,
             focused: false,
-        });
+        } );
         this.props.onBlur(event);
     }
 
