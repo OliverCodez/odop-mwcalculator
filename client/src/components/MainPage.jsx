@@ -53,7 +53,7 @@ class MainPage extends Component {
 
       return (
             <>
-                <Container style={{backgroundColor: '#eee', paddingTop: '60px'}}>
+                <Container style={{backgroundColor: 'transparent', paddingTop: '60px'}}>
                     <ExecutePanel />
                     <Row>
                         <ResultTable />

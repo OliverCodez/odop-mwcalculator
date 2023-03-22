@@ -223,7 +223,7 @@ class SymbolValue extends Component {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Table className="border border-secondary" size="sm" style={{backgroundColor: '#eee'}}>
+                        <Table className="border border-secondary" size="sm" style={{backgroundColor: 'transparent'}}>
                             {this.props.element.type === "equationset" && this.props.element.input && !this.props.element.hidden &&
                                 <>
                                     <NameValueUnitsHeaderIndependentVariable />
@@ -251,7 +251,7 @@ class SymbolValue extends Component {
                                     </tr>
                                 </tbody>
                             </Table>}
-                        <Table className="border border-secondary" size="sm" style={{backgroundColor: '#eee'}}>
+                        <Table className="border border-secondary" size="sm" style={{backgroundColor: 'transparent'}}>
                             {this.props.element.type === "equationset" && this.props.element.input && !this.props.element.hidden &&
                                 <>
                                     <ConstraintsMinHeaderIndependentVariable />
@@ -263,7 +263,7 @@ class SymbolValue extends Component {
                                     <ConstraintsMinRowDependentVariable key={this.props.element.name} element={this.props.element} index={0} onChangeValid={this.onChangeValidMinConstraint} onChangeInvalid={this.onChangeInvalidMinConstraint} />
                                 </>}
                         </Table>
-                        <Table className="border border-secondary" size="sm" style={{backgroundColor: '#eee'}}>
+                        <Table className="border border-secondary" size="sm" style={{backgroundColor: 'transparent'}}>
                             {this.props.element.type === "equationset" && this.props.element.input && !this.props.element.hidden &&
                                 <>
                                     <ConstraintsMaxHeaderIndependentVariable />
