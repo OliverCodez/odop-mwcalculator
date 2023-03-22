@@ -170,6 +170,9 @@ class FormControlTypeNumber extends Component {
                     this.state.hasError = false;
                 }
             }
+            else {
+                this.state.hasError = false;
+            }
         }
 
         var setVal = this.props.disabledText ? '' : this.state.focused ? this.state.valueString : (Number.isFinite(this.state.value) ? this.state.value.toODOPPrecision() : '');
