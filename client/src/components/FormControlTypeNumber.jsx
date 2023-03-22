@@ -51,16 +51,13 @@ class FormControlTypeNumber extends Component {
     }
 
     onChange(event) {
-        console.log('CHANGE');
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
-        var value = parseFloat(event.target.value);
+        var value = parseFloat( event.target.value );
         if ( event.target.classList.contains('err-check') && !this.state.hasError ) {
             this.setState({
-                origValue: this.state.value,
-                mayError: true,
+                cleanValue: this.state.value
             });
         }
-
         if (!isNaN(value)) {
 //            console.log('In FormControlTypeNumber.onChange Valid event.target.value=',event.target.value,'state=',this.state);
             this.setState({
@@ -81,7 +78,6 @@ class FormControlTypeNumber extends Component {
     }
 
     onFocus(event) {
-        console.log('FOCUS');
 //        console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
         if (!this.props.readOnly) {
             this.setState({
@@ -93,11 +89,10 @@ class FormControlTypeNumber extends Component {
     }
 
     onBlur(event) {
-        console.log('BLUR');
 //        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if ( this.state.isInvalid ) {
             var updateVal = this.state.value;
-            if ( this.state.hasError ) updateVal = this.state.origValue;
+            if ( this.state.hasError ) updateVal = this.state.cleanValue;
             event.target.value = updateVal.toString();
             this.props.onChangeValid( event ); // Pass valid number onward
             this.props.onChange( event ); // Pass valid number onward
@@ -116,7 +111,6 @@ class FormControlTypeNumber extends Component {
     }
 
     render() {
-        console.log('RENDER');
 //        console.log('In FormControlTypeNumber.render value=',this.state.value,'valueString=',this.state.valueString);
 //        console.log('In FormControlTypeNumber.render className=',this.props.className);
         var className = (this.props.className !== undefined ? this.props.className : '') + ' text-right',
@@ -163,7 +157,7 @@ class FormControlTypeNumber extends Component {
                 }
                 if ( errLevel.includes('Err') ) {
                     icon_class += 'err-notice ';
-                    isErr = this.state.origValue;
+                    isErr = this.state.cleanValue;
                     this.state.hasError = true;
                 }
                 else {
