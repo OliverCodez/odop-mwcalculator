@@ -51,7 +51,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onChange(event) {
-//        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
+        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat( event.target.value );
         if ( event.target.classList.contains('err-check') && !this.state.hasError ) {
             this.setState({
@@ -89,7 +89,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onBlur(event) {
-//        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
+        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if ( this.state.isInvalid ) {
             var updateVal = this.state.value;
             if ( this.state.hasError ) updateVal = this.state.cleanValue;
