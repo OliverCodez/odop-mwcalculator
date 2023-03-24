@@ -79,6 +79,15 @@ class FormControlTypeNumber extends Component {
 
     onFocus(event) {
         console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
+        if ( event.target.classList.contains('reset') ) {
+            this.setState({
+                value: 0,
+                valueString: '0',
+                cleanValue: 0,
+                hasError: false
+            });
+            event.target.classList.remove('reset');
+        }
         if (!this.props.readOnly) {
             this.setState({
                 valueString: this.state.value.toString(), // Update the display with unformatted value
