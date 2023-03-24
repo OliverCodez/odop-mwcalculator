@@ -23,6 +23,7 @@ class DesignTable extends Component {
                 </Row>
                 <div id="reset-button">
                     <button className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block" onClick={ () => {
+                        document.getElementById( 'nvuriv_Free_OD' ).value = '0';
                         console.log('clicked reset');
                     } }>Reset</button>
                 </div>
