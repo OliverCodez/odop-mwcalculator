@@ -8,6 +8,14 @@ import { connect } from 'react-redux';
 
 class DesignTable extends Component {
 
+    constructor( props, context ) {
+        this.resetClick = this.resetClick.bind(this);
+    }
+
+    resetClick(event) {
+        console.log('clicked!');
+    }
+
     render() {
 //        console.log('In DesignTable.render this=',this);
 //        NameValueUnitsTable :: TODO :: extract fields from Independent Variable segment
@@ -22,7 +30,7 @@ class DesignTable extends Component {
                     <NameValueUnitsCalcInputTable />
                 </Row>
                 <div id="reset-button">
-                    <button type="reset" className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block" onClick={console.log('Reset Clicked!')}>Reset</button>
+                    <button type="reset" className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block" onClick={this.resetClick}>Reset</button>
                 </div>
             </div>
         );
