@@ -11,6 +11,7 @@ import { withOktaAuth } from '@okta/okta-react';
 import { changeUser, changeView, deleteAutoSave } from '../store/actionCreators';
 import config from '../config';
 import ResultTable from './ResultTable';
+import useState from 'react';
 
 class MainPage extends Component {
     
