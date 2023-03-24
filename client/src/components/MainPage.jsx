@@ -64,7 +64,7 @@ class MainPage extends Component {
                             <Tab key={element.title} eventKey={element.name}>
                                 {element.name == 'Advanced' ? <div id="mwc-hero-img" /> : ''}
                                 {element.name == 'Report' ? hideReport = 'hide-soft' : hideReport = ''}
-                                <div id={'main_'+element.name} className={hideReport}>
+                                <div className={hideReport} id={'main_'+element.name}>
                                     {element.component}
                                 </div>
                             </Tab>
