@@ -363,13 +363,21 @@ header {
     border-bottom: 1px solid #d9dee2;
 }
 
-#mwc-hero-img {
+#mwc-hero-img,
+#mwc-hero-imgH {
     height: 524px;
     width: 342px;
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("mwc-hero-imgV.png");
+}
+
+#mwc-hero-imgH {
+    display: none;
+    width: 290px;
+    height: auto;
+    background-image: url("mwc-hero-imgH.png");
 }
 
 .text-value-row {
@@ -475,6 +483,14 @@ header {
         width: 100%;
         background-position: center;
         margin-bottom: 40px;
+    }
+
+    #mwc-hero-imgH {
+        display: block;
+    }
+
+    #root2 > .container > .tab-content > .tab-pane:first-child {
+        flex-direction: column;
     }
 
     #main_Advanced {
