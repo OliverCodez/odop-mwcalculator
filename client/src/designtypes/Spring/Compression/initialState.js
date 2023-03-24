@@ -4,7 +4,7 @@ export const initialState = {
         {
             "input": true,
             "name": "Free_OD",
-            "value": 0.0,
+            "value": 0,
             "units": "inches",
             "lmin": 0,
             "lmax": 0,
@@ -20,7 +20,7 @@ export const initialState = {
         {
             "input": true,
             "name": "Wire_Diameter",
-            "value": 0.0000,
+            "value": 0,
             "units": "inch",
             "lmin": 0,
             "lmax": 0,
@@ -36,7 +36,7 @@ export const initialState = {
         {
             "input": true,
             "name": "Free_Length",
-            "value": 0.00,
+            "value": 0,
             "units": "inches",
             "lmin": 0,
             "lmax": 0,
@@ -52,7 +52,7 @@ export const initialState = {
         {
             "input": true,
             "name": "Total_Coils",
-            "value": 0.0,
+            "value": 0,
             "units": "coils",
             "lmin": 0,
             "lmax": 0,

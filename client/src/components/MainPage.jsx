@@ -49,6 +49,8 @@ class MainPage extends Component {
 
         var src = 'designtypes/'+this.props.type+'/favicon.ico';
         var alt = this.props.type+' icon';
+        var insertHTML = '';
+        if ( element.name == 'Advanced' ) insertHTML = '<div id="mwc-hero-img"></div>';
 //        console.log('src=',src,' alt=',alt);
 
       return (
@@ -61,6 +63,7 @@ class MainPage extends Component {
                     <Tabs defaultActiveKey={config.url.view} activeKey={this.state.activeTab}>
                         {viewNames.map((element) => {return (
                             <Tab key={element.title} eventKey={element.name}>
+                                {insertHTML}
                                 <div id={'main_'+element.name}>
                                     {element.component}
                                 </div>

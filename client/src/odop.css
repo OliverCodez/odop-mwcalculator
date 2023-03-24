@@ -106,12 +106,21 @@ input[type=number] {
     width: 100%;
 }
 
+#root2 > .container > .tab-content:first-child > .tab-pane:first-child {
+    display: flex !important;
+    justify-content: space-evenly;
+}
+
 #root2 > .container > .tab-content > .tab-pane > #main_Report1,
 #root2 > .container > .tab-content > .tab-pane > #main_Report2,
 #root2 > .container > .tab-content > .tab-pane > #main_Report3 {
     border-top: solid 2px #8286883b;
     padding-top: 15px;
     margin-top: 15px;
+}
+
+#main_Advanced {
+    min-width: 580px;
 }
 
 #main_Advanced > .design-table {
@@ -275,7 +284,7 @@ input[type=number] {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     max-width: 1090px;
     width: auto;
     margin: 60px auto 0;
@@ -307,23 +316,25 @@ header {
 }
 
 #mwc-logo-sub {
-    text-transform: uppercase;
     font-weight: bolder;
-    font-size: 50px;
-    text-align: center;
+    text-align: left;
+    font-size: 3.75rem;
     font-family: arial;
-    padding: 0 20px;
-    line-height: 50px;
-    margin-top: 20px;
     color: #000;
     font-family: source-sans-pro, sans-serif;
-    font-weight: 900;
     font-style: normal;
-    font-size: 50px;
+    font-weight: 300;
+    line-height: 4.25rem;
+    text-transform: unset;
+    font-feature-settings: normal;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #d9dee2;
 }
 
 #mwc-hero-img {
-    height: 420px;
+    width: 290px;
+    height: 440px;
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
