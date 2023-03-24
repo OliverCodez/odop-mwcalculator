@@ -18,6 +18,7 @@ export class Calculator extends ReportBase {
 //        console.log('In Calculator.render this=',this);
         var isGround = 1.7,
             reportEl = document.getElementById('main_Report');
+        console.log('classlist:', reportEl.classList);
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
         return (
             <Container>
@@ -279,7 +280,7 @@ export class Calculator extends ReportBase {
                     <HubspotForm
                         portalId='8642978'
                         formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
-                        onSubmit={() => reportEl.classList.remove('hide-soft')}
+                        onFormSubmitted={() => console.log('Submitted')}
                         onReady={(form) => console.log('LOADED')}
                     />
                 </div>
