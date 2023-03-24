@@ -49,6 +49,12 @@ class MainPage extends Component {
 
         var src = 'designtypes/'+this.props.type+'/favicon.ico';
         var alt = this.props.type+' icon';
+
+        // DEBUG
+        const [isActive, setActive] = useState("false");
+        const ToggleClass = () => {
+            setActive(!isActive); 
+        };
 //        console.log('src=',src,' alt=',alt);
 
       return (
@@ -62,7 +68,7 @@ class MainPage extends Component {
                         {viewNames.map((element) => {return (
                             <Tab key={element.title} eventKey={element.name}>
                                 {element.name == 'Advanced' ? <div id="mwc-hero-img" /> : ''}
-                                <div className={(element.name == 'Report' ? 'hide-soft' : '')} id={'main_'+element.name}>
+                                <div className={(element.name == 'Report' ? ( isActive ? 'hide-soft' : '') : '')} id={'main_'+element.name}>
                                     {element.component}
                                 </div>
                             </Tab>
