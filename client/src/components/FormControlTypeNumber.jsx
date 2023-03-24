@@ -87,6 +87,7 @@ class FormControlTypeNumber extends Component {
                 hasError: false
             });
             event.target.classList.remove('reset');
+            return;
         }
         if (!this.props.readOnly) {
             this.setState({
