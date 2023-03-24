@@ -22,10 +22,9 @@ class DesignTable extends Component {
                     <NameValueUnitsCalcInputTable />
                 </Row>
                 <div id="reset-button">
-                    <button className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block" onClick={() => {
-                        const name = 'World!';
-                        alert('Hello, ', name);
-                    }}>Reset</button>
+                    <button className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block" onClick={ () => {
+                        document.getElementsByClassName( 'adv-form' ).value = 0;
+                    } }>Reset</button>
                 </div>
             </div>
         );
