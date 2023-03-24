@@ -1,12 +1,12 @@
 import React from 'react';
 import DesignTable from "../../../components/DesignTable"
 import Calculator from "./Calculator"
-import Report from "./Report1"
+import FooterReport from "./FooterReport"
 
 export function getViewNames() {
     return [
         { name: "Advanced", title: 'Advanced', component: <DesignTable /> },
         { name: "Calculator", title: 'Calculator', component: <Calculator /> },
-        { name: "Report", title: 'Report', component: <Report /> },
+        { name: "FooterReport", title: 'FooterReport', component: <FooterReport /> },
     ];
 }

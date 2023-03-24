@@ -62,7 +62,7 @@ class MainPage extends Component {
                         {viewNames.map((element) => {return (
                             <Tab key={element.title} eventKey={element.name}>
                                 {element.name == 'Advanced' ? <div id="mwc-hero-img" /> : ''}
-                                <div className={(element.name == 'Report' ? 'hide-soft' : '')} id={'main_'+element.name}>
+                                <div id={'main_'+element.name}>
                                     {element.component}
                                 </div>
                             </Tab>

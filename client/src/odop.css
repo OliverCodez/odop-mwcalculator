@@ -115,7 +115,7 @@ input[type=number] {
     justify-content: space-evenly;
 }
 
-#root2 > .container > .tab-content > .tab-pane > #main_Report1,
+#root2 > .container > .tab-content > .tab-pane > #main_FooterReport,
 #root2 > .container > .tab-content > .tab-pane > #main_Report2,
 #root2 > .container > .tab-content > .tab-pane > #main_Report3 {
     border-top: solid 2px #8286883b;
