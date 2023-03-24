@@ -18,7 +18,8 @@ export class Calculator extends ReportBase {
 //        console.log('In Calculator.render this=',this);
         var isGround = 1.7,
             reportEl = document.getElementById('main_Report');
-        console.log('classlist:', reportEl.classList);
+        console.log('before');
+        console.log('element:', reportEl);
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
         return (
             <Container>
