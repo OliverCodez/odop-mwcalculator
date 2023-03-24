@@ -33,10 +33,10 @@ class Report extends ReportBase {
                         portalId='8642978'
                         formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
                         onFormSubmitted={() => console.log('Submitted')}
-                        onReady={(form) => console.log(document.getElementById('report_Inner'))}
+                        onReady={(form) => document.getElementById('report_Inner').classList.remove('testclass')}
                     />
                 </div>
-                <div id="report_Inner" className="hide-soft">
+                <div id="report_Inner" className="hide-soft testclass">
                     <h4 className="d-flex mt-3">
                         <span className="mr-auto">Spring Compression Report</span>
                     </h4>
