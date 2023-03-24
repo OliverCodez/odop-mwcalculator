@@ -68,6 +68,10 @@ input[type=number] {
     display: none!important;
 }
 
+.hide-soft {
+    display: none;
+}
+
 #main_Calculator > .container > .row:nth-child(5) {
     margin-top: 26px;
 }
@@ -106,7 +110,7 @@ input[type=number] {
     width: 100%;
 }
 
-#root2 > .container > .tab-content:first-child > .tab-pane:first-child {
+#root2 > .container > .tab-content > .tab-pane:first-child {
     display: flex !important;
     justify-content: space-evenly;
 }

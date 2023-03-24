@@ -49,6 +49,7 @@ class MainPage extends Component {
 
         var src = 'designtypes/'+this.props.type+'/favicon.ico';
         var alt = this.props.type+' icon';
+        var hideReport;
 //        console.log('src=',src,' alt=',alt);
 
       return (
@@ -62,7 +63,8 @@ class MainPage extends Component {
                         {viewNames.map((element) => {return (
                             <Tab key={element.title} eventKey={element.name}>
                                 {element.name == 'Advanced' ? <div id="mwc-hero-img" /> : ''}
-                                <div id={'main_'+element.name}>
+                                {element.name == 'Report' ? hideReport = 'hide-soft' : hideReport = ''}
+                                <div id={'main_'+element.name} className={hideReport}>
                                     {element.component}
                                 </div>
                             </Tab>
