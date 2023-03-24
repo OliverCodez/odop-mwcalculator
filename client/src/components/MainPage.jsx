@@ -62,7 +62,6 @@ class MainPage extends Component {
                         {viewNames.map((element) => {return (
                             <Tab key={element.title} eventKey={element.name}>
                                 {element.name == 'Advanced' ? <div id="mwc-hero-img" /> : ''}
-                                {element.name == 'Report' ? <div id="mwc-cta">{hbspt.forms.create({region: "na1",portalId: "8642978",formId: "e2d615a6-2965-487e-85da-c79dc8113a9d"})}</div> : ''}
                                 <div className={(element.name == 'Report' ? 'hide-soft' : '')} id={'main_'+element.name}>
                                     {element.component}
                                 </div>
