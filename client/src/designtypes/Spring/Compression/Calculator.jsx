@@ -9,6 +9,7 @@ import ValueName from '../../../components/ValueName';
 import Value from '../../../components/Value';
 import * as o from './symbol_table_offsets';
 import { connect } from 'react-redux';
+import HubspotForm from 'react-hubspot-form'
 
 export class Calculator extends ReportBase {
 
@@ -16,7 +17,6 @@ export class Calculator extends ReportBase {
         super.render();
 //        console.log('In Calculator.render this=',this);
         var isGround = 1.7;
-        const hbsptObj = {region: 'na1',portalId: '8642978',formId: 'e2d615a6-2965-487e-85da-c79dc8113a9d'};
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
         return (
             <Container>
@@ -275,7 +275,12 @@ export class Calculator extends ReportBase {
                 <br />
                 <div id="mwc-cta">
                     {console.log('cta section')}
-                    {hbspt.forms.create(hbsptObj)}
+                    <HubspotForm
+                        portalId='8642978'
+                        formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
+                        onSubmit={() => console.log('Submit!')}
+                        onReady={(form) => console.log('Form ready!')}
+                    />
                 </div>
            </Container>
         );
