@@ -80,13 +80,15 @@ class FormControlTypeNumber extends Component {
     onFocus(event) {
         console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
         if ( event.target.classList.contains('reset') ) {
-            this.setState({
-                value: 0,
-                valueString: '0',
-                cleanValue: 0,
-                hasError: false
-            });
-            event.target.classList.remove('reset');
+            document.querySelectorAll('.adv-form').forEach(
+                e.setState( {
+                    value: 0,
+                    valueString: '0.000',
+                    cleanValue: 0,
+                    hasError: false
+                } ),
+                e.classList.remove('reset')
+            );
             return;
         }
         if (!this.props.readOnly) {
