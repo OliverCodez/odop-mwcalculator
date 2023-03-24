@@ -115,12 +115,10 @@ input[type=number] {
     justify-content: space-evenly;
 }
 
-#root2 > .container > .tab-content > .tab-pane > #main_FooterReport,
-#root2 > .container > .tab-content > .tab-pane > #main_Report2,
-#root2 > .container > .tab-content > .tab-pane > #main_Report3 {
+#root2 > .container > .tab-content > .tab-pane > #main_FooterReport > #report_Inner {
     border-top: solid 2px #8286883b;
-    padding-top: 15px;
-    margin-top: 15px;
+    padding-top: 30px;
+    margin-top: 30px;
 }
 
 #main_Advanced {
@@ -267,6 +265,32 @@ input[type=number] {
     background-color: rgb(255, 214, 0);
 }
 
+#reset-button {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#reset-button > button {
+    display: block;
+    border-radius: .1875rem !important;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center !important;
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #475b66;
+    -webkit-appearance: button;
+    background-image: none;
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+    border-color: #001223;
+    width: 100px;
+}
+
 #main_Calculator > .container > .row:nth-child(3) .report-table-head span {
     background-color: #000;
     color: rgb(255, 214, 0) !important;
@@ -340,8 +364,8 @@ header {
 }
 
 #mwc-hero-img {
-    width: 290px;
-    height: 440px;
+    height: 524px;
+    width: 342px;
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
