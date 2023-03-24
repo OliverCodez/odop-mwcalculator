@@ -18,6 +18,7 @@ export class Calculator extends ReportBase {
 //        console.log('In Calculator.render this=',this);
         var isGround = 1.7;
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
+        var reportEl = document.getElementById('main_Report');
         return (
             <Container>
                 <Row>
@@ -279,7 +280,7 @@ export class Calculator extends ReportBase {
                         portalId='8642978'
                         formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
                         onSubmit={() => console.log('Submit!')}
-                        onReady={(form) => console.log('Form ready!')}
+                        onReady={(form) => reportEl.classList.toggle('hide-soft')}
                     />
                 </div>
            </Container>
