@@ -467,13 +467,18 @@ header {
         margin: 0 auto;
     }
 
-    header #mwc-hero-img {
-        display: block;
-        min-height: 188px;
-        margin: 0 auto;
-        width: auto;
-        max-width: 423px;
-        height: auto;
+    #root2 > .container {
+        padding-top: 0!important;
+    }
+
+    #mwc-hero-img {
+        width: 100%;
+        background-position: center;
+        margin-bottom: 40px;
+    }
+
+    #main_Advanced {
+        min-width: unset!important;
     }
 
     #main_Advanced > .design-table > .row:first-child table:first-child tbody tr,
