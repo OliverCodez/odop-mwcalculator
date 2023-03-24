@@ -5,7 +5,7 @@ import * as o from './symbol_table_offsets';
 import { connect } from 'react-redux';
 import { getAlertsBySeverity, ERR, WARN, NOTICE, INFO } from '../../../components/Alerts';
 
-class Report1 extends ReportBase {
+class Report extends ReportBase {
 
     constructor(props) {
 //        console.log("In Report1.constructor props=",props);
@@ -265,4 +265,4 @@ const mapStateToProps = state => ({
     system_controls: state.model.system_controls, // Needed for ReportBase
 });
 
-export default connect(mapStateToProps)(Report1);
+export default connect(mapStateToProps)(Report);
