@@ -292,6 +292,7 @@ header {
 
 .mwc-hero {
     display: block;
+    width: 100%;
 }
 
 .mcw-hero-left {
