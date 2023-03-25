@@ -79,6 +79,7 @@ class FormControlTypeNumber extends Component {
 
     onFocus(event) {
         console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
+        // TODO :: Finalize and fix bugs with reset
         if ( event.target.classList.contains('reset') ) {
             document.querySelectorAll('.adv-form').forEach( e => {
                 this.setState( {
