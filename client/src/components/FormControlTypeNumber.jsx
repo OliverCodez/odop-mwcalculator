@@ -87,7 +87,7 @@ class FormControlTypeNumber extends Component {
                     cleanValue: 0,
                     hasError: false
                 } ),
-                this.classList.remove('reset')
+                e.classList.remove('reset borders-invalid borders-warn')
             } );
             return;
         }
