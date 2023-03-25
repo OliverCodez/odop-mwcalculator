@@ -26,8 +26,6 @@ class DesignTable extends Component {
                         console.log('clicked reset');
                         document.querySelectorAll('.err-notice').forEach(e => e.remove());
 
-                        Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset', 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
-
                         document.getElementById( 'nvuriv_Free_OD' ).value = 0;
                         document.getElementById( 'nvuriv_Free_OD' ).classList.add('reset');
                         document.getElementById( 'nvuriv_Wire_Diameter' ).value = 0;

@@ -89,6 +89,7 @@ class FormControlTypeNumber extends Component {
                     hasError: false
                 } )
             } );
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset', 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
             return;
         }
         if (!this.props.readOnly) {
