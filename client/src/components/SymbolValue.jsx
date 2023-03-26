@@ -187,9 +187,9 @@ class SymbolValue extends Component {
 //        console.log('In SymbolValue.render className=',className);
         var icon_dependent_tag = '';
         // TODO :: Continue debug and position reset functions correctly
-        const buttonEl = structuredClone(this.props.element);
-        buttonEl.name = 'Reset_Button';
-        buttonEl.tooltip = 'Reset Form';
+        //const buttonEl = structuredClone(this.props.element);
+        //buttonEl.name = 'Reset_Button';
+        //buttonEl.tooltip = 'Reset Form';
         
         if (this.props.element.type === "equationset" && !this.props.element.input) { // Dependent Variable?
             icon_dependent_tag =
