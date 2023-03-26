@@ -186,8 +186,8 @@ class SymbolValue extends Component {
         className += "background-white "; // Always white
 //        console.log('In SymbolValue.render className=',className);
         var icon_dependent_tag = '';
-        var doButton = false;
-        var buttonEl = this.props.element;
+        // TODO :: Continue debug and position reset functions correctly
+        const buttonEl = structuredClone(this.props.element);
         buttonEl.name = 'Reset_Button';
         buttonEl.tooltip = 'Reset Form';
         
@@ -238,7 +238,6 @@ class SymbolValue extends Component {
                                     {this.props.element.name == 'Total_Coils' && 
                                         <>
                                             {console.log('inside if')}
-                                            {doButton = true}
                                         </>
                                     }
                                 </>}
@@ -251,11 +250,6 @@ class SymbolValue extends Component {
                                 <>
                                     <NameValueUnitsHeaderCalcInput />
                                     <NameValueUnitsRowCalcInput key={this.props.element.name} element={this.props.element} index={0} onChangeValid={this.onChangeValidValue} onChangeInvalid={this.onChangeInvalidValue} />
-                                </>}
-                            {doButton && 
-                                <>
-                                    <NameValueUnitsRowIndependentVariable key={buttonEl.name} element={buttonEl} index={0} onChangeValid={this.onChangeValidValue} onChangeInvalid={this.onChangeInvalidValue} />
-                                    {doButton = false}
                                 </>}
                         </Table>
                         {this.props.element.type === "equationset" && !this.props.element.input && !this.props.element.hidden &&
