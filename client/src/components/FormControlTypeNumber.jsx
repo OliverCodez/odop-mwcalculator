@@ -79,22 +79,23 @@ class FormControlTypeNumber extends Component {
 
     onFocus(event) {
         console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
+        var valStr = this.state.value.toString();
         // TODO :: Finalize and fix bugs with reset
         if ( event.target.classList.contains('reset') ) {
-            document.querySelectorAll('.adv-form').forEach( e => {
-                this.setState( {
-                    value: 0,
-                    valueString: '0.000',
-                    cleanValue: 0,
-                    hasError: false
-                } )
+            console.log('doing reset from onfocus');
+            valStr = '0.00';
+            this.setState( {
+                value: 0,
+                valueString: valStr,
+                cleanValue: 0,
+                hasError: false
             } );
+            // document.querySelectorAll('.adv-form').forEach( e => {} );
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset', 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
-            return;
         }
         if (!this.props.readOnly) {
             this.setState({
-                valueString: this.state.value.toString(), // Update the display with unformatted value
+                valueString: valStr, // Update the display with unformatted value
                 focused: true,
             });
         }
