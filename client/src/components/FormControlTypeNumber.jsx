@@ -51,7 +51,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onChange(event) {
-        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
+//        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         var value = parseFloat( event.target.value );
         if ( event.target.classList.contains('err-check') && !this.state.hasError ) {
             this.setState({
@@ -78,7 +78,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onFocus(event) {
-        console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
+//        console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
         var valStr = this.state.value.toString();
         // TODO :: Finalize and fix bugs with reset
         if ( event.target.classList.contains('reset') ) {
@@ -91,7 +91,7 @@ class FormControlTypeNumber extends Component {
                 hasError: false
             } );
             // document.querySelectorAll('.adv-form').forEach( e => {} );
-            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset', 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
         }
         if (!this.props.readOnly) {
             this.setState({
@@ -103,7 +103,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onBlur(event) {
-        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
+//        console.log('In FormControlTypeNumber.onBlur event.target.value=',event.target.value,'state=',this.state);
         if ( this.state.isInvalid ) {
             var updateVal = this.state.value;
             if ( this.state.hasError ) updateVal = this.state.cleanValue;
