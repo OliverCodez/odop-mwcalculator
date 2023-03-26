@@ -5,6 +5,7 @@ import ConstraintsMinTable from './ConstraintsMinTable';
 import ConstraintsMaxTable from './ConstraintsMaxTable';
 import NameValueUnitsCalcInputTable from './NameValueUnitsCalcInputTable';
 import { connect } from 'react-redux';
+import { load, loadInitialState, restoreAutoSave, deleteAutoSave, changeName } from '../store/actionCreators';
 
 class DesignTable extends Component {
 
@@ -24,9 +25,9 @@ class DesignTable extends Component {
                     <button className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block" onClick={ () => {
                         // TODO :: Finalize and fix bug with classList.remove in forEach (also support IE and older browsers)
                         console.log('clicked reset');
-                        this.props.loadInitialState( 'Spring/Compression', 'US' );
-                        this.props.changeName('Startup');
-                        this.props.deleteAutoSave();
+                        loadInitialState( 'Spring/Compression' );
+                        changeName('Startup');
+                        deleteAutoSave();
                     } }>Reset</button>
                 </div>
             </div>
