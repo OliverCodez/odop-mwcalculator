@@ -252,6 +252,7 @@ class SymbolValue extends Component {
                                     {console.log('processing row for: ', this.props.element.name)}
                                     {this.props.element.name == 'Total_Coils' && 
                                         <>
+                                            {console.log('inside if')}
                                             <NameValueUnitsRowIndependentVariable key={'resetButton'} element={buttonEl} index={0} />
                                     </>}
                                 </>}
