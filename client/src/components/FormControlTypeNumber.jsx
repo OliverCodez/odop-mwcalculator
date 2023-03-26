@@ -46,7 +46,7 @@ class FormControlTypeNumber extends Component {
     }
 
     onClick(event) {
-//        console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
+        console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
         this.props.onClick(event); // Pass valid number onward
     }
 
@@ -161,6 +161,7 @@ class FormControlTypeNumber extends Component {
         delete p.icon_alerts;
         delete p.validmin;
         delete p.validmax;
+
         if ( this.props.className.includes( 'err-check' ) ) {
             if ( icon_alerts.length > 0 ) {
                 var errLevel = icon_alerts.map((entry, i) => { return entry.severity});
