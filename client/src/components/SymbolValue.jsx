@@ -249,8 +249,8 @@ class SymbolValue extends Component {
                                 <>
                                     <NameValueUnitsHeaderIndependentVariable />
                                     <NameValueUnitsRowIndependentVariable key={this.props.element.name} element={this.props.element} index={0} onChangeValid={this.onChangeValidValue} onChangeInvalid={this.onChangeInvalidValue} />
-                                    {console.log('processing row for el: ', this.props.element)}
                                     {console.log('processing row for: ', this.props.element.name)}
+                                    {console.log('processing row for el: ', this.props.element)}
                                     {this.props.element.name == 'Total_Coils' && 
                                         <>
                                             {console.log('inside if')}

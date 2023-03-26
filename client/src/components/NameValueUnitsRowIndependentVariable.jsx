@@ -121,6 +121,8 @@ class NameValueUnitsRowIndependentVariable extends Component {
         </td>
         <td className="align-middle" colSpan="2">
           <InputGroup>
+            {console.log('inside building object: ', this.props.element.name)}
+            {console.log('inside building object obj: ', this.props.element)}
             <FormControlTypeNumber id={'nvuriv_' + this.props.element.name} icon_alerts={icon_alerts}
                                    className={advForm + className} value={this.props.element.value}
                                    validmin={this.props.element.validmin} validmax={this.props.element.validmax}
