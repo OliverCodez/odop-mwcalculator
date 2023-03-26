@@ -187,7 +187,7 @@ class SymbolValue extends Component {
 //        console.log('In SymbolValue.render className=',className);
         var icon_dependent_tag = '';
         var doButton = false;
-        var buttonEl = {
+        var buttonEl = [{
             "input": true,
             "name": "Reset_Button",
             "value": 0,
@@ -206,7 +206,7 @@ class SymbolValue extends Component {
             "vmax": 0,
             "smin": 0,
             "smax": 1
-          };
+          }];
         if (this.props.element.type === "equationset" && !this.props.element.input) { // Dependent Variable?
             icon_dependent_tag =
                 <OverlayTrigger placement="top" overlay={<Tooltip>Dependent Variable</Tooltip>}>
@@ -271,7 +271,7 @@ class SymbolValue extends Component {
                             {doButton && 
                                 <>
                                     {console.log('doButton True')}
-                                    <NameValueUnitsRowIndependentVariable key={'resetButton'} element={buttonEl} index={0} />
+                                    <NameValueUnitsRowIndependentVariable key={'resetButton'} element={buttonEl} index={0} onChangeValid={this.onChangeValidValue} onChangeInvalid={this.onChangeInvalidValue} />
                                 </>}
                         </Table>
                         {this.props.element.type === "equationset" && !this.props.element.input && !this.props.element.hidden &&
