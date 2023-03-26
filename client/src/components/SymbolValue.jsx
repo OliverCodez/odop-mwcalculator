@@ -255,6 +255,7 @@ class SymbolValue extends Component {
                             {doButton && 
                                 <>
                                     <NameValueUnitsRowIndependentVariable key={buttonEl.name} element={buttonEl} index={0} onChangeValid={this.onChangeValidValue} onChangeInvalid={this.onChangeInvalidValue} />
+                                    {doButton = false}
                                 </>}
                         </Table>
                         {this.props.element.type === "equationset" && !this.props.element.input && !this.props.element.hidden &&
