@@ -228,6 +228,8 @@ class SymbolValue extends Component {
                                 <>
                                     <NameValueUnitsHeaderIndependentVariable />
                                     <NameValueUnitsRowIndependentVariable key={this.props.element.name} element={this.props.element} index={0} onChangeValid={this.onChangeValidValue} onChangeInvalid={this.onChangeInvalidValue} />
+                                    {console.log('processing row for: ', this.props.element.name)}
+                                    { this.props.element.name == 'Total_Coils' ? <NameValueUnitsRowIndependentVariable key={'resetButton'} element={this.props.element} index={0} /> : '' }
                                 </>}
                             {this.props.element.type === "equationset" && !this.props.element.input && !this.props.element.hidden &&
                                 <>
