@@ -186,6 +186,7 @@ class SymbolValue extends Component {
         className += "background-white "; // Always white
 //        console.log('In SymbolValue.render className=',className);
         var icon_dependent_tag = '';
+        var buttonEl = '<input />';
         if (this.props.element.type === "equationset" && !this.props.element.input) { // Dependent Variable?
             icon_dependent_tag =
                 <OverlayTrigger placement="top" overlay={<Tooltip>Dependent Variable</Tooltip>}>
@@ -228,8 +229,9 @@ class SymbolValue extends Component {
                                 <>
                                     <NameValueUnitsHeaderIndependentVariable />
                                     <NameValueUnitsRowIndependentVariable key={this.props.element.name} element={this.props.element} index={0} onChangeValid={this.onChangeValidValue} onChangeInvalid={this.onChangeInvalidValue} />
+                                    {console.log('processing row for el: ', this.props.element)}
                                     {console.log('processing row for: ', this.props.element.name)}
-                                    { this.props.element.name == 'Total_Coils' ? <NameValueUnitsRowIndependentVariable key={'resetButton'} element={this.props.element} index={0} /> : '' }
+                                    { this.props.element.name == 'Total_Coils' } <NameValueUnitsRowIndependentVariable key={'resetButton'} element={buttonEl} index={0} />
                                 </>}
                             {this.props.element.type === "equationset" && !this.props.element.input && !this.props.element.hidden &&
                                 <>
