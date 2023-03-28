@@ -60,8 +60,8 @@ class FormControlTypeNumber extends Component {
             // Following passes value of zero onto other forms TODO ::
             event.target.value = 0;
             //console.log('pass on event.target:', event.target);
-            //this.props.onChangeValid(event); // Pass valid number onward
-            //this.props.onChange(event); // Pass valid number onward
+            this.props.onChangeValid(event); // Pass valid number onward
+            this.props.onChange(event); // Pass valid number onward
         }
         this.props.onClick(event); // Pass valid number onward
     }
