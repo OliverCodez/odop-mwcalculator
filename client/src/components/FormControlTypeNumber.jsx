@@ -47,17 +47,18 @@ class FormControlTypeNumber extends Component {
 
     onClick(event) {
         console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
+        var valInt = 0;
         if ( event.target.classList.contains('reset-button') ) {
-            console.log('doing reset from onfocus');
-            valInt = 0;
-            this.setState( {
-                value: 0,
-                valueString: valInt.toString(),
-                cleanValue: 0,
-                hasError: false
-            } );
-            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
-            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => 
+                el.setState( {
+                    value: 0,
+                    valueString: valInt.toString(),
+                    cleanValue: 0,
+                    hasError: false
+                } ),
+                Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) ),
+                Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) )
+            );
         }
         this.props.onClick(event); // Pass valid number onward
     }
