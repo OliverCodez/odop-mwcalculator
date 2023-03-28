@@ -456,7 +456,9 @@ header {
 }
 
 .cleared {
-    border-color: green!important;
+    border-color: #000 !important;
+    border-left-width: 1px !important;
+    border-right-width: 1px !important;
 }
 
 .clearerror {
