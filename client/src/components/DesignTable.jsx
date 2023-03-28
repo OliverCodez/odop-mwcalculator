@@ -23,7 +23,7 @@ class DesignTable extends Component {
                 <div id="reset-button">
                     <button className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block" onClick={ () => {
                         // TODO :: Fix table for reset
-                        //Array.from( document.querySelectorAll('.err-notice') ).forEach( ( el ) => el.remove() );
+                        Array.from( document.querySelectorAll( '.err-notice' ) ).forEach( ( el ) => el.remove() );
                         Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.add( 'reset' ) );
                         Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.click() );
                         Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed', 'reset' ) );
