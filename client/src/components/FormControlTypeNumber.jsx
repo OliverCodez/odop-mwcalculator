@@ -54,8 +54,11 @@ class FormControlTypeNumber extends Component {
                 value: 0,
                 valueString: valInt.toString(),
                 cleanValue: 0,
-                hasError: false
+                hasError: false,
+                isInvalid: false
             } );
+            this.props.onChangeValid(event); // Pass valid number onward
+            this.props.onChange(event); // Pass valid number onward
         }
         if ( event.target.classList.contains( 'reset-button' ) ) {
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.add( 'reset' ) );
