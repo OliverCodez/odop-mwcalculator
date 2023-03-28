@@ -108,7 +108,9 @@ class NameValueUnitsRowIndependentVariable extends Component {
     // Table Row
     // =======================================
     var advForm = '';
+    var doReset = false;
     if ( !this.props.element.name.includes('Force') ) advForm = 'adv-form err-check ';
+    if ( this.props.element.name.includes('Total_Coils') ) doReset = true;
     return (
       <tbody>
       <tr key={this.props.element.name}>
@@ -140,6 +142,7 @@ class NameValueUnitsRowIndependentVariable extends Component {
         </td>
         <td className={'text-nowrap align-middle small ' + (this.props.system_controls.show_units ? '' : 'd-none')}
             colSpan="1">{this.props.element.units}</td>
+        {doReset ? <span>TEST</span> : ''}
       </tr>
       </tbody>
     )
