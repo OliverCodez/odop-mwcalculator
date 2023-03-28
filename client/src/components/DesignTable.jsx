@@ -22,7 +22,7 @@ class DesignTable extends Component {
                 </Row>
                 <div id="reset-button">
                     <button className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block" onClick={ () => {
-                        // TODO :: Finalize and fix bug with classList.remove in forEach (also support IE and older browsers)
+                        // TODO :: Fix table for reset
                         console.log('clicked reset');
                         Array.from( document.querySelectorAll('.err-notice') ).forEach( ( el ) => el.remove() );
                         Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.add( 'reset' ) );

@@ -46,9 +46,8 @@ class FormControlTypeNumber extends Component {
     }
 
     onClick(event) {
-        console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
+//        console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
         if ( event.target.classList.contains( 'reset' ) ) {
-            console.log('item clicked: ', event.target.value);
             var valInt = 0;
             this.setState( {
                 value: 0,
@@ -58,12 +57,7 @@ class FormControlTypeNumber extends Component {
                 isInvalid: false
             } );
         }
-        if ( event.target.classList.contains( 'reset-button' ) ) {
-            
-        }
-        else {
-            this.props.onClick(event); // Pass valid number onward
-        }
+        this.props.onClick(event); // Pass valid number onward
     }
 
     onChange(event) {

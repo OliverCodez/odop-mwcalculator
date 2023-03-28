@@ -108,9 +108,7 @@ class NameValueUnitsRowIndependentVariable extends Component {
     // Table Row
     // =======================================
     var advForm = '';
-    var doReset = false;
     if ( !this.props.element.name.includes('Force') ) advForm = 'adv-form err-check ';
-    if ( this.props.element.name.includes('Total_Coils') ) doReset = true;
     return (
       <tbody>
       <tr key={this.props.element.name}>
@@ -123,8 +121,6 @@ class NameValueUnitsRowIndependentVariable extends Component {
         </td>
         <td className="align-middle" colSpan="2">
           <InputGroup>
-            {console.log('inside building object: ', this.props.element.name)}
-            {console.log('inside building object obj: ', this.props.element)}
             <FormControlTypeNumber id={'nvuriv_' + this.props.element.name} icon_alerts={icon_alerts}
                                    className={advForm + className} value={this.props.element.value}
                                    validmin={this.props.element.validmin} validmax={this.props.element.validmax}
@@ -142,18 +138,6 @@ class NameValueUnitsRowIndependentVariable extends Component {
         </td>
         <td className={'text-nowrap align-middle small ' + (this.props.system_controls.show_units ? '' : 'd-none')}
             colSpan="1">{this.props.element.units}</td>
-        {doReset ? 
-          <span>
-            <InputGroup>
-              <FormControlTypeNumber id={'nvuriv_Reset_Button'}
-                                    className={advForm + className + ' reset-button'} value={0}
-                                    validmin={0} validmax={1}
-                                    onChangeValid={this.onChangeValid} onChangeInvalid={this.onChangeInvalid}/>
-            </InputGroup>
-          </span>
-          :
-          ''
-        }
       </tr>
       </tbody>
     )
