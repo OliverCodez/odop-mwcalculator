@@ -187,12 +187,14 @@ class SymbolValue extends Component {
 //          Always white
 //          console.log('In SymbolValue.render className=',className);
         var icon_dependent_tag = '';
-        var rowcnt = 0;
         if (this.props.element.type === "equationset" && !this.props.element.input) { // Dependent Variable?
             icon_dependent_tag =
                 <OverlayTrigger placement="top" overlay={<Tooltip>Dependent Variable</Tooltip>}>
                     <i className="fas fa-asterisk fa-sm icon-dependent"></i>
                 </OverlayTrigger>;
+        }
+        if ( this.props.element.name == 'Free_Length' || this.props.element.name == 'Free_OD' || this.props.element.name == 'ID_Free') {
+            className = className + ' clear-val'
         }
         return (
             <>
@@ -201,9 +203,7 @@ class SymbolValue extends Component {
                         { this.props.element.format === undefined && typeof this.props.element.value === 'number' ?
                             <>
                                 {icon_dependent_tag}
-                                {rowcnt < 2 ? className = className + ' clear-val' : className = className}
                                 <FormControlTypeNumber id={'sv_'+this.props.element.name} readOnly icon_alerts={icon_alerts} className={className} value={this.props.element.value} validmin={this.props.element.validmin} validmax={this.props.element.validmax} onClick={this.onContextMenu} />
-                                {rowcnt += 1}
                             </>
                         : ''}
                         { this.props.element.format === undefined && typeof this.props.element.value === 'string' ?
