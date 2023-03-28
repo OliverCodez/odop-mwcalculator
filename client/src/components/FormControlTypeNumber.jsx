@@ -54,7 +54,8 @@ class FormControlTypeNumber extends Component {
                 valueString: valInt.toString(),
                 cleanValue: 0,
                 hasError: false,
-                isInvalid: false
+                isInvalid: false,
+                formReset: true
             } );
             // Following passes value of zero onto other forms TODO ::
             event.target.value = 0;
@@ -67,10 +68,17 @@ class FormControlTypeNumber extends Component {
 
     onChange(event) {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
-        if ( event.target.classList.contains( 'cleared' ) ) {
-            console.log('running change event for element with cleared class');
-            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'cleared' ) );
-            Array.from( document.querySelectorAll( '.err-notice' ) ).forEach( ( el ) => el.classList.remove( 'clearerror' ) );
+        if ( this.state.formReset ) {
+            this.setState( {
+                formReset: false
+            } );
+        }
+        else {
+            if ( event.target.classList.contains( 'cleared' ) && this.state.formReset ) {
+                console.log('running change event for element with cleared class');
+                Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'cleared' ) );
+                Array.from( document.querySelectorAll( '.err-notice' ) ).forEach( ( el ) => el.classList.remove( 'clearerror' ) );
+            }
         }
         var value = parseFloat( event.target.value );
         if ( event.target.classList.contains('err-check') && !this.state.hasError ) {
