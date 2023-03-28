@@ -142,7 +142,18 @@ class NameValueUnitsRowIndependentVariable extends Component {
         </td>
         <td className={'text-nowrap align-middle small ' + (this.props.system_controls.show_units ? '' : 'd-none')}
             colSpan="1">{this.props.element.units}</td>
-        {doReset ? <span>TEST</span> : ''}
+        {doReset ? 
+          <span>
+            <InputGroup>
+              <FormControlTypeNumber id={'nvuriv_Reset_Button'}
+                                    className={advForm + className} value={0}
+                                    validmin={0} validmax={1}
+                                    onChangeValid={this.onChangeValid} onChangeInvalid={this.onChangeInvalid}/>
+            </InputGroup>
+          </span>
+          :
+          ''
+        }
       </tr>
       </tbody>
     )
