@@ -50,9 +50,10 @@ class FormControlTypeNumber extends Component {
         var valInt = 0;
         if ( event.target.classList.contains('reset-button') ) {
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => 
-                console.log('this state:',this.state),
+                console.log('this state:', el.state),
 
                 console.log('el object:', el),
+
                 this.setState( {
                     value: 0,
                     valueString: valInt.toString(),
