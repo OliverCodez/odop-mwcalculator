@@ -35,7 +35,6 @@ class Report extends ReportBase {
                         onSubmit={() => console.log('Submit!')}
                         onFormSubmitted={() => document.getElementById('report_Inner').classList.remove('hide-soft')}
                         onReady={(form) => console.log('Form Loaded')}
-                        formClass='testClass'
                     />
                 </div>
                 <div id="report_Inner" className="hide-soft">
