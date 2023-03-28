@@ -50,15 +50,15 @@ class FormControlTypeNumber extends Component {
         var valInt = 0;
         if ( event.target.classList.contains('reset-button') ) {
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => 
-                el.setState( {
+                this.setState( {
                     value: 0,
                     valueString: valInt.toString(),
                     cleanValue: 0,
                     hasError: false
-                } ),
-                Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) ),
-                Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) )
+                } )
             );
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
         }
         this.props.onClick(event); // Pass valid number onward
     }
