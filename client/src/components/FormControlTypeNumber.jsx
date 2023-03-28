@@ -47,24 +47,23 @@ class FormControlTypeNumber extends Component {
 
     onClick(event) {
         console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
-        var valInt = 0;
-        if ( event.target.classList.contains('reset-button') ) {
-            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => 
-                console.log('this state:', el.state),
-
-                console.log('el object:', el),
-
-                this.setState( {
-                    value: 0,
-                    valueString: valInt.toString(),
-                    cleanValue: 0,
-                    hasError: false
-                } )
-            );
+        if ( event.target.classList.contains( 'reset' ) ) {
+            var valInt = 0;
+            this.setState( {
+                value: 0,
+                valueString: valInt.toString(),
+                cleanValue: 0,
+                hasError: false
+            } );
+        }
+        if ( event.target.classList.contains( 'reset-button' ) ) {
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.click() );
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
         }
-        this.props.onClick(event); // Pass valid number onward
+        else {
+            this.props.onClick(event); // Pass valid number onward
+        }
     }
 
     onChange(event) {
