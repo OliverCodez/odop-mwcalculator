@@ -23,7 +23,6 @@ class Report extends ReportBase {
     render() {
         super.render();
 //        console.log('In Report1.render this=',this);
-//        TODO :: Finalize hubspot form
         var line = 1;
         var isGround = 1.7;
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
@@ -270,7 +269,6 @@ class Report extends ReportBase {
             </>
         );
     }
-
 }
 
 const mapStateToProps = state => ({

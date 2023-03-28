@@ -24,8 +24,7 @@ class DesignTable extends Component {
                     <button type="number" className="bg-neutral-500 text-white hover:bg-neutral-600 text-md font-semibold antialiased rounded py-12 px-16 text-center duration block form-control" onClick={ () => {
                         // TODO :: Finalize and fix bug with classList.remove in forEach (also support IE and older browsers)
                         console.log('clicked reset');
-                        Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
-                        
+                        //Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
                     } }>Reset</button>
                 </div>
             </div>

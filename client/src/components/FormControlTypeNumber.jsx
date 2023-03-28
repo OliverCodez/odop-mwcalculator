@@ -47,6 +47,18 @@ class FormControlTypeNumber extends Component {
 
     onClick(event) {
         console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
+        if ( event.target.classList.contains('reset-button') ) {
+            console.log('doing reset from onfocus');
+            valInt = 0;
+            this.setState( {
+                value: 0,
+                valueString: valInt.toString(),
+                cleanValue: 0,
+                hasError: false
+            } );
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
+        }
         this.props.onClick(event); // Pass valid number onward
     }
 
@@ -80,19 +92,6 @@ class FormControlTypeNumber extends Component {
     onFocus(event) {
 //        console.log('In FormControlTypeNumber.onFocus event.target.value=',event.target.value,'state=',this.state);
         var valInt = this.state.value;
-        // TODO :: Finalize and fix bugs with reset
-        if ( event.target.classList.contains('reset') ) {
-            console.log('doing reset from onfocus');
-            valInt = 0;
-            this.setState( {
-                value: 0,
-                valueString: valInt.toString(),
-                cleanValue: 0,
-                hasError: false
-            } );
-            // document.querySelectorAll('.adv-form').forEach( e => {} );
-            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
-        }
         if (!this.props.readOnly) {
             this.setState({
                 valueString: valInt.toString(), // Update the display with unformatted value

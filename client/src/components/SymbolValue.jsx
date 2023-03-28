@@ -183,14 +183,10 @@ class SymbolValue extends Component {
                 className += "borders-constrained-max ";
             }
         }
-        className += "background-white "; // Always white
-//        console.log('In SymbolValue.render className=',className);
+        className += "background-white ";
+//          Always white
+//          console.log('In SymbolValue.render className=',className);
         var icon_dependent_tag = '';
-        // TODO :: Continue debug and position reset functions correctly
-        //const buttonEl = structuredClone(this.props.element);
-        //buttonEl.name = 'Reset_Button';
-        //buttonEl.tooltip = 'Reset Form';
-        
         if (this.props.element.type === "equationset" && !this.props.element.input) { // Dependent Variable?
             icon_dependent_tag =
                 <OverlayTrigger placement="top" overlay={<Tooltip>Dependent Variable</Tooltip>}>

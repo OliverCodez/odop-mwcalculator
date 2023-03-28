@@ -146,7 +146,7 @@ class NameValueUnitsRowIndependentVariable extends Component {
           <span>
             <InputGroup>
               <FormControlTypeNumber id={'nvuriv_Reset_Button'}
-                                    className={advForm + className} value={0}
+                                    className={advForm + className + ' reset-button'} value={0}
                                     validmin={0} validmax={1}
                                     onChangeValid={this.onChangeValid} onChangeInvalid={this.onChangeInvalid}/>
             </InputGroup>
