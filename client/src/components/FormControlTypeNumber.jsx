@@ -57,18 +57,19 @@ class FormControlTypeNumber extends Component {
                 isInvalid: false
             } );
             // Following passes value of zero onto other forms TODO ::
-            //event.target.value = 0;
-            //this.props.onChangeValid(event); // Pass valid number onward
-            //this.props.onChange(event); // Pass valid number onward
-        }
-        if ( event.target.classList.contains( 'cleared' ) ) {
-            Array.from( document.querySelectorAll( '.clearerror' ) ).forEach( ( el ) => el.classList.remove( 'clearerror' ) );
+            console.log('pass on event.target:', event.target);
+            event.target.value = 0;
+            this.props.onChangeValid(event); // Pass valid number onward
+            this.props.onChange(event); // Pass valid number onward
         }
         this.props.onClick(event); // Pass valid number onward
     }
 
     onChange(event) {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
+        if ( event.target.classList.contains( 'cleared' ) ) {
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'clearerror', 'cleared' ) );
+        }
         var value = parseFloat( event.target.value );
         if ( event.target.classList.contains('err-check') && !this.state.hasError ) {
             this.setState({
