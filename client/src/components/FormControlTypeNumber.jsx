@@ -56,6 +56,9 @@ class FormControlTypeNumber extends Component {
                 hasError: false,
                 isInvalid: false
             } );
+            event.target.value = 0;
+            this.props.onChangeValid(event); // Pass valid number onward
+            this.props.onChange(event); // Pass valid number onward
         }
         this.props.onClick(event); // Pass valid number onward
     }
