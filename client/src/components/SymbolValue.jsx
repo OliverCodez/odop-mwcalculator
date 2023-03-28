@@ -193,8 +193,12 @@ class SymbolValue extends Component {
                     <i className="fas fa-asterisk fa-sm icon-dependent"></i>
                 </OverlayTrigger>;
         }
+        var id_blank = 'L_1 Deflect_1 Stress_1 L_2 Deflect_2 Stress_2 Stress_Solid';
         if ( this.props.element.name == 'Free_Length' || this.props.element.name == 'Free_OD' || this.props.element.name == 'ID_Free') {
-            className = className + ' clear-val'
+            className = className + ' clear-val';
+        }
+        if ( id_blank.includes( this.props.element.name ) ) {
+            className = className + ' clear-blank';
         }
         return (
             <>

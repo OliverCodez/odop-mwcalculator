@@ -455,8 +455,8 @@ header {
     min-height: 40px;
 }
 
-#root2 .container .tab-content.cleared i,
-i.cleared {
+#root2 .container .tab-content.cleared i.fa-exclamation-triangle,
+i.fa-exclamation-triangle.cleared {
     display:none;
 }
 
