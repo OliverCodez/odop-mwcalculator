@@ -200,19 +200,19 @@ class SymbolValue extends Component {
                         { this.props.element.format === undefined && typeof this.props.element.value === 'number' ?
                             <>
                                 {icon_dependent_tag}
-                                <FormControlTypeNumber id={'sv_'+this.props.element.name} readOnly icon_alerts={icon_alerts} className={className} value={this.props.element.value} validmin={this.props.element.validmin} validmax={this.props.element.validmax} onClick={this.onContextMenu} />
+                                <FormControlTypeNumber id={'sv_'+this.props.element.name} readOnly icon_alerts={icon_alerts} className={className + ' TESTCLASS1'} value={this.props.element.value} validmin={this.props.element.validmin} validmax={this.props.element.validmax} onClick={this.onContextMenu} />
                             </>
                         : ''}
                         { this.props.element.format === undefined && typeof this.props.element.value === 'string' ?
                             <>
                                 {icon_dependent_tag}
-                                <Form.Control id={'sv_'+this.props.element.name} type="text" readOnly value={this.props.element.value} onClick={this.onContextMenu} />
+                                <Form.Control id={'sv_'+this.props.element.name} type="text" readOnly className="TESTCLASS2" value={this.props.element.value} onClick={this.onContextMenu} />
                             </>
                         : ''}
                         { this.props.element.format === 'table' ?
                             <>
                                 {icon_dependent_tag}
-                                <Form.Control id={'sv_'+this.props.element.name} type="text" readOnly className={className} value={this.state.table[this.props.element.value][0]} onClick={this.onContextMenu} />
+                                <Form.Control id={'sv_'+this.props.element.name} type="text" readOnly className={className + ' TESTCLASS3'} value={this.state.table[this.props.element.value][0]} onClick={this.onContextMenu} />
                             </>
                         : ''}
                     </InputGroup>

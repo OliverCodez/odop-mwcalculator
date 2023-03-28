@@ -32,9 +32,9 @@ class Report extends ReportBase {
                     <HubspotForm
                         portalId='8642978'
                         formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
-                        onSubmit={() => console.log('Submit!')}
+                        onSubmit={() => console.log('submit')}
                         onFormSubmitted={() => document.getElementById('report_Inner').classList.remove('hide-soft')}
-                        onReady={(form) => console.log('Form Loaded')}
+                        onReady={(form) => console.log('loaded')}
                     />
                 </div>
                 <div id="report_Inner" className="hide-soft">
