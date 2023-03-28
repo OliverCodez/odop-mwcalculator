@@ -455,14 +455,16 @@ header {
     min-height: 40px;
 }
 
-.cleared {
+#root2 .container .tab-content.cleared i,
+i.cleared {
+    display:none;
+}
+
+#root2 .container .tab-content.cleared input,
+input.cleared {
     border-color: #000 !important;
     border-left-width: 1px !important;
     border-right-width: 1px !important;
-}
-
-.clearerror {
-    display: none;
 }
 
 @media only screen and ( max-width: 800px ) {

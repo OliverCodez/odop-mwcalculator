@@ -54,25 +54,15 @@ class FormControlTypeNumber extends Component {
                 valueString: valInt.toString(),
                 cleanValue: 0,
                 hasError: false,
-                isInvalid: false,
-                formReset: true
+                isInvalid: false
             } );
-            // Following passes value of zero onto other forms TODO ::
-            event.target.value = 0;
-            //console.log('pass on event.target:', event.target);
-            this.props.onChangeValid(event); // Pass valid number onward
-            this.props.onChange(event); // Pass valid number onward
         }
         this.props.onClick(event); // Pass valid number onward
     }
 
     onChange(event) {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
-        if ( event.target.classList.contains( 'cleared' ) && this.state.formReset ) {
-            console.log('running change event for element with cleared class');
-            Array.from( document.querySelectorAll( '.cleared' ) ).forEach( ( el ) => el.classList.remove( 'cleared' ) );
-            Array.from( document.querySelectorAll( '.clearerror' ) ).forEach( ( el ) => el.classList.remove( 'clearerror' ) );
-        }
+        Array.from( document.querySelectorAll( '.cleared' ) ).forEach( ( el ) => el.classList.remove( 'cleared' ) );
         var value = parseFloat( event.target.value );
         if ( event.target.classList.contains('err-check') && !this.state.hasError ) {
             this.setState({
