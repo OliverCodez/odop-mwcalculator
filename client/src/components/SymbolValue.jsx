@@ -85,8 +85,9 @@ class SymbolValue extends Component {
         console.log(this.handleClick);
         console.log(this.handleContextMenu);
         try {
-            document.removeEventListener("click", this.handleClick);
-            document.removeEventListener("contextmenu", this.handleContextMenu);
+            console.log('trying');
+            //document.removeEventListener("click", this.handleClick);
+            //document.removeEventListener("contextmenu", this.handleContextMenu);
         }
         catch (e) {
             console.log('error');
