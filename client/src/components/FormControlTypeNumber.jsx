@@ -58,6 +58,7 @@ class FormControlTypeNumber extends Component {
             } );
         }
         if ( event.target.classList.contains( 'reset-button' ) ) {
+            Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.add( 'reset' ) );
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.click() );
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed' ) );
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
