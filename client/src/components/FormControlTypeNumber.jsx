@@ -68,6 +68,7 @@ class FormControlTypeNumber extends Component {
     onChange(event) {
 //        console.log('In FormControlTypeNumber.onChange event.target.value=',event.target.value,'state=',this.state);
         if ( event.target.classList.contains( 'cleared' ) ) {
+            console.log('running change event for element with cleared class');
             Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'cleared' ) );
             Array.from( document.querySelectorAll( '.err-notice' ) ).forEach( ( el ) => el.classList.remove( 'clearerror' ) );
         }
