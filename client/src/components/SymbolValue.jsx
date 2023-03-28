@@ -81,9 +81,16 @@ class SymbolValue extends Component {
     }
 
     componentWillUnmount() {
-        console.log('In SymbolValue.componentWillUnmount this=',this);
-        document.removeEventListener("click", this.handleClick);
-        document.removeEventListener("contextmenu", this.handleContextMenu);
+//        console.log('In SymbolValue.componentWillUnmount this=',this);
+        console.log(this.handleClick);
+        console.log(this.handleContextMenu);
+        try {
+            document.removeEventListener("click", this.handleClick);
+            document.removeEventListener("contextmenu", this.handleContextMenu);
+        }
+        catch (e) {
+            console.log('error');
+        }
     }
 
     componentDidUpdate(prevProps) {

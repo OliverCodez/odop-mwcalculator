@@ -105,7 +105,7 @@ class SignInPageWidget extends Component {
   }
 
   componentWillUnmount() {
-    console.log('In SignInPageWidget.componentWillUnmount this=',this);
+//    console.log('In SignInPageWidget.componentWillUnmount this=',this);
     this.widget.remove();
   }
 
