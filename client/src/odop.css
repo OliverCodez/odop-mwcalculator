@@ -455,6 +455,10 @@ header {
     min-height: 40px;
 }
 
+.cleared {
+    border-color: green!important;
+}
+
 .clearerror {
     display: none;
 }

@@ -26,9 +26,9 @@ class DesignTable extends Component {
                         // TODO :: clearerror not being added after first run
                         Array.from( document.querySelectorAll( '.fa-exclamation-triangle' ) ).forEach( ( el ) => el.classList.add( 'clearerror' ) );
                         Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.add( 'reset' ) );
-                        Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.click() );
-                        Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed', 'reset' ) );
+                        //Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.remove( 'borders-invalid', 'borders-warn', 'borders-fixed', 'reset' ) );
                         Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.classList.add( 'cleared' ) );
+                        Array.from( document.querySelectorAll( '.adv-form' ) ).forEach( ( el ) => el.click() );
                     } }>Reset</button>
                 </div>
             </div>
