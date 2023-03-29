@@ -61,7 +61,7 @@ class FormControlTypeNumber extends Component {
             event.target.classList.remove( 'reset' );
         }
         else {
-            this.props.onClick(event); // Pass valid number onward
+            //this.props.onClick(event); // Pass valid number onward
         }
     }
 
