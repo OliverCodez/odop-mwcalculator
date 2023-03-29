@@ -65,7 +65,7 @@ class FormControlTypeNumber extends Component {
                 hasError: false,
                 isInvalid: false
             } );
-            event.target.classList.remove( 'reset' );
+            event.target.classList.remove( 'reset', 'text-not-feasible' );
         }
         else {
             this.props.onClick(event); // Pass valid number onward

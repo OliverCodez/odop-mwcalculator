@@ -455,6 +455,10 @@ header {
     min-height: 40px;
 }
 
+#mwc-cta iframe .hs_submit {
+    padding-left: 4px!important;
+}
+
 #root2 .container .tab-content.cleared i.fa-exclamation-triangle,
 i.fa-exclamation-triangle.cleared {
     display:none;
