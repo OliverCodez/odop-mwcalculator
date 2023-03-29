@@ -262,6 +262,8 @@ class SymbolValueWireDia extends Component {
       }
     }
 //        console.log('In SymbolValueWireDia.render nvu_value_class=',nvu_value_class);
+//        TODO :: for Modal to show: {this.state.modal}
+//        TODO :: added disabled={true} for these fields
 
     return (
       <>
@@ -269,12 +271,12 @@ class SymbolValueWireDia extends Component {
           <InputGroup>
             {(sv_value_tooltip !== undefined ?
                 <OverlayTrigger placement="top" overlay={<Tooltip className="tooltip-lg">{sv_value_tooltip}</Tooltip>}>
-                  <Form.Control readOnly type="text" className={sv_value_class} value={default_value === undefined ?
+                  <Form.Control readOnly disabled={true} type="text" className={sv_value_class} value={default_value === undefined ?
                     this.props.element.value.toODOPPrecision() + ' Non-std' :
                     this.props.element.value} onClick={this.onContextMenu}/>
                 </OverlayTrigger>
                 :
-                <Form.Control readOnly type="text" className={sv_value_class} value={default_value === undefined ?
+                <Form.Control readOnly disabled={true} type="text" className={sv_value_class} value={default_value === undefined ?
                   this.props.element.value.toODOPPrecision() + ' Non-std' :
                   this.props.element.value} onClick={this.onContextMenu}/>
             )}
