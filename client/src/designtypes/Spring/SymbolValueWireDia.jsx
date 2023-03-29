@@ -266,7 +266,7 @@ class SymbolValueWireDia extends Component {
 
     return (
       <>
-        <td className={'align-middle ' + (this.props.className !== undefined ? this.props.className : '')}>
+        <td className={'block-input align-middle ' + (this.props.className !== undefined ? this.props.className : '')}>
           <InputGroup>
             {(sv_value_tooltip !== undefined ?
                 <OverlayTrigger placement="top" overlay={<Tooltip className="tooltip-lg">{sv_value_tooltip}</Tooltip>}>
