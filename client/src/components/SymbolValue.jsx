@@ -205,7 +205,7 @@ class SymbolValue extends Component {
         }
         return (
             <>
-                <td className={"align-middle " + (this.props.className !== undefined ? this.props.className : '')}>
+                <td className={"form-secondary align-middle " + (this.props.className !== undefined ? this.props.className : '')}>
                     <InputGroup>
                         { this.props.element.format === undefined && typeof this.props.element.value === 'number' ?
                             <>

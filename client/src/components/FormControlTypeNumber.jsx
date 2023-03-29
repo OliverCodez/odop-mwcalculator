@@ -48,7 +48,6 @@ class FormControlTypeNumber extends Component {
     onClick(event) {
 //        console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
         if ( event.target.classList.contains( 'reset' ) ) {
-            console.log('field contains reset');
             var valInt = 0;
             this.setState( {
                 value: 0,
