@@ -28,7 +28,7 @@ class DesignTable extends Component {
                         Array.from( document.querySelectorAll( '.clear-nan' ) ).forEach( ( el ) => el.value = 'NaN' );
                         Array.from( document.querySelectorAll( '.clear-blank' ) ).forEach( ( el ) => el.value = '' );
                         Array.from( document.querySelectorAll( '.form-reset' ) ).forEach( ( el ) => el.click() );
-                        Array.from( document.querySelectorAll( '.reset' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
+                        //Array.from( document.querySelectorAll( '.reset' ) ).forEach( ( el ) => el.classList.remove( 'reset' ) );
                     } }>Reset</button>
                 </div>
             </div>
