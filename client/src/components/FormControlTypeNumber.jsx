@@ -48,7 +48,7 @@ class FormControlTypeNumber extends Component {
     onClick(event) {
 //        console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
         if ( event.target.classList.contains( 'reset' ) ) {
-            var valInt = 0,
+            var valInt = 0.000,
                 valIntStr = valInt.toString();
             if ( event.target.classList.contains( 'clear-nan' ) ) {
                 console.log('nan value: ' + event.target.value);
