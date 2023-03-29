@@ -51,12 +51,14 @@ class FormControlTypeNumber extends Component {
             var valInt = 0,
                 valIntStr = valInt.toString();
             if ( event.target.classList.contains( 'clean-nan' ) ) {
+                console.log('nan value: ' + event.target.value);
                 valInt = 'NaN';
                 valIntStr = 'NaN';
             }
             if ( event.target.classList.contains( 'clean-blank' ) ) {
-                valInt = '';
-                valIntStr = '';
+                console.log('blank value: ' + event.target.value);
+                valInt = ' ';
+                valIntStr = ' ';
             }
             this.setState( {
                 value: valInt,
@@ -65,6 +67,7 @@ class FormControlTypeNumber extends Component {
                 hasError: false,
                 isInvalid: false
             } );
+            console.log('after value: ' + event.target.value);
             event.target.classList.remove( 'reset' );
         }
         else {
