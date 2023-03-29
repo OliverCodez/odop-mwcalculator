@@ -60,7 +60,9 @@ class FormControlTypeNumber extends Component {
             } );
             event.target.classList.remove( 'reset' );
         }
-        this.props.onClick(event); // Pass valid number onward
+        else {
+            this.props.onClick(event); // Pass valid number onward
+        }
     }
 
     onChange(event) {
