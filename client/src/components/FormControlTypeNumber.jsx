@@ -49,10 +49,12 @@ class FormControlTypeNumber extends Component {
 //        console.log('In FormControlTypeNumber.onClick event.target.value=',event.target.value,'state=',this.state);
         if ( event.target.classList.contains( 'reset' ) ) {
             var valInt = 0;
+            if ( event.target.classList.contains( 'clean-nan' ) ) valInt = 'NaN';
+            if ( event.target.classList.contains( 'clean-blank' ) ) valInt = '';
             this.setState( {
-                value: 0,
+                value: valInt,
                 valueString: valInt.toString(),
-                cleanValue: 0,
+                cleanValue: valInt,
                 hasError: false,
                 isInvalid: false
             } );
