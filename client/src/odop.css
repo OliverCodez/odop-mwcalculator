@@ -282,13 +282,13 @@ input[type=number] {
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: #475b66;
-    -webkit-appearance: button;
     background-image: none;
     border-style: solid;
     border-width: 0;
     box-sizing: border-box;
     border-color: #001223;
     width: 100px;
+    -webkit-appearance: button;
 }
 
 #main_Calculator > .container > .row:nth-child(3) .report-table-head span {
