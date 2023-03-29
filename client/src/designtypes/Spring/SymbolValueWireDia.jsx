@@ -270,12 +270,12 @@ class SymbolValueWireDia extends Component {
           <InputGroup>
             {(sv_value_tooltip !== undefined ?
                 <OverlayTrigger placement="top" overlay={<Tooltip className="tooltip-lg">{sv_value_tooltip}</Tooltip>}>
-                  <Form.Control readOnly type="text" className={'clear-val ' + sv_value_class} value={default_value === undefined ?
+                  <Form.Control readOnly type="text" className={'clear-blank ' + sv_value_class} value={default_value === undefined ?
                     this.props.element.value.toODOPPrecision() + ' Non-std' :
                     this.props.element.value} onClick={this.onContextMenu}/>
                 </OverlayTrigger>
                 :
-                <Form.Control readOnly type="text" className={'clear-val ' + sv_value_class} value={default_value === undefined ?
+                <Form.Control readOnly type="text" className={'clear-blank ' + sv_value_class} value={default_value === undefined ?
                   this.props.element.value.toODOPPrecision() + ' Non-std' :
                   this.props.element.value} onClick={this.onContextMenu}/>
             )}
