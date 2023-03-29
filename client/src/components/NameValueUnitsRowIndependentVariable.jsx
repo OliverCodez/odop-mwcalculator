@@ -108,7 +108,7 @@ class NameValueUnitsRowIndependentVariable extends Component {
     // Table Row
     // =======================================
     var advForm = '';
-    if ( !this.props.element.name.includes('Force') ) advForm = 'adv-form err-check ';
+    if ( !this.props.element.name.includes('Force') ) advForm = 'form-main form-reset err-check ';
     return (
       <tbody>
       <tr key={this.props.element.name}>

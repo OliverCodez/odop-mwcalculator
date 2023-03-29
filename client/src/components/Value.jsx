@@ -17,13 +17,13 @@ class Value extends Component {
     render() {
 //        console.log('In Value.render this=',this);
         var classNames = 'text-right',
-            id_zero = 'Deflection_Solid OD_Solid ID_Solid',
-            id_nan = 'OD_1 ID_1 OD_2 ID_2 Static_FS_1';
-        if ( id_zero.includes( this.props.id ) ) {
-            classNames = classNames + ' clear-val';
+            id_val = 'Deflection_Solid OD_Solid ID_Solid Pitch',
+            id_nan = 'OD_1 ID_1 OD_2 ID_2 Static_FS_1 Safe_Load';
+        if ( id_val.includes( this.props.id ) ) {
+            classNames = classNames + ' clear-val form-reset';
         }
         if ( id_nan.includes( this.props.id ) ) {
-            classNames = classNames + ' clear-nan';
+            classNames = classNames + ' clear-nan form-reset';
         }
         return (
             <>

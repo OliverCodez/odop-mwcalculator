@@ -193,12 +193,13 @@ class SymbolValue extends Component {
                     <i className="fas fa-asterisk fa-sm icon-dependent"></i>
                 </OverlayTrigger>;
         }
-        var id_blank = 'L_1 Deflect_1 Stress_1 L_2 Deflect_2 Stress_2 Stress_Solid';
-        if ( this.props.element.name == 'Free_Length' || this.props.element.name == 'Free_OD' || this.props.element.name == 'ID_Free') {
-            className = className + ' clear-val';
+        var id_blank = 'L_1 Deflect_1 Stress_1 L_2 Deflect_2 Stress_2 Stress_Solid Length_of_Stroke Spring_Index Rate Cycle_Life %_Avail_Deflect',
+            id_val = 'Free_Length Free_OD ID_Free Total_Coils Weight';
+        if ( id_val.includes( this.props.element.name ) ) {
+            className = className + ' clear-val form-reset';
         }
         if ( id_blank.includes( this.props.element.name ) ) {
-            className = className + ' clear-blank';
+            className = className + ' clear-blank form-reset';
         }
         return (
             <>
