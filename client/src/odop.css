@@ -467,12 +467,12 @@ input.cleared {
     border-right-width: 1px !important;
 }
 
-.form-secondary {
+.block-input {
     position: relative;
     z-index: inherit;
 }
 
-.form-secondary:after {
+.block-input:after {
     content: '';
     display: block;
     position: absolute;

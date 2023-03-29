@@ -187,7 +187,6 @@ class SymbolValue extends Component {
 //          Always white
 //          console.log('In SymbolValue.render className=',className);
 //          TODO :: For modal to show: {this.state.modal}
-//          TODO :: added disabled={true} for these fields
         var icon_dependent_tag = '';
         if (this.props.element.type === "equationset" && !this.props.element.input) { // Dependent Variable?
             icon_dependent_tag =
@@ -198,14 +197,14 @@ class SymbolValue extends Component {
         var id_blank = 'L_1 Deflect_1 Stress_1 L_2 Deflect_2 Stress_2 Stress_Solid Length_of_Stroke Spring_Index Rate Cycle_Life %_Avail_Deflect',
             id_val = 'Free_Length Free_OD ID_Free Total_Coils Weight';
         if ( id_val.includes( this.props.element.name ) ) {
-            className = className + ' clear-val form-secondary form-reset';
+            className = className + ' clear-val form-reset';
         }
         if ( id_blank.includes( this.props.element.name ) ) {
-            className = className + ' clear-blank form-secondary form-reset';
+            className = className + ' clear-blank form-reset';
         }
         return (
             <>
-                <td className={"form-secondary align-middle " + (this.props.className !== undefined ? this.props.className : '')}>
+                <td className={"block-input align-middle " + (this.props.className !== undefined ? this.props.className : '')}>
                     <InputGroup>
                         { this.props.element.format === undefined && typeof this.props.element.value === 'number' ?
                             <>

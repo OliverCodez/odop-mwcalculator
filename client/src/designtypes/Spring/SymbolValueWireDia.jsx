@@ -263,7 +263,6 @@ class SymbolValueWireDia extends Component {
     }
 //        console.log('In SymbolValueWireDia.render nvu_value_class=',nvu_value_class);
 //        TODO :: for Modal to show: {this.state.modal}
-//        TODO :: added disabled={true} for these fields
 
     return (
       <>

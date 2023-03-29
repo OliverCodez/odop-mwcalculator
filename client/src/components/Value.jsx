@@ -20,14 +20,14 @@ class Value extends Component {
             id_val = 'Deflection_Solid OD_Solid ID_Solid Pitch',
             id_nan = 'OD_1 ID_1 OD_2 ID_2 Static_FS_1 Safe_Load';
         if ( id_val.includes( this.props.id ) ) {
-            classNames = classNames + ' clear-val form-secondary form-reset';
+            classNames = classNames + ' clear-val form-reset';
         }
         if ( id_nan.includes( this.props.id ) ) {
-            classNames = classNames + ' clear-nan form-secondary form-reset';
+            classNames = classNames + ' clear-nan form-reset';
         }
         return (
             <>
-                <td className={"align-middle " + (this.props.className !== undefined ? this.props.className : '')}>
+                <td className={"block-input align-middle " + (this.props.className !== undefined ? this.props.className : '')}>
                     <InputGroup>
                         {typeof this.props.value === 'number' ?
                             <Form.Control id={'v_'+this.props.id} type="text" disabled={true} className={classNames} value={this.props.value.toODOPPrecision()} />
