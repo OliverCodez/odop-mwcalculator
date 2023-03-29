@@ -13,6 +13,7 @@ class ViewSelect extends Component {
     }
     
     onClick(event) {
+        console.log('onclick 2');
 //        console.log('In ViewSelect.onClick this=',this,'event=',event);
 //        console.log('In ViewSelect.onClick event.target.id=',event.target.id);
 //        this.props.parent.setKey(view);

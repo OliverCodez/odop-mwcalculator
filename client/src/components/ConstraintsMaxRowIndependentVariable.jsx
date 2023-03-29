@@ -63,6 +63,7 @@ class ConstraintMaxRowIndependentVariable extends Component {
   }
 
   onClick (event) {
+    console.log('onclick 4');
 //        console.log("In ConstraintMaxRowIndependentVariable.onClick event.target.value=",event.target.value);
     // Show modal only if there are cmaxchoices
     if (this.props.element.cmaxchoices !== undefined && this.props.element.cmaxchoices.length > 0) {

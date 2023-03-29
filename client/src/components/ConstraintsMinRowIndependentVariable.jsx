@@ -63,6 +63,7 @@ class ConstraintMinRowIndependentVariable extends Component {
   }
 
   onClick (event) {
+    console.log('onclick 6');
 //        console.log("In ConstraintMinRowIndependentVariable.onClick event.target.value=",event.target.value);
     // Show modal only if there are cminchoices
     if (this.props.element.cminchoices !== undefined && this.props.element.cminchoices.length > 0) {
