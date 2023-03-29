@@ -198,10 +198,10 @@ class SymbolValue extends Component {
         var id_blank = 'L_1 Deflect_1 Stress_1 L_2 Deflect_2 Stress_2 Stress_Solid Length_of_Stroke Spring_Index Rate Cycle_Life %_Avail_Deflect',
             id_val = 'Free_Length Free_OD ID_Free Total_Coils Weight';
         if ( id_val.includes( this.props.element.name ) ) {
-            className = className + ' clear-val form-reset';
+            className = className + ' clear-val form-secondary form-reset';
         }
         if ( id_blank.includes( this.props.element.name ) ) {
-            className = className + ' clear-blank form-reset';
+            className = className + ' clear-blank form-secondary form-reset';
         }
         return (
             <>
@@ -210,19 +210,19 @@ class SymbolValue extends Component {
                         { this.props.element.format === undefined && typeof this.props.element.value === 'number' ?
                             <>
                                 {icon_dependent_tag}
-                                <FormControlTypeNumber id={'sv_'+this.props.element.name} readOnly disabled={true} icon_alerts={icon_alerts} className={className} value={this.props.element.value} validmin={this.props.element.validmin} validmax={this.props.element.validmax} onClick={this.onContextMenu} />
+                                <FormControlTypeNumber id={'sv_'+this.props.element.name} readOnly icon_alerts={icon_alerts} className={className} value={this.props.element.value} validmin={this.props.element.validmin} validmax={this.props.element.validmax} onClick={this.onContextMenu} />
                             </>
                         : ''}
                         { this.props.element.format === undefined && typeof this.props.element.value === 'string' ?
                             <>
                                 {icon_dependent_tag}
-                                <Form.Control id={'sv_'+this.props.element.name} type="text" readOnly disabled={true} value={this.props.element.value} onClick={this.onContextMenu} />
+                                <Form.Control id={'sv_'+this.props.element.name} type="text" readOnly value={this.props.element.value} onClick={this.onContextMenu} />
                             </>
                         : ''}
                         { this.props.element.format === 'table' ?
                             <>
                                 {icon_dependent_tag}
-                                <Form.Control id={'sv_'+this.props.element.name} type="text" readOnly disabled={true} className={className} value={this.state.table[this.props.element.value][0]} onClick={this.onContextMenu} />
+                                <Form.Control id={'sv_'+this.props.element.name} type="text" readOnly className={className} value={this.state.table[this.props.element.value][0]} onClick={this.onContextMenu} />
                             </>
                         : ''}
                     </InputGroup>
