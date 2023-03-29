@@ -50,15 +50,15 @@ class FormControlTypeNumber extends Component {
         if ( event.target.classList.contains( 'reset' ) ) {
             var valInt = 0,
                 valIntStr = valInt.toString();
-            if ( event.target.classList.contains( 'clean-nan' ) ) {
+            if ( event.target.classList.contains( 'clear-nan' ) ) {
                 console.log('nan value: ' + event.target.value);
                 valInt = 'NaN';
                 valIntStr = 'NaN';
             }
-            if ( event.target.classList.contains( 'clean-blank' ) ) {
+            if ( event.target.classList.contains( 'clear-blank' ) ) {
                 console.log('blank value: ' + event.target.value);
-                valInt = ' ';
-                valIntStr = ' ';
+                valInt = '';
+                valIntStr = '';
             }
             this.setState( {
                 value: valInt,
