@@ -119,7 +119,7 @@ class Routes extends Component {
   getDesign(user, type, name) {
 //      console.log('In Routes.getDesign user=',user,'type=',type,'name=',name);
       displaySpinner(true);
-      fetch(`/startup.json`)
+      fetch(`./startup.json`)
       .then(res => {
           displaySpinner(false);
           if (!res.ok) {
