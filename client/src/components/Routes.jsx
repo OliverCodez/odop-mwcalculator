@@ -129,7 +129,7 @@ class Routes extends Component {
       })
       .then((design) => {
 //          console.log('In Routes.getDesign design=', design);
-          var { migrate } = require('../designtypes/'+design.type+'/migrate.js'); // Dynamically load migrate
+          var { migrate } = require('./designtypes/'+design.type+'/migrate.js'); // Dynamically load migrate
           var migrated_design = migrate(design);
           if (migrated_design.jsontype === "ODOP") {
 //              console.log('In Routes.getDesign before load');
@@ -138,7 +138,7 @@ class Routes extends Component {
               this.props.deleteAutoSave();
               logUsage('event', 'Routes', { event_label: 'type: ' + type + ' name: ' + name });
               if (config.url.execute !== undefined) { // Once the design is loaded then you can run the query parameter execute script
-                  var { execute } = require('../designtypes/'+config.url.type+'/'+config.url.execute+'.js'); // Dynamically load execute
+                  var { execute } = require('./designtypes/'+config.url.type+'/'+config.url.execute+'.js'); // Dynamically load execute
 //                  console.log('In Routes.loadDefaultDesign execute=',execute);
                   startExecute('Execute : ' + config.url.execute, config.url.execute, execute.steps);
               }
