@@ -68,7 +68,7 @@ root.render(
         <Provider store={store}>
             <>
                 <Alerts />
-                <Router>
+                <Router basename={'/sub'}>
                     <Routes />
                 </Router>
             </>
