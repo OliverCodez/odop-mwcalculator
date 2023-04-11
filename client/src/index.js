@@ -68,7 +68,7 @@ root.render(
         <Provider store={store}>
             <>
                 <Alerts />
-                <Router basename={process.env.PUBLIC_URL}>
+                <Router basename={window.location.pathname}>
                     <Routes />
                 </Router>
             </>
