@@ -123,6 +123,7 @@ input[type=number] {
 
 #main_Advanced {
     min-width: 580px;
+    margin-top: 36px;
 }
 
 #main_Advanced > .design-table {
@@ -209,7 +210,7 @@ input[type=number] {
 #main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child,
 #main_Calculator > .container > .row:nth-child(5) .report-table tbody tr td:first-child {
     text-align: right;
-    width: 30%;
+    width: 34%;
     font-size: 22px;
     font-family: source-sans-pro, sans-serif;
     font-weight: 700;
@@ -225,9 +226,17 @@ input[type=number] {
     width: auto;
 }
 
+#main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child {
+    min-width: 114px;
+}
+
+.lineheight-tight {
+    line-height: 18px;
+}
+
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2),
 #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) {
-    width: 55%;
+    width: 51%;
 }
 
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) input,
@@ -485,6 +494,13 @@ input.cleared {
     width: 100%;
     height: 100%;
     z-index: 100;
+}
+
+.calc-header {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0 6px 8px;
 }
 
 @media only screen and ( max-width: 800px ) {

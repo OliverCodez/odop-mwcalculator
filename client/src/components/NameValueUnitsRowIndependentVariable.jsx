@@ -107,21 +107,24 @@ class NameValueUnitsRowIndependentVariable extends Component {
     // =======================================
     // Table Row
     // =======================================
-    var advForm = '';
-    if ( !this.props.element.name.includes('Force') ) advForm = 'form-main form-reset err-check ';
+    var advForm = '',
+        elName = this.props.element.name,
+        elDisplay = elName.replace(/_/g, ' ');
+    if ( !elName.includes('Force') ) advForm = 'form-main form-reset err-check ';
+    if ( elName == 'Free_OD' ) elDisplay = 'Outside Diameter';
     return (
       <tbody>
-      <tr key={this.props.element.name}>
+      <tr key={elName}>
         <td className="align-middle" colSpan="2" id={'independent_variable_' + this.props.index}>
           <OverlayTrigger placement="top" overlay={this.props.element.tooltip !== undefined &&
           <Tooltip>{this.props.element.tooltip}</Tooltip>}>
-            <span className="calc-hidden">{this.props.element.name}</span>
+            <span className="calc-hidden">{elName}</span>
           </OverlayTrigger>
-          <span>{this.props.element.name.replace(/_/g, ' ')}</span>
+          <span>{elDisplay}</span>
         </td>
         <td className="align-middle" colSpan="2">
           <InputGroup>
-            <FormControlTypeNumber id={'nvuriv_' + this.props.element.name} icon_alerts={icon_alerts}
+            <FormControlTypeNumber id={'nvuriv_' + elName} icon_alerts={icon_alerts}
                                    className={advForm + className} value={this.props.element.value}
                                    validmin={this.props.element.validmin} validmax={this.props.element.validmax}
                                    onChangeValid={this.onChangeValid} onChangeInvalid={this.onChangeInvalid}/>

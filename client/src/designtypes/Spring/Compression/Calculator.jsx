@@ -42,6 +42,10 @@ export class Calculator extends ReportBase {
                 <Row>
                     <table className="report-table calc-outdesk">
                         <thead>
+                            <tr>
+                                <th></th>
+                                <td className='calc-header' colspan="7">Your Spring's Design Data</td>
+                            </tr>
                             <tr className='report-table-head'>
                                 <th></th>
                                 <ValueName name={<><b>Length</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Length at free point, point 1, point 2 and solid point" className="text-center" />
