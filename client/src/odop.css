@@ -464,6 +464,43 @@ header {
     border-color: orange!important;
 }
 
+.mwc-header-intro {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.mwc-sub-intro {
+    border-top: 1px solid #d9dee2;
+}
+
+.margin-botton-40 {
+    margin-bottom: 40px;
+}
+
+.mwc-sub-intro > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 854px;
+    margin: 0px auto 0;
+    padding-top: 20px;
+}
+
+.mwc-sub-intro-body {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0 0 14px !important;
+    text-align: left !important;
+}
+
+.mwc-sub-intro-body {
+    font-size: 20px;
+}
+
+.mwc-indent27 {
+    margin-left: 27px;
+}
+
 #mwc-cta {
     max-width: 800px;
     margin: 40px auto;

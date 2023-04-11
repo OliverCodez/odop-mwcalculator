@@ -28,12 +28,14 @@ class Report extends ReportBase {
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
         return (
             <>
-                <div id="mwc-cta">
-                    <div className='mwc-sub-intro'>
-                        <span className='calc-header'>Get Your Design Data</span>
-                        <span className='mwc-intro-text'>Enter your email below to get your spring data in an easy-to-use format for copying into
-your documents or sharing with colleagues.</span>
+                <div className='mwc-sub-intro'>
+                    <div>
+                        <span className='mwc-sub-intro-title'>Get Your Design Data</span>
+                        <span className='mwc-sub-intro-body mwc-indent27'>Enter your email below to get your spring data in an easy-to-use format for copying into
+    your documents or sharing with colleagues.</span>
                     </div>
+                </div>
+                <div id="mwc-cta">
                     <HubspotForm
                         portalId='8642978'
                         formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
@@ -41,9 +43,11 @@ your documents or sharing with colleagues.</span>
                         onFormSubmitted={() => document.getElementById('report_Inner').classList.remove('hide-soft')}
                         onReady={(form) => console.log('loaded')}
                     />
-                    <div className='mwc-sub-intro'>
-                        <span className='calc-header'>Need Help With Your Spring Data?</span>
-                        <span className='mwc-intro-text'>Do you need to request a quote? Please feel free to contact us - we have expert engineers
+                </div>
+                <div className='mwc-sub-intro margin-botton-40'>
+                    <div>
+                        <span className='mwc-sub-intro-title'>Need Help With Your Spring Data?</span>
+                        <span className='mwc-sub-intro-body mwc-indent27'>Do you need to request a quote? Please feel free to contact us - we have expert engineers
 On staff who can assist with spring design and quote stock or custom parts.</span>
                         <span>
                             <button>Talk to an Engineer</button>
