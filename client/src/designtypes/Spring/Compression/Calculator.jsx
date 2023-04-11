@@ -48,18 +48,18 @@ export class Calculator extends ReportBase {
                             </tr>
                             <tr className='report-table-head'>
                                 <th></th>
-                                <ValueName name={<><b>Length</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Length at free point, point 1, point 2 and solid point" className="text-center" />
-                                <ValueName name={<><b>Deflection</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Deflection at free point, point 1, point 2 and solid point" className="text-center" />
-                                <ValueName name={<><b>Force</b><br />{this.props.symbol_table[o.Force_1].units}</>} tooltip="Force at free point, point 1, point 2 and solid point" className="text-center" />
-                                <ValueName name={<><b>OD</b><br />{this.props.symbol_table[o.Free_OD].units}</>} tooltip="Outside Diameter at free point, point 1, point 2 and solid point" className="text-center" />
-                                <ValueName name={<><b>ID</b><br />{this.props.symbol_table[o.ID_Free].units}</>} tooltip="Inside Diameter at free point, point 1, point 2 and solid point" className="text-center" />
-                                <ValueName name={<><b>Stress</b><br />{this.props.symbol_table[o.Stress_1].units}</>} tooltip="Stress at free point, point 1, point 2 and solid point" className="text-center" />
-                                <ValueName name={<><b>Static FS</b><br />{this.props.symbol_table[o.FS_2].units}</>} tooltip="Static Factor of Safety at free point, point 1, point 2 and solid point" className="text-center" />
+                                <ValueName id="length_t1" name={<><b>Length</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Length at free point, point 1, point 2 and solid point" className="text-center" />
+                                <ValueName id="deflection_t1" name={<><b>Deflection</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Deflection at free point, point 1, point 2 and solid point" className="text-center" />
+                                <ValueName id="force_t1" name={<><b>Force</b><br />{this.props.symbol_table[o.Force_1].units}</>} tooltip="Force at free point, point 1, point 2 and solid point" className="text-center" />
+                                <ValueName id="od_t1" name={<><b>OD</b><br />{this.props.symbol_table[o.Free_OD].units}</>} tooltip="Outside Diameter at free point, point 1, point 2 and solid point" className="text-center" />
+                                <ValueName id="id_t1" name={<><b>ID</b><br />{this.props.symbol_table[o.ID_Free].units}</>} tooltip="Inside Diameter at free point, point 1, point 2 and solid point" className="text-center" />
+                                <ValueName id="stress_t1" name={<><b>Stress</b><br />{this.props.symbol_table[o.Stress_1].units}</>} tooltip="Stress at free point, point 1, point 2 and solid point" className="text-center" />
+                                <ValueName id="static_fs_t1" name={<><b>Static FS</b><br />{this.props.symbol_table[o.FS_2].units}</>} tooltip="Static Factor of Safety at free point, point 1, point 2 and solid point" className="text-center" />
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <ValueName name={<b>Free</b>} tooltip="Free or no load point" />
+                                <ValueName id="free_length_t1" name={<b>Free Length</b>} tooltip="Free or no load point" />
                                 <SymbolValue element={this.props.symbol_table[o.Free_Length]} index={o.Free_Length} />
                                 <Value id="Deflection_Free" value={0.0} />
                                 <Value id="Force_Free" value={0.0} />
@@ -73,7 +73,7 @@ export class Calculator extends ReportBase {
                                 </td>
                             </tr>
                             <tr>
-                                <ValueName name={<b>1</b>} tooltip="Point 1 (minimum operating load)" />
+                                <ValueName id="min_t1" name={<b>Min<br />Operating Load</b>} tooltip="Point 1 (minimum operating load)" />
                                 <SymbolValue element={this.props.symbol_table[o.L_1]} index={o.L_1} />
                                 <SymbolValue element={this.props.symbol_table[o.Deflect_1]} index={o.Deflect_1} />
                                 <SymbolValue element={this.props.symbol_table[o.Force_1]} index={o.Force_1} />
@@ -83,7 +83,7 @@ export class Calculator extends ReportBase {
                                 <Value id="Static_FS_1" value={this.fs_1} />
                             </tr>
                             <tr>
-                                <ValueName name={<b>2</b>} tooltip="Point 2 (maximum operating load)" />
+                                <ValueName id="max_t1" name={<b>Max<br />Operating Load</b>} tooltip="Point 2 (maximum operating load)" />
                                 <SymbolValue element={this.props.symbol_table[o.L_2]} index={o.L_2} />
                                 <SymbolValue element={this.props.symbol_table[o.Deflect_2]} index={o.Deflect_2} />
                                 <SymbolValue element={this.props.symbol_table[o.Force_2]} index={o.Force_2} />
@@ -93,7 +93,7 @@ export class Calculator extends ReportBase {
                                 <SymbolValue element={this.props.symbol_table[o.FS_2]} index={o.FS_2} />
                             </tr>
                             <tr>
-                                <ValueName name={<b>Solid</b>} tooltip="Fully compressed" />
+                                <ValueName id="solid_height_t1" name={<b>Solid Height</b>} tooltip="Fully compressed" />
                                 <SymbolValue element={this.props.symbol_table[o.L_Solid]} index={o.L_Solid} />
                                 <Value id="Deflection_Solid" value={(this.props.symbol_table[o.Free_Length].value - this.props.symbol_table[o.L_Solid].value)} />
                                 <SymbolValue element={this.props.symbol_table[o.Force_Solid]} index={o.Force_Solid} />
@@ -108,57 +108,57 @@ export class Calculator extends ReportBase {
                         <thead>
                             <tr className='report-table-head'>
                                 <th></th>
-                                <ValueName name={<b>Free</b>} tooltip="Free or no load point" />
-                                <ValueName name={<b>1</b>} tooltip="Point 1 (minimum operating load)" />
-                                <ValueName name={<b>2</b>} tooltip="Point 2 (maximum operating load)" />
-                                <ValueName name={<b>Solid</b>} tooltip="Fully compressed" />
+                                <ValueName id="free_length_r1" name={<b>Free</b>} tooltip="Free or no load point" />
+                                <ValueName id="min_load_r1" name={<b>1</b>} tooltip="Point 1 (minimum operating load)" />
+                                <ValueName id="max_load_r1" name={<b>2</b>} tooltip="Point 2 (maximum operating load)" />
+                                <ValueName id="solid_height_r1" name={<b>Solid</b>} tooltip="Fully compressed" />
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <ValueName name={<><b>Length</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Length at free point, point 1, point 2 and solid point" className="text-right" />
+                                <ValueName id="length_r1" name={<><b>Length</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Length at free point, point 1, point 2 and solid point" className="text-right" />
                                 <SymbolValue element={this.props.symbol_table[o.Free_Length]} index={o.Free_Length} />
                                 <SymbolValue element={this.props.symbol_table[o.L_1]} index={o.L_1} />
                                 <SymbolValue element={this.props.symbol_table[o.L_2]} index={o.L_2} />
                                 <SymbolValue element={this.props.symbol_table[o.L_Solid]} index={o.L_Solid} />
                             </tr>
                             <tr>
-                                <ValueName name={<><b>Deflection</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Deflection at free point, point 1, point 2 and solid point" className="text-right" />
+                                <ValueName id="deflection_r1" name={<><b>Deflection</b><br />{this.props.symbol_table[o.Free_Length].units}</>} tooltip="Deflection at free point, point 1, point 2 and solid point" className="text-right" />
                                 <Value id="Deflection_Free" value={0.0} />
                                 <SymbolValue element={this.props.symbol_table[o.Deflect_1]} index={o.Deflect_1} />
                                 <SymbolValue element={this.props.symbol_table[o.Deflect_2]} index={o.Deflect_2} />
                                 <Value id="Deflection_Solid" value={(this.props.symbol_table[o.Free_Length].value - this.props.symbol_table[o.L_Solid].value)} />
                             </tr>
                             <tr>
-                                <ValueName name={<><b>Force</b><br />{this.props.symbol_table[o.Force_1].units}</>} tooltip="Force at free point, point 1, point 2 and solid point" className="text-right" />
+                                <ValueName id="force_r1" name={<><b>Force</b><br />{this.props.symbol_table[o.Force_1].units}</>} tooltip="Force at free point, point 1, point 2 and solid point" className="text-right" />
                                 <Value id="Force_Free" value={0.0} />
                                 <SymbolValue element={this.props.symbol_table[o.Force_1]} index={o.Force_1} />
                                 <SymbolValue element={this.props.symbol_table[o.Force_2]} index={o.Force_2} />
                                 <SymbolValue element={this.props.symbol_table[o.Force_Solid]} index={o.Force_Solid} />
                             </tr>
                             <tr>
-                                <ValueName name={<><b>OD</b><br />{this.props.symbol_table[o.Free_OD].units}</>} tooltip="Outside Diameter at free point, point 1, point 2 and solid point" className="text-right" />
+                                <ValueName id="od_r1" name={<><b>OD</b><br />{this.props.symbol_table[o.Free_OD].units}</>} tooltip="Outside Diameter at free point, point 1, point 2 and solid point" className="text-right" />
                                 <SymbolValue element={this.props.symbol_table[o.Free_OD]} index={o.Free_OD} />
                                 <Value id="OD_1" value={this.od_1} />
                                 <Value id="OD_2" value={this.od_2} />
                                 <Value id="OD_Solid" value={this.od_solid} />
                             </tr>
                             <tr>
-                                <ValueName name={<><b>ID</b><br />{this.props.symbol_table[o.ID_Free].units}</>} tooltip="Inside Diameter at free point, point 1, point 2 and solid point" className="text-right" />
+                                <ValueName id="id_r1" name={<><b>ID</b><br />{this.props.symbol_table[o.ID_Free].units}</>} tooltip="Inside Diameter at free point, point 1, point 2 and solid point" className="text-right" />
                                 <SymbolValue element={this.props.symbol_table[o.ID_Free]} index={o.ID_Free} />
                                 <Value id="ID_1" value={this.id_1} />
                                 <Value id="ID_2" value={this.id_2} />
                                 <Value id="ID_Solid" value={(this.od_solid - 2.0 * this.props.symbol_table[o.Wire_Diameter].value)} />
                             </tr>
                             <tr>
-                                <ValueName name={<><b>Stress</b><br />{this.props.symbol_table[o.Stress_1].units}</>} tooltip="Stress at free point, point 1, point 2 and solid point" className="text-right" />
+                                <ValueName id="stress_r1" name={<><b>Stress</b><br />{this.props.symbol_table[o.Stress_1].units}</>} tooltip="Stress at free point, point 1, point 2 and solid point" className="text-right" />
                                 <Value id="Stress_Free" value={0.0} />
                                 <SymbolValue element={this.props.symbol_table[o.Stress_1]} index={o.Stress_1} />
                                 <SymbolValue element={this.props.symbol_table[o.Stress_2]} index={o.Stress_2} />
                                 <SymbolValue element={this.props.symbol_table[o.Stress_Solid]} index={o.Stress_Solid} />
                             </tr>
                             <tr>
-                                <ValueName name={<><b>Static FS</b><br />{this.props.symbol_table[o.FS_2].units}</>} tooltip="Static Factor of Safety at free point, point 1, point 2 and solid point" className="text-right" />
+                                <ValueName id="static_fs_r1" name={<><b>Static FS</b><br />{this.props.symbol_table[o.FS_2].units}</>} tooltip="Static Factor of Safety at free point, point 1, point 2 and solid point" className="text-right" />
                                 <td className="align-middle">
                                     <InputGroup>
                                         <Form.Control type="text" disabled={true} className="text-right text-muted" value={"Infinity"} />
@@ -203,7 +203,7 @@ export class Calculator extends ReportBase {
                                 <SymbolUnits element={this.props.symbol_table[o.Rate]} index={o.Rate} className="text-left" />
                             </tr>
                             <tr>
-                                <ValueName className='font-weight-bold' name="Safe Load" tooltip="Greatest static load that can be supported without exceeding maximum allowable stress (Stress_Lim_Stat)"/>
+                                <ValueName id="safe_load_r2" className='font-weight-bold' name="Safe Load" tooltip="Greatest static load that can be supported without exceeding maximum allowable stress (Stress_Lim_Stat)"/>
                                 <Value id="Safe_Load" value={this.safe_load} />
                                 <td className="text-left">{this.safe_load_u}</td>
                                 <td> &nbsp; &nbsp; </td>
@@ -212,7 +212,7 @@ export class Calculator extends ReportBase {
                                 <SymbolUnits element={this.props.symbol_table[o.Weight]} index={o.Weight} className="text-left" />
                             </tr>
                             <tr>
-                                <ValueName className='font-weight-bold' name="Pitch" tooltip="Pitch is the distance between two adjacent coils"/>
+                                <ValueName id="pitch_r2" className='font-weight-bold' name="Pitch" tooltip="Pitch is the distance between two adjacent coils"/>
                                 <Value id="Pitch" value={this.pitch} />
                                 <SymbolUnits element={this.props.symbol_table[o.Free_Length]} index={o.Free_Length} className="text-left" />
                                 <td> &nbsp; &nbsp; </td>
