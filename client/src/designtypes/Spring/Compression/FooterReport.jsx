@@ -29,6 +29,11 @@ class Report extends ReportBase {
         return (
             <>
                 <div id="mwc-cta">
+                    <div className='mwc-sub-intro'>
+                        <span className='calc-header'>Get Your Design Data</span>
+                        <span className='mwc-intro-text'>Enter your email below to get your spring data in an easy-to-use format for copying into
+your documents or sharing with colleagues.</span>
+                    </div>
                     <HubspotForm
                         portalId='8642978'
                         formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
@@ -36,6 +41,15 @@ class Report extends ReportBase {
                         onFormSubmitted={() => document.getElementById('report_Inner').classList.remove('hide-soft')}
                         onReady={(form) => console.log('loaded')}
                     />
+                    <div className='mwc-sub-intro'>
+                        <span className='calc-header'>Need Help With Your Spring Data?</span>
+                        <span className='mwc-intro-text'>Do you need to request a quote? Please feel free to contact us - we have expert engineers
+On staff who can assist with spring design and quote stock or custom parts.</span>
+                        <span>
+                            <button>Talk to an Engineer</button>
+                            <button>Request a Quote</button>
+                        </span>
+                    </div>
                 </div>
                 <div id="report_Inner" className="hide-soft">
                     <h4 className="d-flex mt-3">

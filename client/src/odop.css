@@ -230,7 +230,7 @@ input[type=number] {
     min-width: 136px;
 }
 
-.lineheight-tight > b {
+.lineheight-tight {
     line-height: 15px;
 }
 
