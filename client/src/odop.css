@@ -486,7 +486,7 @@ header {
     padding-top: 20px;
 }
 
-.mwc-sub-intro-body {
+.mwc-sub-intro-title {
     font-size: 22px;
     font-weight: 700;
     padding: 0 0 14px !important;
@@ -512,6 +512,21 @@ header {
 
 #mwc-cta iframe .hs_submit {
     padding-left: 4px!important;
+}
+
+.mwc-cta-block {
+    margin: 30px 27px;
+    display: flex;
+    justify-content: left;
+}
+
+.mwc-cta-button {
+    margin-right: 20px;
+    background-color: #ffd600;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 700;
 }
 
 #root2 .container .tab-content.cleared i.fa-exclamation-triangle,

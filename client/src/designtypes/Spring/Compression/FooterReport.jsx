@@ -49,10 +49,10 @@ class Report extends ReportBase {
                         <span className='mwc-sub-intro-title'>Need Help With Your Spring Data?</span>
                         <span className='mwc-sub-intro-body mwc-indent27'>Do you need to request a quote? Please feel free to contact us - we have expert engineers
 On staff who can assist with spring design and quote stock or custom parts.</span>
-                        <span>
-                            <button>Talk to an Engineer</button>
-                            <button>Request a Quote</button>
-                        </span>
+                        <div className='mwc-cta-block'>
+                            <button className='mwc-cta-button'>Talk to an Engineer</button>
+                            <button className='mwc-cta-button'>Request a Quote</button>
+                        </div>
                     </div>
                 </div>
                 <div id="report_Inner" className="hide-soft">
