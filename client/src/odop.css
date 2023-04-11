@@ -227,11 +227,11 @@ input[type=number] {
 }
 
 #main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child {
-    min-width: 114px;
+    min-width: 136px;
 }
 
-.lineheight-tight {
-    line-height: 18px;
+.lineheight-tight > b {
+    line-height: 15px;
 }
 
 #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2),
