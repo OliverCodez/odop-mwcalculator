@@ -641,6 +641,10 @@ input.cleared {
         display: table-cell;
     }
 
+    #main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child {
+        min-width: unset;
+    }
+
     .calc-out1,
     .report-mobile-only {
         display: table;
