@@ -7,7 +7,7 @@ import { dispatcher } from './store/middleware/dispatcher';
 import { reducers } from './store/reducers';
 import { Provider } from 'react-redux'
 import Routes from './components/Routes';
-import './odop.css';
+import './odop.min.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { initialSystemControls } from './initialSystemControls';
 import config from './config';
