@@ -37,6 +37,10 @@ footer .button.text-white {
   }
 }
 
+#root2 > .container > .row {
+  display: none!important;
+}
+
 .mw-spring-calculator {
   min-height: calc(100vh - 300px);
   
@@ -283,6 +287,15 @@ footer .button.text-white {
   #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) {
     width: 51%;
   }
+  .input-group {
+    i, .fas { 
+      position:absolute;
+      z-index: 4;
+      margin: 6px 6px 6px 6px;
+      &.fa-asterisk { color: rgba(0,0,0,.4); font-size: .65em; }
+      &.icon-invalid { color:rgba(255,0,0,0.65); margin-top:2.25em; font-size:0.65em; }
+    }
+  }
   
   #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(2) input,
   #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(2) input,
@@ -433,14 +446,14 @@ footer .button.text-white {
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("mwc-hero-imgV.png");
+    background-image: url("../media/mwc-hero-imgV.png");
   }
   
   #mwc-hero-imgH {
     display: none;
     width: 290px;
     height: auto;
-    background-image: url("mwc-hero-imgH.png");
+    background-image: url("../media/mwc-hero-imgH.png");
   }
   
   .text-value-row {
