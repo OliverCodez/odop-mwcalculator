@@ -6,7 +6,7 @@ body {
 }
 
 header.mw-spring-calculator-header {
-  max-width: 980px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 60px;
@@ -141,7 +141,7 @@ footer .button.text-white {
   }
   
   #root2 > .container {
-    max-width: 1140px !important;
+    // max-width: 1140px !important;
     padding-top: 40px !important;
   }
   
@@ -162,6 +162,7 @@ footer .button.text-white {
     opacity: 1 !important;
     margin: 0 auto;
     width: 100%;
+    max-width: 1280px;
   }
   
   #root2 > .container > .tab-content > .tab-pane:first-child {
@@ -542,6 +543,9 @@ footer .button.text-white {
   
   .mwc-sub-intro {
     border-top: 1px solid #d9dee2;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .margin-botton-40 {
@@ -551,7 +555,7 @@ footer .button.text-white {
   .mwc-sub-intro > div {
     display: flex;
     flex-direction: column;
-    max-width: 854px;
+    max-width: 1280px;
     margin: 0px auto 0;
     padding-top: 20px;
   }
@@ -572,7 +576,7 @@ footer .button.text-white {
   }
   
   #mwc-cta {
-    max-width: 800px;
+    max-width: 1280px;
     margin: 40px auto;
   }
   
