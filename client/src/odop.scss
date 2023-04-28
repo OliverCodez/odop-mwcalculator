@@ -12,7 +12,6 @@ header.mw-spring-calculator-header {
   padding-top: 60px;
   
   #mwc-logo-sub {
-    font-weight: bolder;
     text-align: left;
     font-size: 3.75rem;
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
@@ -99,12 +98,7 @@ footer .button.text-white {
   .report-table-1 .symbol-name, .report-table-head span {
     background: #1d1d21;
     color: #f7d160 !important;
-    font-weight: bold;
     text-align: center;
-  }
-  
-  .report-table .symbol-name {
-    font-weight: bold;
   }
   
   .report-table input, .report-table select, .report-table .input-group-append, .report-table .input-group-prepend {
@@ -141,14 +135,12 @@ footer .button.text-white {
   }
   
   #root2 > .container {
-    // max-width: 1140px !important;
     padding-top: 40px !important;
   }
   
   #root2 > .container h4 {
     color: #000;
     font-size: 1.9rem;
-    font-weight: bolder;
   }
   
   #root2 > .container > .nav-tabs {
@@ -226,8 +218,7 @@ footer .button.text-white {
     width: 100%;
     padding: 10px;
     font-size: 20px;
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     background: #000 !important;
     border-top: none;
@@ -254,6 +245,7 @@ footer .button.text-white {
   
   #main_Calculator > .container .report-table {
     margin: 0 auto;
+    width:100%;
   }
   
   #main_Calculator > .container .report-table td {
@@ -266,23 +258,29 @@ footer .button.text-white {
   #main_Calculator > .container > .row:nth-child(5) .report-table tbody tr td:first-child {
     text-align: right;
     width: 34%;
-    font-size: 22px;
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     font-style: normal;
-    font-weight: bold;
+
   }
   
   #main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child,
   #main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child b,
-  #main_Calculator > .container > .row:nth-child(5) .report-table tbody tr td:first-child {
-    font-weight: 700!important;
+  #main_Calculator > .container > .row:nth-child(5) .report-table tbody tr td:first-child,
+  #main_Calculator > .container > .row:nth-child(5) .report-table tbody .symbol-name {
+    font-weight: 600;
     font-size: 18px;
     width: auto;
+    padding-right: 0.5em;
+  }
+  #main_Calculator > .container > .row:nth-child(5) .report-table tbody .text-left {
+    text-align: left;
+    font-size: 16px;
+    padding-left: 0.5em;
   }
   
   #main_Calculator > .container > .row:nth-child(3) .report-table tbody tr td:first-child {
-    min-width: 136px;
+    min-width: 8em; 
   }
   
   .lineheight-tight {
@@ -318,21 +316,18 @@ footer .button.text-white {
   #main_Calculator .report-table input,
   #main_Calculator .report-table select {
     color: #000;
-    font-family: source-sans-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 3px;
   }
   
   #main_Advanced > .design-table > .row:first-child table:first-child tbody tr td:nth-child(3),
   #main_Advanced > .design-table > .row:nth-child(2) table:first-child tbody tr td:nth-child(3) {
     width: 15%;
-    text-transform: capitalize;
-    font-family: source-sans-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 16px;
   }
   
   .form-control:focus {
@@ -375,7 +370,6 @@ footer .button.text-white {
     background-color: #000;
     color: rgb(255, 214, 0) !important;
     text-transform: capitalize;
-    font-family: source-sans-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
@@ -386,7 +380,7 @@ footer .button.text-white {
   }
   
   #main_Calculator > .container > .row:nth-child(3) .report-table-head span b {
-    font-weight: 700!important;
+    font-weight: 600!important;
   }
   
   header {
@@ -427,12 +421,10 @@ footer .button.text-white {
   }
   
   #mwc-logo-sub {
-    font-weight: bolder;
     text-align: left;
     font-size: 3.75rem;
     font-family: arial;
     color: #000;
-    font-family: source-sans-pro, sans-serif;
     font-style: normal;
     font-weight: 300;
     line-height: 4.25rem;
@@ -444,10 +436,9 @@ footer .button.text-white {
   }
   
   #mwc-hero-subtitle {
-    font-family: source-sans-pro,sans-serif;
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     padding: 10px 0;
   }
@@ -476,7 +467,7 @@ footer .button.text-white {
   
   .text-value {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
   }
   
   .text-table-small {
@@ -495,7 +486,7 @@ footer .button.text-white {
   
   .text-value-small {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
   }
   
   .text-value-small thead th:first-child {
@@ -561,18 +552,13 @@ footer .button.text-white {
   }
   
   .mwc-sub-intro-title {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 26px;
     padding: 0 0 14px !important;
     text-align: left !important;
   }
   
   .mwc-sub-intro-body {
-    font-size: 20px;
-  }
-  
-  .mwc-indent27 {
-    margin-left: 27px;
+    font-size: 16px;
   }
   
   #mwc-cta {
@@ -600,7 +586,7 @@ footer .button.text-white {
     border: none;
     padding: 14px;
     border-radius: 8px;
-    font-weight: 700;
+    font-weight: 600;
   }
   
   #root2 .container .tab-content.cleared i.fa-exclamation-triangle,
@@ -633,7 +619,7 @@ footer .button.text-white {
   
   .calc-header {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 0 6px 8px !important;
     text-align: left !important;
   }
@@ -738,7 +724,7 @@ footer .button.text-white {
     
     .calc-out1 tbody td > span:first-child > b {
       font-size: 17px;
-      font-weight: 700!important;
+      font-weight: 600!important;
     }
     
     .calc-out2,
