@@ -28,6 +28,13 @@ class Report extends ReportBase {
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
         return (
             <>
+                <div className='mwc-sub-intro'>
+                    <div>
+                        <span className='mwc-sub-intro-title'>Get Your Design Data</span>
+                        <span className='mwc-sub-intro-body mwc-indent27'>Enter your email below to get your spring data in an easy-to-use format for copying into
+    your documents or sharing with colleagues.</span>
+                    </div>
+                </div>
                 <div id="mwc-cta">
                     <HubspotForm
                         portalId='8642978'
