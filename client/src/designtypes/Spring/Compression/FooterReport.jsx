@@ -22,60 +22,44 @@ class Report extends ReportBase {
 
     fillCalcData( targetObj = '#hs-form-iframe-0' ) {
         console.log('function available');
-        var getData = [
-                'static_compression spring',
-                'nvurci_Material_Type',
-                'nvuriv_Wire_Diameter',
-                'nvurci_End_Type',
-                'sv_Spring_Index',
-                'sv_Total_Coils',
-                'sv_Rate',
-                'Wire_Len',// TEMP TODO REVERT BACK TO: 'sv_Active_Coils',
-                // TODO :: For Prod Re-Enable additional fields
-                /*'Free_Length_Tol',
-                'Coil_Dia_Tol',
-                'MTS_at_Solid',
-                'v_Safe_Load',
-                'Wire_Len',// Blank if report not yet generated
-                'sv_Length_of_Stroke',
-                'sv_Weight',
-                'v_Pitch',
-                'sv_Cycle_Life'*/
-            ],
-            toFill = [
-                'spring_type',// raw: "compression spring"
-                'material_type',// nvurci_Material_Type
-                'spring_wire_diameter',// nvuriv_Wire_Diameter
-                'end_type',// nvurci_End_Type
-                'spring_index',// sv_Spring_Index
-                'total_spring_coils',// sv_Total_Coils
-                'spring_rate',// sv_Rate
-                'active_spring_coils',// sv_Active_Coils
-                /*'free_length_tolerance',// Free_Length_Tol
-                'coil_diameter_tolerance',// Coil_Dia_Tol
-                'mts_at_solid',// MTS_at_Solid
-                'safe_load',// v_Safe_Load
-                'wire_length',// Wire_Len
-                'length_of_stroke',// sv_Length_of_Stroke
-                'spring_weight',// sv_Weight
-                'pitch',// v_Pitch
-                'cycle_life'// sv_Cycle_Life*/
+        var toFill = [
+                'spring_type||compression spring|0',// raw: "compression spring"
+                'material_type|nvurci_Material_Type||2',// nvurci_Material_Type
+                'spring_wire_diameter|nvuriv_Wire_Diameter| inches|1',// nvuriv_Wire_Diameter
+                'end_type|nvurci_End_Type||2',// nvurci_End_Type
+                'spring_index|sv_Spring_Index| ratio|1',// sv_Spring_Index
+                'total_spring_coils|sv_Total_Coils| coils|1',// sv_Total_Coils
+                'spring_rate|sv_Rate| Lb/In|1',// sv_Rate
+                'active_spring_coils|sv_Active_Coils| coils|1',// sv_Active_Coils
+                /*'free_length_tolerance|Free_Length_Tol| inches|1',// Free_Length_Tol
+                'coil_diameter_tolerance|Coil_Dia_Tol| inches|1',// Coil_Dia_Tol
+                'mts_at_solid|MTS_at_Solid| %|1',// MTS_at_Solid
+                'safe_load|v_Safe_Load| (solid)|1',// v_Safe_Load
+                'wire_length|Wire_Len| inches|1',// Wire_Len
+                'length_of_stroke|sv_Length_of_Stroke| inches|1',// sv_Length_of_Stroke
+                'spring_weight|sv_Weight| pounds|1',// sv_Weight TODO: TEST POUNDS OR POUNDS/1000
+                'pitch|v_Pitch| inches|1',// v_Pitch
+                'cycle_life|sv_Cycle_Life| cycles (est)|1'// sv_Cycle_Life*/
             ];
-        var sq1 = this.props.symbol_table[o.Free_Length].value;
-        var sq2 = this.props.symbol_table[o.Total_Coils].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value;
-        var wire_len = Math.sqrt(sq1 * sq1 + sq2 * sq2);
+        var sq1 = this.props.symbol_table[o.Free_Length].value,
+            sq2 = this.props.symbol_table[o.Total_Coils].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value,
+            wire_len = Math.sqrt( sq1 * sq1 + sq2 * sq2 );
         if (this.props.symbol_table[o.End_Type].value === 5 ) wire_len = wire_len - 3.926 * this.props.symbol_table[o.Wire_Diameter].value;
         wire_len = wire_len.toFixed(3) + ' ' + this.props.symbol_table[o.Free_Length].units;
-        console.log('wire len:'+wire_len);
-        for ( let i = 0; i < getData.length; ++i ) {
-            var dataField = 'input[name=' + toFill[i] + ']',
+        for ( let i = 0; i < toFill.length; ++i ) {
+            var toFillArr = toFill[i].split('|'),
+                thisProperty = toFillArr[0],
+                thisID = '#' + toFillArr[1],
+                thisTxt = toFillArr[2],
+                thisGet = toFillArr[3],
+                dataField = 'input[name=' + thisProperty + ']',
                 dataValue = '';
-            if ( getData[i].includes( 'static_' ) ) dataValue = getData[i].split( '_' )[1];
-            else {
-                if ( toFill[i] == 'active_spring_coils' ) dataValue = wire_len;//'wire_length'
-                else dataValue = document.querySelector( '#' + getData[i] ).value;
+            if ( thisGet > 0 ) {
+                dataValue = document.querySelector( thisID ).value;
+                if ( thisProperty == 'active_spring_coils' ) dataValue = wire_len;// TODO: Replace back to: 'wire_length'
+                if ( thisGet == 2 ) dataValue = document.querySelector( thisID ).innerHTML;
             }
-            document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue;
+            document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue + thisTxt;
         }
     }
 
