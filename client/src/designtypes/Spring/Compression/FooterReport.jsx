@@ -28,10 +28,15 @@ class Report extends ReportBase {
                 'spring_wire_diameter|nvuriv_Wire_Diameter| inches|1',// nvuriv_Wire_Diameter
                 'end_type|nvurci_End_Type||2:' + this.et_tab[this.props.symbol_table[o.End_Type].value][0],// nvurci_End_Type
                 'spring_index|sv_Spring_Index| ratio|1',// sv_Spring_Index
-                'total_spring_coils|sv_Total_Coils| coils|1',// sv_Total_Coils
-                'spring_rate|sv_Rate| Lb/In|1',// sv_Rate
-                'active_spring_coils|Wire_Len| inches|1',//FORTESTING
-                /*'active_spring_coils|sv_Active_Coils| coils|1',// sv_Active_Coils
+                //'total_spring_coils|sv_Total_Coils| coils|1',// sv_Total_Coils
+                //'spring_rate|sv_Rate| Lb/In|1',// sv_Rate
+                //'active_spring_coils|sv_Active_Coils| coils|1',// sv_Active_Coils
+
+                'total_spring_coils|MTS_at_Solid| %|1',// FORTESTING
+                'spring_rate|Coil_Dia_Tol| inches|1',// FORTESTING
+                'active_spring_coils|Free_Length_Tol| inches|1',//FORTESTING
+
+                /*
                 'free_length_tolerance|Free_Length_Tol| inches|1',// Free_Length_Tol
                 'coil_diameter_tolerance|Coil_Dia_Tol| inches|1',// Coil_Dia_Tol
                 'mts_at_solid|MTS_at_Solid| %|1',// MTS_at_Solid
