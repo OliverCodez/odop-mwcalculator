@@ -201,6 +201,11 @@ input[type=number] {
     margin: 0 auto;
 }
 
+#main_Calculator > .container .report-table.calc-outdesk > tbody > tr:nth-child(2),
+#main_Calculator > .container .report-table.calc-outdesk > tbody > tr:nth-child(3) {
+	display: none!important;
+}
+
 #main_Calculator > .container .report-table td {
     text-align: right;
 }

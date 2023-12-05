@@ -226,7 +226,7 @@ export class Calculator extends ReportBase {
                                 </td>
                                 <td className="align-middle ">
                                     <InputGroup>
-                                        <Form.Control type="text" disabled={true} className="form-reset clear-nan text-right" value={((((((this.props.symbol_table[o.Free_Length].value * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value + (25))) / 2000 ) * isGround) / 25.4).toFixed(3)} />
+                                        <Form.Control id="Free_Length_Tol" type="text" disabled={true} className="form-reset clear-nan text-right" value={((((((this.props.symbol_table[o.Free_Length].value * 25.4) + 10) * (this.props.symbol_table[o.Spring_Index].value + (25))) / 2000 ) * isGround) / 25.4).toFixed(3)} />
                                     </InputGroup>
                                 </td>
                                 <td className="text-nowrap align-middle text-left">inches</td>
@@ -236,7 +236,7 @@ export class Calculator extends ReportBase {
                                 </td>
                                 <td className="align-middle ">
                                     <InputGroup>
-                                        <Form.Control type="text" disabled={true} className="form-reset clear-nan text-right" value={((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3)} />
+                                        <Form.Control id="Coil_Dia_Tol" type="text" disabled={true} className="form-reset clear-nan text-right" value={((((this.props.symbol_table[o.Free_OD].value + this.props.symbol_table[o.ID_Free].value) / 2) * 0.7) / ((Math.pow(this.props.symbol_table[o.Wire_Diameter].value, 0.398)) * 135) * 2).toFixed(3)} />
                                     </InputGroup>
                                 </td>
                                 <td className="text-left">inches</td>
@@ -247,7 +247,7 @@ export class Calculator extends ReportBase {
                                 </td>
                                 <td className="align-middle ">
                                     <InputGroup>
-                                        <Form.Control type="text" disabled={true} className="form-reset clear-nan text-right" value={(this.props.symbol_table[o.Stress_Solid].value / this.dhat).toFixed(1)} />
+                                        <Form.Control id="MTS_at_Solid" type="text" disabled={true} className="form-reset clear-nan text-right" value={(this.props.symbol_table[o.Stress_Solid].value / this.dhat).toFixed(1)} />
                                     </InputGroup>
                                 </td>
                                 <td className="text-nowrap align-middle text-left">%</td>

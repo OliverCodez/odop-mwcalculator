@@ -20,9 +20,59 @@ class Report extends ReportBase {
         return false;
     }
 
+    fillCalcData( targetObj = '#hs-form-iframe-0' ) {
+        console.log('function available');
+        var getData = [
+                'static_compression spring',
+                'nvurci_Material_Type',
+                'nvuriv_Wire_Diameter',
+                'nvurci_End_Type',
+                'sv_Spring_Index',
+                'sv_Total_Coils',
+                'sv_Rate',
+                'sv_Active_Coils',
+                'Free_Length_Tol',
+                'Coil_Dia_Tol',
+                'MTS_at_Solid',
+                'v_Safe_Load',
+                'Wire_Len',// Blank if report not yet generated
+                'sv_Length_of_Stroke',
+                'sv_Weight',
+                'v_Pitch',
+                'sv_Cycle_Life'
+            ],
+            toFill = [
+                'spring_type',// raw: "compression spring"
+                'material_type',// nvurci_Material_Type
+                'spring_wire_diameter',// nvuriv_Wire_Diameter
+                'end_type',// nvurci_End_Type
+                'spring_index',// sv_Spring_Index
+                'total_spring_coils',// sv_Total_Coils
+                'spring_rate',// sv_Rate
+                'active_spring_coils',// sv_Active_Coils
+                'free_length_tolerance',// Free_Length_Tol
+                'coil_diameter_tolerance',// Coil_Dia_Tol
+                'mts_at_solid',// MTS_at_Solid
+                'safe_load',// v_Safe_Load
+                'wire_length',// Wire_Len
+                'length_of_stroke',// sv_Length_of_Stroke
+                'spring_weight',// sv_Weight
+                'pitch',// v_Pitch
+                'cycle_life'// sv_Cycle_Life
+            ];
+        for ( let i = 0; i < getData.length; ++i ) {
+            var dataField = 'input[name=' + toFill[i] + ']',
+                dataValue = '';
+            if ( getData[i].includes( 'static_' ) ) dataValue = getData[i].split( '_' )[1];
+            else dataValue = document.querySelector( '#' + getData[i] ).value;
+            document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue;
+        }
+    }
+
     render() {
         super.render();
 //        console.log('In Report1.render this=',this);
+//        TODO: fillCalcData() function implementation and complete
         var line = 1;
         var isGround = 1.7;
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
@@ -37,9 +87,11 @@ class Report extends ReportBase {
                 </div>
                 <div id="mwc-cta">
                     <HubspotForm
-                        portalId='8642978'
-                        formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
+                        // TODO : After Test Change Form and Portal IDs
+                        portalId='44500165'//testform; real form:'8642978'
+                        formId='b1068814-c6e0-4f4c-bf5a-c4da95cdeed0'//testform; real form:'e2d615a6-2965-487e-85da-c79dc8113a9d'
                         onSubmit={() => console.log('submit')}
+                        onBeforeFormSubmit={(form) => this.fillCalcData}
                         onFormSubmitted={() => document.getElementById('report_Inner').classList.remove('hide-soft')}
                         onReady={(form) => console.log('loaded')}
                     />
@@ -257,7 +309,7 @@ On staff who can assist with spring design and quote stock or custom parts.</spa
                                 <td/>
                                 <td>{this.len_lbl}</td>
                                 <td>=</td>
-                                <td className="text-left text-value">{this.wire_len_t.toFixed(3) + ' ' + this.props.symbol_table[o.Free_Length].units}</td>
+                                <td id="Wire_Len" className="text-left text-value">{this.wire_len_t.toFixed(3) + ' ' + this.props.symbol_table[o.Free_Length].units}</td>
                             </tr>
                             <tr className="text-value-row">
                                 <td>{this.props.symbol_table[o.Length_of_Stroke].name.replace(/_/g, ' ')}</td>
