@@ -61,7 +61,12 @@ class Report extends ReportBase {
                 'pitch',// v_Pitch
                 'cycle_life'// sv_Cycle_Life*/
             ];
-        var wire_len = this.wire_len_t.toFixed(3) + ' ' + this.props.symbol_table[o.Free_Length].units;
+        var sq1 = this.props.symbol_table[o.Free_Length].value;
+        var sq2 = this.props.symbol_table[o.Total_Coils].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value;
+        var wire_len = Math.sqrt(sq1 * sq1 + sq2 * sq2);
+        if (this.props.symbol_table[o.End_Type].value === 5 ) wire_len = wire_len - 3.926 * this.props.symbol_table[o.Wire_Diameter].value;
+        wire_len = wire_len + ' ' + this.props.symbol_table[o.Free_Length].units;
+        console.log('wire len:'+wire_len);
         for ( let i = 0; i < getData.length; ++i ) {
             var dataField = 'input[name=' + toFill[i] + ']',
                 dataValue = '';
