@@ -27,39 +27,42 @@ class Report extends ReportBase {
         if (this.props.symbol_table[o.End_Type].value === 5 ) wire_len = wire_len - 3.926 * this.props.symbol_table[o.Wire_Diameter].value;
         wire_len = wire_len.toFixed(3);
         var toFill = [
-                // form property internal name | HTML ID | append text | where to get data (1 value, 2 innerHTML, 0 static)
-                'spring_type||compression spring|0',
-                'material_type|nvurci_Material_Type||2:' + this.m_tab[this.props.symbol_table[o.Material_Type].value][0],
-                'spring_wire_diameter|nvuriv_Wire_Diameter| inches|1',
-                'end_type|nvurci_End_Type||2:' + this.et_tab[this.props.symbol_table[o.End_Type].value][0],
-                'spring_index|sv_Spring_Index| ratio|1',
-                'total_spring_coils|sv_Total_Coils| coils|1',
-                'spring_rate|sv_Rate| Lb/In|1',
-                'active_spring_coils|sv_Active_Coils| coils|1',
+                // HubSpot property internal name | HTML ID for type 1 (pos3) | append text | where to get data (1 value from ID'd element, 2:override data, 0 static/append text override)
+
+                // prop | type | append | ID
+                'spring_type|0|compression spring',
+                'material_type|2:' + this.m_tab[this.props.symbol_table[o.Material_Type].value][0],
+                'spring_wire_diameter|1| inches|nvuriv_Wire_Diameter',
+                'end_type|2:' + this.et_tab[this.props.symbol_table[o.End_Type].value][0],
+                'spring_index|1| ratio|sv_Spring_Index',
+                'total_spring_coils|1| coils|sv_Total_Coils',
+                'spring_rate|1| Lb/In|sv_Rate',
+                'active_spring_coils|1| coils|sv_Active_Coils',
 
                 /*
-                'free_length_tolerance|Free_Length_Tol| inches|1',
-                'coil_diameter_tolerance|Coil_Dia_Tol| inches|1',
-                'mts_at_solid|MTS_at_Solid| %|1',
-                'safe_load|v_Safe_Load| (solid)|1',
-                'wire_length|Wire_Len| inches|2:' + wire_len,
-                'length_of_stroke|sv_Length_of_Stroke| inches|1',
-                'spring_weight|sv_Weight| pounds|1',
-                'pitch|v_Pitch| inches|1',
-                'cycle_life|sv_Cycle_Life| cycles (est)|1'*/
+                'free_length_tolerance|1| inches|Free_Length_Tol',
+                'coil_diameter_tolerance|1| inches|Coil_Dia_Tol',
+                'mts_at_solid|1| %|MTS_at_Solid',
+                'safe_load|1| (solid)|v_Safe_Load',
+                'wire_length|2:' + wire_len + '| inches',
+                'length_of_stroke|1| inches|sv_Length_of_Stroke',
+                'spring_weight|1| pounds|sv_Weight',
+                'pitch|1| inches|v_Pitch',
+                'cycle_life|1| cycles (est)|sv_Cycle_Life'*/
             ];
-        
         for ( let i = 0; i < toFill.length; ++i ) {
             var toFillArr = toFill[i].split('|'),
                 thisProperty = toFillArr[0],
-                thisID = '#' + toFillArr[1],
-                thisAppend = toFillArr[2],
-                thisGet = toFillArr[3].split(':')[0],
-                thisOverride = toFillArr[3].split(':')[1],
+                thisType = toFillArr[1].split(':')[0],
+                thisOverride = toFillArr[1].split(':')[1],
+                thisAppend = '',
+                thisID = '',
                 dataField = 'input[name=' + thisProperty + ']',
                 dataValue = '';
-            if ( thisGet > 0 ) {
-                if ( thisGet == 2 ) dataValue = thisOverride;
+            if ( toFillArr[2] ) thisAppend = toFillArr[2];
+            if ( toFillArr[3] ) thisID = '#' + toFillArr[3];
+            if ( thisType > 0 ) {
+                if ( thisType == 2 ) dataValue = thisOverride;
                 else dataValue = document.querySelector( thisID ).value;
             }
             document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue + thisAppend;
