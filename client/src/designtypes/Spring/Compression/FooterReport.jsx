@@ -67,6 +67,7 @@ class Report extends ReportBase {
             }
             document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue + thisAppend;
         }
+        document.querySelector( targetObj ).contentDocument.querySelector( 'input[name=html_data]' ).value = '<div id="report_Inner">' + document.querySelector( '#report_Inner' ).innerHTML + '</div>';
     }
 
     render() {
