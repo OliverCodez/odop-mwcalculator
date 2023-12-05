@@ -28,26 +28,26 @@ class Report extends ReportBase {
         wire_len = wire_len.toFixed(3);
         var toFill = [
                 // form property internal name | HTML ID | append text | where to get data (1 value, 2 innerHTML, 0 static)
-                'spring_type||compression spring|0',// raw: "compression spring"
-                'material_type|nvurci_Material_Type||2:' + this.m_tab[this.props.symbol_table[o.Material_Type].value][0],// nvurci_Material_Type
-                'spring_wire_diameter|nvuriv_Wire_Diameter| inches|1',// nvuriv_Wire_Diameter
-                'end_type|nvurci_End_Type||2:' + this.et_tab[this.props.symbol_table[o.End_Type].value][0],// nvurci_End_Type
-                'spring_index|sv_Spring_Index| ratio|1',// sv_Spring_Index
-                //'total_spring_coils|sv_Total_Coils| coils|1',// sv_Total_Coils
-                //'spring_rate|sv_Rate| Lb/In|1',// sv_Rate
-                //'active_spring_coils|sv_Active_Coils| coils|1',// sv_Active_Coils
+                'spring_type||compression spring|0',
+                'material_type|nvurci_Material_Type||2:' + this.m_tab[this.props.symbol_table[o.Material_Type].value][0],
+                'spring_wire_diameter|nvuriv_Wire_Diameter| inches|1',
+                'end_type|nvurci_End_Type||2:' + this.et_tab[this.props.symbol_table[o.End_Type].value][0],
+                'spring_index|sv_Spring_Index| ratio|1',
+                //'total_spring_coils|sv_Total_Coils| coils|1',
+                //'spring_rate|sv_Rate| Lb/In|1',
+                //'active_spring_coils|sv_Active_Coils| coils|1',
 
-                'total_spring_coils|sv_Weight| pounds|1',// FORTESTING
+                'total_spring_coils|sv_Weight| pounds|1',// FORTESTING/REMOVE AFTER
                 'spring_rate|v_Pitch| inches|1',// FORTESTING
-                'active_spring_coils|sv_Cycle_Life| cycles (est)|1',//FORTESTING
+                'active_spring_coils|sv_Cycle_Life| cycles (est)|2:' + this.props.symbol_table[o.Cycle_Life].value.toFixed(0),//FORTESTING
 
                 /*
-                'free_length_tolerance|Free_Length_Tol| inches|1',// Free_Length_Tol
-                'coil_diameter_tolerance|Coil_Dia_Tol| inches|1',// Coil_Dia_Tol
-                'mts_at_solid|MTS_at_Solid| %|1',// MTS_at_Solid
-                'safe_load|v_Safe_Load| (solid)|1',// v_Safe_Load
-                'wire_length|Wire_Len| inches|2:' + wire_len,// Wire_Len
-                'length_of_stroke|sv_Length_of_Stroke| inches|1',// sv_Length_of_Stroke
+                'free_length_tolerance|Free_Length_Tol| inches|1',
+                'coil_diameter_tolerance|Coil_Dia_Tol| inches|1',
+                'mts_at_solid|MTS_at_Solid| %|1',
+                'safe_load|v_Safe_Load| (solid)|1',
+                'wire_length|Wire_Len| inches|2:' + wire_len,
+                'length_of_stroke|sv_Length_of_Stroke| inches|1',
 
                 'spring_weight|sv_Weight| pounds|1',// sv_Weight TODO: TEST POUNDS OR POUNDS/1000
                 'pitch|v_Pitch| inches|1',// v_Pitch
