@@ -37,17 +37,19 @@ class Report extends ReportBase {
                 //'spring_rate|sv_Rate| Lb/In|1',// sv_Rate
                 //'active_spring_coils|sv_Active_Coils| coils|1',// sv_Active_Coils
 
-                'total_spring_coils|MTS_at_Solid| %|1',// FORTESTING
-                'spring_rate|Coil_Dia_Tol| inches|1',// FORTESTING
-                'active_spring_coils|Free_Length_Tol| inches|1',//FORTESTING
+                'total_spring_coils|v_Safe_Load| (solid)|1',// FORTESTING
+                'spring_rate|Wire_Len| inches|2:' + wire_len,// FORTESTING
+                'active_spring_coils|sv_Length_of_Stroke| inches|1',//FORTESTING
 
                 /*
                 'free_length_tolerance|Free_Length_Tol| inches|1',// Free_Length_Tol
                 'coil_diameter_tolerance|Coil_Dia_Tol| inches|1',// Coil_Dia_Tol
                 'mts_at_solid|MTS_at_Solid| %|1',// MTS_at_Solid
+
                 'safe_load|v_Safe_Load| (solid)|1',// v_Safe_Load
                 'wire_length|Wire_Len| inches|2:' + wire_len,// Wire_Len
                 'length_of_stroke|sv_Length_of_Stroke| inches|1',// sv_Length_of_Stroke
+                
                 'spring_weight|sv_Weight| pounds|1',// sv_Weight TODO: TEST POUNDS OR POUNDS/1000
                 'pitch|v_Pitch| inches|1',// v_Pitch
                 'cycle_life|sv_Cycle_Life| cycles (est)|1'// sv_Cycle_Life*/
