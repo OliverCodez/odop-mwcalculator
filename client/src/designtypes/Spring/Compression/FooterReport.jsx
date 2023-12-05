@@ -21,6 +21,11 @@ class Report extends ReportBase {
     }
 
     fillCalcData( targetObj = '#hs-form-iframe-0' ) {
+        var sq1 = this.props.symbol_table[o.Free_Length].value,
+            sq2 = this.props.symbol_table[o.Total_Coils].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value,
+            wire_len = Math.sqrt( sq1 * sq1 + sq2 * sq2 );
+        if (this.props.symbol_table[o.End_Type].value === 5 ) wire_len = wire_len - 3.926 * this.props.symbol_table[o.Wire_Diameter].value;
+        wire_len = wire_len.toFixed(3);
         var toFill = [
                 // form property internal name | HTML ID | append text | where to get data (1 value, 2 innerHTML, 0 static)
                 'spring_type||compression spring|0',// raw: "compression spring"
@@ -41,17 +46,13 @@ class Report extends ReportBase {
                 'coil_diameter_tolerance|Coil_Dia_Tol| inches|1',// Coil_Dia_Tol
                 'mts_at_solid|MTS_at_Solid| %|1',// MTS_at_Solid
                 'safe_load|v_Safe_Load| (solid)|1',// v_Safe_Load
-                'wire_length|Wire_Len| inches|1',// Wire_Len
+                'wire_length|Wire_Len| inches|2:' + wire_len,// Wire_Len
                 'length_of_stroke|sv_Length_of_Stroke| inches|1',// sv_Length_of_Stroke
                 'spring_weight|sv_Weight| pounds|1',// sv_Weight TODO: TEST POUNDS OR POUNDS/1000
                 'pitch|v_Pitch| inches|1',// v_Pitch
                 'cycle_life|sv_Cycle_Life| cycles (est)|1'// sv_Cycle_Life*/
-            ],
-            sq1 = this.props.symbol_table[o.Free_Length].value,
-            sq2 = this.props.symbol_table[o.Total_Coils].value * Math.PI * this.props.symbol_table[o.Mean_Dia].value,
-            wire_len = Math.sqrt( sq1 * sq1 + sq2 * sq2 );
-        if (this.props.symbol_table[o.End_Type].value === 5 ) wire_len = wire_len - 3.926 * this.props.symbol_table[o.Wire_Diameter].value;
-        wire_len = wire_len.toFixed(3);
+            ];
+        
         for ( let i = 0; i < toFill.length; ++i ) {
             var toFillArr = toFill[i].split('|'),
                 thisProperty = toFillArr[0],
@@ -62,12 +63,11 @@ class Report extends ReportBase {
                 dataField = 'input[name=' + thisProperty + ']',
                 dataValue = '';
             if ( thisGet > 0 ) {
-                dataValue = document.querySelector( thisID ).value;
-                if ( thisProperty == 'active_spring_coils' ) dataValue = wire_len;// TODO: Replace back to: 'wire_length'
                 if ( thisGet == 2 ) {
                     console.log('Override:' + thisOverride);
                     dataValue = thisOverride;//document.querySelector( thisID ).innerHTML;
                 }
+                else dataValue = document.querySelector( thisID ).value;
             }
             document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue + thisAppend;
         }
