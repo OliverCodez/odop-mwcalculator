@@ -24,9 +24,9 @@ class Report extends ReportBase {
         var toFill = [
                 // form property internal name | HTML ID | append text | where to get data (1 value, 2 innerHTML, 0 static)
                 'spring_type||compression spring|0',// raw: "compression spring"
-                'material_type|nvurci_Material_Type||2:this.m_tab[this.props.symbol_table[o.Material_Type].value][mo.matnam]',// nvurci_Material_Type
+                'material_type|nvurci_Material_Type||2:' + this.m_tab[this.props.symbol_table[o.Material_Type].value][mo.matnam],// nvurci_Material_Type
                 'spring_wire_diameter|nvuriv_Wire_Diameter| inches|1',// nvuriv_Wire_Diameter
-                'end_type|nvurci_End_Type||2:this.et_tab[this.props.symbol_table[o.End_Type].value][0]',// nvurci_End_Type
+                'end_type|nvurci_End_Type||2:' + this.et_tab[this.props.symbol_table[o.End_Type].value][0],// nvurci_End_Type
                 'spring_index|sv_Spring_Index| ratio|1',// sv_Spring_Index
                 'total_spring_coils|sv_Total_Coils| coils|1',// sv_Total_Coils
                 'spring_rate|sv_Rate| Lb/In|1',// sv_Rate
@@ -59,7 +59,10 @@ class Report extends ReportBase {
             if ( thisGet > 0 ) {
                 dataValue = document.querySelector( thisID ).value;
                 if ( thisProperty == 'active_spring_coils' ) dataValue = wire_len;// TODO: Replace back to: 'wire_length'
-                if ( thisGet == 2 ) dataValue = window[thisOverride];//document.querySelector( thisID ).innerHTML;
+                if ( thisGet == 2 ) {
+                    console.log('Override:' + thisOverride);
+                    dataValue = thisOverride;//document.querySelector( thisID ).innerHTML;
+                }
             }
             document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue + thisAppend;
         }
