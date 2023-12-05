@@ -24,7 +24,7 @@ class Report extends ReportBase {
         var toFill = [
                 // form property internal name | HTML ID | append text | where to get data (1 value, 2 innerHTML, 0 static)
                 'spring_type||compression spring|0',// raw: "compression spring"
-                'material_type|nvurci_Material_Type||2:this.matTypeValue',// nvurci_Material_Type
+                'material_type|nvurci_Material_Type||2:this.m_tab[this.props.symbol_table[o.Material_Type].value][mo.matnam]',// nvurci_Material_Type
                 'spring_wire_diameter|nvuriv_Wire_Diameter| inches|1',// nvuriv_Wire_Diameter
                 'end_type|nvurci_End_Type||2:this.et_tab[this.props.symbol_table[o.End_Type].value][0]',// nvurci_End_Type
                 'spring_index|sv_Spring_Index| ratio|1',// sv_Spring_Index
