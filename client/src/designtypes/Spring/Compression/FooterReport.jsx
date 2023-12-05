@@ -33,13 +33,9 @@ class Report extends ReportBase {
                 'spring_wire_diameter|nvuriv_Wire_Diameter| inches|1',
                 'end_type|nvurci_End_Type||2:' + this.et_tab[this.props.symbol_table[o.End_Type].value][0],
                 'spring_index|sv_Spring_Index| ratio|1',
-                //'total_spring_coils|sv_Total_Coils| coils|1',
-                //'spring_rate|sv_Rate| Lb/In|1',
-                //'active_spring_coils|sv_Active_Coils| coils|1',
-
-                'total_spring_coils|sv_Weight| pounds|1',// FORTESTING/REMOVE AFTER
-                'spring_rate|v_Pitch| inches|1',// FORTESTING
-                'active_spring_coils|sv_Cycle_Life| cycles (est)|2:' + this.props.symbol_table[o.Cycle_Life].value.toFixed(0),//FORTESTING
+                'total_spring_coils|sv_Total_Coils| coils|1',
+                'spring_rate|sv_Rate| Lb/In|1',
+                'active_spring_coils|sv_Active_Coils| coils|1',
 
                 /*
                 'free_length_tolerance|Free_Length_Tol| inches|1',
@@ -48,10 +44,9 @@ class Report extends ReportBase {
                 'safe_load|v_Safe_Load| (solid)|1',
                 'wire_length|Wire_Len| inches|2:' + wire_len,
                 'length_of_stroke|sv_Length_of_Stroke| inches|1',
-
-                'spring_weight|sv_Weight| pounds|1',// sv_Weight TODO: TEST POUNDS OR POUNDS/1000
-                'pitch|v_Pitch| inches|1',// v_Pitch
-                'cycle_life|sv_Cycle_Life| cycles (est)|1'// sv_Cycle_Life*/
+                'spring_weight|sv_Weight| pounds|1',
+                'pitch|v_Pitch| inches|1',
+                'cycle_life|sv_Cycle_Life| cycles (est)|1'*/
             ];
         
         for ( let i = 0; i < toFill.length; ++i ) {
@@ -64,10 +59,7 @@ class Report extends ReportBase {
                 dataField = 'input[name=' + thisProperty + ']',
                 dataValue = '';
             if ( thisGet > 0 ) {
-                if ( thisGet == 2 ) {
-                    console.log('Override:' + thisOverride);
-                    dataValue = thisOverride;//document.querySelector( thisID ).innerHTML;
-                }
+                if ( thisGet == 2 ) dataValue = thisOverride;
                 else dataValue = document.querySelector( thisID ).value;
             }
             document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue + thisAppend;
