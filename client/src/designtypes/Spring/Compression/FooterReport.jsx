@@ -30,7 +30,7 @@ class Report extends ReportBase {
                 'sv_Spring_Index',
                 'sv_Total_Coils',
                 'sv_Rate',
-                'sv_Active_Coils',
+                'Wire_Len',// temp test wire len'sv_Active_Coils',
                 // TODO :: For Prod Re-Enable additional fields
                 /*'Free_Length_Tol',
                 'Coil_Dia_Tol',
