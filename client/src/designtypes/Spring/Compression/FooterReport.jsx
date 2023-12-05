@@ -30,7 +30,7 @@ class Report extends ReportBase {
                 'sv_Spring_Index',
                 'sv_Total_Coils',
                 'sv_Rate',
-                'Wire_Len',// temp test wire len'sv_Active_Coils',
+                'Wire_Len',// TEMP TODO REVERT BACK TO: 'sv_Active_Coils',
                 // TODO :: For Prod Re-Enable additional fields
                 /*'Free_Length_Tol',
                 'Coil_Dia_Tol',
@@ -61,11 +61,15 @@ class Report extends ReportBase {
                 'pitch',// v_Pitch
                 'cycle_life'// sv_Cycle_Life*/
             ];
+        var wire_len = this.wire_len_t.toFixed(3) + ' ' + this.props.symbol_table[o.Free_Length].units;
         for ( let i = 0; i < getData.length; ++i ) {
             var dataField = 'input[name=' + toFill[i] + ']',
                 dataValue = '';
             if ( getData[i].includes( 'static_' ) ) dataValue = getData[i].split( '_' )[1];
-            else dataValue = document.querySelector( '#' + getData[i] ).value;
+            else {
+                if ( toFill[i] == 'wire_length' ) dataValue = wire_len;
+                else dataValue = document.querySelector( '#' + getData[i] ).value;
+            }
             document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue;
         }
     }
