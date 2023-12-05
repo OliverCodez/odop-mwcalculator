@@ -31,7 +31,8 @@ class Report extends ReportBase {
                 'sv_Total_Coils',
                 'sv_Rate',
                 'sv_Active_Coils',
-                'Free_Length_Tol',
+                // TODO :: For Prod Re-Enable additional fields
+                /*'Free_Length_Tol',
                 'Coil_Dia_Tol',
                 'MTS_at_Solid',
                 'v_Safe_Load',
@@ -39,7 +40,7 @@ class Report extends ReportBase {
                 'sv_Length_of_Stroke',
                 'sv_Weight',
                 'v_Pitch',
-                'sv_Cycle_Life'
+                'sv_Cycle_Life'*/
             ],
             toFill = [
                 'spring_type',// raw: "compression spring"
@@ -50,7 +51,7 @@ class Report extends ReportBase {
                 'total_spring_coils',// sv_Total_Coils
                 'spring_rate',// sv_Rate
                 'active_spring_coils',// sv_Active_Coils
-                'free_length_tolerance',// Free_Length_Tol
+                /*'free_length_tolerance',// Free_Length_Tol
                 'coil_diameter_tolerance',// Coil_Dia_Tol
                 'mts_at_solid',// MTS_at_Solid
                 'safe_load',// v_Safe_Load
@@ -58,7 +59,7 @@ class Report extends ReportBase {
                 'length_of_stroke',// sv_Length_of_Stroke
                 'spring_weight',// sv_Weight
                 'pitch',// v_Pitch
-                'cycle_life'// sv_Cycle_Life
+                'cycle_life'// sv_Cycle_Life*/
             ];
         for ( let i = 0; i < getData.length; ++i ) {
             var dataField = 'input[name=' + toFill[i] + ']',
