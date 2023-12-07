@@ -112,9 +112,8 @@ class Report extends ReportBase {
                 </div>
                 <div id="mwc-cta">
                     <HubspotForm
-                        // TODO : After Test Change Form and Portal IDs
-                        portalId='44500165'//testform; real form:'8642978'
-                        formId='b1068814-c6e0-4f4c-bf5a-c4da95cdeed0'//testform; real form:'e2d615a6-2965-487e-85da-c79dc8113a9d'
+                        portalId='8642978'
+                        formId='e2d615a6-2965-487e-85da-c79dc8113a9d'
                         onSubmit={() => console.log('submit')}
                         onBeforeFormSubmit={(form) => this.fillCalcData()}
                         onFormSubmitted={() => document.getElementById('report_Inner').classList.remove('hide-soft')}

@@ -46,7 +46,7 @@ More detail is available in the [On-line Help](https://odop.herokuapp.com/docs/H
 &nbsp; 1. Modify line 23 ("homepage") value in package.json to reflect the path of the calculator (e.g. https://mycalc.com/calc/ --> "/calc/")
 &nbsp; 2. If using Apache make sure the directory containing the calculator has the necessary .htaccess settings for React
 &nbsp; 3. From the client folder, run npm install and then run nmp run build to build the app
-&nbsp; 4. After build, copy the contents of the new build folder to the path where the app should live
+&nbsp; 4. After build, copy the contents of the new build folder to the path where the app lives
 
 &nbsp; [Live Demo of Latest Build](https://treestonecode.com/mwc/calc/)
 
