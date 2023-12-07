@@ -26,12 +26,10 @@ class Report extends ReportBase {
             wire_len = Math.sqrt( sq1 * sq1 + sq2 * sq2 );
         if (this.props.symbol_table[o.End_Type].value === 5 ) wire_len = wire_len - 3.926 * this.props.symbol_table[o.Wire_Diameter].value;
         wire_len = wire_len.toFixed(3);
-        // TODO : Remove test data after verify
-        var testfill = 'test';
         var toFill = [
                 // HubSpot property internal name | HTML ID for type 1 (pos3) | append text | where to get data (1 value from ID'd element, 2:override data, 0 static/append text override)
                 // prop | type | append | ID
-                'spring_type|0|compression spring',
+                'spring_type|0|Compression Spring',
                 'material_type|2:' + this.m_tab[this.props.symbol_table[o.Material_Type].value][0],
                 'spring_wire_diameter|1| inches|nvuriv_Wire_Diameter',
                 'end_type|2:' + this.et_tab[this.props.symbol_table[o.End_Type].value][0],
