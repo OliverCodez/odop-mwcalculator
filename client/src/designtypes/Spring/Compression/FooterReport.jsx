@@ -26,9 +26,10 @@ class Report extends ReportBase {
             wire_len = Math.sqrt( sq1 * sq1 + sq2 * sq2 );
         if (this.props.symbol_table[o.End_Type].value === 5 ) wire_len = wire_len - 3.926 * this.props.symbol_table[o.Wire_Diameter].value;
         wire_len = wire_len.toFixed(3);
+        // TODO : Remove test data after verify
+        var testfill = 'test';
         var toFill = [
                 // HubSpot property internal name | HTML ID for type 1 (pos3) | append text | where to get data (1 value from ID'd element, 2:override data, 0 static/append text override)
-
                 // prop | type | append | ID
                 'spring_type|0|compression spring',
                 'material_type|2:' + this.m_tab[this.props.symbol_table[o.Material_Type].value][0],
@@ -38,8 +39,6 @@ class Report extends ReportBase {
                 'total_spring_coils|1| coils|sv_Total_Coils',
                 'spring_rate|1| Lb/In|sv_Rate',
                 'active_spring_coils|1| coils|sv_Active_Coils',
-
-                /*
                 'free_length_tolerance|1| inches|Free_Length_Tol',
                 'coil_diameter_tolerance|1| inches|Coil_Dia_Tol',
                 'mts_at_solid|1| %|MTS_at_Solid',
@@ -48,7 +47,35 @@ class Report extends ReportBase {
                 'length_of_stroke|1| inches|sv_Length_of_Stroke',
                 'spring_weight|1| pounds|sv_Weight',
                 'pitch|1| inches|v_Pitch',
-                'cycle_life|1| cycles (est)|sv_Cycle_Life'*/
+                'cycle_life|1| cycles (est)|sv_Cycle_Life',
+                'force_free|2:' + (0.0).toFixed(2),
+                'force_1|2:' + this.props.symbol_table[o.Force_1].value.toFixed(2),
+                'force_2|2:' + this.props.symbol_table[o.Force_2].value.toFixed(2),
+                'force_solid|2:' + this.props.symbol_table[o.Force_Solid].value.toFixed(2),
+                'deflect_free|2:' + (0.0).toFixed(2),
+                'deflect_1|2:' + testfill,
+                'deflect_2|2:' + testfill,
+                'deflect_solid|2:' + testfill,
+                'length_free|2:' + testfill,
+                'length_1|2:' + testfill,
+                'length_2|2:' + testfill,
+                'length_solid|2:' + testfill,
+                'od_free|2:' + testfill,
+                'od_1|2:' + testfill,
+                'od_2|2:' + testfill,
+                'od_solid|2:' + testfill,
+                'id_free|2:' + testfill,
+                'id_1|2:' + testfill,
+                'id_2|2:' + testfill,
+                'id_solid|2:' + testfill,
+                'stress_free|2:' + testfill,
+                'stress_1|2:' + testfill,
+                'stress_2|2:' + testfill,
+                'stress_solid|2:' + testfill,
+                'static_fs_free|2:' + testfill,
+                'static_fs_1|2:' + testfill,
+                'static_fs_2|2:' + testfill,
+                'static_fs_solid|2:' + testfill,
             ];
         for ( let i = 0; i < toFill.length; ++i ) {
             var toFillArr = toFill[i].split('|'),
@@ -67,7 +94,6 @@ class Report extends ReportBase {
             }
             document.querySelector( targetObj ).contentDocument.querySelector( dataField ).value = dataValue + thisAppend;
         }
-        document.querySelector( targetObj ).contentDocument.querySelector( 'input[name=html_data]' ).value = '<div id="report_Inner">' + document.querySelector( '#report_Inner' ).innerHTML + '</div>';
     }
 
     render() {
