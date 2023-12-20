@@ -201,6 +201,7 @@ class SymbolValue extends Component {
         if ( id_val.includes( this.props.element.name ) ) {
             className = className + ' clear-val form-reset';
             if ( id_init.includes( this.props.element.name ) ) {
+                console.log('classnames before init:' + className);
                 className = className + ' clear-init';
                 theValue = '0.0000';
             }
