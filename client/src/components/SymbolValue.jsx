@@ -196,15 +196,18 @@ class SymbolValue extends Component {
         }
         var id_blank = 'L_1 Deflect_1 Stress_1 L_2 Deflect_2 Stress_2 Stress_Solid Length_of_Stroke Spring_Index Rate Cycle_Life %_Avail_Deflect Force_Solid',
             id_val = 'Free_Length Free_OD ID_Free Total_Coils Weight L_Solid FS_2 FS_Solid Active_Coils Force_1 Force_2',
-            id_init = 'Force_1 Force_2';
+            id_init = 'Force_1 Force_2',
+            theValue = this.props.element.value;
         if ( id_val.includes( this.props.element.name ) ) {
             className = className + ' clear-val form-reset';
-            if ( id_init.includes( this.props.element.name ) ) className = className + ' clear-init';
+            if ( id_init.includes( this.props.element.name ) ) {
+                className = className + ' clear-init';
+                theValue = '0.0000';
+            }
         }
         if ( id_blank.includes( this.props.element.name ) ) {
             className = className + ' clear-blank form-reset';
         }
-        
         return (
             <>
                 <td className={"block-input align-middle " + (this.props.className !== undefined ? this.props.className : '')}>
@@ -212,7 +215,7 @@ class SymbolValue extends Component {
                         { this.props.element.format === undefined && typeof this.props.element.value === 'number' ?
                             <>
                                 {icon_dependent_tag}
-                                <FormControlTypeNumber id={'sv_'+this.props.element.name} readOnly icon_alerts={icon_alerts} className={className} value={this.props.element.value} validmin={this.props.element.validmin} validmax={this.props.element.validmax} onClick={this.onContextMenu} />
+                                <FormControlTypeNumber id={'sv_'+this.props.element.name} readOnly icon_alerts={icon_alerts} className={className} value={theValue} validmin={this.props.element.validmin} validmax={this.props.element.validmax} onClick={this.onContextMenu} />
                             </>
                         : ''}
                         { this.props.element.format === undefined && typeof this.props.element.value === 'string' ?

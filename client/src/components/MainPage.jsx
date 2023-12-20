@@ -50,12 +50,6 @@ class MainPage extends Component {
         var src = 'designtypes/'+this.props.type+'/favicon.ico';
         var alt = this.props.type+' icon';
 //        console.log('src=',src,' alt=',alt);
-
-useEffect(() => {
-    //this.value = '0.000';
-    Array.from( document.querySelectorAll( '.clear-init' ) ).forEach( ( el ) => el.value = '0.000' );
-},
-[]);
       return (
             <>
                 <Container style={{backgroundColor: 'transparent', paddingTop: '60px'}}>
