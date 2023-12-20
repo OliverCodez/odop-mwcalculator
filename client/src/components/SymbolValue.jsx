@@ -203,7 +203,11 @@ class SymbolValue extends Component {
             if ( id_init.includes( this.props.element.name ) ) {
                 console.log('classnames before init:' + className);
                 className = className + ' clear-init';
-                theValue = '0.0000';
+                useEffect(() => {
+                    return () => {
+                        theValue = '0.0000';
+                    };
+                }, []);
             }
         }
         if ( id_blank.includes( this.props.element.name ) ) {
