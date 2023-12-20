@@ -24,9 +24,7 @@ class MainPage extends Component {
             isOpen: false,
             activeTab: 'Calculator',
         };
-        useEffect( ()=> {
-            Array.from( document.querySelectorAll( '.clear-init' ) ).forEach( ( el ) => el.value = '0.000' );
-        }, [] );
+        Array.from( document.querySelectorAll( '.clear-init' ) ).forEach( ( el ) => el.value = '0.000' );
     }
 
     toggle() {
