@@ -195,9 +195,11 @@ class SymbolValue extends Component {
                 </OverlayTrigger>;
         }
         var id_blank = 'L_1 Deflect_1 Stress_1 L_2 Deflect_2 Stress_2 Stress_Solid Length_of_Stroke Spring_Index Rate Cycle_Life %_Avail_Deflect Force_Solid',
-            id_val = 'Free_Length Free_OD ID_Free Total_Coils Weight L_Solid FS_2 FS_Solid Active_Coils Force_1 Force_2';
+            id_val = 'Free_Length Free_OD ID_Free Total_Coils Weight L_Solid FS_2 FS_Solid Active_Coils Force_1 Force_2',
+            id_init = 'Force_1 Force_2';
         if ( id_val.includes( this.props.element.name ) ) {
             className = className + ' clear-val form-reset';
+            if ( id_init.includes( this.props.element.name ) ) className = className + ' clear-init';
         }
         if ( id_blank.includes( this.props.element.name ) ) {
             className = className + ' clear-blank form-reset';
