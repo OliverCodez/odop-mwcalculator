@@ -203,7 +203,7 @@ input[type=number] {
 
 #main_Calculator > .container .report-table.calc-outdesk > tbody > tr:nth-child(2),
 #main_Calculator > .container .report-table.calc-outdesk > tbody > tr:nth-child(3) {
-	display: none!important;
+	/*display: none!important;*/
 }
 
 #main_Calculator > .container .report-table td {
