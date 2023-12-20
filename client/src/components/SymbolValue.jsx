@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import { InputGroup, Form, OverlayTrigger, Tooltip, Modal, Button, Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { FIXED, CONSTRAINED } from '../store/actionTypes';
@@ -170,7 +170,7 @@ class SymbolValue extends Component {
 
     render() {
 //        console.log('In SymbolValue.render this=',this);
-        var results = getAlertsByName(this.props.element.name, true);
+        var results = getAlertsByName(this.props.element.name, true);//getAlertsByName(this.props.element.name, true).className
         var className = results.className;
         var icon_alerts = results.alerts;
         if (this.props.element.lmin & FIXED) {
@@ -204,6 +204,7 @@ class SymbolValue extends Component {
                 console.log('classnames before init:' + className);
                 className = className + ' clear-init';
                 // if value of other is 0 then 0
+                if ( )
                 theValue = '0.0000';
             }
         }
