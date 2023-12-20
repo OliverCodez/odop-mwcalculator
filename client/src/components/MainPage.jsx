@@ -24,7 +24,6 @@ class MainPage extends Component {
             isOpen: false,
             activeTab: 'Calculator',
         };
-        Array.from( document.querySelectorAll( '.clear-init' ) ).forEach( ( el ) => el.value = '0.000' );
     }
 
     toggle() {

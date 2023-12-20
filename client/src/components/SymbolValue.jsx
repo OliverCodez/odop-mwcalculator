@@ -204,6 +204,11 @@ class SymbolValue extends Component {
         if ( id_blank.includes( this.props.element.name ) ) {
             className = className + ' clear-blank form-reset';
         }
+        useEffect(() => {
+            //this.value = '0.000';
+            Array.from( document.querySelectorAll( '.clear-init' ) ).forEach( ( el ) => el.value = '0.000' );
+        },
+        []);
         return (
             <>
                 <td className={"block-input align-middle " + (this.props.className !== undefined ? this.props.className : '')}>
