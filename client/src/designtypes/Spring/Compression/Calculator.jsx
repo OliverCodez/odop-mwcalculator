@@ -17,14 +17,16 @@ export class Calculator extends ReportBase {
         /*this.setState({
             value: this.safe_load
         });*/
-        console.log('this.safe_load:' + this.safe_load);
-        sessionStorage.setItem( 'safe_load', this.safe_load );
         super.render();
 //        console.log('In Calculator.render this=',this);
         var isGround = 1.7;
         if ( this.et_tab[this.props.symbol_table[o.End_Type].value][0].includes('Grounded') ) isGround = 1;
         return (
             <Container>
+                <script>
+                    console.log('safeload::' + this.safe_load);
+                    sessionStorage.setItem( 'safe_load', this.safe_load );
+                </script>
                 <Row>
                     <table className="report-table report-table-1">
                         <tbody>
