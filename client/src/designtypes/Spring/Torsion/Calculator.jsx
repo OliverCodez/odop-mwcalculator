@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, InputGroup, Form } from 'react-bootstrap';
 import { ReportBase } from "./ReportBase" // import the inner non-redux-connected class
 import SymbolName from '../../../components/SymbolName';
@@ -15,6 +15,7 @@ export class Calculator extends ReportBase {
     render() {
         super.render();
 //        console.log('In Calculator.render this.props=',this.props);
+        sessionStorage.setItem( 'safe_load', this.safe_load );
         return (
             <Container>
                 <Row>

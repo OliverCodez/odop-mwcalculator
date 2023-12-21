@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { InputGroup, Form, OverlayTrigger, Tooltip, Modal, Button, Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { FIXED, CONSTRAINED } from '../store/actionTypes';
@@ -201,10 +201,11 @@ class SymbolValue extends Component {
         if ( id_val.includes( this.props.element.name ) ) {
             className = className + ' clear-val form-reset';
             if ( id_init.includes( this.props.element.name ) ) {
-                console.log('data value:' + dataVal);
+                
                 className = className + ' clear-init';
                 // if value of other is 0 then 0
-                var dataVal = document.querySelector( '.table-body-data' ).getAttribute( 'data-safe_load' );
+                var dataVal = sessionStorage.getItem( 'safe_load' );//document.querySelector( '.table-body-data' ).getAttribute( 'data-safe_load' );
+                console.log('data value:' + dataVal);
                 if ( dataVal != '' ) {
                     console.log('dataval is not empty');
                     if ( Math.floor( dataVal ) > 0.0000 ) {
