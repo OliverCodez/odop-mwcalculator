@@ -208,6 +208,7 @@ class SymbolValue extends Component {
                 console.log('data value got?' + dataVal);
                 if ( dataVal != '' ) {
                     console.log('dataval is not empty');
+                    /*
                     if ( Math.floor( dataVal ) > 0.0000 ) {
                         console.log('dataval is above 0.0000');
                         theValue = this.props.element.value;
@@ -215,7 +216,7 @@ class SymbolValue extends Component {
                     else {
                         console.log('dataval is 0');
                         theValue = '0.0000';
-                    }
+                    }*/
                 }
             }
         }

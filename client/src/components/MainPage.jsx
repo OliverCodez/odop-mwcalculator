@@ -22,10 +22,8 @@ class MainPage extends Component {
         this.props.changeView(config.url.view);
         this.state = {
             isOpen: false,
-            activeTab: 'Calculator',
-            value: '0.0000'
+            activeTab: 'Calculator'
         };
-        sessionStorage.setItem( 'safe_load', '0.0000' );
     }
 
     toggle() {
@@ -51,6 +49,7 @@ class MainPage extends Component {
 
         var src = 'designtypes/'+this.props.type+'/favicon.ico';
         var alt = this.props.type+' icon';
+        sessionStorage.setItem( 'safe_load', '0.0000' );
 //        console.log('src=',src,' alt=',alt);
       return (
             <>
