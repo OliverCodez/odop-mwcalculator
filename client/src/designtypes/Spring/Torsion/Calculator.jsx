@@ -15,7 +15,9 @@ export class Calculator extends ReportBase {
     render() {
         super.render();
 //        console.log('In Calculator.render this.props=',this.props);
+        console.log('setting safe_load');
         sessionStorage.setItem( 'safe_load', this.safe_load );
+        console.log('set to: ' + sessionStorage.getItem( 'safe_load' ) );
         return (
             <Container>
                 <Row>
