@@ -23,6 +23,7 @@ class MainPage extends Component {
         this.state = {
             isOpen: false,
             activeTab: 'Calculator',
+            value: '0.0000'
         };
     }
 

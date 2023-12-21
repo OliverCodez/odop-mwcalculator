@@ -14,8 +14,10 @@ export class Calculator extends ReportBase {
 
     render() {
         console.log('setting safe_load');
-        sessionStorage.setItem( 'safe_load', this.safe_load );
-        console.log('set to: ' + sessionStorage.getItem( 'safe_load' ) );
+        this.setState({
+            value: this.safe_load
+        });
+        console.log('set to: ' + this.state.value );
         super.render();
 //        console.log('In Calculator.render this=',this);
         var isGround = 1.7;
