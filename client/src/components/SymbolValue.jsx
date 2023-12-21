@@ -213,7 +213,8 @@ class SymbolValue extends Component {
                     }
                 }
                 if ( this.props.element.name == 'Active_Coils' ) {
-                    if ( Math.floor( this.props.element.value ) < 0.0000 ) {
+                    console.log('active coils! value:' + this.props.element.value);
+                    if ( Math.floor( this.props.element.value ) < 0.0000 || this.props.element.value.includes( '-' ) ) {
                         theValue = '0';
                     }
                 }
