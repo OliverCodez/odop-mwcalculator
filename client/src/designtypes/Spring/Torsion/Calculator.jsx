@@ -51,7 +51,7 @@ export class Calculator extends ReportBase {
                                 <ValueName name={<><b>Static FS</b><br />{this.props.symbol_table[o.FS_2].units}</>} tooltip="Static Factor of Safety at free point, point 1, point 2 and maximum safe point" className="text-center" />
                             </tr>
                         </thead>
-                        <tbody data-safe_load={this.safe_load}>
+                        <tbody class="table-body-data" data-safe_load={this.safe_load}>
                             <tr>
                                 <ValueName name={<b>Free</b>} tooltip="Free or no torsion point" />
                                 <SymbolValue element={this.props.symbol_table[o.L_Body]} index={o.L_Body} />
