@@ -15,6 +15,7 @@ export class Calculator extends ReportBase {
         super.render();
 //        console.log('In Calculator.render this.props=',this.props);
         return (
+
             <Container>
                 <Row>
                     <table className="report-table">

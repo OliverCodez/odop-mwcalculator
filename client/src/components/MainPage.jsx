@@ -49,7 +49,6 @@ class MainPage extends Component {
 
         var src = 'designtypes/'+this.props.type+'/favicon.ico';
         var alt = this.props.type+' icon';
-        console.log('mainpage is val?' + this.safe_load);
 //        console.log('src=',src,' alt=',alt);
       return (
             <>
