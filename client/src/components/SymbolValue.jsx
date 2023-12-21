@@ -205,7 +205,7 @@ class SymbolValue extends Component {
                 className = className + ' clear-init';
                 // if value of other is 0 then 0
                 var dataVal = sessionStorage.getItem( 'safe_load' );//document.querySelector( '.table-body-data' ).getAttribute( 'data-safe_load' );
-                console.log('data value:' + dataVal);
+                console.log('data value got?' + dataVal);
                 if ( dataVal != '' ) {
                     console.log('dataval is not empty');
                     if ( Math.floor( dataVal ) > 0.0000 ) {

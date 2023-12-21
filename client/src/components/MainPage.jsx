@@ -25,6 +25,7 @@ class MainPage extends Component {
             activeTab: 'Calculator',
             value: '0.0000'
         };
+        sessionStorage.setItem( 'safe_load', '0.0000' );
     }
 
     toggle() {

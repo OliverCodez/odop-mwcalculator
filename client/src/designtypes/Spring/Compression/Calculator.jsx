@@ -17,8 +17,9 @@ export class Calculator extends ReportBase {
         this.setState({
             value: this.safe_load
         });
-        var stateValue = JSON.parse(window.localStorage.getItem('state')).value;
-        console.log('set to: ' + stateValue );
+        console.log('this.safe_load:' + this.safe_load);
+        sessionStorage.setItem( 'safe_load', this.safe_load );
+        console.log('set to: ' + sessionStorage.getItem( 'safe_load' ) );
         super.render();
 //        console.log('In Calculator.render this=',this);
         var isGround = 1.7;
