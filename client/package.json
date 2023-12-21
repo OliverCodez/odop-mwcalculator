@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/thegrumpys/odop/issues"
   },
-  "homepage": "/mwc/calc/",
+  "homepage": "/subdirectory-if-present-otherwise-slash/",
   "browserslist": [
     ">0.2%",
     "not dead",
