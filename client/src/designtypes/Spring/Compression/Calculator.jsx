@@ -13,10 +13,6 @@ import { connect } from 'react-redux';
 export class Calculator extends ReportBase {
 
     render() {
-        console.log('setting safe_load');
-        /*this.setState({
-            value: this.safe_load
-        });*/
         super.render();
 //        console.log('In Calculator.render this=',this);
         var isGround = 1.7;
