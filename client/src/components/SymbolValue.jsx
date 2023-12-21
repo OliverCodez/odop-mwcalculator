@@ -201,20 +201,20 @@ class SymbolValue extends Component {
         if ( id_val.includes( this.props.element.name ) ) {
             className = className + ' clear-val form-reset';
             if ( id_init.includes( this.props.element.name ) ) {
-                
                 className = className + ' clear-init';
                 // if value of other is 0 then 0
                 var dataVal = sessionStorage.getItem( 'safe_load' );//document.querySelector( '.table-body-data' ).getAttribute( 'data-safe_load' );
-                console.log('data value got?' + dataVal);
                 if ( dataVal != '' ) {
-                    console.log('dataval is not empty');
                     if ( Math.floor( dataVal ) > 0.0000 ) {
-                        console.log('dataval is above 0.0000');
                         theValue = this.props.element.value;
                     }
                     else {
-                        console.log('dataval is 0');
                         theValue = '0.0000';
+                    }
+                }
+                if ( this.props.element.name == 'Active_Coils' ) {
+                    if ( Math.floor( this.props.element.value ) < 0.0000 ) {
+                        theValue = '0';
                     }
                 }
             }

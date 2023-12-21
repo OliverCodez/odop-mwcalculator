@@ -24,7 +24,6 @@ export class Calculator extends ReportBase {
         return (
             <Container>
                 <script>
-                    {console.log('safeload::' + this.safe_load)}
                     {sessionStorage.setItem( 'safe_load', this.safe_load )}
                 </script>
                 <Row>
